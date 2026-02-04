@@ -144,6 +144,88 @@ body.theme-light .site-header {
   box-shadow: var(--glow);
 }
 
+/* Dropdown Navigation */
+.nav-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav-dropdown-toggle {
+  color: var(--muted);
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-dropdown-toggle:hover {
+  color: var(--text);
+  background: var(--glass);
+}
+
+.nav-dropdown-toggle.active {
+  color: var(--text);
+  background: var(--card);
+  border: 1px solid var(--border-glow);
+  box-shadow: var(--glow);
+}
+
+.dropdown-arrow {
+  font-size: 10px;
+  transition: transform 0.2s ease;
+}
+
+.nav-dropdown:hover .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 160px;
+  background: var(--card-solid);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow);
+  z-index: 200;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(4px);
+}
+
+.nav-dropdown-menu a {
+  display: block;
+  padding: 10px 14px;
+  border-radius: 8px;
+  color: var(--muted);
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.nav-dropdown-menu a:hover {
+  color: var(--text);
+  background: var(--glass);
+}
+
 .ghost-btn {
   border: 1px solid var(--border);
   background: var(--glass);
@@ -1238,6 +1320,547 @@ h1 {
 .copy-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 20px rgba(124, 58, 237, 0.4);
+}
+
+/* ══════════════════════════════════════════════════════════
+   AWARDS PAGE - FANCY STYLES
+══════════════════════════════════════════════════════════ */
+.award-section.alt-bg {
+  background: var(--bg-2);
+}
+
+/* Featured Award Showcase */
+.award-showcase {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.award-showcase-content {
+  position: relative;
+}
+
+.award-badge {
+  display: inline-block;
+  background: var(--gradient);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 20px rgba(124, 58, 237, 0.4);
+}
+
+.award-badge.secondary {
+  background: linear-gradient(135deg, #06b6d4, #0891b2);
+  box-shadow: 0 4px 20px rgba(6, 182, 212, 0.4);
+}
+
+.award-badge.tertiary {
+  background: linear-gradient(135deg, #f472b6, #ec4899);
+  box-shadow: 0 4px 20px rgba(244, 114, 182, 0.4);
+}
+
+.award-showcase-content h2 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 12px;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.award-year {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.award-description {
+  color: var(--muted);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.award-highlight-bar {
+  width: 100px;
+  height: 4px;
+  background: var(--gradient);
+  border-radius: 2px;
+  margin-top: 24px;
+}
+
+.award-showcase-image {
+  position: relative;
+}
+
+/* Photo Placeholder Styles */
+.award-photo-placeholder {
+  background: var(--card);
+  border: 2px dashed var(--border);
+  border-radius: 16px;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.award-photo-placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gradient);
+  opacity: 0.05;
+  transition: opacity 0.3s ease;
+}
+
+.award-photo-placeholder:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: var(--glow);
+}
+
+.award-photo-placeholder:hover::before {
+  opacity: 0.1;
+}
+
+.placeholder-icon {
+  font-size: 3rem;
+}
+
+.placeholder-text {
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.award-photo-placeholder.large {
+  aspect-ratio: 3 / 4;
+}
+
+/* Fancy Award Card (alternating layout) */
+.award-card-fancy {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 60px;
+  align-items: center;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 40px;
+  transition: all 0.3s ease;
+}
+
+.award-card-fancy:hover {
+  border-color: var(--border-glow);
+  box-shadow: var(--glow);
+  transform: translateY(-4px);
+}
+
+.award-card-fancy.reverse {
+  grid-template-columns: 1fr 400px;
+}
+
+.award-card-fancy-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.award-card-fancy-image .award-photo-placeholder {
+  aspect-ratio: 4 / 3;
+}
+
+/* Award Gallery (for GIS Day) */
+.award-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.award-gallery-item {
+  position: relative;
+}
+
+.award-gallery-info {
+  text-align: center;
+  padding: 20px;
+}
+
+.award-ribbon {
+  display: inline-block;
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  color: #000;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.award-ribbon.special {
+  background: linear-gradient(135deg, #a78bfa, #7c3aed);
+  color: #fff;
+}
+
+.award-gallery-info h4 {
+  font-size: 1.2rem;
+  color: var(--text);
+}
+
+/* Membership Grid */
+.membership-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.membership-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 32px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.membership-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--gradient);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.membership-card:hover {
+  border-color: var(--border-glow);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.membership-card:hover::before {
+  transform: scaleX(1);
+}
+
+.membership-card.honor {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(6, 182, 212, 0.05));
+  border-color: var(--border-glow);
+}
+
+.membership-card.honor::before {
+  transform: scaleX(1);
+}
+
+.membership-icon {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.membership-card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.membership-year {
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'JetBrains Mono', monospace;
+  margin-bottom: 12px;
+}
+
+.membership-card > p:last-child {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Awards Page Responsive */
+@media (max-width: 900px) {
+  .award-showcase {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .award-showcase-content h2 {
+    font-size: 2rem;
+  }
+
+  .award-card-fancy,
+  .award-card-fancy.reverse {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .award-gallery {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .membership-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════
+   CONTACT PAGE - SIGNATURE & MAP
+══════════════════════════════════════════════════════════ */
+
+/* Professional Signature Card */
+.signature-card {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.signature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--gradient);
+}
+
+.signature-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-shrink: 0;
+}
+
+.signature-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: var(--gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 32px rgba(124, 58, 237, 0.3);
+}
+
+.avatar-initials {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -2px;
+}
+
+.signature-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.signature-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.signature-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
+}
+
+.signature-org {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.signature-divider {
+  width: 1px;
+  height: 120px;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+.signature-right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+
+.signature-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.signature-icon {
+  font-size: 1.2rem;
+  width: 32px;
+  text-align: center;
+}
+
+.signature-contact-item > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.signature-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.signature-contact-item a,
+.signature-contact-item span:not(.signature-label):not(.signature-icon) {
+  font-size: 14px;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.signature-contact-item a:hover {
+  color: var(--accent);
+}
+
+.signature-social {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--muted);
+  transition: all 0.2s ease;
+}
+
+.social-link:hover {
+  color: var(--text);
+  border-color: var(--border-glow);
+  background: var(--card);
+  transform: translateY(-2px);
+  box-shadow: var(--glow);
+}
+
+/* Map Section */
+.alt-bg {
+  background: var(--bg-2);
+}
+
+.map-container {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+
+.map-container iframe {
+  display: block;
+  filter: grayscale(20%) contrast(1.1);
+}
+
+body.theme-light .map-container iframe {
+  filter: none;
+}
+
+.map-info-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 10;
+}
+
+.map-info-card {
+  background: var(--card-solid);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow);
+}
+
+.map-info-card h4 {
+  font-size: 1rem;
+  margin: 0 0 4px 0;
+  color: var(--text);
+}
+
+.map-info-card p {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Contact Page Responsive */
+@media (max-width: 900px) {
+  .signature-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+    padding: 32px 24px;
+  }
+
+  .signature-left {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .signature-divider {
+    width: 100%;
+    height: 1px;
+  }
+
+  .signature-right {
+    align-items: center;
+  }
+
+  .signature-contact-item {
+    justify-content: center;
+  }
+
+  .signature-social {
+    justify-content: center;
+  }
 }
 
 /* ══════════════════════════════════════════════════════════

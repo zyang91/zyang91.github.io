@@ -13,8 +13,13 @@
         <nav class="site-nav">
           <a href="../index.html">Home</a>
           <a href="about-me.html">About</a>
-          <a href="upenn.html">UPenn</a>
-          <a href="binghamton.html">Binghamton</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown-toggle">Education <span class="dropdown-arrow">▾</span></button>
+            <div class="nav-dropdown-menu">
+              <a href="upenn.html">UPenn</a>
+              <a href="binghamton.html">Binghamton</a>
+            </div>
+          </div>
           <a href="research.html">Research</a>
           <a href="experience.html">Experience</a>
           <a href="publications.html">Publications</a>
@@ -36,35 +41,152 @@
         </div>
       </section>
 
-      <section class="section">
-        <div class="container content-grid">
-          <article class="list-card">
-            <img
-              src="https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?auto=format&fit=crop&w=1000&q=80"
-              alt="Trophy"
-            />
-            <h3>Awards & honors</h3>
-            <ul>
-              <li><strong>SUNY Chancellor's Award for Student Excellence</strong> (2024) — highest honor for SUNY students.</li>
-              <li>President's Award for Undergraduate Student Excellence, Honorable Mention (2024).</li>
-              <li>GIS Day Poster Competition: First Place (2022 & 2023), People's Choice Award (2022).</li>
-              <li>Paul F. Gorman '73 Memorial Scholarship (2023).</li>
-            </ul>
-          </article>
-          <article class="list-card">
-            <h3>Professional memberships</h3>
-            <ul>
-              <li>American Association of Geographers (2022–present).</li>
-              <li>LEED Green Associate (2023).</li>
-            </ul>
-          </article>
-          <article class="list-card">
-            <h3>Honor societies</h3>
-            <ul>
-              <li>Phi Beta Kappa (2024).</li>
-              <li>Gamma Theta Upsilon (2022).</li>
-            </ul>
-          </article>
+      <!-- Featured Award - SUNY Chancellor's Award -->
+      <section class="section award-featured">
+        <div class="container">
+          <div class="award-showcase">
+            <div class="award-showcase-content">
+              <span class="award-badge">🏆 Highest Honor</span>
+              <h2>SUNY Chancellor's Award for Student Excellence</h2>
+              <p class="award-year">2024</p>
+              <p class="award-description">
+                The highest honor bestowed upon students in the State University of New York system, 
+                recognizing the integration of academic excellence with other aspects of their lives.
+              </p>
+              <div class="award-highlight-bar"></div>
+            </div>
+            <div class="award-showcase-image">
+              <!-- PLACEHOLDER: Add your Chancellor's Award ceremony photo here -->
+              <div class="award-photo-placeholder">
+                <span class="placeholder-icon">📸</span>
+                <span class="placeholder-text">Award Ceremony Photo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- President's Award -->
+      <section class="section award-section alt-bg">
+        <div class="container">
+          <div class="award-card-fancy">
+            <div class="award-card-fancy-image">
+              <!-- PLACEHOLDER: Add your President's Award photo here -->
+              <div class="award-photo-placeholder">
+                <span class="placeholder-icon">📸</span>
+                <span class="placeholder-text">Award Photo</span>
+              </div>
+            </div>
+            <div class="award-card-fancy-content">
+              <span class="award-badge secondary">🎖️ Honorable Mention</span>
+              <h3>President's Award for Undergraduate Student Excellence</h3>
+              <p class="award-year">2024</p>
+              <p class="award-description">
+                Recognition for outstanding academic achievement and contributions to the university community.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GIS Day Awards -->
+      <section class="section award-section">
+        <div class="container">
+          <div class="section-title">
+            <h2>GIS Day Poster Competition</h2>
+            <p>Back-to-back wins showcasing geospatial research excellence.</p>
+          </div>
+          <div class="award-gallery">
+            <div class="award-gallery-item">
+              <div class="award-photo-placeholder large">
+                <span class="placeholder-icon">📸</span>
+                <span class="placeholder-text">2023 First Place Poster</span>
+              </div>
+              <div class="award-gallery-info">
+                <span class="award-ribbon">🥇 First Place</span>
+                <h4>2023</h4>
+              </div>
+            </div>
+            <div class="award-gallery-item">
+              <div class="award-photo-placeholder large">
+                <span class="placeholder-icon">📸</span>
+                <span class="placeholder-text">2022 First Place Poster</span>
+              </div>
+              <div class="award-gallery-info">
+                <span class="award-ribbon">🥇 First Place</span>
+                <h4>2022</h4>
+              </div>
+            </div>
+            <div class="award-gallery-item">
+              <div class="award-photo-placeholder large">
+                <span class="placeholder-icon">📸</span>
+                <span class="placeholder-text">People's Choice Award</span>
+              </div>
+              <div class="award-gallery-info">
+                <span class="award-ribbon special">⭐ People's Choice</span>
+                <h4>2022</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Scholarship -->
+      <section class="section award-section alt-bg">
+        <div class="container">
+          <div class="award-card-fancy reverse">
+            <div class="award-card-fancy-content">
+              <span class="award-badge tertiary">📚 Scholarship</span>
+              <h3>Paul F. Gorman '73 Memorial Scholarship</h3>
+              <p class="award-year">2023</p>
+              <p class="award-description">
+                Awarded to students demonstrating academic excellence and commitment to geographic studies.
+              </p>
+            </div>
+            <div class="award-card-fancy-image">
+              <!-- PLACEHOLDER: Add scholarship photo here -->
+              <div class="award-photo-placeholder">
+                <span class="placeholder-icon">📸</span>
+                <span class="placeholder-text">Scholarship Photo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Memberships & Honor Societies -->
+      <section class="section award-section">
+        <div class="container">
+          <div class="section-title">
+            <h2>Professional Memberships & Honor Societies</h2>
+            <p>Building connections and earning recognition in the field.</p>
+          </div>
+          <div class="membership-grid">
+            <div class="membership-card">
+              <div class="membership-icon">🌍</div>
+              <h4>American Association of Geographers</h4>
+              <p class="membership-year">2022 – Present</p>
+              <p>Active member contributing to geographic research and education.</p>
+            </div>
+            <div class="membership-card">
+              <div class="membership-icon">🌿</div>
+              <h4>LEED Green Associate</h4>
+              <p class="membership-year">2023</p>
+              <p>Certified credential in green building and sustainable design.</p>
+            </div>
+            <div class="membership-card honor">
+              <div class="membership-icon">ΦΒΚ</div>
+              <h4>Phi Beta Kappa</h4>
+              <p class="membership-year">2024</p>
+              <p>America's oldest and most prestigious academic honor society.</p>
+            </div>
+            <div class="membership-card honor">
+              <div class="membership-icon">ΓΘΥ</div>
+              <h4>Gamma Theta Upsilon</h4>
+              <p class="membership-year">2022</p>
+              <p>International geographic honor society.</p>
+            </div>
+          </div>
         </div>
       </section>
     </main>
