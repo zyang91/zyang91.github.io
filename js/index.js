@@ -70,7 +70,10 @@ function rotateFunFacts() {
 }
 
 function initTheme() {
-	if (document.body.classList.contains("home-cinematic")) {
+	if (
+		document.body.classList.contains("home-cinematic") ||
+		document.body.classList.contains("page-cinematic")
+	) {
 		document.body.classList.add("theme-light");
 		return;
 	}

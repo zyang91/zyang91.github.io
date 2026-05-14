@@ -1,183 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Publications | Zhanchao Yang</title>
-    <link rel="stylesheet" href="../css/style.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <a class="logo" href="../index.html">ZY</a>
-        <nav class="site-nav">
-          <a href="../index.html">Home</a>
-          <a href="about-me.html">About</a>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown-toggle">Education <span class="dropdown-arrow">▾</span></button>
-            <div class="nav-dropdown-menu">
-              <a href="upenn.html">UPenn</a>
-              <a href="binghamton.html">Binghamton</a>
-            </div>
-          </div>
-          <a href="research.html">Research</a>
-          <a href="experience.html">Experience</a>
-          <a href="publications.html" class="active">Publications</a>
-          <a href="awards.html">Awards</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-        <button id="theme-toggle" class="ghost-btn" type="button">
-          Toggle theme
-        </button>
-      </div>
-    </header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Publications | Zhanchao Yang</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="../css/style.css" />
+	</head>
+	<body class="theme-light page-cinematic bg-sky">
+		<header class="pc-nav" id="cinematic-nav">
+			<div class="pc-nav-inner">
+				<a class="pc-logo" href="../index.html">Zhanchao Yang<sup>®</sup></a>
+				<div class="pc-nav-right">
+					<nav class="pc-nav-links">
+						<a href="../index.html">Home</a>
+						<a href="about-me.html">About</a>
+						<a href="research.html">Research</a>
+						<a href="publications.html" class="active">Journal</a>
+					</nav>
+					<button
+						class="cinematic-menu-toggle"
+						id="cinematic-menu-toggle"
+						aria-label="Open menu"
+						aria-expanded="false"
+						aria-controls="cinematic-menu-panel"
+					>
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+				</div>
+			</div>
+		</header>
 
-    <main>
-      <section class="page-hero">
-        <div class="container">
-          <p class="pill">Publications & Talks</p>
-          <h1>Sharing ideas, one map at a time.</h1>
-          <p class="lead">Publications, talks, and poster wins.</p>
-        </div>
-      </section>
+		<div class="cinematic-menu-panel" id="cinematic-menu-panel" aria-hidden="true">
+			<div class="cinematic-menu-panel-inner">
+				<div class="cinematic-menu-panel-top">
+					<a class="cinematic-logo" href="../index.html">Zhanchao Yang<sup>®</sup></a>
+					<button class="cinematic-menu-close" id="cinematic-menu-close" aria-label="Close menu">
+						<span></span><span></span>
+					</button>
+				</div>
+				<div class="cinematic-menu-grid">
+					<div class="cinematic-menu-col">
+						<a href="../index.html">Home <span>→</span></a>
+						<a href="about-me.html">About <span>→</span></a>
+						<a href="research.html">Research <span>→</span></a>
+						<a href="experience.html">Experience <span>→</span></a>
+					</div>
+					<div class="cinematic-menu-col">
+						<a href="publications.html">Publications <span>→</span></a>
+						<a href="awards.html">Awards <span>→</span></a>
+						<a href="upenn.html">UPenn</a>
+						<a href="binghamton.html">Binghamton</a>
+					</div>
+				</div>
+				<div class="cinematic-menu-foot">
+					<a class="cinematic-menu-cta" href="contact.html">Get in touch</a>
+					<p>Philadelphia, PA · zhanchao@upenn.edu</p>
+				</div>
+			</div>
+		</div>
 
-      <section class="section">
-        <div class="container">
-          <!-- Publications Section -->
-          <div class="pub-section">
-            <div class="pub-section-title">
-              <span class="icon">📄</span>
-              <h2>Publications</h2>
-            </div>
-            <div class="pub-grid">
-              <article class="pub-card">
-                <span class="pub-number">01</span>
-                <div class="pub-content">
-                  <h3>Accessibility or Environmental Conservation? Evaluating the Relationship Between Environmental Protection and Hiking Trails Accessibility</h3>
-                  <div class="pub-meta">
-                    <span class="venue">Binghamton University</span>
-                    <span class="year">2024</span>
-                  </div>
-                  <span class="pub-type thesis">Honors Thesis</span>
-                  <p style="margin-top: 12px; color: var(--muted); font-size: 14px;">Using LiDAR and remote sensing to evaluate trail conditions in the Binghamton University Nature Preserve.</p>
-                </div>
-              </article>
-              <article class="pub-card">
-                <span class="pub-number">02</span>
-                <div class="pub-content">
-                  <h3>Accessibility or Environmental Conservation? Evaluating the Relationship Between Environmental Protection and Hiking Trails Accessibility</h3>
-                  <div class="pub-meta">
-                    <span class="venue">GIS Day 2023</span>
-                    <span class="year">2023</span>
-                  </div>
-                  <span class="pub-type poster">Poster</span>
-                  <a href="https://orb.binghamton.edu/gisday/5" target="_blank" class="pub-link">
-                    View on ORB →
-                  </a>
-                </div>
-              </article>
-              <article class="pub-card">
-                <span class="pub-number">03</span>
-                <div class="pub-content">
-                  <h3>Tracking the Spread of Invasive Species in the Binghamton University Natural Preserve</h3>
-                  <div class="pub-meta">
-                    <span class="venue">GIS Day 2022</span>
-                    <span class="year">2022</span>
-                    <span style="color: var(--muted);">Yang, Z., O'Day, S., McCann, P., Lu, I.</span>
-                  </div>
-                  <span class="pub-type poster">Poster</span>
-                  <a href="https://orb.binghamton.edu/gisday/4" target="_blank" class="pub-link">
-                    View on ORB →
-                  </a>
-                </div>
-              </article>
-            </div>
-          </div>
+		<main>
+			<section class="pc-hero">
+				<p class="pc-hero-eyebrow">Publications &amp; Talks</p>
+				<h1 class="pc-hero-title">
+					Sharing <em>ideas</em>,<br />
+					one map at a time.
+				</h1>
+				<p class="pc-hero-lead">
+					Publications, talks, and <em>poster wins</em>.
+				</p>
+			</section>
 
-          <!-- Presentations Section -->
-          <div class="pub-section">
-            <div class="pub-section-title">
-              <span class="icon">🎤</span>
-              <h2>Conference Presentations</h2>
-            </div>
-            <div class="pub-grid">
-              <article class="pub-card">
-                <span class="pub-number">01</span>
-                <div class="pub-content">
-                  <h3>Satellite and Population Embeddings: Powerful GeoAI Tools or Overrated?</h3>
-                  <div class="pub-meta">
-                    <span class="venue">UPenn GIS Day</span>
-                    <span class="year">2025</span>
-                  </div>
-                  <span class="pub-type talk">Lightning Talk</span>
-                </div>
-              </article>
-              <article class="pub-card">
-                <span class="pub-number">02</span>
-                <div class="pub-content">
-                  <h3>Affordable Near-Earth Sensing and Photogrammetry: Digital Twinning Micro-Level Geographic Spaces with GIS</h3>
-                  <div class="pub-meta">
-                    <span class="venue">UPenn GIS Day</span>
-                    <span class="year">2024</span>
-                  </div>
-                  <span class="pub-type talk">Lightning Talk</span>
-                </div>
-              </article>
-              <article class="pub-card">
-                <span class="pub-number">03</span>
-                <div class="pub-content">
-                  <h3>Accessibility or Environmental Conservation? Evaluating the Relationship via LiDAR & Remote Sensing</h3>
-                  <div class="pub-meta">
-                    <span class="venue">AAG Annual Conference</span>
-                    <span class="year">2024</span>
-                  </div>
-                  <span class="pub-type paper">Paper Presentation</span>
-                </div>
-              </article>
-              <article class="pub-card">
-                <span class="pub-number">04</span>
-                <div class="pub-content">
-                  <h3>Evaluating the Balance Between Environmental Protection and Accessibility via Remote Sensing</h3>
-                  <div class="pub-meta">
-                    <span class="venue">Applied Geography Conference</span>
-                    <span class="year">2023</span>
-                  </div>
-                  <span class="pub-type poster">Student Poster</span>
-                </div>
-              </article>
-              <article class="pub-card">
-                <span class="pub-number">05</span>
-                <div class="pub-content">
-                  <h3>Tracking the Spread of Invasive Species in the Binghamton University Natural Preserve</h3>
-                  <div class="pub-meta">
-                    <span class="venue">GIS Day</span>
-                    <span class="year">2022</span>
-                  </div>
-                  <span class="pub-type poster">Student Poster</span>
-                  <p style="margin-top: 8px; font-size: 13px; color: var(--accent-3);">🏆 First Place & People's Choice Award</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+			<section class="section">
+				<div class="container">
+					<div class="pub-section">
+						<div class="pub-section-title">
+							<span class="icon">📄</span>
+							<h2>Publications</h2>
+						</div>
+						<div class="pub-grid">
+							<article class="pub-card">
+								<span class="pub-number">01</span>
+								<div class="pub-content">
+									<h3>Accessibility or Environmental Conservation? Evaluating the Relationship Between Environmental Protection and Hiking Trails Accessibility</h3>
+									<div class="pub-meta">
+										<span class="venue">Binghamton University</span>
+										<span class="year">2024</span>
+									</div>
+									<span class="pub-type thesis">Honors Thesis</span>
+									<p style="margin-top: 12px; font-size: 14px;">Using LiDAR and remote sensing to evaluate trail conditions in the Binghamton University Nature Preserve.</p>
+								</div>
+							</article>
+							<article class="pub-card">
+								<span class="pub-number">02</span>
+								<div class="pub-content">
+									<h3>Accessibility or Environmental Conservation? Evaluating the Relationship Between Environmental Protection and Hiking Trails Accessibility</h3>
+									<div class="pub-meta">
+										<span class="venue">GIS Day 2023</span>
+										<span class="year">2023</span>
+									</div>
+									<span class="pub-type poster">Poster</span>
+									<a href="https://orb.binghamton.edu/gisday/5" target="_blank" class="pub-link">
+										View on ORB →
+									</a>
+								</div>
+							</article>
+							<article class="pub-card">
+								<span class="pub-number">03</span>
+								<div class="pub-content">
+									<h3>Tracking the Spread of Invasive Species in the Binghamton University Natural Preserve</h3>
+									<div class="pub-meta">
+										<span class="venue">GIS Day 2022</span>
+										<span class="year">2022</span>
+										<span>Yang, Z., O'Day, S., McCann, P., Lu, I.</span>
+									</div>
+									<span class="pub-type poster">Poster</span>
+									<a href="https://orb.binghamton.edu/gisday/4" target="_blank" class="pub-link">
+										View on ORB →
+									</a>
+								</div>
+							</article>
+						</div>
+					</div>
 
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <div>
-          <h3>Let's build something smart.</h3>
-          <p>Philadelphia, PA · zhanchao@upenn.edu · 607-644-7982</p>
-        </div>
-        <div class="footer-links">
-          <a href="contact.html">Contact</a>
-          <a href="publications.html">Publications</a>
-          <a href="experience.html">Experience</a>
-        </div>
-      </div>
-      <p class="footer-note">© <span id="year"></span> Zhanchao Yang.</p>
-    </footer>
+					<div class="pub-section">
+						<div class="pub-section-title">
+							<span class="icon">🎤</span>
+							<h2>Conference Presentations</h2>
+						</div>
+						<div class="pub-grid">
+							<article class="pub-card">
+								<span class="pub-number">01</span>
+								<div class="pub-content">
+									<h3>Satellite and Population Embeddings: Powerful GeoAI Tools or Overrated?</h3>
+									<div class="pub-meta">
+										<span class="venue">UPenn GIS Day</span>
+										<span class="year">2025</span>
+									</div>
+									<span class="pub-type talk">Lightning Talk</span>
+								</div>
+							</article>
+							<article class="pub-card">
+								<span class="pub-number">02</span>
+								<div class="pub-content">
+									<h3>Affordable Near-Earth Sensing and Photogrammetry: Digital Twinning Micro-Level Geographic Spaces with GIS</h3>
+									<div class="pub-meta">
+										<span class="venue">UPenn GIS Day</span>
+										<span class="year">2024</span>
+									</div>
+									<span class="pub-type talk">Lightning Talk</span>
+								</div>
+							</article>
+							<article class="pub-card">
+								<span class="pub-number">03</span>
+								<div class="pub-content">
+									<h3>Accessibility or Environmental Conservation? Evaluating the Relationship via LiDAR &amp; Remote Sensing</h3>
+									<div class="pub-meta">
+										<span class="venue">AAG Annual Conference</span>
+										<span class="year">2024</span>
+									</div>
+									<span class="pub-type paper">Paper Presentation</span>
+								</div>
+							</article>
+							<article class="pub-card">
+								<span class="pub-number">04</span>
+								<div class="pub-content">
+									<h3>Evaluating the Balance Between Environmental Protection and Accessibility via Remote Sensing</h3>
+									<div class="pub-meta">
+										<span class="venue">Applied Geography Conference</span>
+										<span class="year">2023</span>
+									</div>
+									<span class="pub-type poster">Student Poster</span>
+								</div>
+							</article>
+							<article class="pub-card">
+								<span class="pub-number">05</span>
+								<div class="pub-content">
+									<h3>Tracking the Spread of Invasive Species in the Binghamton University Natural Preserve</h3>
+									<div class="pub-meta">
+										<span class="venue">GIS Day</span>
+										<span class="year">2022</span>
+									</div>
+									<span class="pub-type poster">Student Poster</span>
+									<p style="margin-top: 8px; font-size: 13px; color: var(--accent-orange);">🏆 First Place &amp; People's Choice Award</p>
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
 
-    <script src="../js/index.js"></script>
-  </body>
+		<footer class="site-footer">
+			<div class="container footer-grid">
+				<div>
+					<h3>Let's build something smart.</h3>
+					<p>Philadelphia, PA · zhanchao@upenn.edu · 607-644-7982</p>
+				</div>
+				<div class="footer-links">
+					<a href="contact.html">Contact</a>
+					<a href="publications.html">Publications</a>
+					<a href="experience.html">Experience</a>
+				</div>
+			</div>
+			<p class="footer-note">© <span id="year"></span> Zhanchao Yang.</p>
+		</footer>
+
+		<script src="../js/index.js"></script>
+	</body>
 </html>

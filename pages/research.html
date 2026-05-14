@@ -1,128 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Research | Zhanchao Yang</title>
-    <link rel="stylesheet" href="../css/style.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <a class="logo" href="../index.html">ZY</a>
-        <nav class="site-nav">
-          <a href="../index.html">Home</a>
-          <a href="about-me.html">About</a>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown-toggle">Education <span class="dropdown-arrow">▾</span></button>
-            <div class="nav-dropdown-menu">
-              <a href="upenn.html">UPenn</a>
-              <a href="binghamton.html">Binghamton</a>
-            </div>
-          </div>
-          <a href="research.html" class="active">Research</a>
-          <a href="experience.html">Experience</a>
-          <a href="publications.html">Publications</a>
-          <a href="awards.html">Awards</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-        <button id="theme-toggle" class="ghost-btn" type="button">
-          Toggle theme
-        </button>
-      </div>
-    </header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Research | Zhanchao Yang</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="../css/style.css" />
+	</head>
+	<body class="theme-light page-cinematic bg-sage">
+		<header class="pc-nav" id="cinematic-nav">
+			<div class="pc-nav-inner">
+				<a class="pc-logo" href="../index.html">Zhanchao Yang<sup>®</sup></a>
+				<div class="pc-nav-right">
+					<nav class="pc-nav-links">
+						<a href="../index.html">Home</a>
+						<a href="about-me.html">About</a>
+						<a href="research.html" class="active">Research</a>
+						<a href="contact.html">Contact</a>
+					</nav>
+					<button
+						class="cinematic-menu-toggle"
+						id="cinematic-menu-toggle"
+						aria-label="Open menu"
+						aria-expanded="false"
+						aria-controls="cinematic-menu-panel"
+					>
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+				</div>
+			</div>
+		</header>
 
-    <main>
-      <section class="page-hero">
-        <div class="container">
-          <p class="pill">Research</p>
-          <h1>Questions I’m chasing (with data and maps).</h1>
-          <p class="lead">Spatial analytics + community insight, always.</p>
-        </div>
-      </section>
+		<div class="cinematic-menu-panel" id="cinematic-menu-panel" aria-hidden="true">
+			<div class="cinematic-menu-panel-inner">
+				<div class="cinematic-menu-panel-top">
+					<a class="cinematic-logo" href="../index.html">Zhanchao Yang<sup>®</sup></a>
+					<button class="cinematic-menu-close" id="cinematic-menu-close" aria-label="Close menu">
+						<span></span><span></span>
+					</button>
+				</div>
+				<div class="cinematic-menu-grid">
+					<div class="cinematic-menu-col">
+						<a href="../index.html">Home <span>→</span></a>
+						<a href="about-me.html">About <span>→</span></a>
+						<a href="research.html">Research <span>→</span></a>
+						<a href="experience.html">Experience <span>→</span></a>
+					</div>
+					<div class="cinematic-menu-col">
+						<a href="publications.html">Publications <span>→</span></a>
+						<a href="awards.html">Awards <span>→</span></a>
+						<a href="upenn.html">UPenn</a>
+						<a href="binghamton.html">Binghamton</a>
+					</div>
+				</div>
+				<div class="cinematic-menu-foot">
+					<a class="cinematic-menu-cta" href="contact.html">Get in touch</a>
+					<p>Philadelphia, PA · zhanchao@upenn.edu</p>
+				</div>
+			</div>
+		</div>
 
-      <section class="section">
-        <div class="container">
-          <div class="stacked-cards">
-            <article class="stacked-card">
-              <div class="card-visual">
-                <img
-                  src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1000&q=80"
-                  alt="Data visualization"
-                />
-              </div>
-              <div class="card-content">
-                <h3>GIS & Spatial Analytics</h3>
-                <p class="subtitle">Leveraging geospatial technologies for smarter cities</p>
-                <ul>
-                  <li>Geostatistics and Spatial Analysis with Machine Learning</li>
-                  <li>Geovisualization & Cartography</li>
-                  <li>Agent-Based Modeling for urban systems</li>
-                </ul>
-              </div>
-            </article>
-            <article class="stacked-card">
-              <div class="card-visual">
-                <img
-                  src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1000&q=80"
-                  alt="Transportation"
-                />
-              </div>
-              <div class="card-content">
-                <h3>Transportation Planning</h3>
-                <p class="subtitle">Understanding human mobility & smart systems</p>
-                <ul>
-                  <li>Travel behavior modeling & data mining</li>
-                  <li>Intelligent Transportation Systems (ITS)</li>
-                  <li>GeoAI and remote sensing for urban planning</li>
-                </ul>
-              </div>
-            </article>
-            <article class="stacked-card">
-              <div class="card-visual">
-                <img
-                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80"
-                  alt="Urban infrastructure"
-                />
-              </div>
-              <div class="card-content">
-                <h3>Current Focus</h3>
-                <p class="subtitle">Research fellow under Prof. Erick Guerra @ UPenn</p>
-                <p>Working on travel behavior and smart mobility research. Supporting equitable, efficient, and sustainable urban infrastructure through spatial data science and advanced analytics.</p>
-              </div>
-            </article>
-            <article class="stacked-card">
-              <div class="card-icon">🌐</div>
-              <div class="card-content">
-                <h3>GitHub Organizations</h3>
-                <p class="subtitle">Open-source contributions & research code</p>
-                <ul>
-                  <li><strong>Geography-and-Planning:</strong> coding resources for planners</li>
-                  <li><strong>MUSA-Zhanchao:</strong> coursework & research at UPenn MUSA</li>
-                  <li><strong>UPenn-Transport-Zhanchao:</strong> Penn transportation research</li>
-                </ul>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-    </main>
+		<main>
+			<section class="pc-hero">
+				<p class="pc-hero-eyebrow">Research</p>
+				<h1 class="pc-hero-title">
+					Questions I'm <em>chasing</em><br />
+					with data and maps.
+				</h1>
+				<p class="pc-hero-lead">
+					Spatial analytics + community insight, <em>always</em>.
+				</p>
+			</section>
 
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <div>
-          <h3>Let’s build something smart.</h3>
-          <p>Philadelphia, PA · zhanchao@upenn.edu · 607-644-7982</p>
-        </div>
-        <div class="footer-links">
-          <a href="contact.html">Contact</a>
-          <a href="publications.html">Publications</a>
-          <a href="experience.html">Experience</a>
-        </div>
-      </div>
-      <p class="footer-note">© <span id="year"></span> Zhanchao Yang.</p>
-    </footer>
+			<section class="section">
+				<div class="container">
+					<div class="stacked-cards">
+						<article class="stacked-card">
+							<div class="card-visual">
+								<img
+									src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1000&q=80"
+									alt="Data visualization"
+								/>
+							</div>
+							<div class="card-content">
+								<h3>GIS &amp; Spatial Analytics</h3>
+								<p class="subtitle">Leveraging geospatial technologies for smarter cities</p>
+								<ul>
+									<li>Geostatistics and Spatial Analysis with Machine Learning</li>
+									<li>Geovisualization &amp; Cartography</li>
+									<li>Agent-Based Modeling for urban systems</li>
+								</ul>
+							</div>
+						</article>
+						<article class="stacked-card">
+							<div class="card-visual">
+								<img
+									src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1000&q=80"
+									alt="Transportation"
+								/>
+							</div>
+							<div class="card-content">
+								<h3>Transportation Planning</h3>
+								<p class="subtitle">Understanding human mobility &amp; smart systems</p>
+								<ul>
+									<li>Travel behavior modeling &amp; data mining</li>
+									<li>Intelligent Transportation Systems (ITS)</li>
+									<li>GeoAI and remote sensing for urban planning</li>
+								</ul>
+							</div>
+						</article>
+						<article class="stacked-card">
+							<div class="card-visual">
+								<img
+									src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80"
+									alt="Urban infrastructure"
+								/>
+							</div>
+							<div class="card-content">
+								<h3>Current Focus</h3>
+								<p class="subtitle">Research fellow under Prof. Erick Guerra @ UPenn</p>
+								<p>Working on travel behavior and smart mobility research. Supporting equitable, efficient, and sustainable urban infrastructure through spatial data science and advanced analytics.</p>
+							</div>
+						</article>
+						<article class="stacked-card">
+							<div class="card-icon">🌐</div>
+							<div class="card-content">
+								<h3>GitHub Organizations</h3>
+								<p class="subtitle">Open-source contributions &amp; research code</p>
+								<ul>
+									<li><strong>Geography-and-Planning:</strong> coding resources for planners</li>
+									<li><strong>MUSA-Zhanchao:</strong> coursework &amp; research at UPenn MUSA</li>
+									<li><strong>UPenn-Transport-Zhanchao:</strong> Penn transportation research</li>
+								</ul>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+		</main>
 
-    <script src="../js/index.js"></script>
-  </body>
+		<footer class="site-footer">
+			<div class="container footer-grid">
+				<div>
+					<h3>Let's build something smart.</h3>
+					<p>Philadelphia, PA · zhanchao@upenn.edu · 607-644-7982</p>
+				</div>
+				<div class="footer-links">
+					<a href="contact.html">Contact</a>
+					<a href="publications.html">Publications</a>
+					<a href="experience.html">Experience</a>
+				</div>
+			</div>
+			<p class="footer-note">© <span id="year"></span> Zhanchao Yang.</p>
+		</footer>
+
+		<script src="../js/index.js"></script>
+	</body>
 </html>

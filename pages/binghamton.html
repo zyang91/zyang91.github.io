@@ -4,41 +4,79 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Binghamton | Zhanchao Yang</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap"
+  rel="stylesheet"
+/>
 <link rel="stylesheet" href="../css/style.css" />
 </head>
-<body>
-<header class="site-header">
-<div class="container nav-wrap">
-<a class="logo" href="../index.html">ZY</a>
-<nav class="site-nav">
-<a href="../index.html">Home</a>
-<a href="about-me.html">About</a>
-<div class="nav-dropdown">
-<button class="nav-dropdown-toggle active">Education <span class="dropdown-arrow">▾</span></button>
-<div class="nav-dropdown-menu">
-<a href="upenn.html">UPenn</a>
-<a href="binghamton.html" class="active">Binghamton</a>
-</div>
-</div>
-<a href="research.html">Research</a>
-<a href="experience.html">Experience</a>
-<a href="publications.html">Publications</a>
-<a href="awards.html">Awards</a>
-<a href="contact.html">Contact</a>
-</nav>
-<button id="theme-toggle" class="ghost-btn" type="button">
-Toggle theme
-</button>
-</div>
+<body class="theme-light page-cinematic bg-mint">
+<header class="pc-nav" id="cinematic-nav">
+  <div class="pc-nav-inner">
+    <a class="pc-logo" href="../index.html">Zhanchao Yang<sup>®</sup></a>
+    <div class="pc-nav-right">
+      <nav class="pc-nav-links">
+        <a href="../index.html">Home</a>
+        <a href="upenn.html">UPenn</a>
+        <a href="binghamton.html" class="active">Binghamton</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button
+        class="cinematic-menu-toggle"
+        id="cinematic-menu-toggle"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="cinematic-menu-panel"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
 </header>
 
-<main>
-<section class="page-hero">
-<div class="container">
-<p class="pill">Binghamton University</p>
-<h1>Geography & GIScience (B.A.)</h1>
-<p class="lead">Summa Cum Laude · GPA 3.88/4.0 · Highest honors.</p>
+<div class="cinematic-menu-panel" id="cinematic-menu-panel" aria-hidden="true">
+  <div class="cinematic-menu-panel-inner">
+    <div class="cinematic-menu-panel-top">
+      <a class="cinematic-logo" href="../index.html">Zhanchao Yang<sup>®</sup></a>
+      <button class="cinematic-menu-close" id="cinematic-menu-close" aria-label="Close menu">
+        <span></span><span></span>
+      </button>
+    </div>
+    <div class="cinematic-menu-grid">
+      <div class="cinematic-menu-col">
+        <a href="../index.html">Home <span>→</span></a>
+        <a href="about-me.html">About <span>→</span></a>
+        <a href="research.html">Research <span>→</span></a>
+        <a href="experience.html">Experience <span>→</span></a>
+      </div>
+      <div class="cinematic-menu-col">
+        <a href="publications.html">Publications <span>→</span></a>
+        <a href="awards.html">Awards <span>→</span></a>
+        <a href="upenn.html">UPenn</a>
+        <a href="binghamton.html">Binghamton</a>
+      </div>
+    </div>
+    <div class="cinematic-menu-foot">
+      <a class="cinematic-menu-cta" href="contact.html">Get in touch</a>
+      <p>Philadelphia, PA · zhanchao@upenn.edu</p>
+    </div>
+  </div>
 </div>
+
+<main>
+<section class="pc-hero">
+  <p class="pc-hero-eyebrow">Binghamton University</p>
+  <h1 class="pc-hero-title">
+    Geography &amp; <em>GIScience</em><br />
+    (B.A.)
+  </h1>
+  <p class="pc-hero-lead">
+    Summa Cum Laude · GPA 3.88 / 4.0 · <em>Highest honors</em>.
+  </p>
 </section>
 
 <!-- Project Showcase Section -->

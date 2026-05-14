@@ -762,7 +762,412 @@ body.menu-open {
   }
 }
 
-/* Cinematic hero content */
+/* ══════════════════════════════════════════════════════════
+   SUBPAGE CINEMATIC STYLE
+   Editorial typography + shared nav, with a per-page background color
+══════════════════════════════════════════════════════════ */
+
+body.page-cinematic {
+  background: var(--page-bg, #F5F1E8);
+  color: #1A1A1A;
+  font-family: 'Inter', system-ui, sans-serif;
+  --accent-orange:  #E8743C;
+  --accent-blue:    #3B5F7E;
+  --accent-mustard: #C99240;
+  --accent-green:   #5C7B4F;
+}
+
+body.page-cinematic::before { display: none; }
+
+/* Unique per-page background colors (all warm, harmonized with cream home) */
+body.page-cinematic.bg-peach    { --page-bg: #F2DECC; }
+body.page-cinematic.bg-sage     { --page-bg: #DCE4D2; }
+body.page-cinematic.bg-sky      { --page-bg: #D9E1E8; }
+body.page-cinematic.bg-butter   { --page-bg: #F1E7C8; }
+body.page-cinematic.bg-lilac    { --page-bg: #E2D9E5; }
+body.page-cinematic.bg-stone    { --page-bg: #E8E0D2; }
+body.page-cinematic.bg-rose     { --page-bg: #EBD8D4; }
+body.page-cinematic.bg-mint     { --page-bg: #D4DFD4; }
+
+/* Editorial italic accent helpers (also work on home) */
+body.page-cinematic em.accent-orange  { color: var(--accent-orange);  font-style: italic; }
+body.page-cinematic em.accent-blue    { color: var(--accent-blue);    font-style: italic; }
+body.page-cinematic em.accent-mustard { color: var(--accent-mustard); font-style: italic; }
+body.page-cinematic em.accent-green   { color: var(--accent-green);   font-style: italic; }
+
+/* ── Shared cinematic nav (matches home page bar) ─────────── */
+.page-cinematic .pc-nav {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  width: 100%;
+  background: transparent;
+  transition: background 0.3s ease, backdrop-filter 0.3s ease,
+    border-bottom-color 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.page-cinematic .pc-nav.scrolled {
+  background: color-mix(in srgb, var(--page-bg, #F5F1E8) 80%, white 10%);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border-bottom-color: rgba(0, 0, 0, 0.08);
+}
+
+.page-cinematic .pc-nav-inner {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.page-cinematic .pc-logo {
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.75rem;
+  letter-spacing: -0.025em;
+  color: #1A1A1A;
+  text-decoration: none;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.page-cinematic .pc-logo sup {
+  font-size: 0.5em;
+  vertical-align: super;
+  margin-left: 2px;
+  color: var(--accent-orange);
+}
+
+.page-cinematic .pc-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.page-cinematic .pc-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.page-cinematic .pc-nav-links a {
+  color: #1A1A1A;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+.page-cinematic .pc-nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  right: 0;
+  height: 1.5px;
+  background: #1A1A1A;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.page-cinematic .pc-nav-links a.active::after,
+.page-cinematic .pc-nav-links a:hover::after {
+  transform: scaleX(1);
+}
+
+@media (max-width: 720px) {
+  .page-cinematic .pc-nav-links { display: none; }
+  .page-cinematic .pc-nav-inner { padding: 18px 20px; }
+}
+
+/* ── Editorial page hero (replaces .page-hero on subpages) ── */
+.page-cinematic main { background: transparent; }
+
+.page-cinematic .pc-hero {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 64px 32px 48px;
+}
+
+.page-cinematic .pc-hero-eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #1A1A1A;
+  font-weight: 600;
+  margin: 0 0 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.page-cinematic .pc-hero-eyebrow::before {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background: #1A1A1A;
+}
+
+.page-cinematic .pc-hero-title {
+  font-family: 'Instrument Serif', serif;
+  font-weight: 400;
+  font-size: clamp(2.5rem, 7vw, 5.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  color: #1A1A1A;
+  margin: 0 0 28px;
+  max-width: 60rem;
+}
+
+.page-cinematic .pc-hero-title em {
+  font-style: italic;
+  color: #6F6F6F;
+}
+
+.page-cinematic .pc-hero-lead {
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(1.1rem, 1.6vw, 1.5rem);
+  line-height: 1.45;
+  color: #1A1A1A;
+  max-width: 42rem;
+  margin: 0;
+  font-style: italic;
+}
+
+.page-cinematic .pc-hero-lead em {
+  font-style: italic;
+  color: var(--accent-orange);
+}
+
+/* ── Body overrides: editorial cards, sections, footer ───── */
+.page-cinematic .section {
+  padding: 64px 0;
+}
+
+.page-cinematic .section.alt {
+  background: rgba(0, 0, 0, 0.03);
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.page-cinematic .container {
+  width: min(80rem, 92%);
+  margin: 0 auto;
+}
+
+.page-cinematic .section-title {
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.page-cinematic .section-title h2 {
+  font-family: 'Instrument Serif', serif;
+  font-weight: 400;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1;
+  letter-spacing: -0.025em;
+  color: #1A1A1A;
+  background: none;
+  -webkit-text-fill-color: #1A1A1A;
+  margin: 0 0 12px;
+}
+
+.page-cinematic .section-title p {
+  color: #4A4A4A;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+}
+
+/* Cards take on a warm, semi-translucent card look */
+.page-cinematic .card,
+.page-cinematic .list-card,
+.page-cinematic .timeline-item,
+.page-cinematic .pub-card,
+.page-cinematic .project-card,
+.page-cinematic .stacked-card,
+.page-cinematic .award-card-fancy,
+.page-cinematic .membership-card,
+.page-cinematic .contact-card,
+.page-cinematic .signature-card,
+.page-cinematic .stay-updated,
+.page-cinematic .award-photo-placeholder,
+.page-cinematic .fun-fact {
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  color: #1A1A1A;
+}
+
+.page-cinematic .card:hover,
+.page-cinematic .list-card:hover,
+.page-cinematic .timeline-item:hover,
+.page-cinematic .pub-card:hover,
+.page-cinematic .project-card:hover {
+  border-color: rgba(0, 0, 0, 0.18);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.page-cinematic .card h3,
+.page-cinematic .list-card h3,
+.page-cinematic .timeline-item h3,
+.page-cinematic .pub-content h3,
+.page-cinematic .project-title,
+.page-cinematic .award-showcase-content h2,
+.page-cinematic .award-card-fancy-content h3,
+.page-cinematic .stay-updated h3,
+.page-cinematic .signature-name {
+  color: #1A1A1A;
+  font-family: 'Instrument Serif', serif;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  background: none;
+  -webkit-text-fill-color: #1A1A1A;
+}
+
+.page-cinematic .card p,
+.page-cinematic .list-card p,
+.page-cinematic .list-card li,
+.page-cinematic .timeline-item p,
+.page-cinematic .pub-content p,
+.page-cinematic .stacked-card .card-content p,
+.page-cinematic .stacked-card .card-content li,
+.page-cinematic .award-description,
+.page-cinematic .stay-updated p,
+.page-cinematic .signature-title,
+.page-cinematic .signature-org,
+.page-cinematic .map-info-card p {
+  color: #4A4A4A;
+}
+
+.page-cinematic .timeline::before {
+  background: linear-gradient(180deg,
+    var(--accent-orange), var(--accent-mustard),
+    var(--accent-green), var(--accent-blue));
+}
+
+.page-cinematic .timeline-item::before {
+  background: var(--accent-orange);
+  border-color: var(--page-bg, #F5F1E8);
+  box-shadow: 0 0 0 4px rgba(232, 116, 60, 0.18);
+}
+
+.page-cinematic .timeline-year,
+.page-cinematic .pub-meta .year,
+.page-cinematic .award-year,
+.page-cinematic .membership-year {
+  color: var(--accent-orange);
+  background: rgba(232, 116, 60, 0.12);
+  border: 1px solid rgba(232, 116, 60, 0.25);
+  border-radius: 999px;
+  padding: 2px 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  display: inline-block;
+}
+
+.page-cinematic .pub-number {
+  background: rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.08);
+  color: #1A1A1A;
+}
+
+.page-cinematic .pill,
+.page-cinematic .eyebrow {
+  background: rgba(232, 116, 60, 0.12);
+  color: var(--accent-orange);
+  border: 1px solid rgba(232, 116, 60, 0.25);
+  -webkit-text-fill-color: var(--accent-orange);
+}
+
+.page-cinematic .badge,
+.page-cinematic .award-badge,
+.page-cinematic .award-ribbon {
+  background: #1A1A1A;
+  color: var(--page-bg, #F5F1E8);
+  -webkit-text-fill-color: var(--page-bg, #F5F1E8);
+  box-shadow: none;
+}
+
+.page-cinematic .tag {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #1A1A1A;
+}
+
+.page-cinematic .tag:hover {
+  border-color: var(--accent-orange);
+  box-shadow: 0 4px 14px rgba(232, 116, 60, 0.15);
+}
+
+.page-cinematic .primary-btn,
+.page-cinematic .copy-btn {
+  background: #1A1A1A;
+  color: var(--page-bg, #F5F1E8);
+  border: none;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.page-cinematic .primary-btn:hover,
+.page-cinematic .copy-btn:hover {
+  background: var(--accent-orange);
+  color: #FFFFFF;
+}
+
+.page-cinematic .secondary-btn {
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  color: #1A1A1A;
+}
+
+.page-cinematic .secondary-btn:hover {
+  background: #1A1A1A;
+  color: var(--page-bg, #F5F1E8);
+  border-color: #1A1A1A;
+  box-shadow: none;
+}
+
+.page-cinematic .ghost-btn {
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  color: #1A1A1A;
+}
+
+/* Page footer takes the editorial treatment */
+.page-cinematic .site-footer {
+  background: rgba(0, 0, 0, 0.04);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  color: #1A1A1A;
+}
+
+.page-cinematic .site-footer h3 {
+  font-family: 'Instrument Serif', serif;
+  font-weight: 400;
+  color: #1A1A1A;
+}
+
+.page-cinematic .site-footer p,
+.page-cinematic .footer-links a {
+  color: #4A4A4A;
+}
+
+.page-cinematic .footer-links a:hover { color: var(--accent-orange); }
+
+.page-cinematic .footer-note {
+  color: #6F6F6F;
+  font-family: 'Inter', sans-serif;
+}
+
 /* Fade-rise animations */
 @keyframes fade-rise {
   from {
