@@ -8,97 +8,269 @@
 			name="description"
 			content="Zhanchao Yang — city planning, geospatial analytics, and a healthy dose of curiosity."
 		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
-	<body>
-		<header class="site-header">
-			<div class="container nav-wrap">
-				<a class="logo" href="index.html">ZY</a>
-				<nav class="site-nav">
-					<a href="index.html" class="active">Home</a>
-					<a href="pages/about-me.html">About</a>
-					<div class="nav-dropdown">
-						<button class="nav-dropdown-toggle">Education <span class="dropdown-arrow">▾</span></button>
-						<div class="nav-dropdown-menu">
-							<a href="pages/upenn.html">UPenn</a>
-							<a href="pages/binghamton.html">Binghamton</a>
-						</div>
-					</div>
+	<body class="theme-light home-cinematic">
+		<div class="cinematic-shell">
+			<div class="cinematic-grain" aria-hidden="true"></div>
+
+			<p class="cinematic-tag animate-fade-rise">
+				Travel Behavior · Land Use · Economics · Smart Mobility
+			</p>
+
+			<header class="cinematic-nav" id="cinematic-nav">
+				<nav class="cinematic-nav-links">
+					<a href="#whats-up" class="active">Intro</a>
 					<a href="pages/research.html">Research</a>
-					<a href="pages/experience.html">Experience</a>
-					<a href="pages/publications.html">Publications</a>
-					<a href="pages/awards.html">Awards</a>
+					<a href="pages/publications.html">Journal</a>
 					<a href="pages/contact.html">Contact</a>
 				</nav>
-				<button id="theme-toggle" class="ghost-btn" type="button">
-					Toggle theme
+				<button
+					class="cinematic-menu-toggle"
+					id="cinematic-menu-toggle"
+					aria-label="Open menu"
+					aria-expanded="false"
+					aria-controls="cinematic-menu-panel"
+				>
+					<span></span>
+					<span></span>
+					<span></span>
 				</button>
-			</div>
-		</header>
+			</header>
 
-		<main>
-			<section class="hero">
-				<div class="container hero-grid">
-					<div>
-						<p class="eyebrow">Hi, I’m Zhanchao (Z) Yang 👋</p>
-						<h1>
-							Dual-degree master's student exploring how cities function through
-							GIS and urban informatics.
-						</h1>
-						<p class="lead">
-							MCP + MUSA at UPenn. Research fellow under Prof. Erick Guerra.
-							2024 SUNY Chancellor's Award recipient.
-						</p>
-						<div class="cta-row">
-							<a class="primary-btn" href="pages/about-me.html">Meet the human</a>
-							<a class="secondary-btn" href="pages/contact.html">Let’s connect</a>
-						</div>
-						<div class="quick-links">
-							<a href="https://storymaps.arcgis.com/collections/4b21436eff7e4ea88b55caa33ea26e3d" target="_blank" rel="noreferrer"
-								>Portfolio</a
-							>
-							<a
-								href="https://www.linkedin.com/in/zhanchaoyang/"
-								target="_blank"
-								rel="noreferrer"
-								>LinkedIn</a
-							>
-							<a href="https://linktr.ee/zhanchaoyang" target="_blank" rel="noreferrer">LinkTree</a>
-						</div>
-					</div>
-					<div class="hero-visual">
-						<div class="image-card">
-							<img
-								src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1200&q=80"
-								alt="City skyline at dusk"
+			<div class="cinematic-brand animate-fade-rise">
+				<h1 class="cinematic-wordmark">
+					ZHANCHAO<span class="cinematic-wordmark-bullet" aria-hidden="true">●</span>
+				</h1>
+				<a href="pages/about-me.html" class="cinematic-name-cta">
+					<span class="cinematic-name-cta-mono">ZY</span>
+					<span class="cinematic-name-cta-text">
+						<span class="cinematic-name-cta-label">About Zhanchao</span>
+						<span class="cinematic-name-cta-sub">Urban &amp; spatial analytics — Penn Weitzman</span>
+					</span>
+					<span class="cinematic-name-cta-arrow" aria-hidden="true">↗</span>
+				</a>
+			</div>
+
+			<div class="cinematic-stage animate-fade-rise-delay" aria-hidden="true">
+				<svg
+					class="cinematic-stage-svg"
+					viewBox="0 0 800 800"
+					preserveAspectRatio="xMidYMid meet"
+				>
+					<defs>
+						<radialGradient id="hubGlow" cx="50%" cy="50%" r="50%">
+							<stop offset="0%" stop-color="#E8743C" stop-opacity="0.18" />
+							<stop offset="40%" stop-color="#3B5F7E" stop-opacity="0.08" />
+							<stop offset="80%" stop-color="#1A1A1A" stop-opacity="0" />
+						</radialGradient>
+						<linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+							<stop offset="0%" stop-color="#E8743C" />
+							<stop offset="33%" stop-color="#C99240" />
+							<stop offset="66%" stop-color="#5C7B4F" />
+							<stop offset="100%" stop-color="#3B5F7E" />
+						</linearGradient>
+					</defs>
+
+					<circle cx="400" cy="400" r="360" fill="url(#hubGlow)" />
+
+					<circle cx="400" cy="400" r="370" fill="none"
+						stroke="url(#ringGrad)" stroke-width="10" opacity="0.55"
+						stroke-dasharray="1 63.61" />
+					<circle cx="400" cy="400" r="370" fill="none"
+						stroke="#1A1A1A" stroke-width="0.6" opacity="0.18" />
+
+					<circle cx="400" cy="400" r="240" fill="none"
+						stroke="#1A1A1A" stroke-width="0.6" opacity="0.25"
+						stroke-dasharray="3 7" />
+
+					<circle cx="400" cy="400" r="120" fill="none"
+						stroke="#1A1A1A" stroke-width="0.6" opacity="0.32" />
+
+					<g class="cinematic-spokes" stroke-width="0.8" stroke-dasharray="2 5" opacity="0.65">
+						<line x1="400" y1="400" x2="570" y2="230" stroke="#E8743C" class="spoke spoke-1" />
+						<line x1="400" y1="400" x2="230" y2="230" stroke="#3B5F7E" class="spoke spoke-2" />
+						<line x1="400" y1="400" x2="230" y2="570" stroke="#C99240" class="spoke spoke-3" />
+						<line x1="400" y1="400" x2="570" y2="570" stroke="#5C7B4F" class="spoke spoke-4" />
+					</g>
+
+					<g class="cinematic-sweep">
+						<line x1="400" y1="400" x2="400" y2="40"
+							stroke="#1A1A1A" stroke-width="1.2" opacity="0.45">
+							<animateTransform
+								attributeName="transform"
+								type="rotate"
+								from="0 400 400"
+								to="360 400 400"
+								dur="16s"
+								repeatCount="indefinite"
 							/>
-							<span class="image-badge">Urban analytics in motion</span>
-						</div>
-						<div class="hero-card terminal-card">
-							<div class="terminal-header">
-								<span class="terminal-dot red"></span>
-								<span class="terminal-dot yellow"></span>
-								<span class="terminal-dot green"></span>
-								<span class="terminal-title">zhanchao@research ~ </span>
-							</div>
-							<div class="terminal-body">
-								<p><span class="terminal-prompt">$</span> cat research_interests.txt</p>
-								<p class="terminal-output">→ Travel behavior modeling & human mobility</p>
-								<p class="terminal-output">→ GeoAI and remote sensing for urban planning</p>
-								<p class="terminal-output">→ Intelligent Transportation Systems (ITS)</p>
-								<p><span class="terminal-prompt">$</span> echo $CURRENT_STATUS</p>
-								<p class="terminal-output">Research Fellow @ UPenn under Prof. Erick Guerra</p>
-								<p><span class="terminal-prompt">$</span> <span class="terminal-cursor">_</span></p>
-							</div>
-						</div>
+						</line>
+					</g>
+
+					<g class="cinematic-pulse-rings" stroke-width="1.2" fill="none">
+						<circle cx="400" cy="400" r="100" stroke="#E8743C" class="ring ring-1" />
+						<circle cx="400" cy="400" r="100" stroke="#5C7B4F" class="ring ring-2" />
+						<circle cx="400" cy="400" r="100" stroke="#3B5F7E" class="ring ring-3" />
+					</g>
+
+					<g class="cinematic-microdots" fill="#1A1A1A" opacity="0.45">
+						<circle cx="520" cy="400" r="2" />
+						<circle cx="485" cy="315" r="2" />
+						<circle cx="400" cy="280" r="2" />
+						<circle cx="315" cy="315" r="2" />
+						<circle cx="280" cy="400" r="2" />
+						<circle cx="315" cy="485" r="2" />
+						<circle cx="400" cy="520" r="2" />
+						<circle cx="485" cy="485" r="2" />
+					</g>
+
+					<g class="cinematic-points">
+						<g transform="translate(570, 230)" class="point-group point-1">
+							<circle r="6" fill="#E8743C" class="point" />
+							<circle r="6" fill="none" stroke="#E8743C"
+								stroke-width="1.2" class="point-ring" />
+							<text x="16" y="-10" font-family="Inter,sans-serif"
+								font-size="11" fill="#1A1A1A"
+								font-weight="600" letter-spacing="2.2">SMART MOBILITY</text>
+							<text x="16" y="6" font-family="Inter,sans-serif"
+								font-size="9" fill="#E8743C"
+								font-weight="500" letter-spacing="1.5">01 · futures</text>
+						</g>
+
+						<g transform="translate(230, 230)" class="point-group point-2">
+							<circle r="6" fill="#3B5F7E" class="point" />
+							<circle r="6" fill="none" stroke="#3B5F7E"
+								stroke-width="1.2" class="point-ring" />
+							<text x="-16" y="-10" text-anchor="end"
+								font-family="Inter,sans-serif" font-size="11"
+								fill="#1A1A1A" font-weight="600"
+								letter-spacing="2.2">TRAVEL BEHAVIOR</text>
+							<text x="-16" y="6" text-anchor="end"
+								font-family="Inter,sans-serif" font-size="9"
+								fill="#3B5F7E" font-weight="500"
+								letter-spacing="1.5">02 · people</text>
+						</g>
+
+						<g transform="translate(230, 570)" class="point-group point-3">
+							<circle r="6" fill="#C99240" class="point" />
+							<circle r="6" fill="none" stroke="#C99240"
+								stroke-width="1.2" class="point-ring" />
+							<text x="-16" y="-6" text-anchor="end"
+								font-family="Inter,sans-serif" font-size="11"
+								fill="#1A1A1A" font-weight="600"
+								letter-spacing="2.2">TRANSPORT &amp; ECONOMICS</text>
+							<text x="-16" y="10" text-anchor="end"
+								font-family="Inter,sans-serif" font-size="9"
+								fill="#C99240" font-weight="500"
+								letter-spacing="1.5">03 · value</text>
+						</g>
+
+						<g transform="translate(570, 570)" class="point-group point-4">
+							<circle r="6" fill="#5C7B4F" class="point" />
+							<circle r="6" fill="none" stroke="#5C7B4F"
+								stroke-width="1.2" class="point-ring" />
+							<text x="16" y="-6" font-family="Inter,sans-serif"
+								font-size="11" fill="#1A1A1A" font-weight="600"
+								letter-spacing="2.2">TRANSPORT &amp; LAND USE</text>
+							<text x="16" y="10" font-family="Inter,sans-serif"
+								font-size="9" fill="#5C7B4F" font-weight="500"
+								letter-spacing="1.5">04 · place</text>
+						</g>
+					</g>
+
+					<g class="cinematic-hub">
+						<circle cx="400" cy="400" r="24"
+							fill="#F5F1E8" stroke="#1A1A1A" stroke-width="1.4" />
+						<circle cx="400" cy="400" r="7" fill="#1A1A1A" />
+					</g>
+				</svg>
+			</div>
+
+			<div class="cinematic-bio animate-fade-rise-delay">
+				<p class="cinematic-bio-caps">
+					Penn Weitzman · MCP + MUSA<br />
+					Transportation Research with Prof. Erick Guerra
+				</p>
+				<div class="cinematic-bio-divider"></div>
+				<p class="cinematic-bio-quote">
+					At the intersection of how <em class="accent-blue">people move</em>
+					and how <em class="accent-green">cities grow</em>.
+				</p>
+			</div>
+
+			<div class="cinematic-desc animate-fade-rise-delay-2">
+				<p>
+					<em class="accent-orange">Smart mobility</em>,
+					<em class="accent-blue">travel behavior</em>,<br />
+					<em class="accent-mustard">economics</em> &amp;
+					<em class="accent-green">land use</em>.<br />
+					Reading the pulse of cities.
+				</p>
+			</div>
+
+			<a class="cinematic-scroll-hint animate-fade-rise-delay-2" href="#whats-up">
+				<span class="cinematic-scroll-circle" aria-hidden="true">
+					<svg viewBox="0 0 24 24" width="14" height="14">
+						<path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.5"
+							stroke-linecap="round" stroke-linejoin="round" />
+					</svg>
+				</span>
+				<span>Scroll to continue</span>
+			</a>
+		</div>
+
+		<div
+			class="cinematic-menu-panel"
+			id="cinematic-menu-panel"
+			aria-hidden="true"
+		>
+			<div class="cinematic-menu-panel-inner">
+				<div class="cinematic-menu-panel-top">
+					<a class="cinematic-logo" href="index.html">
+						Zhanchao Yang<sup>®</sup>
+					</a>
+					<button
+						class="cinematic-menu-close"
+						id="cinematic-menu-close"
+						aria-label="Close menu"
+					>
+						<span></span>
+						<span></span>
+					</button>
+				</div>
+				<div class="cinematic-menu-grid">
+					<div class="cinematic-menu-col">
+						<a href="index.html">Home <span aria-hidden="true">→</span></a>
+						<a href="pages/about-me.html">About <span aria-hidden="true">→</span></a>
+						<a href="pages/research.html">Research <span aria-hidden="true">→</span></a>
+						<a href="pages/experience.html">Experience <span aria-hidden="true">→</span></a>
+					</div>
+					<div class="cinematic-menu-col">
+						<a href="pages/publications.html">Publications <span aria-hidden="true">→</span></a>
+						<a href="pages/awards.html">Awards <span aria-hidden="true">→</span></a>
+						<a href="pages/upenn.html">UPenn</a>
+						<a href="pages/binghamton.html">Binghamton</a>
 					</div>
 				</div>
-			</section>
+				<div class="cinematic-menu-foot">
+					<a class="cinematic-menu-cta" href="pages/contact.html">Get in touch</a>
+					<p>Philadelphia, PA · zhanchao@upenn.edu</p>
+				</div>
+			</div>
+		</div>
 
-			<section class="section">
+		<main>
+			<section class="section" id="whats-up">
 				<div class="container">
 					<div class="section-title">
-						<h2>What I’m up to now</h2>
+						<h2>What I'm up to now</h2>
 						<p>Three hats, one brain, zero boredom.</p>
 					</div>
 					<div class="card-grid">
@@ -231,7 +403,7 @@
 		<footer class="site-footer">
 			<div class="container footer-grid">
 				<div>
-					<h3>Let’s build something smart.</h3>
+					<h3>Let's build something smart.</h3>
 					<p>Philadelphia, PA · zhanchao@upenn.edu · 607-644-7982</p>
 				</div>
 				<div class="footer-links">
