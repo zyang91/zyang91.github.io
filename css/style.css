@@ -69,6 +69,7 @@ body.home-cinematic::before {
   color: #1A1A1A;
   font-weight: 500;
   z-index: 5;
+  pointer-events: none;
 }
 
 /* Brand block: wordmark + About CTA below it */
@@ -80,6 +81,13 @@ body.home-cinematic::before {
   gap: 18px;
   z-index: 5;
   padding-top: 4px;
+  /* Let pointer events fall through to the SVG points behind us.
+     Only the CTA below re-enables hit-testing. */
+  pointer-events: none;
+}
+
+.cinematic-brand .cinematic-name-cta {
+  pointer-events: auto;
 }
 
 .cinematic-wordmark {
@@ -198,6 +206,13 @@ body.home-cinematic::before {
   justify-content: flex-end;
   gap: 28px;
   padding-top: 12px;
+  /* Let pointer events fall through the bar; links/button re-enable below. */
+  pointer-events: none;
+}
+
+.cinematic-nav-links,
+.cinematic-nav .cinematic-menu-toggle {
+  pointer-events: auto;
 }
 
 .cinematic-nav-links {
@@ -249,10 +264,78 @@ body.home-cinematic::before {
 }
 
 .cinematic-stage-svg {
-  width: min(820px, 82vmin);
+  width: min(900px, 90vmin);
   height: auto;
   display: block;
-  filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.06));
+  overflow: visible;
+  pointer-events: none;
+}
+
+/* Re-enable hover interaction only on the labeled research points */
+.cinematic-points .point-group {
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+/* Cream outline around labels so they pop on the busy compass */
+.cinematic-points .label-main,
+.cinematic-points .label-sub {
+  paint-order: stroke fill;
+  stroke: #F5F1E8;
+  stroke-width: 4px;
+  stroke-linejoin: round;
+}
+
+/* Smooth hover transitions */
+.cinematic-points .point-group .point,
+.cinematic-points .point-group .point-ring,
+.cinematic-points .point-group .label-main,
+.cinematic-points .point-group .label-sub {
+  transition: r 0.35s cubic-bezier(0.25, 1, 0.5, 1),
+              font-size 0.35s cubic-bezier(0.25, 1, 0.5, 1),
+              font-weight 0.2s ease,
+              stroke-width 0.3s ease,
+              filter 0.3s ease,
+              opacity 0.3s ease;
+}
+
+/* Hover: dot/ring grow, animation pauses so it sits steady at the bigger size */
+.cinematic-points .point-group:hover .point {
+  r: 12;
+  animation: none;
+  transform: none;
+  opacity: 1;
+}
+
+.cinematic-points .point-group:hover .point-ring {
+  r: 22;
+  stroke-width: 1.8;
+  animation: none;
+  transform: none;
+  opacity: 0.85;
+}
+
+/* Hover: labels swell + go bold. Kept conservative so the longest one
+   ("TRANSPORT & ECONOMICS") still fits without being cut off. */
+.cinematic-points .point-group:hover .label-main {
+  font-size: 22px;
+  font-weight: 700;
+  stroke-width: 5px;
+}
+
+.cinematic-points .point-group:hover .label-sub {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Dim non-hovered point groups to focus attention */
+.cinematic-points:hover .point-group {
+  opacity: 0.35;
+  transition: opacity 0.25s ease;
+}
+
+.cinematic-points:hover .point-group:hover {
+  opacity: 1;
 }
 
 /* Concentric pulse rings (radar pulse from center) */
