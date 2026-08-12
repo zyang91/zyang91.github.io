@@ -1,0 +1,649 @@
+/* ══════════════════════════════════════════════════════════════
+   Zhanchao Yang — Research Proposal pages
+   Extends home.css. Each proposal page carries a theme accent:
+   perception pages lean sage (see design.md research categories).
+══════════════════════════════════════════════════════════════ */
+
+body.proposal {
+	background: var(--bg);
+	color: var(--ink);
+	font-family: var(--sans);
+	font-size: 16px;
+	line-height: 1.65;
+	-webkit-font-smoothing: antialiased;
+	overflow-x: hidden;
+}
+
+/* theme accent — deep sage that stays readable on ivory */
+body.theme-perception {
+	--accent: #53775b;
+	--accent-soft: var(--sage);
+	--accent-mid: var(--sage-deep);
+}
+
+/* section labels pick up the page accent instead of red */
+.proposal .section-label {
+	color: var(--accent);
+}
+.proposal .section-label::before {
+	background: var(--accent);
+}
+
+/* ── Proposal hero ────────────────────────────────────────── */
+.p-hero {
+	position: relative;
+	padding: 158px 0 84px;
+	overflow: hidden;
+}
+
+/* faint city map drifting behind the right column */
+.p-hero-map {
+	position: absolute;
+	top: -10%;
+	bottom: -10%;
+	right: -6%;
+	width: 62%;
+	opacity: 0.5;
+	pointer-events: none;
+	-webkit-mask-image: radial-gradient(
+		ellipse 75% 80% at 62% 45%,
+		rgba(0, 0, 0, 1) 40%,
+		rgba(0, 0, 0, 0) 82%
+	);
+	mask-image: radial-gradient(
+		ellipse 75% 80% at 62% 45%,
+		rgba(0, 0, 0, 1) 40%,
+		rgba(0, 0, 0, 0) 82%
+	);
+}
+.p-hero-map img {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 150%;
+	height: auto;
+	transform: translate(-50%, -50%);
+}
+.p-hero-scrim {
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	pointer-events: none;
+	background: linear-gradient(
+		100deg,
+		var(--bg) 0%,
+		var(--bg) 30%,
+		rgba(250, 248, 244, 0.7) 55%,
+		rgba(250, 248, 244, 0.15) 80%
+	);
+}
+
+.p-hero-content {
+	position: relative;
+	z-index: 2;
+	max-width: 660px;
+}
+
+.p-crumb {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	font-size: 0.78rem;
+	font-weight: 500;
+	letter-spacing: 0.06em;
+	color: var(--ink-faint);
+	text-decoration: none;
+	margin-bottom: 30px;
+	transition: color 0.25s ease;
+}
+.p-crumb .arrow {
+	transition: transform 0.3s ease;
+}
+.p-crumb:hover {
+	color: var(--red);
+}
+.p-crumb:hover .arrow {
+	transform: translateX(-3px);
+}
+
+.p-eyebrow {
+	font-size: 0.78rem;
+	font-weight: 600;
+	letter-spacing: 0.17em;
+	text-transform: uppercase;
+	color: var(--accent);
+	margin-bottom: 22px;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	flex-wrap: wrap;
+}
+.p-eyebrow::before {
+	content: '';
+	width: 30px;
+	height: 1.5px;
+	background: var(--accent);
+}
+.p-eyebrow .p-status {
+	color: var(--ink);
+	background: rgba(128, 153, 181, 0.32);
+	border-radius: 100px;
+	padding: 4px 13px;
+	letter-spacing: 0.12em;
+}
+
+.p-hero h1 {
+	font-family: var(--serif);
+	font-size: clamp(2.5rem, 5.2vw, 3.8rem);
+	font-weight: 600;
+	line-height: 1.08;
+	letter-spacing: -0.015em;
+	margin-bottom: 24px;
+	max-width: 560px;
+}
+.p-dek {
+	font-family: var(--serif);
+	font-size: clamp(1.14rem, 2vw, 1.3rem);
+	line-height: 1.6;
+	color: var(--ink-soft);
+	max-width: 540px;
+	margin-bottom: 26px;
+}
+.p-dek em {
+	font-style: italic;
+	color: var(--ink);
+}
+.p-lede {
+	font-size: 0.98rem;
+	line-height: 1.7;
+	color: var(--ink-soft);
+	max-width: 540px;
+	margin-bottom: 34px;
+}
+.p-keywords {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+.p-keywords span {
+	font-size: 0.73rem;
+	font-weight: 500;
+	letter-spacing: 0.04em;
+	color: var(--ink-soft);
+	border: 1px solid var(--line);
+	border-radius: 100px;
+	padding: 5px 14px;
+	background: rgba(255, 255, 255, 0.55);
+}
+
+/* concept chips under the hero */
+.p-concepts {
+	position: relative;
+	z-index: 2;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 28px;
+	margin-top: 66px;
+	padding-top: 44px;
+	border-top: 1px solid var(--line-soft);
+}
+.p-concept {
+	display: flex;
+	align-items: flex-start;
+	gap: 16px;
+}
+.p-concept .icon-badge {
+	width: 48px;
+	height: 48px;
+}
+.p-concept .icon-badge svg {
+	width: 23px;
+	height: 23px;
+}
+.p-concept h3 {
+	font-family: var(--serif);
+	font-size: 1.04rem;
+	font-weight: 600;
+	line-height: 1.3;
+	margin-bottom: 4px;
+}
+.p-concept p {
+	font-size: 0.84rem;
+	line-height: 1.55;
+	color: var(--ink-soft);
+}
+
+/* ── The Core Idea — two cities compared ──────────────────── */
+.compare {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) 64px minmax(0, 1fr);
+	align-items: stretch;
+	gap: 0;
+}
+.compare-panel {
+	background: var(--surface);
+	border: 1px solid var(--line-soft);
+	border-radius: 6px;
+	box-shadow: var(--shadow);
+	padding: 32px 32px 26px;
+	display: flex;
+	flex-direction: column;
+}
+.compare-panel h3 {
+	font-family: var(--serif);
+	font-size: 1.35rem;
+	font-weight: 600;
+	text-align: center;
+	margin-bottom: 6px;
+}
+.compare-panel .compare-sub {
+	font-size: 0.86rem;
+	color: var(--ink-soft);
+	text-align: center;
+	margin-bottom: 22px;
+}
+.compare-fig {
+	background: var(--surface-warm);
+	border: 1px solid var(--line-soft);
+	border-radius: 4px;
+	padding: 14px;
+	margin-bottom: 20px;
+}
+.compare-fig svg {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.compare-vs {
+	align-self: center;
+	justify-self: center;
+	width: 52px;
+	height: 52px;
+	border-radius: 50%;
+	background: var(--ink);
+	color: #fdfcf9;
+	font-family: var(--serif);
+	font-style: italic;
+	font-size: 1.05rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: var(--shadow);
+	z-index: 1;
+}
+
+/* legends */
+.legend {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px 22px;
+	margin-top: auto;
+}
+.legend li {
+	list-style: none;
+	display: inline-flex;
+	align-items: center;
+	gap: 9px;
+	font-size: 0.76rem;
+	color: var(--ink-soft);
+}
+.lg-swatch {
+	flex-shrink: 0;
+	width: 13px;
+	height: 13px;
+	border-radius: 3px;
+}
+.lg-line {
+	flex-shrink: 0;
+	width: 22px;
+	height: 0;
+	border-top: 2.6px solid currentColor;
+	border-radius: 2px;
+}
+.lg-line.dashed {
+	border-top-style: dashed;
+}
+
+/* route draws itself when the panel scrolls into view */
+.route-draw {
+	stroke-dasharray: 720;
+	stroke-dashoffset: 720;
+}
+.compare-panel.in-view .route-draw {
+	animation: route-draw 1.9s cubic-bezier(0.3, 0, 0.2, 1) forwards 0.45s;
+}
+@keyframes route-draw {
+	to { stroke-dashoffset: 0; }
+}
+.route-fade {
+	opacity: 0;
+	transition: opacity 1.2s ease 0.9s;
+}
+.compare-panel.in-view .route-fade {
+	opacity: 1;
+}
+
+/* ── Where the Idea Comes From ────────────────────────────── */
+.section-origin {
+	background: var(--surface-warm);
+	border-top: 1px solid var(--line-soft);
+	border-bottom: 1px solid var(--line-soft);
+}
+.origin-grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	gap: 64px;
+	align-items: start;
+	margin-bottom: 64px;
+}
+.origin-prose p {
+	font-size: 0.98rem;
+	line-height: 1.75;
+	color: var(--ink-soft);
+	margin-bottom: 20px;
+	max-width: 520px;
+}
+.origin-prose p strong {
+	color: var(--ink);
+	font-weight: 600;
+}
+.origin-question {
+	font-family: var(--serif);
+	font-size: clamp(1.3rem, 2.3vw, 1.6rem);
+	font-style: italic;
+	line-height: 1.5;
+	color: var(--ink);
+	border-left: 3px solid var(--accent-mid);
+	padding: 10px 0 10px 28px;
+	margin: 8px 0;
+}
+
+/* conceptual framework — five stations on one line */
+.flow-panel {
+	background: var(--surface);
+	border: 1px solid var(--line-soft);
+	border-radius: 6px;
+	box-shadow: var(--shadow);
+	padding: 44px 40px 40px;
+}
+.flow-title {
+	font-size: 0.74rem;
+	font-weight: 600;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: var(--accent);
+	text-align: center;
+	margin-bottom: 40px;
+}
+.flow {
+	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 8px;
+	position: relative;
+}
+/* the line the stations sit on: col centers at 10% … 90% */
+.flow::before {
+	content: '';
+	position: absolute;
+	top: 27px;
+	left: 10%;
+	right: 10%;
+	height: 2px;
+	background: var(--line);
+}
+.flow li {
+	position: relative;
+	text-align: center;
+	padding: 0 8px;
+}
+.flow li:not(:last-child)::after {
+	content: '';
+	position: absolute;
+	top: 22px;
+	right: -5px;
+	width: 8px;
+	height: 8px;
+	border-top: 2px solid var(--ink-faint);
+	border-right: 2px solid var(--ink-faint);
+	transform: rotate(45deg);
+}
+.flow .flow-badge {
+	position: relative;
+	width: 54px;
+	height: 54px;
+	margin: 0 auto 16px;
+	border-radius: 50%;
+	background: var(--surface);
+	border: 4.5px solid var(--stage-c, var(--sand-deep));
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--ink);
+	box-shadow: 0 0 0 6px var(--surface);
+}
+.flow .flow-badge svg {
+	width: 22px;
+	height: 22px;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 1.6;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+.flow .flow-stage {
+	display: block;
+	font-size: 0.66rem;
+	font-weight: 600;
+	letter-spacing: 0.16em;
+	color: var(--accent);
+	margin-bottom: 6px;
+}
+.flow h3 {
+	font-family: var(--serif);
+	font-size: 1rem;
+	font-weight: 600;
+	line-height: 1.3;
+	margin-bottom: 7px;
+}
+.flow p {
+	font-size: 0.78rem;
+	line-height: 1.55;
+	color: var(--ink-soft);
+}
+.flow .st-environment { --stage-c: var(--sand-deep); }
+.flow .st-perception { --stage-c: var(--sage-deep); }
+.flow .st-choice { --stage-c: #8fa98f; }
+.flow .st-access { --stage-c: var(--blue-soft); }
+.flow .st-outcomes { --stage-c: var(--terracotta); }
+
+/* ── What This Project Aims to Do — editorial rows ────────── */
+.aim-row {
+	display: flex;
+	align-items: flex-start;
+	gap: 40px;
+	padding: 44px 0;
+	border-bottom: 1px solid var(--line-soft);
+}
+.aim-row:last-of-type {
+	border-bottom: none;
+}
+.aim-badge {
+	flex-shrink: 0;
+	width: 64px;
+	height: 64px;
+	margin-top: 4px;
+	border-radius: 50%;
+	background: var(--aim-c, var(--accent-soft));
+	color: var(--ink);
+	font-family: var(--serif);
+	font-style: italic;
+	font-size: 1.35rem;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+.aim-content {
+	max-width: 720px;
+}
+.aim-content h3 {
+	font-family: var(--serif);
+	font-size: clamp(1.25rem, 2.3vw, 1.5rem);
+	font-weight: 600;
+	line-height: 1.35;
+	margin-bottom: 10px;
+}
+.aim-content p {
+	font-size: 0.96rem;
+	line-height: 1.65;
+	color: var(--ink-soft);
+	max-width: 620px;
+}
+.aim-behavior { --aim-c: var(--sage); }
+.aim-access { --aim-c: rgba(128, 153, 181, 0.32); }
+.aim-outcomes { --aim-c: rgba(215, 106, 84, 0.28); }
+
+/* ── Closing statement ────────────────────────────────────── */
+.section-closing {
+	background: var(--surface-warm);
+	border-top: 1px solid var(--line-soft);
+	border-bottom: 1px solid var(--line-soft);
+}
+.closing {
+	max-width: 780px;
+	margin: 0 auto;
+	text-align: center;
+}
+.closing .icon-badge {
+	--badge-bg: var(--accent-soft);
+	width: 58px;
+	height: 58px;
+	margin-bottom: 28px;
+}
+.closing .icon-badge svg {
+	width: 26px;
+	height: 26px;
+}
+.closing-text {
+	font-family: var(--serif);
+	font-size: clamp(1.3rem, 2.6vw, 1.7rem);
+	line-height: 1.55;
+	color: var(--ink);
+	margin-bottom: 38px;
+}
+.closing-text strong {
+	font-weight: 600;
+}
+.closing-actions {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 22px;
+	flex-wrap: wrap;
+}
+.closing .text-link {
+	font-size: 0.88rem;
+	font-weight: 600;
+	color: var(--red);
+	text-decoration: none;
+	display: inline-flex;
+	align-items: center;
+	gap: 7px;
+}
+.closing .text-link .arrow {
+	transition: transform 0.3s ease;
+}
+.closing .text-link:hover .arrow {
+	transform: translateX(4px);
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 1020px) {
+	.p-hero-map {
+		opacity: 0.3;
+		width: 90%;
+	}
+	.origin-grid {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+	.origin-prose p {
+		max-width: 620px;
+	}
+}
+
+@media (max-width: 880px) {
+	.compare {
+		grid-template-columns: 1fr;
+	}
+	.compare-vs {
+		margin: 22px auto;
+	}
+	.flow {
+		grid-template-columns: 1fr;
+		gap: 0;
+	}
+	.flow::before {
+		top: 27px;
+		bottom: 27px;
+		left: 26px;
+		right: auto;
+		width: 2px;
+		height: auto;
+	}
+	.flow li {
+		display: grid;
+		grid-template-columns: 54px 1fr;
+		column-gap: 20px;
+		text-align: left;
+		padding: 0 0 34px;
+	}
+	.flow li:last-child {
+		padding-bottom: 0;
+	}
+	.flow li:not(:last-child)::after {
+		display: none;
+	}
+	.flow .flow-badge {
+		margin: 0;
+		grid-row: 1 / span 3;
+	}
+	.p-concepts {
+		grid-template-columns: 1fr;
+		gap: 26px;
+	}
+}
+
+@media (max-width: 720px) {
+	.p-hero {
+		padding: 128px 0 64px;
+	}
+	.aim-row {
+		flex-direction: column;
+		gap: 18px;
+		padding: 36px 0;
+	}
+	.aim-badge {
+		width: 54px;
+		height: 54px;
+		font-size: 1.15rem;
+	}
+	.compare-panel {
+		padding: 24px 22px 20px;
+	}
+	.flow-panel {
+		padding: 32px 26px;
+	}
+}
+
+/* ── Reduced motion ───────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+	.route-draw {
+		animation: none !important;
+		stroke-dashoffset: 0;
+	}
+	.route-fade {
+		opacity: 1;
+		transition: none;
+	}
+}
