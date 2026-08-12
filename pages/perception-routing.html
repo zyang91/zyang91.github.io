@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Perception-Based Urban Routing | Zhanchao Yang</title>
+		<meta
+			name="description"
+			content="An ongoing research project examining how perceptions of urban space shape route choice, experienced accessibility, and broader urban outcomes."
+		/>
+		<link
+			rel="icon"
+			href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%F0%9F%97%BA%EF%B8%8F%3C/text%3E%3C/svg%3E"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="../css/home.css" />
+		<link rel="stylesheet" href="../css/proposal.css" />
+	</head>
+	<body class="proposal theme-perception">
+		<!-- ══ Navigation ══ -->
+		<header class="site-nav" id="site-nav">
+			<div class="nav-inner">
+				<div class="nav-brand">
+					<a class="nav-name" href="../index.html">Zhanchao Yang</a>
+					<span class="nav-affil">Penn Weitzman</span>
+				</div>
+				<button
+					class="nav-toggle"
+					id="nav-toggle"
+					aria-label="Open menu"
+					aria-expanded="false"
+					aria-controls="nav-links"
+				>
+					<span></span><span></span><span></span>
+				</button>
+				<nav class="nav-links" id="nav-links">
+					<a href="research.html" class="active">Research</a>
+					<a href="publications.html">Publications</a>
+					<a href="experience.html">Experience</a>
+					<a href="about-me.html">About</a>
+					<a href="contact.html">Contact</a>
+				</nav>
+			</div>
+		</header>
+
+		<!-- ══ Hero ══ -->
+		<section class="p-hero">
+			<div class="p-hero-map" aria-hidden="true">
+				<img src="../assets/philly-map.svg" alt="" />
+			</div>
+			<div class="p-hero-scrim" aria-hidden="true"></div>
+
+			<div class="container">
+				<div class="p-hero-content">
+					<a class="p-crumb reveal in-view" href="research.html">
+						<span class="arrow" aria-hidden="true">←</span> Research
+					</a>
+					<p class="p-eyebrow reveal in-view">
+						Research Proposal
+						<span class="p-status">Idea</span>
+					</p>
+					<h1 class="reveal in-view">Perception-Based Urban Routing</h1>
+					<p class="p-dek reveal in-view reveal-d1">
+						Understanding how perceptions of urban space shape the routes
+						people choose — <em>and the outcomes that follow</em>.
+					</p>
+					<p class="p-lede reveal in-view reveal-d1">
+						Conventional routing models assume travelers respond to measurable
+						attributes such as travel time, distance, cost, and network
+						connectivity. Yet people also navigate cities through their
+						perceptions of neighborhoods and places — avoiding certain areas,
+						preferring familiar environments, or choosing routes that differ
+						from those an algorithm calls optimal.
+					</p>
+					<div class="p-keywords reveal in-view reveal-d2">
+						<span>Route Choice</span>
+						<span>Urban Perception</span>
+						<span>Accessibility</span>
+						<span>Travel Behavior</span>
+					</div>
+				</div>
+
+				<!-- three concepts the project connects -->
+				<div class="p-concepts">
+					<div class="p-concept reveal">
+						<span class="icon-badge" style="--badge-bg: var(--sage)" aria-hidden="true">
+							<svg viewBox="0 0 24 24">
+								<circle cx="12" cy="7.6" r="3.4" />
+								<path d="M5.5 20.2c1-4 3.5-6 6.5-6s5.5 2 6.5 6" />
+							</svg>
+						</span>
+						<div>
+							<h3>Human Perception</h3>
+							<p>Mental maps of neighborhoods and places.</p>
+						</div>
+					</div>
+					<div class="p-concept reveal reveal-d1">
+						<span class="icon-badge" style="--badge-bg: var(--sand)" aria-hidden="true">
+							<svg viewBox="0 0 24 24">
+								<path d="M5 20V10.5" />
+								<path d="M5 10.5C5 6 9 4.5 12 7c3 2.5 7 1 7-3.5" />
+								<circle cx="5" cy="20" r="1.6" fill="currentColor" stroke="none" />
+								<circle cx="19" cy="3.5" r="1.6" fill="currentColor" stroke="none" />
+							</svg>
+						</span>
+						<div>
+							<h3>Route Choice</h3>
+							<p>Perception influences daily routing decisions.</p>
+						</div>
+					</div>
+					<div class="p-concept reveal reveal-d2">
+						<span class="icon-badge" style="--badge-bg: rgba(128, 153, 181, 0.32)" aria-hidden="true">
+							<svg viewBox="0 0 24 24">
+								<path d="M4 20h16" />
+								<path d="M6.5 20v-6.5M12 20V5.5M17.5 20v-9.5" />
+							</svg>
+						</span>
+						<div>
+							<h3>Urban Outcomes</h3>
+							<p>Impacts on accessibility and urban activity.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<main>
+			<!-- ══ The Core Idea ══ -->
+			<section class="section" id="core-idea">
+				<div class="container">
+					<p class="section-label reveal">The Core Idea</p>
+					<h2 class="section-title reveal">
+						Two cities, one origin and destination
+					</h2>
+					<p class="section-intro reveal">
+						For the same origin and destination, the algorithmic
+						&ldquo;optimal&rdquo; route and the perception-influenced route can
+						be very different. These differences may lead to different
+						experiences of accessibility — and different patterns of
+						opportunity in the city.
+					</p>
+
+					<div class="compare">
+						<!-- The Algorithmic City -->
+						<article class="compare-panel reveal">
+							<h3>The Algorithmic City</h3>
+							<p class="compare-sub">
+								The city as represented by the transportation network.
+							</p>
+							<div class="compare-fig" aria-hidden="true">
+								<svg viewBox="0 0 440 280">
+									<defs>
+										<pattern id="gridA" width="26" height="26" patternUnits="userSpaceOnUse">
+											<path d="M 26 0 H 0 V 26" fill="none" stroke="#0b2345" stroke-width="0.6" />
+										</pattern>
+									</defs>
+									<rect width="440" height="280" fill="url(#gridA)" opacity="0.1" />
+									<path d="M 14 252 L 426 44" stroke="#0b2345" stroke-width="1.2" opacity="0.12" />
+									<path d="M 60 14 L 200 268" stroke="#0b2345" stroke-width="1.2" opacity="0.09" />
+									<!-- high modeled access -->
+									<path d="M 96 62 L 216 46 L 244 122 L 156 152 L 88 124 Z"
+										fill="#8099b5" opacity="0.24" />
+									<path d="M 252 148 L 366 128 L 402 194 L 306 228 L 250 202 Z"
+										fill="#8099b5" opacity="0.18" />
+									<text x="166" y="102" text-anchor="middle" font-family="Inter, sans-serif"
+										font-size="8.5" fill="#0b2345" opacity="0.55" letter-spacing="1.4">HIGH ACCESS</text>
+									<!-- shortest / fastest route -->
+									<path class="route-draw" d="M 46 214 L 130 198 L 150 150 L 240 132 L 266 100 L 352 86 L 394 68"
+										fill="none" stroke="#0b2345" stroke-width="3" stroke-linecap="round"
+										stroke-linejoin="round" />
+									<circle cx="46" cy="214" r="7" fill="#0b2345" />
+									<circle cx="394" cy="68" r="7" fill="#a51c30" />
+									<text x="46" y="198" text-anchor="middle" font-family="'Source Serif 4', serif"
+										font-style="italic" font-size="14" fill="#0b2345">A</text>
+									<text x="394" y="52" text-anchor="middle" font-family="'Source Serif 4', serif"
+										font-style="italic" font-size="14" fill="#0b2345">B</text>
+								</svg>
+							</div>
+							<ul class="legend">
+								<li><span class="lg-line" style="color: #0b2345"></span> Shortest / fastest route</li>
+								<li><span class="lg-swatch" style="background: rgba(128, 153, 181, 0.4)"></span> High modeled access</li>
+							</ul>
+						</article>
+
+						<span class="compare-vs reveal" aria-hidden="true">vs.</span>
+
+						<!-- The Perceived City -->
+						<article class="compare-panel reveal reveal-d1">
+							<h3>The Perceived City</h3>
+							<p class="compare-sub">
+								The city as experienced and interpreted by people.
+							</p>
+							<div class="compare-fig" aria-hidden="true">
+								<svg viewBox="0 0 440 280">
+									<defs>
+										<pattern id="gridB" width="26" height="26" patternUnits="userSpaceOnUse">
+											<path d="M 26 0 H 0 V 26" fill="none" stroke="#0b2345" stroke-width="0.6" />
+										</pattern>
+									</defs>
+									<rect width="440" height="280" fill="url(#gridB)" opacity="0.1" />
+									<path d="M 14 252 L 426 44" stroke="#0b2345" stroke-width="1.2" opacity="0.12" />
+									<path d="M 60 14 L 200 268" stroke="#0b2345" stroke-width="1.2" opacity="0.09" />
+									<!-- perceived barrier -->
+									<path d="M 128 66 L 258 50 L 292 118 L 216 158 L 128 136 Z"
+										fill="#a51c30" opacity="0.14" />
+									<text x="204" y="98" text-anchor="middle" font-family="Inter, sans-serif"
+										font-size="8.5" fill="#a51c30" opacity="0.75" letter-spacing="1.4">PERCEIVED</text>
+									<text x="204" y="110" text-anchor="middle" font-family="Inter, sans-serif"
+										font-size="8.5" fill="#a51c30" opacity="0.75" letter-spacing="1.4">BARRIER</text>
+									<!-- perceived positive / familiar -->
+									<path d="M 128 196 L 252 178 L 296 226 L 188 254 L 118 238 Z"
+										fill="#e9dcc7" opacity="0.68" />
+									<text x="204" y="222" text-anchor="middle" font-family="Inter, sans-serif"
+										font-size="8.5" fill="#0b2345" opacity="0.6" letter-spacing="1.4">FAMILIAR</text>
+									<!-- modeled path, for reference -->
+									<path d="M 46 214 L 150 150 L 266 100 L 394 68"
+										fill="none" stroke="#0b2345" stroke-width="1.6"
+										stroke-dasharray="5 5" opacity="0.3" stroke-linecap="round" />
+									<!-- perception-influenced route -->
+									<path class="route-fade" d="M 46 214 C 110 234 196 240 262 222 C 322 206 368 140 394 68"
+										fill="none" stroke="#d76a54" stroke-width="3"
+										stroke-dasharray="8 6" stroke-linecap="round" />
+									<circle cx="46" cy="214" r="7" fill="#0b2345" />
+									<circle cx="394" cy="68" r="7" fill="#a51c30" />
+									<text x="46" y="198" text-anchor="middle" font-family="'Source Serif 4', serif"
+										font-style="italic" font-size="14" fill="#0b2345">A</text>
+									<text x="394" y="52" text-anchor="middle" font-family="'Source Serif 4', serif"
+										font-style="italic" font-size="14" fill="#0b2345">B</text>
+								</svg>
+							</div>
+							<ul class="legend">
+								<li><span class="lg-line dashed" style="color: #d76a54"></span> Perception-influenced route</li>
+								<li><span class="lg-swatch" style="background: rgba(165, 28, 48, 0.22)"></span> Perceived barrier</li>
+								<li><span class="lg-swatch" style="background: #e9dcc7"></span> Perceived positive</li>
+							</ul>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<!-- ══ Where the Idea Comes From ══ -->
+			<section class="section section-origin" id="origin">
+				<div class="container">
+					<p class="section-label reveal">Where the Idea Comes From</p>
+					<h2 class="section-title reveal">
+						Cities are navigated by mental maps, not only networks
+					</h2>
+
+					<div class="origin-grid">
+						<div class="origin-prose reveal">
+							<p>
+								Routing algorithms describe the city through objective,
+								measurable information: <strong>time, distance, cost, and
+								network connectivity</strong>. But in everyday life, people
+								also rely on subjective judgments — Is this neighborhood safe?
+								Is it pleasant? Is the detour worth it? Does this area feel
+								connected to where I need to go?
+							</p>
+							<p>
+								When choosing between the same origin and destination, two
+								people may take very different routes — not because the
+								transportation network differs, but because their
+								<strong>mental maps of the city differ</strong>. A neighborhood
+								may feel unfamiliar, inconvenient, unsafe, or simply &ldquo;not
+								on the way,&rdquo; even when an algorithm identifies it as part
+								of an efficient route.
+							</p>
+						</div>
+						<p class="origin-question reveal reveal-d1">
+							What happens when the city people perceive is different from the
+							city represented by the transportation network?
+						</p>
+					</div>
+
+					<div class="flow-panel reveal">
+						<p class="flow-title">A Conceptual Framework</p>
+						<ol class="flow">
+							<li class="st-environment">
+								<span class="flow-badge" aria-hidden="true">
+									<svg viewBox="0 0 24 24">
+										<path d="M3.5 20.5V8l5-2.5V20.5M8.5 20.5V11l6 2v7.5M14.5 20.5h5V6.5l-5-2z" />
+										<path d="M2.5 20.5h19" />
+									</svg>
+								</span>
+								<span class="flow-stage">01</span>
+								<h3>Urban Environment</h3>
+								<p>Built environment, land use, transit, and network structure.</p>
+							</li>
+							<li class="st-perception">
+								<span class="flow-badge" aria-hidden="true">
+									<svg viewBox="0 0 24 24">
+										<path d="M9.5 21v-3.2c-2.6-1-4.5-3.5-4.5-6.6A7.1 7.1 0 0 1 12.1 4c3.9 0 7 3.2 7 7.1 0 1.5-.5 3-1.4 4.1l1 2.6-2.8.4-.6 2.8" />
+										<path d="M9.7 11.6c1-.9 2.3-1.5 3.6-1.1" stroke-dasharray="2.2 2" />
+									</svg>
+								</span>
+								<span class="flow-stage">02</span>
+								<h3>Perception / Mental Map</h3>
+								<p>How people perceive neighborhoods and routes.</p>
+							</li>
+							<li class="st-choice">
+								<span class="flow-badge" aria-hidden="true">
+									<svg viewBox="0 0 24 24">
+										<path d="M12 20.5V12" />
+										<path d="M12 12C12 8 8 7 5.5 4.5M12 12c0-4 4-5 6.5-7.5" />
+										<path d="M5.5 7.5v-3h3M15.5 4.5h3v3" />
+									</svg>
+								</span>
+								<span class="flow-stage">03</span>
+								<h3>Route Choice</h3>
+								<p>Daily routing decisions shaped by perception.</p>
+							</li>
+							<li class="st-access">
+								<span class="flow-badge" aria-hidden="true">
+									<svg viewBox="0 0 24 24">
+										<path d="M12 21s-6.5-5.4-6.5-10a6.5 6.5 0 0 1 13 0c0 4.6-6.5 10-6.5 10z" />
+										<circle cx="12" cy="10.6" r="2.4" />
+									</svg>
+								</span>
+								<span class="flow-stage">04</span>
+								<h3>Experienced Accessibility</h3>
+								<p>Perception-driven access to jobs, services, and places.</p>
+							</li>
+							<li class="st-outcomes">
+								<span class="flow-badge" aria-hidden="true">
+									<svg viewBox="0 0 24 24">
+										<path d="M4 20h16" />
+										<path d="M6.5 20v-6.5M12 20V5.5M17.5 20v-9.5" />
+									</svg>
+								</span>
+								<span class="flow-stage">05</span>
+								<h3>Urban Outcomes</h3>
+								<p>Impacts on mobility, equity, economic activity, and neighborhood vitality.</p>
+							</li>
+						</ol>
+					</div>
+				</div>
+			</section>
+
+			<!-- ══ What This Project Aims to Do ══ -->
+			<section class="section" id="aims">
+				<div class="container">
+					<p class="section-label reveal">What This Project Aims to Do</p>
+					<h2 class="section-title reveal">
+						Three questions this project pursues
+					</h2>
+					<p class="section-intro reveal" style="margin-bottom: 0">
+						The broader goal is to understand how these behavioral differences
+						may influence transportation outcomes, neighborhood connectivity,
+						and patterns of urban economic activity.
+					</p>
+					<div class="section-rule reveal" aria-hidden="true"></div>
+
+					<article class="aim-row aim-behavior reveal">
+						<span class="aim-badge" aria-hidden="true">01</span>
+						<div class="aim-content">
+							<h3>Quantify perception in routing behavior</h3>
+							<p>
+								Quantify how perception shapes routing behavior across
+								different neighborhood and city contexts.
+							</p>
+						</div>
+					</article>
+					<article class="aim-row aim-access reveal">
+						<span class="aim-badge" aria-hidden="true">02</span>
+						<div class="aim-content">
+							<h3>Measure experienced accessibility</h3>
+							<p>
+								Examine how perception-driven routing creates systematic
+								differences between modeled and experienced accessibility.
+							</p>
+						</div>
+					</article>
+					<article class="aim-row aim-outcomes reveal">
+						<span class="aim-badge" aria-hidden="true">03</span>
+						<div class="aim-content">
+							<h3>Trace broader urban outcomes</h3>
+							<p>
+								Explore how these differences influence broader urban and
+								economic outcomes.
+							</p>
+						</div>
+					</article>
+				</div>
+			</section>
+
+			<!-- ══ Closing ══ -->
+			<section class="section section-closing">
+				<div class="container">
+					<div class="closing reveal">
+						<span class="icon-badge" aria-hidden="true">
+							<svg viewBox="0 0 24 24">
+								<path d="M12 3a6.2 6.2 0 0 0-3.6 11.3c.7.5 1.1 1.2 1.1 2v.7h5v-.7c0-.8.4-1.5 1.1-2A6.2 6.2 0 0 0 12 3z" />
+								<path d="M10 20.5h4" />
+							</svg>
+						</span>
+						<p class="closing-text">
+							By connecting <strong>human perception</strong> with
+							<strong>route choice</strong> and <strong>accessibility</strong>,
+							this project seeks to inform more people-centered transportation
+							planning and urban policy.
+						</p>
+						<div class="closing-actions">
+							<a class="btn-primary" href="research.html">
+								View All Research <span class="arrow" aria-hidden="true">→</span>
+							</a>
+							<a class="text-link" href="contact.html">
+								Discuss this project <span class="arrow" aria-hidden="true">→</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- ══ Footer ══ -->
+		<footer class="site-footer">
+			<div class="container">
+				<div class="footer-grid">
+					<div>
+						<p class="footer-name">Zhanchao Yang</p>
+						<p class="footer-identity">
+							Urban Planning <span class="dot">·</span> Transportation
+							<span class="dot">·</span> Spatial Analytics
+						</p>
+					</div>
+					<nav class="footer-links">
+						<a href="mailto:zhanchao@upenn.edu">Email</a>
+						<a href="research.html">Research</a>
+						<a href="publications.html">Publications</a>
+						<a href="experience.html">Experience</a>
+						<a href="awards.html">Awards</a>
+						<a href="https://github.com/zyang91" target="_blank" rel="noopener">GitHub</a>
+						<a href="https://www.linkedin.com/in/zhanchaoyang/" target="_blank" rel="noopener">LinkedIn</a>
+					</nav>
+				</div>
+				<div class="footer-note">
+					<span>© <span id="year"></span> Zhanchao Yang</span>
+					<span>Philadelphia, PA</span>
+				</div>
+			</div>
+		</footer>
+
+		<script src="../js/home.js"></script>
+	</body>
+</html>
