@@ -1,181 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact | Zhanchao Yang</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../css/style.css" />
-  </head>
-  <body class="theme-light page-cinematic bg-stone">
-    <header class="pc-nav" id="cinematic-nav">
-      <div class="pc-nav-inner">
-        <a class="pc-logo" href="../index.html">Zhanchao Yang<sup>®</sup></a>
-        <div class="pc-nav-right">
-          <nav class="pc-nav-links">
-            <a href="../index.html">Home</a>
-            <a href="about-me.html">About</a>
-            <a href="research.html">Research</a>
-            <a href="contact.html" class="active">Contact</a>
-          </nav>
-          <button
-            class="cinematic-menu-toggle"
-            id="cinematic-menu-toggle"
-            aria-label="Open menu"
-            aria-expanded="false"
-            aria-controls="cinematic-menu-panel"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-      </div>
-    </header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Contact | Zhanchao Yang</title>
+		<meta
+			name="description"
+			content="Get in touch with Zhanchao Yang — research collaborations, transportation and spatial analytics questions, and conversations about cities. Based at the Weitzman School of Design, University of Pennsylvania."
+		/>
+		<link
+			rel="icon"
+			href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%F0%9F%97%BA%EF%B8%8F%3C/text%3E%3C/svg%3E"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="../css/home.css" />
+		<link rel="stylesheet" href="../css/contact.css" />
+	</head>
+	<body class="contact-page">
+		<!-- ══ Navigation ══ -->
+		<header class="site-nav" id="site-nav">
+			<div class="nav-inner">
+				<div class="nav-brand">
+					<a class="nav-name" href="../index.html">Zhanchao Yang</a>
+					<span class="nav-affil">Penn Weitzman</span>
+				</div>
+				<button
+					class="nav-toggle"
+					id="nav-toggle"
+					aria-label="Open menu"
+					aria-expanded="false"
+					aria-controls="nav-links"
+				>
+					<span></span><span></span><span></span>
+				</button>
+				<nav class="nav-links" id="nav-links">
+					<a href="research.html">Research</a>
+					<a href="cv.html">CV</a>
+					<a href="about-me.html">About</a>
+					<a href="contact.html" class="active">Contact</a>
+				</nav>
+			</div>
+		</header>
 
-    <div class="cinematic-menu-panel" id="cinematic-menu-panel" aria-hidden="true">
-      <div class="cinematic-menu-panel-inner">
-        <div class="cinematic-menu-panel-top">
-          <a class="cinematic-logo" href="../index.html">Zhanchao Yang<sup>®</sup></a>
-          <button class="cinematic-menu-close" id="cinematic-menu-close" aria-label="Close menu">
-            <span></span><span></span>
-          </button>
-        </div>
-        <div class="cinematic-menu-grid">
-          <div class="cinematic-menu-col">
-            <a href="../index.html">Home <span>→</span></a>
-            <a href="about-me.html">About <span>→</span></a>
-            <a href="research.html">Research <span>→</span></a>
-            <a href="experience.html">Experience <span>→</span></a>
-          </div>
-          <div class="cinematic-menu-col">
-            <a href="publications.html">Publications <span>→</span></a>
-            <a href="awards.html">Awards <span>→</span></a>
-            <a href="upenn.html">UPenn</a>
-            <a href="binghamton.html">Binghamton</a>
-          </div>
-        </div>
-        <div class="cinematic-menu-foot">
-          <a class="cinematic-menu-cta" href="contact.html">Get in touch</a>
-          <p>Philadelphia, PA · zhanchao@upenn.edu</p>
-        </div>
-      </div>
-    </div>
+		<!-- ══ Header ══ -->
+		<section class="contact-hero">
+			<div class="container">
+				<p class="contact-hero-eyebrow reveal in-view">Contact</p>
+				<h1 class="reveal in-view">
+					Let&rsquo;s talk <em>maps</em>, cities, and how people move
+				</h1>
+				<p class="contact-hero-identity reveal in-view reveal-d1">
+					Urban Planning <span class="dot">·</span> Transportation
+					<span class="dot">·</span> Spatial Analytics
+				</p>
+				<p class="contact-hero-statement reveal in-view reveal-d1">
+					I welcome <em>research collaborations</em>, questions about data and
+					methods, and conversations with students and practitioners working on
+					transportation and urban policy.
+				</p>
+				<div class="contact-hero-actions reveal in-view reveal-d2">
+					<a class="btn-primary" href="mailto:zhanchao@upenn.edu">
+						Email Me <span class="arrow" aria-hidden="true">→</span>
+					</a>
+					<a
+						class="btn-outline"
+						href="https://www.linkedin.com/in/zhanchaoyang/"
+						target="_blank"
+						rel="noopener"
+						>LinkedIn</a
+					>
+					<a class="btn-outline" href="../assets/Zhanchao-Yang-CV.pdf" download>
+						CV (PDF) <span aria-hidden="true">↓</span>
+					</a>
+				</div>
+				<p class="contact-hero-meta reveal in-view reveal-d3">
+					Philadelphia, PA · Eastern Time
+				</p>
+			</div>
+		</section>
 
-    <main>
-      <section class="pc-hero">
-        <p class="pc-hero-eyebrow">Contact</p>
-        <h1 class="pc-hero-title">
-          Let's talk <em>maps</em>, cities,<br />
-          or the best coffee in Philly.
-        </h1>
-        <p class="pc-hero-lead">
-          Open to <em>collaborations</em>, research opportunities, and conversations.
-        </p>
-      </section>
+		<main>
+			<!-- ══ Details ══ -->
+			<section class="section" id="details">
+				<div class="container">
+					<p class="section-label reveal">Get in Touch</p>
+					<h2 class="section-title reveal">Where to find me</h2>
+					<p class="section-intro reveal">
+						Email is the most reliable way to reach me. I read everything and
+						usually reply within a couple of business days.
+					</p>
 
-      <!-- Professional Signature Section -->
-      <section class="section">
-        <div class="container">
-          <div class="signature-card">
-            <div class="signature-left">
-              <div class="signature-avatar">
-                <span class="avatar-initials">ZY</span>
-              </div>
-              <div class="signature-info">
-                <h2 class="signature-name">Zhanchao Yang</h2>
-                <p class="signature-title">Master of City Planning + Master of Urban Spatial Analytics Candidate</p>
-                <p class="signature-title">Research Fellow at Penn Institute for Urban Research</p>
-                <p class="signature-org">Weitzman School of Design, University of Pennsylvania</p>
-              </div>
-            </div>
-            <div class="signature-divider"></div>
-            <div class="signature-right">
-              <div class="signature-contact-item">
-                <span class="signature-icon">&#9993;</span>
-                <div>
-                  <span class="signature-label">Email</span>
-                  <a href="mailto:zhanchao@upenn.edu">zhanchao@upenn.edu</a>
-                </div>
-              </div>
-              <div class="signature-contact-item">
-                <span class="signature-icon">&#128222;</span>
-                <div>
-                  <span class="signature-label">Phone</span>
-                  <a href="tel:+16076447982">607-644-7982</a>
-                </div>
-              </div>
-              <div class="signature-contact-item">
-                <span class="signature-icon">&#128205;</span>
-                <div>
-                  <span class="signature-label">Location</span>
-                  <span>Philadelphia, PA</span>
-                </div>
-              </div>
-              <div class="signature-social">
-                <a href="https://www.linkedin.com/in/zhanchaoyang/" target="_blank" rel="noreferrer" class="social-link" title="LinkedIn">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                </a>
-                <a href="https://linktr.ee/zhanchaoyang" target="_blank" rel="noreferrer" class="social-link" title="LinkTree">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M7.953 15.066l-.038-4.086-3.796.008.008-3.068h3.722l.022-3.846 3.14-.01-.018 3.856h3.818v3.068h-3.818l.022 4.078h-3.062zm2.998 3.048h-2.91l.012 5.886h2.9l-.002-5.886z"/></svg>
-                </a>
-                <a href="https://bit.ly/zhanchao" target="_blank" rel="noreferrer" class="social-link" title="Portfolio">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+					<div class="contact-grid">
+						<!-- identity -->
+						<div class="contact-card reveal">
+							<div class="contact-identity-top">
+								<span class="contact-avatar" aria-hidden="true">ZY</span>
+								<div>
+									<h2>Zhanchao Yang</h2>
+									<p>Penn Weitzman</p>
+								</div>
+							</div>
+							<ul class="contact-roles">
+								<li>
+									<strong>Master of City Planning + Master of Urban Spatial Analytics Candidate</strong>
+									Weitzman School of Design, University of Pennsylvania
+								</li>
+								<li>
+									<strong>Research Assistant</strong>
+									Department of City and Regional Planning, University of Pennsylvania
+								</li>
+								<li>
+									<strong>Research focus</strong>
+									Transportation policy, travel behavior, accessibility, and
+									urban outcomes
+								</li>
+							</ul>
+						</div>
 
-      <!-- Map Section -->
-      <section class="section alt-bg">
-        <div class="container">
-          <div class="section-title">
-            <h2>Find Me at UPenn</h2>
-            <p>Weitzman School of Design, Meyerson Hall</p>
-          </div>
-          <div class="map-container">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3058.517451814985!2d-75.19383492392488!3d39.95220398521581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6c65a5903b8e1%3A0x37bf0177d72a3f1!2sMeyerson%20Hall!5e0!3m2!1sen!2sus!4v1706900000000!5m2!1sen!2sus"
-              width="100%" 
-              height="400" 
-              style="border:0; border-radius: 16px;" 
-              allowfullscreen="" 
-              loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-            <div class="map-info-overlay">
-              <div class="map-info-card">
-                <h4>Meyerson Hall</h4>
-                <p>210 S 34th St<br>Philadelphia, PA 19104</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+						<!-- channels -->
+						<div class="contact-card reveal reveal-d1">
+							<div class="contact-channel">
+								<span class="icon-badge" aria-hidden="true">
+									<svg viewBox="0 0 24 24">
+										<rect x="2.5" y="5" width="19" height="14" rx="2" />
+										<path d="M3.5 6.5l8.5 6.8 8.5-6.8" />
+									</svg>
+								</span>
+								<div>
+									<p class="contact-channel-label">Email</p>
+									<a class="contact-channel-value" href="mailto:zhanchao@upenn.edu"
+										>zhanchao@upenn.edu</a
+									>
+								</div>
+							</div>
 
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <div>
-          <h3>Let's build something smart.</h3>
-          <p>Philadelphia, PA &middot; zhanchao@upenn.edu &middot; 607-644-7982</p>
-        </div>
-        <div class="footer-links">
-          <a href="contact.html">Contact</a>
-          <a href="publications.html">Publications</a>
-          <a href="experience.html">Experience</a>
-        </div>
-      </div>
-      <p class="footer-note">&copy; <span id="year"></span> Zhanchao Yang.</p>
-    </footer>
+							<div class="contact-channel">
+								<span class="icon-badge" aria-hidden="true">
+									<svg viewBox="0 0 24 24">
+										<path
+											d="M5 3.5h3.2l1.6 4-2 1.4a12.5 12.5 0 0 0 5.8 5.8l1.4-2 4 1.6V19a1.5 1.5 0 0 1-1.6 1.5C9.6 20 4 14.4 3.5 5.1A1.5 1.5 0 0 1 5 3.5z"
+										/>
+									</svg>
+								</span>
+								<div>
+									<p class="contact-channel-label">Phone</p>
+									<a class="contact-channel-value" href="tel:+16076447982">607-644-7982</a>
+								</div>
+							</div>
 
-    <script src="../js/index.js"></script>
-  </body>
+							<div class="contact-channel">
+								<span class="icon-badge" aria-hidden="true">
+									<svg viewBox="0 0 24 24">
+										<path d="M12 21.5s7-5.9 7-11a7 7 0 1 0-14 0c0 5.1 7 11 7 11z" />
+										<circle cx="12" cy="10.4" r="2.6" />
+									</svg>
+								</span>
+								<div>
+									<p class="contact-channel-label">Office</p>
+									<span class="contact-channel-value">Meyerson Hall, Philadelphia, PA</span>
+									<p class="contact-channel-note">210 S 34th St, Philadelphia, PA 19104</p>
+								</div>
+							</div>
+
+							<div class="contact-social">
+								<p class="contact-social-label">Elsewhere</p>
+								<div class="contact-social-links">
+									<a
+										href="https://www.linkedin.com/in/zhanchaoyang/"
+										target="_blank"
+										rel="noopener"
+									>
+										<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+											<path
+												d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"
+											/>
+										</svg>
+										LinkedIn
+									</a>
+									<a href="https://github.com/zyang91" target="_blank" rel="noopener">
+										<svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+											<path
+												d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+											/>
+										</svg>
+										GitHub
+									</a>
+									<a href="https://linktr.ee/zhanchaoyang" target="_blank" rel="noopener">
+										<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+											<path
+												d="M7.953 15.066l-.038-4.086-3.796.008.008-3.068h3.722l.022-3.846 3.14-.01-.018 3.856h3.818v3.068h-3.818l.022 4.078h-3.062zm2.998 3.048h-2.91l.012 5.886h2.9l-.002-5.886z"
+											/>
+										</svg>
+										Linktree
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ══ Map ══ -->
+			<section class="section section-map" id="location">
+				<div class="container">
+					<p class="section-label reveal">Location</p>
+					<h2 class="section-title reveal">Find me at Penn</h2>
+					<p class="section-intro reveal">
+						Weitzman School of Design, Meyerson Hall — on Penn&rsquo;s campus in
+						West Philadelphia.
+					</p>
+
+					<div class="map-frame reveal">
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3058.517451814985!2d-75.19383492392488!3d39.95220398521581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6c65a5903b8e1%3A0x37bf0177d72a3f1!2sMeyerson%20Hall!5e0!3m2!1sen!2sus!4v1706900000000!5m2!1sen!2sus"
+							title="Map showing Meyerson Hall, University of Pennsylvania"
+							loading="lazy"
+							allowfullscreen
+							referrerpolicy="no-referrer-when-downgrade"
+						></iframe>
+						<div class="map-info">
+							<h3>Meyerson Hall</h3>
+							<p>210 S 34th St<br />Philadelphia, PA 19104</p>
+							<a
+								href="https://maps.google.com/?q=Meyerson+Hall+Philadelphia"
+								target="_blank"
+								rel="noopener"
+								>Open in Maps <span class="arrow" aria-hidden="true">→</span></a
+							>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- ══ Footer ══ -->
+		<footer class="site-footer">
+			<div class="container">
+				<div class="footer-grid">
+					<div>
+						<p class="footer-name">Zhanchao Yang</p>
+						<p class="footer-identity">
+							Urban Planning <span class="dot">·</span> Transportation
+							<span class="dot">·</span> Spatial Analytics
+						</p>
+					</div>
+					<nav class="footer-links">
+						<a href="mailto:zhanchao@upenn.edu">Email</a>
+						<a href="research.html">Research</a>
+						<a href="cv.html">CV</a>
+						<a href="about-me.html">About</a>
+						<a href="awards.html">Awards</a>
+						<a href="https://github.com/zyang91" target="_blank" rel="noopener">GitHub</a>
+						<a href="https://www.linkedin.com/in/zhanchaoyang/" target="_blank" rel="noopener">LinkedIn</a>
+					</nav>
+				</div>
+				<div class="footer-note">
+					<span>© <span id="year"></span> Zhanchao Yang</span>
+					<span>Philadelphia, PA</span>
+				</div>
+			</div>
+		</footer>
+
+		<script src="../js/home.js"></script>
+	</body>
 </html>
