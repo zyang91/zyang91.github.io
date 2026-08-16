@@ -4,163 +4,1112 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Research | Zhanchao Yang</title>
+		<meta
+			name="description"
+			content="The research hub for Zhanchao Yang — current projects, working papers, emerging research directions, and earlier work on transportation policy, travel behavior, perception and accessibility, and urban outcomes."
+		/>
+		<link
+			rel="icon"
+			href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%F0%9F%97%BA%EF%B8%8F%3C/text%3E%3C/svg%3E"
+		/>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&display=swap"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" href="../css/home.css" />
+		<link rel="stylesheet" href="../css/research.css" />
 	</head>
-	<body class="theme-light page-cinematic bg-sage">
-		<header class="pc-nav" id="cinematic-nav">
-			<div class="pc-nav-inner">
-				<a class="pc-logo" href="../index.html">Zhanchao Yang<sup>®</sup></a>
-				<div class="pc-nav-right">
-					<nav class="pc-nav-links">
-						<a href="../index.html">Home</a>
-						<a href="about-me.html">About</a>
-						<a href="research.html" class="active">Research</a>
-						<a href="contact.html">Contact</a>
-					</nav>
-					<button
-						class="cinematic-menu-toggle"
-						id="cinematic-menu-toggle"
-						aria-label="Open menu"
-						aria-expanded="false"
-						aria-controls="cinematic-menu-panel"
-					>
-						<span></span>
-						<span></span>
-						<span></span>
-					</button>
+	<!-- background motif: swap bg-network for bg-grid, bg-contour,
+	     bg-blueprint, or bg-plain — see the top of css/research.css -->
+	<body class="research-hub bg-network">
+		<!-- ══ Navigation ══ -->
+		<header class="site-nav" id="site-nav">
+			<div class="nav-inner">
+				<div class="nav-brand">
+					<a class="nav-name" href="../index.html">Zhanchao Yang</a>
+					<span class="nav-affil">Penn Weitzman</span>
 				</div>
+				<button
+					class="nav-toggle"
+					id="nav-toggle"
+					aria-label="Open menu"
+					aria-expanded="false"
+					aria-controls="nav-links"
+				>
+					<span></span><span></span><span></span>
+				</button>
+				<nav class="nav-links" id="nav-links">
+					<a href="research.html" class="active">Research</a>
+					<a href="cv.html">CV</a>
+					<a href="awards.html">Awards</a>
+					<a href="about-me.html">About</a>
+					<a href="contact.html">Contact</a>
+				</nav>
 			</div>
 		</header>
 
-		<div class="cinematic-menu-panel" id="cinematic-menu-panel" aria-hidden="true">
-			<div class="cinematic-menu-panel-inner">
-				<div class="cinematic-menu-panel-top">
-					<a class="cinematic-logo" href="../index.html">Zhanchao Yang<sup>®</sup></a>
-					<button class="cinematic-menu-close" id="cinematic-menu-close" aria-label="Close menu">
-						<span></span><span></span>
-					</button>
-				</div>
-				<div class="cinematic-menu-grid">
-					<div class="cinematic-menu-col">
-						<a href="../index.html">Home <span>→</span></a>
-						<a href="about-me.html">About <span>→</span></a>
-						<a href="research.html">Research <span>→</span></a>
-						<a href="experience.html">Experience <span>→</span></a>
+		<!-- ══ Hero ══ -->
+		<section class="rh-hero">
+			<div class="container rh-hero-inner">
+				<div class="rh-hero-text">
+					<p class="rh-hero-eyebrow reveal in-view">Research</p>
+					<h1 class="reveal in-view">
+						A map of an evolving <em>research program</em>
+					</h1>
+					<p class="rh-hero-statement reveal in-view reveal-d1">
+						I study how people respond to transportation systems and urban
+						policies — and how those responses reshape mobility, accessibility,
+						and cities.
+					</p>
+					<p class="rh-hero-sub reveal in-view reveal-d1">
+						Explore current projects, working papers, completed research, and
+						emerging research directions. This page is the interchange; each
+						project is a destination.
+					</p>
+					<div class="rh-hero-actions reveal in-view reveal-d2">
+						<a class="btn-primary" href="#explore">
+							Explore Projects <span class="arrow" aria-hidden="true">↓</span>
+						</a>
+						<a class="btn-outline" href="#network">See the research network</a>
 					</div>
-					<div class="cinematic-menu-col">
-						<a href="publications.html">Publications <span>→</span></a>
-						<a href="awards.html">Awards <span>→</span></a>
-						<a href="upenn.html">UPenn</a>
-						<a href="binghamton.html">Binghamton</a>
-					</div>
+					<p class="rh-hero-meta reveal in-view reveal-d3">
+						Transportation Policy <span class="dot">·</span> Travel Behavior
+						<span class="dot">·</span> Perception &amp; Accessibility
+						<span class="dot">·</span> Urban Outcomes
+					</p>
 				</div>
-				<div class="cinematic-menu-foot">
-					<a class="cinematic-menu-cta" href="contact.html">Get in touch</a>
-					<p>Philadelphia, PA · zhanchao@upenn.edu</p>
+
+				<!-- routes converging on a single interchange -->
+				<div class="rh-hero-art reveal in-view reveal-d2" aria-hidden="true">
+					<svg viewBox="0 0 520 420" role="presentation">
+						<g fill="none" stroke-width="2.6" stroke-linecap="round">
+							<path class="rh-route r1" d="M 8 54 C 150 66 262 108 392 182"
+								stroke="#d9c5a5" />
+							<path class="rh-route r2" d="M 4 166 C 140 170 268 176 392 182"
+								stroke="#b7c9b7" />
+							<path class="rh-route r3" d="M 14 296 C 158 292 282 246 392 182"
+								stroke="#8099b5" />
+							<path class="rh-route r4" d="M 58 400 C 172 368 302 268 392 182"
+								stroke="#d76a54" />
+							<path class="rh-route r5" d="M 392 182 C 442 178 476 148 514 112"
+								stroke="#0b2345" stroke-opacity="0.35" />
+							<path class="rh-route r6" d="M 392 182 C 444 192 470 244 502 300"
+								stroke="#0b2345" stroke-opacity="0.35" />
+						</g>
+						<g class="rh-stop" fill="#ffffff" stroke-width="2.4">
+							<circle cx="150" cy="66" r="4.6" stroke="#d9c5a5" />
+							<circle cx="140" cy="170" r="4.6" stroke="#b7c9b7" />
+							<circle cx="158" cy="292" r="4.6" stroke="#8099b5" />
+							<circle cx="172" cy="368" r="4.6" stroke="#d76a54" />
+							<circle cx="278" cy="126" r="4.6" stroke="#d9c5a5" />
+							<circle cx="282" cy="246" r="4.6" stroke="#8099b5" />
+						</g>
+						<g class="rh-stop big">
+							<circle cx="392" cy="182" r="17" fill="#ffffff" stroke="#a51c30"
+								stroke-width="5" />
+							<circle cx="392" cy="182" r="4" fill="#a51c30" />
+						</g>
+					</svg>
 				</div>
 			</div>
-		</div>
+		</section>
 
 		<main>
-			<section class="pc-hero">
-				<p class="pc-hero-eyebrow">Research</p>
-				<h1 class="pc-hero-title">
-					Questions I'm <em>chasing</em><br />
-					with data and maps.
-				</h1>
-				<p class="pc-hero-lead">
-					Spatial analytics + community insight, <em>always</em>.
-				</p>
+			<!-- ══ Research network ══ -->
+			<section class="rh-net" id="network">
+				<div class="container">
+					<p class="section-label reveal">The Research Network</p>
+					<h2 class="section-title reveal">
+						Four themes, one connected line of inquiry
+					</h2>
+					<p class="section-intro reveal">
+						Projects sit between themes rather than inside them. Hover a theme to
+						see which projects run through it; select a project to jump to its
+						card.
+					</p>
+
+					<div class="rn-diagram reveal" id="research-network">
+						<svg viewBox="0 0 1120 620" role="img"
+							aria-label="Research network: four themes — behavior, policy, accessibility, and urban outcomes — connected in a loop, with projects placed on the links between them.">
+							<!-- links between themes -->
+							<g fill="none" stroke="#0b2345" stroke-opacity="0.24"
+								stroke-width="2.2" stroke-linecap="round">
+								<path class="rn-edge e1" d="M 560 92 L 210 310" />
+								<path class="rn-edge e2" d="M 560 92 L 910 310" />
+								<path class="rn-edge e3" d="M 210 310 L 560 530" />
+								<path class="rn-edge e4" d="M 910 310 L 560 530" />
+								<path class="rn-edge e5" d="M 210 310 L 190 468" />
+								<path class="rn-edge e6" d="M 910 310 L 930 468" />
+								<path class="rn-edge e7" d="M 560 530 L 560 410" />
+							</g>
+
+							<!-- themes -->
+							<a class="rn-hub" href="#explore" data-theme="behavior"
+								data-themes="behavior">
+								<circle cx="560" cy="92" r="14" fill="#ffffff"
+									stroke="#b7c9b7" stroke-width="5.5" />
+								<text class="rn-hub-label" x="560" y="50"
+									text-anchor="middle">BEHAVIOR</text>
+							</a>
+							<a class="rn-hub" href="#explore" data-theme="policy"
+								data-themes="policy">
+								<circle cx="210" cy="310" r="14" fill="#ffffff"
+									stroke="#d9c5a5" stroke-width="5.5" />
+								<text class="rn-hub-label" x="188" y="315"
+									text-anchor="end">POLICY</text>
+							</a>
+							<a class="rn-hub" href="#explore" data-theme="accessibility"
+								data-themes="accessibility">
+								<circle cx="910" cy="310" r="14" fill="#ffffff"
+									stroke="#8099b5" stroke-width="5.5" />
+								<text class="rn-hub-label" x="932" y="315"
+									text-anchor="start">ACCESSIBILITY</text>
+							</a>
+							<a class="rn-hub" href="#explore" data-theme="outcomes"
+								data-themes="outcomes">
+								<circle cx="560" cy="530" r="14" fill="#ffffff"
+									stroke="#d76a54" stroke-width="5.5" />
+								<text class="rn-hub-label" x="560" y="572"
+									text-anchor="middle">URBAN OUTCOMES</text>
+							</a>
+
+							<!-- projects, placed on the links they run between -->
+							<a class="rn-node" href="#telework" data-themes="behavior policy"
+								data-methods="survey statistical causal">
+								<circle cx="385" cy="201" r="7.5" fill="#a51c30" />
+								<text class="rn-node-label" x="368" y="196"
+									text-anchor="end">TELEWORK</text>
+							</a>
+							<a class="rn-node" href="#transit-cuts" data-themes="policy outcomes"
+								data-methods="causal spatial">
+								<circle cx="385" cy="420" r="7.5" fill="#a51c30" />
+								<text class="rn-node-label" x="370" y="450"
+									text-anchor="end">TRANSIT CUTS</text>
+							</a>
+							<a class="rn-node" href="#traffic-safety" data-themes="policy outcomes"
+								data-methods="survey spatial statistical">
+								<circle cx="190" cy="468" r="7.5" fill="#a51c30" />
+								<text class="rn-node-label" x="190" y="498"
+									text-anchor="middle">TRAFFIC SAFETY</text>
+							</a>
+							<a class="rn-node" href="#perception-routing"
+								data-themes="perception behavior accessibility"
+								data-methods="spatial computational survey">
+								<circle cx="735" cy="201" r="7.5" fill="#456a96" />
+								<text class="rn-node-label" x="752" y="196"
+									text-anchor="start">PERCEPTION &amp; ROUTING</text>
+							</a>
+							<a class="rn-node" href="#ai-streetscape"
+								data-themes="accessibility infrastructure"
+								data-methods="computational gis spatial">
+								<circle cx="930" cy="468" r="7.5" fill="#a51c30" />
+								<text class="rn-node-label" x="930" y="498"
+									text-anchor="middle">AI STREETSCAPE</text>
+							</a>
+							<a class="rn-node" href="#ev-charging"
+								data-themes="infrastructure outcomes behavior"
+								data-methods="causal spatial statistical">
+								<circle cx="735" cy="420" r="7.5" fill="#a51c30" />
+								<text class="rn-node-label" x="752" y="450"
+									text-anchor="start">EV CHARGING</text>
+							</a>
+							<a class="rn-node" href="#arenas"
+								data-themes="infrastructure outcomes"
+								data-methods="causal spatial">
+								<circle cx="560" cy="410" r="7.5" fill="#a51c30" />
+								<text class="rn-node-label" x="578" y="414"
+									text-anchor="start">ARENAS &amp; EVENTS</text>
+							</a>
+						</svg>
+					</div>
+
+					<!-- compact equivalent for narrow screens -->
+					<ul class="rn-list">
+						<li style="--rn-c: #b7c9b7">
+							<span class="rn-list-theme">Behavior</span>
+							<p>
+								<a href="#telework">Telework</a> ·
+								<a href="#perception-routing">Perception &amp; Routing</a> ·
+								<a href="#ev-charging">EV Charging</a>
+							</p>
+						</li>
+						<li style="--rn-c: #d9c5a5">
+							<span class="rn-list-theme">Policy</span>
+							<p>
+								<a href="#telework">Telework</a> ·
+								<a href="#transit-cuts">Transit Cuts</a> ·
+								<a href="#traffic-safety">Traffic Safety</a>
+							</p>
+						</li>
+						<li style="--rn-c: #8099b5">
+							<span class="rn-list-theme">Accessibility &amp; Perception</span>
+							<p>
+								<a href="#perception-routing">Perception &amp; Routing</a> ·
+								<a href="#ai-streetscape">AI Streetscape</a> ·
+								<a href="#trail">Trail Accessibility</a>
+							</p>
+						</li>
+						<li style="--rn-c: #d76a54">
+							<span class="rn-list-theme">Urban Outcomes</span>
+							<p>
+								<a href="#transit-cuts">Transit Cuts</a> ·
+								<a href="#ev-charging">EV Charging</a> ·
+								<a href="#arenas">Arenas &amp; Events</a>
+							</p>
+						</li>
+					</ul>
+
+					<p class="rn-caption reveal">
+						The same line runs through every project: policy and infrastructure
+						change conditions, people respond, accessibility shifts, and cities
+						change with it.
+					</p>
+				</div>
 			</section>
 
-			<section class="section">
+			<!-- ══ Explore the research ══ -->
+			<section class="section" id="explore">
 				<div class="container">
-					<div class="stacked-cards">
-						<article class="stacked-card">
-							<div class="card-visual">
-								<img
-									src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1000&q=80"
-									alt="Data visualization"
-								/>
+					<p class="section-label reveal">Explore the Research</p>
+					<h2 class="section-title reveal">
+						Each project takes a different route
+					</h2>
+					<p class="section-intro reveal">
+						Every project moves through transportation, behavior, space, and
+						urban outcomes in its own order. Filter by theme to see which ones
+						share a stretch of that route.
+					</p>
+
+					<div class="rh-filterbar reveal">
+						<span class="rh-filter-label" id="theme-filter-label">By theme</span>
+						<div class="rh-chips" role="group" aria-labelledby="theme-filter-label">
+							<button class="rh-chip" type="button" data-filter=""
+								data-filter-kind="theme" aria-pressed="true">All</button>
+							<button class="rh-chip" type="button" data-filter="behavior"
+								data-filter-kind="theme" aria-pressed="false">Behavior</button>
+							<button class="rh-chip" type="button" data-filter="policy"
+								data-filter-kind="theme" aria-pressed="false">Policy</button>
+							<button class="rh-chip" type="button" data-filter="accessibility"
+								data-filter-kind="theme" aria-pressed="false">Accessibility</button>
+							<button class="rh-chip" type="button" data-filter="perception"
+								data-filter-kind="theme" aria-pressed="false">Perception</button>
+							<button class="rh-chip" type="button" data-filter="infrastructure"
+								data-filter-kind="theme" aria-pressed="false">Infrastructure</button>
+							<button class="rh-chip" type="button" data-filter="outcomes"
+								data-filter-kind="theme" aria-pressed="false">Urban Outcomes</button>
+						</div>
+						<p class="rh-filter-status" id="rh-filter-status" aria-live="polite"></p>
+					</div>
+
+					<!-- ── I · Transportation Policy & Travel Behavior ── -->
+					<div class="rh-theme t-policy" id="policy-behavior">
+						<div class="rh-theme-head reveal">
+							<span class="rh-theme-num">I</span>
+							<h3>Transportation Policy &amp; Travel Behavior</h3>
+						</div>
+						<p class="rh-theme-intro reveal">
+							How policies, technologies, and changing conditions alter travel
+							decisions and the transportation systems that carry them.
+						</p>
+
+						<div class="rh-projects">
+							<!-- Telework -->
+							<article class="rh-project reveal" id="telework"
+								data-themes="behavior policy"
+								data-methods="survey statistical causal">
+								<div class="rh-fig" aria-hidden="true">
+									<svg viewBox="0 0 300 170">
+										<g stroke="#0b2345" stroke-width="0.6" opacity="0.09">
+											<line x1="38" y1="36" x2="284" y2="36" />
+											<line x1="38" y1="70" x2="284" y2="70" />
+											<line x1="38" y1="104" x2="284" y2="104" />
+										</g>
+										<path d="M 38 104 C 100 32 214 32 282 98 L 282 124 C 214 66 100 66 38 130 Z"
+											fill="#d76a54" opacity="0.13" />
+										<g fill="#456a96" opacity="0.8">
+											<circle cx="48" cy="114" r="2.4" /><circle cx="62" cy="96" r="2.4" />
+											<circle cx="76" cy="101" r="2.4" /><circle cx="90" cy="80" r="2.4" />
+											<circle cx="104" cy="84" r="2.4" /><circle cx="118" cy="64" r="2.4" />
+											<circle cx="132" cy="70" r="2.4" /><circle cx="146" cy="56" r="2.4" />
+											<circle cx="160" cy="62" r="2.4" /><circle cx="174" cy="52" r="2.4" />
+											<circle cx="188" cy="60" r="2.4" /><circle cx="202" cy="56" r="2.4" />
+											<circle cx="216" cy="68" r="2.4" /><circle cx="230" cy="64" r="2.4" />
+											<circle cx="244" cy="80" r="2.4" /><circle cx="258" cy="90" r="2.4" />
+											<circle cx="272" cy="104" r="2.4" />
+										</g>
+										<path class="fig-anim" d="M 38 118 C 100 48 214 48 282 112"
+											fill="none" stroke="#d76a54" stroke-width="2.6"
+											stroke-linecap="round" />
+										<line x1="168" y1="50" x2="168" y2="136" stroke="#a51c30"
+											stroke-width="1" stroke-dasharray="3 4" opacity="0.45" />
+										<circle cx="168" cy="50" r="5" fill="none" stroke="#a51c30"
+											stroke-width="1.5" />
+										<g stroke="#0b2345" stroke-width="1.1" opacity="0.4">
+											<line x1="38" y1="16" x2="38" y2="136" />
+											<line x1="38" y1="136" x2="284" y2="136" />
+										</g>
+										<text x="162" y="160" text-anchor="middle"
+											font-family="Inter, sans-serif" font-size="8.5"
+											fill="#0b2345" opacity="0.55" letter-spacing="1.2">DAILY TELEWORK HOURS</text>
+										<text x="14" y="76" text-anchor="middle"
+											font-family="Inter, sans-serif" font-size="8.5"
+											fill="#0b2345" opacity="0.55" letter-spacing="1.2"
+											transform="rotate(-90 14 76)">TRIPS / DAY</text>
+									</svg>
+								</div>
+								<div class="rh-body">
+									<p class="rh-status">Manuscript · Under Review</p>
+									<h4>Telework and Daily Travel Behavior</h4>
+									<p class="rh-q">
+										How does the intensity of telework reshape daily trip-making?
+									</p>
+									<div class="rh-taglines">
+										<div class="rh-tagline">
+											<span>Themes</span>
+											<div class="rh-tags">
+												<span>Travel Behavior</span><span>Telework</span><span>Transportation Policy</span>
+											</div>
+										</div>
+										<div class="rh-tagline">
+											<span>Methods</span>
+											<div class="rh-tags methods">
+												<span>Travel Survey</span><span>Count Models</span><span>Matching</span>
+											</div>
+										</div>
+									</div>
+									<div class="rh-foot">
+										<p class="rh-related">
+											Related: <a href="#transit-cuts">Transit Service Cuts</a>
+										</p>
+										<span class="rh-pending">Project page in preparation</span>
+									</div>
+								</div>
+							</article>
+
+							<!-- Transit cuts -->
+							<article class="rh-project reveal" id="transit-cuts"
+								data-themes="policy outcomes"
+								data-methods="causal spatial">
+								<div class="rh-fig" aria-hidden="true">
+									<svg viewBox="0 0 300 170">
+										<g stroke="#f5f2ec" stroke-width="2" stroke-linejoin="round">
+											<path d="M 22 12 L 88 8 L 94 54 L 18 60 Z" fill="#8099b5" opacity="0.5" />
+											<path d="M 88 8 L 160 14 L 154 48 L 94 54 Z" fill="#e9dcc7" opacity="0.75" />
+											<path d="M 160 14 L 226 8 L 232 52 L 154 48 Z" fill="#d76a54" opacity="0.55" />
+											<path d="M 226 8 L 286 14 L 280 56 L 232 52 Z" fill="#a51c30" opacity="0.5" />
+											<path d="M 18 60 L 94 54 L 90 98 L 24 104 Z" fill="#6685a8" opacity="0.45" />
+											<path d="M 94 54 L 154 48 L 160 94 L 90 98 Z" fill="#d76a54" opacity="0.45" />
+											<path d="M 154 48 L 232 52 L 224 100 L 160 94 Z" fill="#e9dcc7" opacity="0.8" />
+											<path d="M 232 52 L 280 56 L 286 96 L 224 100 Z" fill="#d76a54" opacity="0.6" />
+											<path d="M 24 104 L 90 98 L 94 134 L 20 138 Z" fill="#8099b5" opacity="0.55" />
+											<path d="M 90 98 L 160 94 L 156 138 L 94 134 Z" fill="#e9dcc7" opacity="0.7" />
+											<path d="M 160 94 L 224 100 L 230 134 L 156 138 Z" fill="#6685a8" opacity="0.4" />
+											<path d="M 224 100 L 286 96 L 282 136 L 230 134 Z" fill="#8099b5" opacity="0.45" />
+										</g>
+										<path class="fig-anim" d="M 30 116 C 100 98 168 60 274 30"
+											fill="none" stroke="#a51c30" stroke-width="2.6"
+											stroke-dasharray="7 5" stroke-linecap="round" />
+										<g fill="#ffffff" stroke="#a51c30" stroke-width="1.8">
+											<circle cx="58" cy="109" r="3.6" />
+											<circle cx="126" cy="86" r="3.6" />
+											<circle cx="194" cy="56" r="3.6" />
+											<circle cx="252" cy="36" r="3.6" />
+										</g>
+										<g transform="translate(166, 158)">
+											<rect x="0" y="-7" width="9" height="9" fill="#6685a8" opacity="0.55" />
+											<rect x="11" y="-7" width="9" height="9" fill="#e9dcc7" opacity="0.8" />
+											<rect x="22" y="-7" width="9" height="9" fill="#d76a54" opacity="0.6" />
+											<rect x="33" y="-7" width="9" height="9" fill="#a51c30" opacity="0.55" />
+											<text x="48" y="1" font-family="Inter, sans-serif"
+												font-size="8" fill="#0b2345" opacity="0.55"
+												letter-spacing="0.8">Δ CONGESTION</text>
+										</g>
+										<text x="14" y="160" font-family="Inter, sans-serif"
+											font-size="8" fill="#a51c30" letter-spacing="1">- - SUSPENDED ROUTE</text>
+									</svg>
+								</div>
+								<div class="rh-body">
+									<p class="rh-status">Working Paper · Ongoing</p>
+									<h4>When Transit Service Disappears</h4>
+									<p class="rh-subtitle">Transit Service Cuts &amp; Urban Congestion</p>
+									<p class="rh-q">
+										What happens to urban road traffic when transit service is
+										abruptly reduced?
+									</p>
+									<div class="rh-taglines">
+										<div class="rh-tagline">
+											<span>Themes</span>
+											<div class="rh-tags">
+												<span>Public Transit</span><span>Congestion</span><span>Transportation Policy</span>
+											</div>
+										</div>
+										<div class="rh-tagline">
+											<span>Methods</span>
+											<div class="rh-tags methods">
+												<span>Quasi-Experimental Design</span><span>Spatial Analysis</span><span>GTFS</span>
+											</div>
+										</div>
+									</div>
+									<div class="rh-foot">
+										<p class="rh-related">
+											Related: <a href="#telework">Telework</a>
+										</p>
+										<span class="rh-pending">Project page in preparation</span>
+									</div>
+								</div>
+							</article>
+
+							<!-- Traffic safety -->
+							<article class="rh-project reveal" id="traffic-safety"
+								data-themes="policy outcomes"
+								data-methods="survey spatial statistical">
+								<div class="rh-fig" aria-hidden="true">
+									<svg viewBox="0 0 300 170">
+										<g stroke="#0b2345" stroke-width="0.6" opacity="0.1">
+											<line x1="150" y1="14" x2="150" y2="136" />
+										</g>
+										<!-- metro rows: actual rate vs estimated rate -->
+										<g stroke-linecap="round">
+											<line x1="60" y1="28" x2="228" y2="28" stroke="#0b2345"
+												stroke-opacity="0.12" stroke-width="1.4" />
+											<line x1="60" y1="55" x2="228" y2="55" stroke="#0b2345"
+												stroke-opacity="0.12" stroke-width="1.4" />
+											<line x1="60" y1="82" x2="228" y2="82" stroke="#0b2345"
+												stroke-opacity="0.12" stroke-width="1.4" />
+											<line x1="60" y1="109" x2="228" y2="109" stroke="#0b2345"
+												stroke-opacity="0.12" stroke-width="1.4" />
+											<!-- the gap between what is true and what is believed -->
+											<line class="fig-anim" x1="96" y1="28" x2="186" y2="28"
+												stroke="#d76a54" stroke-width="3" />
+											<line class="fig-anim" x1="132" y1="55" x2="164" y2="55"
+												stroke="#d76a54" stroke-width="3" />
+											<line class="fig-anim" x1="78" y1="82" x2="204" y2="82"
+												stroke="#d76a54" stroke-width="3" />
+											<line class="fig-anim" x1="118" y1="109" x2="152" y2="109"
+												stroke="#d76a54" stroke-width="3" />
+										</g>
+										<g fill="#0b2345">
+											<circle cx="96" cy="28" r="4.4" /><circle cx="132" cy="55" r="4.4" />
+											<circle cx="78" cy="82" r="4.4" /><circle cx="118" cy="109" r="4.4" />
+										</g>
+										<g fill="#ffffff" stroke="#a51c30" stroke-width="2">
+											<circle cx="186" cy="28" r="4.4" /><circle cx="164" cy="55" r="4.4" />
+											<circle cx="204" cy="82" r="4.4" /><circle cx="152" cy="109" r="4.4" />
+										</g>
+										<g font-family="Inter, sans-serif" font-size="7.5"
+											fill="#0b2345" opacity="0.5" letter-spacing="0.9"
+											text-anchor="end">
+											<text x="52" y="31">METRO A</text>
+											<text x="52" y="58">METRO B</text>
+											<text x="52" y="85">METRO C</text>
+											<text x="52" y="112">METRO D</text>
+										</g>
+										<g font-family="Inter, sans-serif" font-size="8" letter-spacing="1">
+											<circle cx="66" cy="152" r="4" fill="#0b2345" />
+											<text x="76" y="155" fill="#0b2345" opacity="0.55">OBSERVED</text>
+											<circle cx="164" cy="152" r="4" fill="#ffffff"
+												stroke="#a51c30" stroke-width="2" />
+											<text x="174" y="155" fill="#a51c30">ESTIMATED</text>
+										</g>
+									</svg>
+								</div>
+								<div class="rh-body">
+									<p class="rh-status">Ongoing Research</p>
+									<h4>Traffic Safety Across U.S. Metropolitan Areas</h4>
+									<p class="rh-q">
+										How accurately do transportation professionals understand
+										systematic differences in traffic safety outcomes across
+										metropolitan areas?
+									</p>
+									<div class="rh-taglines">
+										<div class="rh-tagline">
+											<span>Themes</span>
+											<div class="rh-tags">
+												<span>Traffic Safety</span><span>Professional Knowledge</span><span>Urban Policy</span>
+											</div>
+										</div>
+										<div class="rh-tagline">
+											<span>Methods</span>
+											<div class="rh-tags methods">
+												<span>Survey Research</span><span>Spatial Data</span><span>Statistical Analysis</span>
+											</div>
+										</div>
+									</div>
+									<div class="rh-foot">
+										<p class="rh-related">
+											Related: <a href="#perception-routing">Perception &amp; Routing</a>
+										</p>
+										<span class="rh-pending">Project page in preparation</span>
+									</div>
+								</div>
+							</article>
+						</div>
+					</div>
+
+					<!-- ── II · Perception, Accessibility & Spatial Behavior ── -->
+					<div class="rh-theme t-perception" id="perception-accessibility">
+						<div class="rh-theme-head reveal">
+							<span class="rh-theme-num">II</span>
+							<h3>Perception, Accessibility &amp; Spatial Behavior</h3>
+						</div>
+						<p class="rh-theme-intro reveal">
+							The difference between the city represented by networks and the
+							city experienced by the people moving through it.
+						</p>
+
+						<div class="rh-projects">
+							<!-- Perception routing -->
+							<article class="rh-project is-emerging reveal" id="perception-routing"
+								data-themes="perception behavior accessibility"
+								data-methods="spatial computational survey">
+								<div class="rh-fig" aria-hidden="true">
+									<svg viewBox="0 0 300 170">
+										<defs>
+											<pattern id="rhGrid" width="22" height="22"
+												patternUnits="userSpaceOnUse">
+												<path d="M 22 0 H 0 V 22" fill="none"
+													stroke="#0b2345" stroke-width="0.5" />
+											</pattern>
+										</defs>
+										<rect x="10" y="8" width="278" height="128"
+											fill="url(#rhGrid)" opacity="0.1" />
+										<path d="M 106 26 L 192 20 L 210 60 L 172 82 L 114 72 Z"
+											fill="#c8d5c5" opacity="0.6" />
+										<text x="156" y="48" text-anchor="middle"
+											font-family="Inter, sans-serif" font-size="8"
+											fill="#0b2345" opacity="0.6" letter-spacing="1.1">PERCEIVED</text>
+										<text x="156" y="60" text-anchor="middle"
+											font-family="Inter, sans-serif" font-size="8"
+											fill="#0b2345" opacity="0.6" letter-spacing="1.1">BARRIER</text>
+										<path d="M 42 100 L 106 86 L 156 72 L 210 64 L 258 56"
+											fill="none" stroke="#0b2345" stroke-width="1.7"
+											stroke-dasharray="5 5" opacity="0.5" stroke-linecap="round" />
+										<path class="fig-anim"
+											d="M 42 100 C 80 126 148 132 196 118 C 226 108 248 84 258 56"
+											fill="none" stroke="#d76a54" stroke-width="2.6"
+											stroke-linecap="round" />
+										<g>
+											<circle cx="42" cy="100" r="6" fill="#0b2345" />
+											<circle cx="258" cy="56" r="6" fill="#a51c30" />
+											<text x="42" y="87" text-anchor="middle"
+												font-family="'Source Serif 4', Georgia, serif"
+												font-style="italic" font-size="12" fill="#0b2345">A</text>
+											<text x="258" y="43" text-anchor="middle"
+												font-family="'Source Serif 4', Georgia, serif"
+												font-style="italic" font-size="12" fill="#0b2345">B</text>
+										</g>
+										<g font-family="Inter, sans-serif" font-size="8" letter-spacing="1">
+											<line x1="12" y1="156" x2="28" y2="156" stroke="#0b2345"
+												stroke-width="1.7" stroke-dasharray="5 5" opacity="0.5" />
+											<text x="34" y="159" fill="#0b2345" opacity="0.55">SHORTEST PATH</text>
+											<line x1="150" y1="156" x2="166" y2="156"
+												stroke="#d76a54" stroke-width="2.4" />
+											<text x="172" y="159" fill="#d76a54">CHOSEN ROUTE</text>
+										</g>
+									</svg>
+								</div>
+								<div class="rh-body">
+									<p class="rh-status s-emerging">Emerging Research Agenda</p>
+									<h4>The City People Think They Travel Through</h4>
+									<p class="rh-subtitle">Urban Perception, Route Choice &amp; Accessibility</p>
+									<p class="rh-q">
+										How do perceptions of neighborhoods and urban space alter
+										route choice and experienced accessibility?
+									</p>
+									<div class="rh-taglines">
+										<div class="rh-tagline">
+											<span>Themes</span>
+											<div class="rh-tags">
+												<span>Urban Perception</span><span>Route Choice</span><span>Accessibility</span><span>Mental Maps</span>
+											</div>
+										</div>
+									</div>
+									<div class="rh-foot">
+										<p class="rh-related">
+											Related: <a href="#trail">Trail Accessibility</a>
+										</p>
+										<a class="rh-cta" href="perception-routing.html">
+											Explore Research Direction <span class="arrow" aria-hidden="true">→</span>
+										</a>
+									</div>
+								</div>
+							</article>
+
+							<!-- AI streetscape -->
+							<article class="rh-project reveal" id="ai-streetscape"
+								data-themes="accessibility infrastructure"
+								data-methods="computational gis spatial">
+								<div class="rh-fig" aria-hidden="true">
+									<svg viewBox="0 0 300 170">
+										<rect x="12" y="10" width="276" height="118" rx="3"
+											fill="#e9dcc7" opacity="0.45" />
+										<!-- segmented sidewalk surface -->
+										<path d="M 12 128 L 92 74 L 208 74 L 288 128 Z"
+											fill="#8099b5" opacity="0.4" />
+										<path d="M 12 128 L 60 96 L 96 96 L 60 128 Z"
+											fill="#c8d5c5" opacity="0.75" />
+										<path d="M 288 128 L 240 96 L 204 96 L 240 128 Z"
+											fill="#c8d5c5" opacity="0.75" />
+										<!-- horizon + building blocks -->
+										<g fill="#0b2345" opacity="0.16">
+											<rect x="26" y="34" width="42" height="42" />
+											<rect x="74" y="46" width="30" height="30" />
+											<rect x="196" y="42" width="34" height="34" />
+											<rect x="238" y="28" width="44" height="48" />
+										</g>
+										<!-- detections -->
+										<g fill="none" stroke="#a51c30" stroke-width="1.8">
+											<rect class="fig-anim" x="112" y="58" width="24" height="46" rx="2" />
+											<rect x="152" y="62" width="20" height="42" rx="2" />
+											<rect x="60" y="88" width="30" height="18" rx="2" />
+										</g>
+										<g font-family="Inter, sans-serif" font-size="6.5" fill="#a51c30">
+											<text x="112" y="54">PED 0.94</text>
+											<text x="152" y="58">PED 0.88</text>
+											<text x="60" y="84">CURB RAMP 0.91</text>
+										</g>
+										<g font-family="Inter, sans-serif" font-size="8" letter-spacing="1">
+											<rect x="14" y="146" width="9" height="9" fill="#c8d5c5" opacity="0.8" />
+											<text x="29" y="154" fill="#0b2345" opacity="0.55">SEGMENTED SIDEWALK</text>
+											<rect x="176" y="146" width="9" height="9" fill="none"
+												stroke="#a51c30" stroke-width="1.6" />
+											<text x="191" y="154" fill="#a51c30">DETECTION</text>
+										</g>
+									</svg>
+								</div>
+								<div class="rh-body">
+									<p class="rh-status s-complete">Completed · Exploratory Research</p>
+									<h4>AI Streetscape Analysis for Pedestrian Infrastructure</h4>
+									<p class="rh-q">
+										Can computer vision provide scalable measures of pedestrian
+										infrastructure conditions?
+									</p>
+									<div class="rh-taglines">
+										<div class="rh-tagline">
+											<span>Themes</span>
+											<div class="rh-tags">
+												<span>Pedestrian Infrastructure</span><span>GeoAI</span><span>Spatial Measurement</span>
+											</div>
+										</div>
+										<div class="rh-tagline">
+											<span>Methods</span>
+											<div class="rh-tags methods">
+												<span>U-Net</span><span>YOLO</span><span>Street View</span><span>GIS</span>
+											</div>
+										</div>
+									</div>
+									<div class="rh-foot">
+										<a class="rh-cta"
+											href="https://musa-zhanchao.github.io/practicum-web-app/"
+											target="_blank" rel="noopener">
+											Explore Project <span class="arrow" aria-hidden="true">→</span>
+										</a>
+									</div>
+								</div>
+							</article>
+						</div>
+					</div>
+
+					<!-- ── III · Infrastructure & Urban Outcomes ── -->
+					<div class="rh-theme t-outcomes" id="infrastructure-outcomes">
+						<div class="rh-theme-head reveal">
+							<span class="rh-theme-num">III</span>
+							<h3>Infrastructure &amp; Urban Outcomes</h3>
+						</div>
+						<p class="rh-theme-intro reveal">
+							How transportation infrastructure and mobility ripple outward into
+							economic activity, land use, and the life of surrounding places.
+						</p>
+
+						<div class="rh-projects">
+							<!-- EV charging -->
+							<article class="rh-project reveal" id="ev-charging"
+								data-themes="infrastructure outcomes behavior"
+								data-methods="causal spatial statistical">
+								<div class="rh-fig" aria-hidden="true">
+									<svg viewBox="0 0 300 170">
+										<rect x="12" y="8" width="276" height="130"
+											fill="url(#rhGrid)" opacity="0.08" />
+										<circle cx="96" cy="66" r="40" fill="#e9dcc7" opacity="0.5" />
+										<circle cx="96" cy="66" r="23" fill="#e9dcc7" opacity="0.6" />
+										<circle cx="212" cy="100" r="30" fill="#e9dcc7" opacity="0.45" />
+										<g fill="#0b2345" opacity="0.45">
+											<circle cx="78" cy="52" r="1.9" /><circle cx="92" cy="42" r="1.9" />
+											<circle cx="110" cy="50" r="1.9" /><circle cx="118" cy="66" r="1.9" />
+											<circle cx="110" cy="82" r="1.9" /><circle cx="90" cy="88" r="1.9" />
+											<circle cx="72" cy="78" r="1.9" /><circle cx="66" cy="62" r="1.9" />
+											<circle cx="100" cy="64" r="1.9" /><circle cx="84" cy="68" r="1.9" />
+											<circle cx="200" cy="88" r="1.9" /><circle cx="222" cy="90" r="1.9" />
+											<circle cx="228" cy="108" r="1.9" /><circle cx="208" cy="114" r="1.9" />
+											<circle cx="196" cy="102" r="1.9" /><circle cx="216" cy="102" r="1.9" />
+											<circle cx="156" cy="52" r="1.9" opacity="0.5" />
+											<circle cx="170" cy="120" r="1.9" opacity="0.5" />
+											<circle cx="44" cy="110" r="1.9" opacity="0.5" />
+											<circle cx="264" cy="60" r="1.9" opacity="0.5" />
+										</g>
+										<g>
+											<rect x="89" y="59" width="14" height="14" rx="3" fill="#456a96" />
+											<path d="M 97.5 61.5 L 93.5 66.5 H 96.5 L 94.5 70.5 L 99 65 H 96 Z"
+												fill="#ffffff" />
+											<rect x="205" y="93" width="14" height="14" rx="3" fill="#456a96" />
+											<path d="M 213.5 95.5 L 209.5 100.5 H 212.5 L 210.5 104.5 L 215 99 H 212 Z"
+												fill="#ffffff" />
+											<circle cx="96" cy="66" r="10" fill="none"
+												stroke="#a51c30" stroke-width="1.3" />
+										</g>
+										<g transform="translate(214, 14)">
+											<rect x="0" y="0" width="72" height="48" rx="4" fill="#ffffff"
+												stroke="#0b2345" stroke-opacity="0.12" />
+											<path class="fig-anim" d="M 8 38 L 20 34 L 31 36 L 42 26 L 52 20 L 64 11"
+												fill="none" stroke="#d76a54" stroke-width="2"
+												stroke-linecap="round" />
+											<line x1="31" y1="8" x2="31" y2="42" stroke="#a51c30"
+												stroke-width="0.9" stroke-dasharray="2.5 3" opacity="0.55" />
+											<text x="36" y="46" font-family="Inter, sans-serif"
+												font-size="7" fill="#0b2345" opacity="0.55"
+												text-anchor="middle" letter-spacing="0.6">STATION OPENS</text>
+										</g>
+										<text x="96" y="126" text-anchor="middle"
+											font-family="Inter, sans-serif" font-size="8"
+											fill="#0b2345" opacity="0.55" letter-spacing="1.2">CHARGING SITE</text>
+										<text x="212" y="146" text-anchor="middle"
+											font-family="Inter, sans-serif" font-size="8"
+											fill="#0b2345" opacity="0.55" letter-spacing="1.2">COMMERCIAL ACTIVITY</text>
+									</svg>
+								</div>
+								<div class="rh-body">
+									<p class="rh-status">Ongoing Research</p>
+									<h4>EV Charging &amp; Commercial Activity</h4>
+									<p class="rh-q">
+										When do EV charging stations generate sustained and spatially
+										embedded commercial activity?
+									</p>
+									<div class="rh-taglines">
+										<div class="rh-tagline">
+											<span>Themes</span>
+											<div class="rh-tags">
+												<span>EV Charging</span><span>Commercial Activity</span><span>Infrastructure</span>
+											</div>
+										</div>
+										<div class="rh-tagline">
+											<span>Methods</span>
+											<div class="rh-tags methods">
+												<span>Panel Data</span><span>Spatial Analysis</span><span>Causal Inference</span>
+											</div>
+										</div>
+									</div>
+									<div class="rh-foot">
+										<p class="rh-related">
+											Related: <a href="#arenas">Arenas &amp; Events</a>
+										</p>
+										<span class="rh-pending">Project page in preparation</span>
+									</div>
+								</div>
+							</article>
+
+							<!-- Arenas -->
+							<article class="rh-project reveal" id="arenas"
+								data-themes="infrastructure outcomes"
+								data-methods="causal spatial">
+								<div class="rh-fig" aria-hidden="true">
+									<svg viewBox="0 0 300 170">
+										<rect x="12" y="8" width="276" height="130"
+											fill="url(#rhGrid)" opacity="0.08" />
+										<!-- travel-demand rings -->
+										<g fill="none" stroke="#d76a54" stroke-opacity="0.3">
+											<circle cx="150" cy="72" r="30" stroke-width="1.4" />
+											<circle cx="150" cy="72" r="48" stroke-width="1.4" />
+											<circle cx="150" cy="72" r="66" stroke-width="1.4" />
+										</g>
+										<!-- inbound flows on event night -->
+										<g fill="none" stroke="#a51c30" stroke-width="2.2"
+											stroke-linecap="round">
+											<path class="fig-anim" d="M 26 32 C 70 46 104 56 128 66" />
+											<path class="fig-anim" d="M 274 30 C 232 46 196 56 172 66" />
+											<path class="fig-anim" d="M 40 128 C 82 112 112 92 134 80" />
+											<path class="fig-anim" d="M 258 130 C 216 114 188 94 166 80" />
+										</g>
+										<!-- the venue -->
+										<g>
+											<ellipse cx="150" cy="72" rx="20" ry="13" fill="#456a96" />
+											<ellipse cx="150" cy="72" rx="10" ry="6" fill="#ffffff"
+												opacity="0.75" />
+										</g>
+										<!-- surrounding activity -->
+										<g fill="#0b2345" opacity="0.4">
+											<circle cx="112" cy="44" r="2" /><circle cx="190" cy="46" r="2" />
+											<circle cx="102" cy="100" r="2" /><circle cx="198" cy="102" r="2" />
+											<circle cx="128" cy="112" r="2" /><circle cx="176" cy="110" r="2" />
+											<circle cx="86" cy="70" r="2" /><circle cx="214" cy="72" r="2" />
+										</g>
+										<text x="150" y="126" text-anchor="middle"
+											font-family="Inter, sans-serif" font-size="8"
+											fill="#0b2345" opacity="0.55" letter-spacing="1.2">EVENT VENUE</text>
+										<g font-family="Inter, sans-serif" font-size="8" letter-spacing="1">
+											<line x1="14" y1="152" x2="30" y2="152" stroke="#a51c30"
+												stroke-width="2.2" />
+											<text x="36" y="155" fill="#a51c30">TRAVEL DEMAND</text>
+											<circle cx="176" cy="152" r="2.6" fill="#0b2345" opacity="0.45" />
+											<text x="186" y="155" fill="#0b2345" opacity="0.55">LOCAL ACTIVITY</text>
+										</g>
+									</svg>
+								</div>
+								<div class="rh-body">
+									<p class="rh-status">Ongoing · Developing Research</p>
+									<h4>Arenas, Events &amp; Urban Activity</h4>
+									<p class="rh-q">
+										How do major events reshape travel demand, commercial
+										activity, and the relationship between venues and surrounding
+										communities?
+									</p>
+									<div class="rh-taglines">
+										<div class="rh-tagline">
+											<span>Themes</span>
+											<div class="rh-tags">
+												<span>Major Events</span><span>Travel Demand</span><span>Urban Economics</span><span>Community</span>
+											</div>
+										</div>
+										<div class="rh-tagline">
+											<span>Methods</span>
+											<div class="rh-tags methods">
+												<span>Causal Inference</span><span>Spatial Analysis</span>
+											</div>
+										</div>
+									</div>
+									<div class="rh-foot">
+										<p class="rh-related">
+											Related: <a href="#ev-charging">EV Charging</a>
+										</p>
+										<span class="rh-pending">Project page in preparation</span>
+									</div>
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ══ Earlier research ══ -->
+			<section class="section rh-earlier" id="earlier">
+				<div class="container">
+					<p class="section-label reveal">Earlier Research</p>
+					<h2 class="section-title reveal">
+						The work that shaped the questions
+					</h2>
+					<p class="section-intro reveal">
+						Earlier work in geography, GIS, remote sensing, and
+						community-engaged research shaped the questions and methods that
+						inform my current research.
+					</p>
+
+					<div class="rh-archive">
+						<article class="rh-arch-card reveal" id="trail"
+							data-themes="accessibility infrastructure"
+							data-methods="gis spatial survey">
+							<p class="rh-arch-kicker">Undergraduate Honors Research</p>
+							<h4>Trail Accessibility, LiDAR &amp; Environmental Conservation</h4>
+							<p>
+								Public input, UAV survey, and iPhone LiDAR combined to evaluate
+								trail conditions against conservation tradeoffs.
+							</p>
+							<div class="rh-tags">
+								<span>Accessibility</span><span>LiDAR</span><span>UAV</span><span>Environmental Planning</span>
 							</div>
-							<div class="card-content">
-								<h3>GIS &amp; Spatial Analytics</h3>
-								<p class="subtitle">Leveraging geospatial technologies for smarter cities</p>
-								<ul>
-									<li>Geostatistics and Spatial Analysis with Machine Learning</li>
-									<li>Geovisualization &amp; Cartography</li>
-									<li>Agent-Based Modeling for urban systems</li>
-								</ul>
+							<div class="rh-foot">
+								<a class="rh-cta"
+									href="https://orb.binghamton.edu/undergrad_honors_theses/40/"
+									target="_blank" rel="noopener">
+									Read Thesis <span class="arrow" aria-hidden="true">→</span>
+								</a>
 							</div>
 						</article>
-						<article class="stacked-card">
-							<div class="card-visual">
-								<img
-									src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1000&q=80"
-									alt="Transportation"
-								/>
+
+						<article class="rh-arch-card reveal reveal-d1" id="johnson-city"
+							data-themes="perception outcomes"
+							data-methods="qualitative">
+							<p class="rh-arch-kicker">Community-Engaged Research · Public Scholarship</p>
+							<h4>Johnson City Oral Histories &amp; Places with Hidden Stories</h4>
+							<p>
+								Oral histories of industrial decline, university-led
+								revitalization, and displacement — carried into short films and
+								public performance.
+							</p>
+							<div class="rh-tags">
+								<span>Urban Change</span><span>Oral History</span><span>Community Engagement</span><span>Revitalization</span>
 							</div>
-							<div class="card-content">
-								<h3>Transportation Planning</h3>
-								<p class="subtitle">Understanding human mobility &amp; smart systems</p>
-								<ul>
-									<li>Travel behavior modeling &amp; data mining</li>
-									<li>Intelligent Transportation Systems (ITS)</li>
-									<li>GeoAI and remote sensing for urban planning</li>
-								</ul>
-							</div>
-						</article>
-						<article class="stacked-card">
-							<div class="card-visual">
-								<img
-									src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80"
-									alt="Urban infrastructure"
-								/>
-							</div>
-							<div class="card-content">
-								<h3>Current Focus</h3>
-								<p class="subtitle">Research fellow under Prof. Erick Guerra @ UPenn</p>
-								<p>Working on travel behavior and smart mobility research. Supporting equitable, efficient, and sustainable urban infrastructure through spatial data science and advanced analytics.</p>
+							<div class="rh-foot">
+								<span class="rh-pending">Project archive in preparation</span>
 							</div>
 						</article>
-						<article class="stacked-card">
-							<div class="card-icon">🌐</div>
-							<div class="card-content">
-								<h3>GitHub Organizations</h3>
-								<p class="subtitle">Open-source contributions &amp; research code</p>
-								<ul>
-									<li><strong>Geography-and-Planning:</strong> coding resources for planners</li>
-									<li><strong>MUSA-Zhanchao:</strong> coursework &amp; research at UPenn MUSA</li>
-									<li><strong>UPenn-Transport-Zhanchao:</strong> Penn transportation research</li>
-								</ul>
+
+						<article class="rh-arch-card reveal reveal-d2" id="invasive-species"
+							data-themes=""
+							data-methods="gis spatial">
+							<p class="rh-arch-kicker">Earlier Undergraduate Research</p>
+							<h4>Invasive Species &amp; GIS</h4>
+							<p>
+								Field mapping of invasive species spread across the Binghamton
+								region — the first project that made spatial measurement feel
+								like a research method.
+							</p>
+							<div class="rh-tags">
+								<span>GIS</span><span>Field Research</span><span>Environmental Geography</span>
+							</div>
+							<div class="rh-foot">
+								<span class="rh-pending">Project page in preparation</span>
 							</div>
 						</article>
+					</div>
+				</div>
+			</section>
+
+			<!-- ══ Methods ══ -->
+			<section class="section" id="methods">
+				<div class="container">
+					<p class="section-label reveal">How I Study These Questions</p>
+					<h2 class="section-title reveal">
+						Methods follow the question, not the other way round
+					</h2>
+					<p class="section-intro reveal">
+						Select a method to see which projects rely on it — the portfolio
+						above responds.
+					</p>
+
+					<div class="rh-methods-grid reveal" role="group"
+						aria-label="Filter projects by method">
+						<button class="rh-method" type="button" data-filter="causal"
+							data-filter-kind="method" aria-pressed="false"
+							style="--rh-accent: #a51c30">Causal Inference</button>
+						<button class="rh-method" type="button" data-filter="spatial"
+							data-filter-kind="method" aria-pressed="false"
+							style="--rh-accent: #8099b5">Spatial Analytics</button>
+						<button class="rh-method" type="button" data-filter="survey"
+							data-filter-kind="method" aria-pressed="false"
+							style="--rh-accent: #d9c5a5">Survey Research</button>
+						<button class="rh-method" type="button" data-filter="statistical"
+							data-filter-kind="method" aria-pressed="false"
+							style="--rh-accent: #d76a54">Statistical Modeling</button>
+						<button class="rh-method" type="button" data-filter="gis"
+							data-filter-kind="method" aria-pressed="false"
+							style="--rh-accent: #456a96">GIS &amp; Network Analysis</button>
+						<button class="rh-method" type="button" data-filter="computational"
+							data-filter-kind="method" aria-pressed="false"
+							style="--rh-accent: #0b2345">Computational Methods</button>
+						<button class="rh-method" type="button" data-filter="qualitative"
+							data-filter-kind="method" aria-pressed="false"
+							style="--rh-accent: #b7c9b7">Community-Engaged Research</button>
+					</div>
+					<p class="rh-method-note reveal">
+						Selecting a method highlights the matching projects in
+						<a href="#explore">Explore the Research</a>. Select it again to clear.
+					</p>
+				</div>
+			</section>
+
+			<!-- ══ Research evolution ══ -->
+			<section class="section rh-evolution" id="evolution">
+				<div class="container">
+					<p class="section-label reveal">Research Evolution</p>
+					<h2 class="section-title reveal">
+						How the questions kept moving
+					</h2>
+					<p class="section-intro reveal">
+						Not a chronology of positions — a record of what each stage of
+						training left behind in the next one.
+					</p>
+
+					<div class="rh-evo reveal">
+						<div class="rh-evo-step">
+							<h4>Geography &amp; GIS</h4>
+							<ul>
+								<li>Spatial measurement</li>
+								<li>Environmental accessibility</li>
+								<li>Community research</li>
+							</ul>
+						</div>
+						<div class="rh-evo-step">
+							<h4>Transportation &amp; Behavior</h4>
+							<ul>
+								<li>Travel behavior</li>
+								<li>Transit policy</li>
+								<li>Traffic safety</li>
+							</ul>
+						</div>
+						<div class="rh-evo-step">
+							<h4>Accessibility &amp; Perception</h4>
+							<ul>
+								<li>Route choice</li>
+								<li>Perceived accessibility</li>
+								<li>Spatial behavior</li>
+							</ul>
+						</div>
+						<div class="rh-evo-step">
+							<h4>Urban Outcomes</h4>
+							<ul>
+								<li>Economic activity</li>
+								<li>Land use</li>
+								<li>Infrastructure</li>
+							</ul>
+						</div>
+					</div>
+
+					<p class="rh-evo-note reveal">
+						The trajectory was not predetermined. Each stage kept a method or a
+						question that the next one needed.
+					</p>
+				</div>
+			</section>
+
+			<!-- ══ Closing ══ -->
+			<section class="rh-closing">
+				<div class="container">
+					<p class="reveal">
+						This page is not everything I have studied — it is the map that helps
+						you navigate it. The complete academic record lives on the CV; the
+						recognition behind this work lives on the awards page.
+					</p>
+					<div class="rh-closing-actions reveal">
+						<a class="btn-primary" href="cv.html">
+							View CV <span class="arrow" aria-hidden="true">→</span>
+						</a>
+						<a class="btn-outline" href="awards.html">Awards &amp; Recognition</a>
 					</div>
 				</div>
 			</section>
 		</main>
 
+		<!-- ══ Footer ══ -->
 		<footer class="site-footer">
-			<div class="container footer-grid">
-				<div>
-					<h3>Let's build something smart.</h3>
-					<p>Philadelphia, PA · zhanchao@upenn.edu · 607-644-7982</p>
+			<div class="container">
+				<div class="footer-grid">
+					<div>
+						<p class="footer-name">Zhanchao Yang</p>
+						<p class="footer-identity">
+							Urban Planning <span class="dot">·</span> Transportation
+							<span class="dot">·</span> Spatial Analytics
+						</p>
+					</div>
+					<nav class="footer-links">
+						<a href="mailto:zhanchao@upenn.edu">Email</a>
+						<a href="research.html">Research</a>
+						<a href="cv.html">CV</a>
+						<a href="awards.html">Awards</a>
+						<a href="about-me.html">About</a>
+						<a href="contact.html">Contact</a>
+						<a href="https://github.com/zyang91" target="_blank" rel="noopener">GitHub</a>
+						<a href="https://www.linkedin.com/in/zhanchaoyang/" target="_blank" rel="noopener">LinkedIn</a>
+					</nav>
 				</div>
-				<div class="footer-links">
-					<a href="contact.html">Contact</a>
-					<a href="publications.html">Publications</a>
-					<a href="experience.html">Experience</a>
+				<div class="footer-note">
+					<span>© <span id="year"></span> Zhanchao Yang</span>
+					<span>Philadelphia, PA</span>
 				</div>
 			</div>
-			<p class="footer-note">© <span id="year"></span> Zhanchao Yang.</p>
 		</footer>
 
-		<script src="../js/index.js"></script>
+		<script src="../js/home.js"></script>
+		<script src="../js/research.js"></script>
 	</body>
 </html>
