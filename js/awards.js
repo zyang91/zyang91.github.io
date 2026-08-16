@@ -16,7 +16,7 @@
 		lastFocused = document.activeElement;
 		boxImg.src = img.getAttribute('src');
 		boxImg.alt = img.getAttribute('alt') || '';
-		boxCap.innerHTML = img.getAttribute('data-caption') || '';
+		boxCap.textContent = img.getAttribute('data-caption') || '';
 		box.hidden = false;
 		document.body.classList.add('aw-lightbox-open');
 		window.requestAnimationFrame(function () {
