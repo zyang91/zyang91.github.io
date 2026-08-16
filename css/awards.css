@@ -1,0 +1,1008 @@
+/* ══════════════════════════════════════════════════════════════
+   Zhanchao Yang — Awards & Recognition
+   Loads after home.css and inherits its tokens:
+   warm ivory · academic navy · restrained brick red
+   Own background motif: archival ruled-and-gridded paper
+══════════════════════════════════════════════════════════════ */
+
+body.awards-page {
+	background: var(--bg);
+	color: var(--ink);
+	font-family: var(--sans);
+	font-size: 16px;
+	line-height: 1.65;
+	-webkit-font-smoothing: antialiased;
+	overflow-x: hidden;
+}
+
+/* ── Header ───────────────────────────────────────────────── */
+.aw-hero {
+	position: relative;
+	padding: 150px 0 64px;
+	border-bottom: 1px solid var(--line-soft);
+	background: linear-gradient(180deg, var(--surface-warm) 0%, var(--bg) 100%);
+	overflow: hidden;
+}
+
+/* the page's own background: an archive sheet — ruled lines over a
+   faint index grid, fading out before it reaches the text */
+.aw-hero-pattern {
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	background-image:
+		repeating-linear-gradient(
+			0deg,
+			rgba(11, 35, 69, 0.055) 0 1px,
+			transparent 1px 34px
+		),
+		repeating-linear-gradient(
+			90deg,
+			rgba(11, 35, 69, 0.04) 0 1px,
+			transparent 1px 34px
+		),
+		radial-gradient(
+			ellipse 46% 60% at 84% 22%,
+			rgba(217, 197, 165, 0.5) 0%,
+			rgba(217, 197, 165, 0) 70%
+		);
+	-webkit-mask-image: linear-gradient(
+		100deg,
+		rgba(0, 0, 0, 0) 0%,
+		rgba(0, 0, 0, 0.35) 34%,
+		rgba(0, 0, 0, 1) 66%
+	);
+	mask-image: linear-gradient(
+		100deg,
+		rgba(0, 0, 0, 0) 0%,
+		rgba(0, 0, 0, 0.35) 34%,
+		rgba(0, 0, 0, 1) 66%
+	);
+}
+
+.aw-hero-inner {
+	position: relative;
+	z-index: 1;
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) 260px;
+	gap: 56px;
+	align-items: center;
+}
+.aw-hero-text {
+	max-width: 640px;
+}
+.aw-hero-eyebrow {
+	font-size: 0.76rem;
+	font-weight: 600;
+	letter-spacing: 0.22em;
+	text-transform: uppercase;
+	color: var(--red);
+	margin-bottom: 14px;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+.aw-hero-eyebrow::before {
+	content: '';
+	width: 30px;
+	height: 1.5px;
+	background: var(--red);
+}
+.aw-hero h1 {
+	font-family: var(--serif);
+	font-weight: 600;
+	font-size: clamp(2.3rem, 5vw, 3.4rem);
+	line-height: 1.08;
+	letter-spacing: -0.01em;
+	margin-bottom: 18px;
+}
+.aw-hero h1 em {
+	font-style: italic;
+	color: var(--red);
+}
+.aw-hero-statement {
+	font-family: var(--serif);
+	font-size: 1.08rem;
+	line-height: 1.7;
+	color: var(--ink-soft);
+	max-width: 600px;
+	margin-bottom: 26px;
+}
+.aw-hero-meta {
+	margin-top: 20px;
+	font-size: 0.72rem;
+	font-weight: 500;
+	letter-spacing: 0.13em;
+	text-transform: uppercase;
+	color: var(--ink-faint);
+}
+
+/* category chips */
+.aw-chips {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 9px;
+}
+.aw-chips a {
+	font-size: 0.82rem;
+	font-weight: 500;
+	color: var(--ink-soft);
+	text-decoration: none;
+	border: 1px solid var(--line);
+	border-radius: 100px;
+	padding: 8px 17px;
+	background: rgba(255, 255, 255, 0.6);
+	transition: color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+.aw-chips a:hover,
+.aw-chips a.active {
+	color: var(--red);
+	border-color: var(--red);
+	transform: translateY(-1px);
+}
+
+/* recognition spine */
+.aw-spine svg {
+	display: block;
+	width: 100%;
+	height: auto;
+	overflow: visible;
+}
+.aw-spine-line {
+	stroke-dasharray: 400;
+	stroke-dashoffset: 400;
+	animation: aw-draw 1.8s cubic-bezier(0.3, 0, 0.2, 1) 0.2s forwards;
+	opacity: 0.55;
+}
+@keyframes aw-draw {
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+.aw-spine-stop {
+	opacity: 0;
+	animation: aw-stop-in 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+.aw-spine-stop.s1 { animation-delay: 0.45s; }
+.aw-spine-stop.s2 { animation-delay: 0.85s; }
+.aw-spine-stop.s3 { animation-delay: 1.25s; }
+.aw-spine-stop.s4 { animation-delay: 1.65s; }
+@keyframes aw-stop-in {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+/* ── Section tints ────────────────────────────────────────── */
+.section-quiet {
+	background: var(--surface-warm);
+	border-top: 1px solid var(--line-soft);
+	border-bottom: 1px solid var(--line-soft);
+}
+.section-exhibit {
+	position: relative;
+	background: var(--surface-warm);
+	border-top: 1px solid var(--line-soft);
+	border-bottom: 1px solid var(--line-soft);
+}
+/* the archive grid returns, very faintly, behind the exhibition */
+.section-exhibit::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	background-image:
+		repeating-linear-gradient(0deg, rgba(11, 35, 69, 0.04) 0 1px, transparent 1px 34px),
+		repeating-linear-gradient(90deg, rgba(11, 35, 69, 0.03) 0 1px, transparent 1px 34px);
+	-webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+	mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+}
+.section-exhibit > .container {
+	position: relative;
+	z-index: 1;
+}
+
+/* ── Shared award typography ──────────────────────────────── */
+.aw-eyebrow {
+	font-size: 0.72rem;
+	font-weight: 600;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--red);
+	margin-bottom: 12px;
+}
+.aw-inst {
+	font-size: 0.86rem;
+	color: var(--ink-faint);
+	margin-bottom: 14px;
+}
+.aw-desc {
+	font-size: 0.95rem;
+	line-height: 1.68;
+	color: var(--ink-soft);
+	margin-bottom: 18px;
+	max-width: 60ch;
+}
+.aw-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 7px;
+	margin-bottom: 16px;
+}
+.aw-tags span {
+	font-size: 0.7rem;
+	font-weight: 500;
+	color: var(--ink-faint);
+	border: 1px solid var(--line);
+	border-radius: 100px;
+	padding: 3px 11px;
+}
+.aw-tags span.is-red {
+	color: var(--red);
+	border-color: rgba(165, 28, 48, 0.35);
+}
+.aw-links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+.aw-links a {
+	font-size: 0.84rem;
+	font-weight: 600;
+	color: var(--red);
+	text-decoration: none;
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+}
+.aw-links a .arrow {
+	transition: transform 0.3s ease;
+}
+.aw-links a:hover .arrow {
+	transform: translateX(4px);
+}
+
+/* expandable detail panels */
+.aw-details {
+	margin-top: 20px;
+	border-top: 1px solid var(--line-soft);
+	padding-top: 14px;
+}
+.aw-details > summary {
+	list-style: none;
+	cursor: pointer;
+	font-size: 0.76rem;
+	font-weight: 600;
+	letter-spacing: 0.13em;
+	text-transform: uppercase;
+	color: var(--ink-faint);
+	display: flex;
+	align-items: center;
+	gap: 9px;
+	transition: color 0.25s ease;
+}
+.aw-details > summary::-webkit-details-marker {
+	display: none;
+}
+.aw-details > summary::after {
+	content: '↓';
+	font-size: 0.9rem;
+	transition: transform 0.3s ease;
+}
+.aw-details[open] > summary::after {
+	transform: rotate(180deg);
+}
+.aw-details > summary:hover {
+	color: var(--red);
+}
+.aw-details-body {
+	padding-top: 16px;
+	font-size: 0.9rem;
+	line-height: 1.68;
+	color: var(--ink-soft);
+}
+.aw-details-body h4 {
+	font-family: var(--serif);
+	font-size: 1rem;
+	font-weight: 600;
+	color: var(--ink);
+	margin-bottom: 8px;
+}
+.aw-details-body ul {
+	list-style: none;
+	margin-bottom: 18px;
+}
+.aw-details-body li {
+	position: relative;
+	padding-left: 16px;
+	margin-bottom: 7px;
+}
+.aw-details-body li::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0.66em;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: var(--sand-deep);
+}
+
+/* archive thumbnails inside detail panels */
+.aw-thumbs {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 14px;
+	margin-bottom: 16px;
+}
+.aw-thumbs figure {
+	width: 132px;
+}
+.aw-thumbs img {
+	display: block;
+	width: 100%;
+	height: 104px;
+	object-fit: cover;
+	border: 1px solid var(--line-soft);
+	border-radius: 4px;
+	background: var(--surface-warm);
+}
+.aw-thumbs figcaption {
+	margin-top: 6px;
+	font-size: 0.7rem;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--ink-faint);
+}
+
+/* zoomable archive images */
+.aw-zoom {
+	cursor: zoom-in;
+	transition: opacity 0.25s ease;
+}
+.aw-zoom:hover {
+	opacity: 0.9;
+}
+
+/* ── Featured: lead award ─────────────────────────────────── */
+.aw-lead {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) 300px;
+	gap: 48px;
+	align-items: center;
+	background: var(--surface);
+	border: 1px solid var(--line-soft);
+	border-left: 3px solid var(--red);
+	border-radius: 6px;
+	box-shadow: var(--shadow);
+	padding: 40px 42px;
+	margin-bottom: 36px;
+}
+.aw-lead-body h3 {
+	font-family: var(--serif);
+	font-size: clamp(1.7rem, 3.2vw, 2.25rem);
+	font-weight: 600;
+	line-height: 1.18;
+	margin-bottom: 8px;
+}
+.aw-lead-body .aw-desc {
+	font-family: var(--serif);
+	font-size: 1.08rem;
+	line-height: 1.65;
+}
+.aw-lead-figure img {
+	display: block;
+	width: 100%;
+	height: auto;
+	border: 1px solid var(--line-soft);
+	border-radius: 4px;
+	box-shadow: var(--shadow);
+}
+.aw-lead-figure figcaption,
+.aw-side-figure figcaption,
+.aw-exhibit-main figcaption {
+	margin-top: 10px;
+	font-size: 0.78rem;
+	line-height: 1.5;
+	color: var(--ink-faint);
+}
+.aw-exhibit-main figcaption em {
+	font-family: var(--serif);
+	font-style: italic;
+	color: var(--ink-soft);
+}
+
+/* ── Featured: paired awards ──────────────────────────────── */
+.aw-pair {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 36px;
+}
+.aw-card {
+	display: flex;
+	flex-direction: column;
+	background: var(--surface);
+	border: 1px solid var(--line-soft);
+	border-radius: 6px;
+	overflow: hidden;
+	box-shadow: var(--shadow);
+	transition: transform 0.45s cubic-bezier(0.22, 0.61, 0.36, 1), box-shadow 0.45s ease;
+}
+.aw-card:hover {
+	transform: translateY(-4px);
+	box-shadow: var(--shadow-lift);
+}
+.aw-card-figure {
+	background: var(--surface-warm);
+	border-bottom: 1px solid var(--line-soft);
+}
+/* ceremony photographs are archive material — show them whole,
+   never cropped to a card-shaped band */
+.aw-card-figure img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.aw-card-body {
+	padding: 28px 30px 30px;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+.aw-card-body h3 {
+	font-family: var(--serif);
+	font-size: 1.36rem;
+	font-weight: 600;
+	line-height: 1.28;
+	margin-bottom: 12px;
+}
+.aw-card-body .aw-details {
+	margin-top: auto;
+}
+.aw-quote {
+	font-family: var(--serif);
+	font-size: 1.02rem;
+	line-height: 1.62;
+	color: var(--ink-soft);
+	border-left: 2px solid var(--sand-deep);
+	padding-left: 16px;
+	margin-bottom: 18px;
+}
+.aw-quote cite {
+	display: block;
+	margin-top: 8px;
+	font-family: var(--sans);
+	font-style: normal;
+	font-size: 0.72rem;
+	letter-spacing: 0.11em;
+	text-transform: uppercase;
+	color: var(--ink-faint);
+}
+
+/* ── Award rows ───────────────────────────────────────────── */
+.aw-rows {
+	border-top: 1px solid var(--line-soft);
+}
+.aw-row {
+	display: grid;
+	grid-template-columns: 76px minmax(0, 1fr) auto;
+	gap: 28px;
+	align-items: start;
+	padding: 28px 0;
+	border-bottom: 1px solid var(--line-soft);
+}
+.aw-row-year {
+	font-family: var(--serif);
+	font-size: 1.32rem;
+	font-weight: 600;
+	color: var(--red);
+	line-height: 1.3;
+	padding-top: 2px;
+}
+.aw-row-body h3 {
+	font-family: var(--serif);
+	font-size: 1.24rem;
+	font-weight: 600;
+	line-height: 1.32;
+	margin-bottom: 5px;
+}
+.aw-row-body .aw-inst {
+	margin-bottom: 10px;
+}
+.aw-row-body .aw-desc {
+	margin-bottom: 0;
+}
+.aw-row-body .aw-desc + .aw-links {
+	margin-top: 14px;
+}
+.aw-row-cat {
+	font-size: 0.68rem;
+	font-weight: 600;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--ink-faint);
+	border: 1px solid var(--line);
+	border-radius: 100px;
+	padding: 5px 13px;
+	white-space: nowrap;
+	margin-top: 4px;
+}
+.aw-row.is-secondary .aw-row-body h3 {
+	font-size: 1.06rem;
+}
+.aw-row.is-secondary .aw-row-year {
+	font-size: 1.1rem;
+	color: var(--ink-faint);
+}
+
+/* honors: rows + a single archive photograph */
+.aw-honors {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) 300px;
+	gap: 44px;
+	align-items: start;
+}
+.aw-side-stack {
+	display: flex;
+	flex-direction: column;
+	gap: 26px;
+}
+.aw-side-figure img {
+	display: block;
+	width: 100%;
+	height: auto;
+	border: 1px solid var(--line-soft);
+	border-radius: 4px;
+	box-shadow: var(--shadow);
+}
+
+/* cross-references to recognition shown elsewhere */
+.aw-refs {
+	margin-top: 34px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 10px;
+}
+.aw-refs-label {
+	width: 100%;
+	font-size: 0.7rem;
+	font-weight: 600;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--ink-faint);
+	margin-bottom: 2px;
+}
+.aw-ref {
+	font-size: 0.82rem;
+	color: var(--ink-soft);
+	text-decoration: none;
+	background: var(--surface);
+	border: 1px solid var(--line);
+	border-radius: 100px;
+	padding: 7px 16px;
+	transition: color 0.25s ease, border-color 0.25s ease;
+}
+.aw-ref:hover {
+	color: var(--red);
+	border-color: var(--red);
+}
+
+/* ── Research communication: small exhibition ─────────────── */
+.aw-exhibit {
+	padding: 40px 0;
+	border-top: 1px solid var(--line);
+}
+.aw-exhibit:first-of-type {
+	border-top: none;
+	padding-top: 0;
+}
+.aw-exhibit-head {
+	display: flex;
+	align-items: baseline;
+	gap: 26px;
+	margin-bottom: 26px;
+}
+.aw-exhibit-year {
+	font-family: var(--serif);
+	font-size: clamp(2rem, 4vw, 2.8rem);
+	font-weight: 600;
+	line-height: 1;
+	color: var(--red);
+	flex-shrink: 0;
+}
+.aw-exhibit-head h3 {
+	font-family: var(--serif);
+	font-size: 1.42rem;
+	font-weight: 600;
+	line-height: 1.28;
+	margin-bottom: 6px;
+}
+.aw-exhibit-head .aw-inst {
+	margin-bottom: 0;
+}
+/* both columns of an exhibit item finish on the same line */
+.aw-exhibit-grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+	gap: 40px;
+	align-items: stretch;
+}
+.aw-exhibit-main {
+	display: flex;
+	flex-direction: column;
+}
+.aw-exhibit-main img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	flex: 1 1 auto;
+	min-height: 0;
+	object-fit: cover;
+	border: 1px solid var(--line-soft);
+	border-radius: 4px;
+	box-shadow: var(--shadow);
+	background: var(--surface);
+}
+.aw-exhibit-side {
+	display: flex;
+	flex-direction: column;
+	padding-top: 4px;
+}
+.aw-exhibit-side .aw-links {
+	margin-top: auto;
+	padding-top: 4px;
+}
+.aw-ribbons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 9px;
+	margin-bottom: 20px;
+}
+.aw-ribbon {
+	font-size: 0.7rem;
+	font-weight: 600;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--red);
+	background: var(--surface);
+	border: 1px solid rgba(165, 28, 48, 0.3);
+	border-radius: 3px;
+	padding: 7px 14px;
+}
+.aw-ribbon.is-alt {
+	color: var(--ink);
+	border-color: var(--sand-deep);
+	background: var(--sand);
+}
+.aw-side-label {
+	font-size: 0.7rem;
+	font-weight: 600;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--ink-faint);
+	margin-bottom: 8px;
+}
+.aw-side-work {
+	font-family: var(--serif);
+	font-size: 1.06rem;
+	line-height: 1.55;
+	color: var(--ink);
+	margin-bottom: 14px;
+}
+.aw-side-note {
+	font-size: 0.86rem;
+	line-height: 1.6;
+	color: var(--ink-soft);
+	margin-bottom: 18px;
+}
+.aw-exhibit-thumb {
+	margin-bottom: 18px;
+	max-width: 240px;
+}
+.aw-exhibit-thumb img {
+	display: block;
+	width: 100%;
+	height: auto;
+	border: 1px solid var(--line-soft);
+	border-radius: 4px;
+	box-shadow: var(--shadow);
+}
+.aw-exhibit-thumb figcaption {
+	margin-top: 7px;
+	font-size: 0.7rem;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--ink-faint);
+}
+
+/* ── Timeline ─────────────────────────────────────────────── */
+.aw-timeline {
+	list-style: none;
+	max-width: 780px;
+}
+.aw-timeline > li {
+	position: relative;
+	padding: 0 0 30px 40px;
+}
+.aw-timeline > li::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 6px;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background: var(--surface);
+	border: 4px solid var(--red);
+}
+.aw-timeline > li::after {
+	content: '';
+	position: absolute;
+	left: 7px;
+	top: 27px;
+	bottom: 0;
+	width: 1.5px;
+	background: var(--line);
+}
+.aw-timeline > li:last-child {
+	padding-bottom: 0;
+}
+.aw-timeline > li:last-child::after {
+	display: none;
+}
+.aw-timeline > li:not(:first-child)::before {
+	border-color: var(--sand-deep);
+}
+.aw-tl-year {
+	font-family: var(--serif);
+	font-size: 1.5rem;
+	font-weight: 600;
+	line-height: 1;
+	margin-bottom: 14px;
+}
+.aw-timeline ul {
+	list-style: none;
+}
+.aw-timeline ul li {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 20px;
+	padding: 9px 0;
+	border-bottom: 1px solid var(--line-soft);
+}
+.aw-tl-name {
+	font-size: 0.94rem;
+	color: var(--ink);
+}
+.aw-tl-inst {
+	font-size: 0.76rem;
+	letter-spacing: 0.06em;
+	color: var(--ink-faint);
+	text-align: right;
+	white-space: nowrap;
+}
+.aw-closing {
+	margin-top: 56px;
+	padding-top: 34px;
+	border-top: 1px solid var(--line-soft);
+	max-width: 640px;
+}
+.aw-closing p {
+	font-family: var(--serif);
+	font-size: 1.08rem;
+	line-height: 1.65;
+	color: var(--ink-soft);
+	margin-bottom: 22px;
+}
+.aw-hero-actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 14px;
+}
+.btn-outline {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	border: 1px solid var(--line);
+	color: var(--ink);
+	font-size: 0.9rem;
+	font-weight: 500;
+	letter-spacing: 0.03em;
+	text-decoration: none;
+	padding: 13px 22px;
+	border-radius: 3px;
+	background: var(--surface);
+	transition: border-color 0.25s ease, color 0.25s ease;
+}
+.btn-outline:hover {
+	border-color: var(--red);
+	color: var(--red);
+}
+
+/* ── Lightbox ─────────────────────────────────────────────── */
+.aw-lightbox {
+	position: fixed;
+	inset: 0;
+	z-index: 200;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 56px 32px;
+	background: rgba(11, 35, 69, 0.9);
+	-webkit-backdrop-filter: blur(4px);
+	backdrop-filter: blur(4px);
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+.aw-lightbox[hidden] {
+	display: none;
+}
+.aw-lightbox.open {
+	opacity: 1;
+}
+.aw-lightbox figure {
+	max-width: 1100px;
+	max-height: 100%;
+	text-align: center;
+}
+.aw-lightbox img {
+	display: block;
+	max-width: 100%;
+	max-height: calc(100vh - 150px);
+	margin: 0 auto;
+	border-radius: 4px;
+	box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+	background: #fff;
+}
+.aw-lightbox figcaption {
+	margin-top: 16px;
+	font-size: 0.84rem;
+	line-height: 1.5;
+	color: rgba(255, 255, 255, 0.8);
+}
+.aw-lightbox-close {
+	position: absolute;
+	top: 22px;
+	right: 26px;
+	width: 42px;
+	height: 42px;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	border-radius: 50%;
+	background: none;
+	cursor: pointer;
+	transition: border-color 0.25s ease;
+}
+.aw-lightbox-close:hover {
+	border-color: #fff;
+}
+.aw-lightbox-close span {
+	position: absolute;
+	left: 11px;
+	top: 20px;
+	width: 18px;
+	height: 1.5px;
+	background: #fff;
+}
+.aw-lightbox-close span:first-child {
+	transform: rotate(45deg);
+}
+.aw-lightbox-close span:last-child {
+	transform: rotate(-45deg);
+}
+body.aw-lightbox-open {
+	overflow: hidden;
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 1080px) {
+	.aw-hero-inner {
+		grid-template-columns: minmax(0, 1fr) 210px;
+		gap: 36px;
+	}
+	.aw-honors {
+		grid-template-columns: minmax(0, 1fr) 250px;
+		gap: 32px;
+	}
+}
+
+@media (max-width: 960px) {
+	.aw-hero-inner {
+		grid-template-columns: 1fr;
+	}
+	.aw-spine {
+		display: none;
+	}
+	.aw-lead {
+		grid-template-columns: 1fr;
+		gap: 30px;
+		padding: 32px 30px;
+	}
+	.aw-lead-figure {
+		order: -1;
+		max-width: 300px;
+	}
+	.aw-pair {
+		grid-template-columns: 1fr;
+		gap: 24px;
+	}
+	.aw-honors {
+		grid-template-columns: 1fr;
+		gap: 30px;
+	}
+	.aw-side-stack {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.aw-side-figure {
+		flex: 1 1 300px;
+		max-width: 420px;
+	}
+	.aw-exhibit-grid {
+		grid-template-columns: 1fr;
+		gap: 26px;
+	}
+	.aw-exhibit-thumb {
+		max-width: 300px;
+	}
+}
+
+@media (max-width: 720px) {
+	.aw-hero {
+		padding: 118px 0 48px;
+	}
+	.aw-hero-pattern {
+		-webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.55));
+		mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.55));
+	}
+	.aw-lead {
+		padding: 26px 22px;
+	}
+	.aw-card-body {
+		padding: 24px 22px 26px;
+	}
+	.aw-row {
+		grid-template-columns: 60px minmax(0, 1fr);
+		gap: 16px;
+		padding: 24px 0;
+	}
+	.aw-row-cat {
+		grid-column: 2;
+		justify-self: start;
+		margin-top: 2px;
+	}
+	.aw-exhibit-head {
+		flex-direction: column;
+		gap: 8px;
+	}
+	.aw-timeline ul li {
+		flex-direction: column;
+		gap: 3px;
+	}
+	.aw-tl-inst {
+		text-align: left;
+		white-space: normal;
+	}
+	.aw-lightbox {
+		padding: 60px 16px 32px;
+	}
+}
+
+/* ── Reduced motion ───────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+	.aw-spine-line {
+		animation: none;
+		stroke-dashoffset: 0;
+	}
+	.aw-spine-stop {
+		animation: none;
+		opacity: 1;
+	}
+	.aw-card:hover {
+		transform: none;
+	}
+	.aw-lightbox {
+		transition: none;
+	}
+}
