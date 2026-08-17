@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" role="presentation">
+	<g fill="none" stroke="#0b2345" stroke-width="2" stroke-linecap="round"
+		stroke-linejoin="round" stroke-opacity="0.5">
+
+		<!-- ground -->
+		<path d="M0 286 H1200" stroke-opacity="0.32" />
+
+		<!-- downtown -->
+		<path d="M34 286 V168 h48 v118" />
+		<path d="M82 286 V118 h34 v168" />
+		<path d="M99 118 V96" />
+		<path d="M116 286 V190 h54 v96" />
+		<path d="M170 286 V86 h42 v200" />
+		<path d="M176 86 l15 -22 l15 22" />
+		<path d="M212 286 V156 h58 v130" />
+		<path d="M270 286 V110 h38 v176" />
+		<path d="M308 286 V178 h50 v108" />
+		<path d="M358 286 V132 h44 v154" />
+		<path d="M380 132 V106" />
+
+		<!-- windows, just enough to read as a city -->
+		<g stroke-opacity="0.3" stroke-width="3" stroke-linecap="round">
+			<path d="M48 190 h6 M66 190 h6 M48 214 h6 M66 214 h6 M48 238 h6 M66 238 h6" />
+			<path d="M94 140 h6 M94 168 h6 M94 196 h6 M94 224 h6 M94 252 h6" />
+			<path d="M182 110 h6 M198 110 h6 M182 140 h6 M198 140 h6 M182 170 h6
+				M198 170 h6 M182 200 h6 M198 200 h6 M182 230 h6 M198 230 h6" />
+			<path d="M282 134 h6 M296 134 h6 M282 164 h6 M296 164 h6 M282 194 h6
+				M296 194 h6 M282 224 h6 M296 224 h6" />
+			<path d="M372 156 h6 M388 156 h6 M372 186 h6 M388 186 h6 M372 216 h6
+				M388 216 h6" />
+		</g>
+
+		<!-- the terminal: a long shed with a glazed front -->
+		<path d="M470 286 V232 Q640 196 810 232 V286" />
+		<path d="M470 254 Q640 218 810 254" stroke-opacity="0.3" />
+		<g stroke-opacity="0.28" stroke-width="1.6">
+			<path d="M508 268 V246 M546 266 V242 M584 264 V239 M622 262 V236
+				M660 262 V236 M698 264 V239 M736 266 V242 M774 268 V246" />
+		</g>
+		<!-- jet bridges -->
+		<path d="M556 286 v-12 h-34" stroke-opacity="0.3" />
+		<path d="M724 286 v-12 h34" stroke-opacity="0.3" />
+
+		<!-- control tower -->
+		<path d="M874 286 V150 M908 286 V150" />
+		<path d="M858 150 h66 l-12 -34 h-42 z" />
+		<path d="M862 134 h58" stroke-opacity="0.3" />
+		<path d="M891 116 V84" />
+		<path d="M883 286 h16" />
+
+		<!-- a jet on the apron, seen from the side -->
+		<g transform="translate(566 284) scale(0.7)" fill="#faf7ef"
+			stroke-opacity="0.44">
+			<path d="M0 0 C 14 -12 66 -16 124 -14 L 154 -16 C 166 -16 168 -5 155 -3
+				L 22 7 C 6 8 -6 4 0 0 Z" />
+			<path d="M126 -14 L 138 -42 L 150 -42 L 156 -16" fill="#faf7ef" />
+			<path d="M62 -6 L 44 12 L 74 12 L 96 -8" fill="#faf7ef" />
+			<path d="M98 3 a6 6 0 1 0 0.1 0" fill="none" />
+		</g>
+
+		<!-- and one on the way out -->
+		<path d="M470 96 C 640 42 852 34 1004 74" stroke-dasharray="4 12"
+			stroke-opacity="0.34" />
+		<g transform="translate(1004 74) rotate(16)" stroke-opacity="0.44">
+			<path d="M0 0 L 42 -4 L 58 -6 C 66 -6 66 2 58 3 L 8 8 C 1 8 -4 4 0 0 Z" />
+			<path d="M44 -4 L 52 -20 L 60 -20 L 62 -6" />
+			<path d="M22 -1 L 12 12 L 30 12 L 40 -2" />
+		</g>
+
+		<!-- transit line running along the front -->
+		<path d="M0 302 H1200" stroke-dasharray="18 14" stroke-opacity="0.24" />
+		<g transform="translate(940 268)" stroke-opacity="0.36">
+			<path d="M0 0 h132 a10 10 0 0 1 10 10 v18 h-152 v-18 a10 10 0 0 1 10 -10 z" />
+			<path d="M14 8 h44 v14 h-44 z M78 8 h44 v14 h-44 z" stroke-opacity="0.26" />
+			<path d="M16 34 a5 5 0 1 0 0.1 0 M124 34 a5 5 0 1 0 0.1 0" />
+		</g>
+	</g>
+</svg>
