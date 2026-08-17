@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 300" role="presentation">
+	<g fill="none" stroke="#0b2345" stroke-width="2.4" stroke-linecap="round"
+		stroke-linejoin="round" stroke-opacity="0.55">
+
+		<!-- gavel, caught mid-swing -->
+		<g transform="rotate(-27 160 116)">
+			<rect x="60" y="84" width="118" height="62" rx="18" />
+			<path d="M88 84 V146 M150 84 V146" stroke-opacity="0.4" />
+			<rect x="178" y="104" width="118" height="22" rx="11" />
+			<path d="M178 104 V126" stroke-opacity="0.4" />
+			<path d="M268 106 V124" stroke-opacity="0.35" />
+		</g>
+
+		<!-- the block it lands on -->
+		<rect x="86" y="222" width="148" height="30" rx="9" />
+		<path d="M106 222 v-12 h108 v12" />
+		<path d="M104 252 v10 M216 252 v10" stroke-opacity="0.4" />
+
+		<!-- impact -->
+		<g stroke-opacity="0.35" stroke-width="2">
+			<path d="M62 198 l-18 -10" />
+			<path d="M56 216 l-22 -2" />
+			<path d="M74 180 l-10 -20" />
+			<path d="M258 198 l18 -10" />
+			<path d="M264 216 l22 -2" />
+		</g>
+	</g>
+</svg>

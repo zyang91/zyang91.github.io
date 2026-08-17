@@ -3,134 +3,907 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>About Zhanchao Yang</title>
+		<title>About | Zhanchao Yang</title>
+		<meta
+			name="description"
+			content="The longer answer: where Zhanchao Yang is from, how he wandered into geography and planning, the places he has explored, the systems he watches, the rules he reads for fun, and the books and shows that stuck."
+		/>
+		<link
+			rel="icon"
+			href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%F0%9F%97%BA%EF%B8%8F%3C/text%3E%3C/svg%3E"
+		/>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400;1,8..60,600&family=Inter:wght@400;500;600&display=swap"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" href="../css/home.css" />
+		<link rel="stylesheet" href="../css/about.css" />
 	</head>
-	<body class="theme-light page-cinematic bg-peach">
-		<header class="pc-nav" id="cinematic-nav">
-			<div class="pc-nav-inner">
-				<a class="pc-logo" href="../index.html">Zhanchao Yang<sup>®</sup></a>
-				<div class="pc-nav-right">
-					<nav class="pc-nav-links">
-						<a href="../index.html">Home</a>
-						<a href="about-me.html" class="active">About</a>
-						<a href="research.html">Research</a>
-						<a href="contact.html">Contact</a>
-					</nav>
-					<button
-						class="cinematic-menu-toggle"
-						id="cinematic-menu-toggle"
-						aria-label="Open menu"
-						aria-expanded="false"
-						aria-controls="cinematic-menu-panel"
-					>
-						<span></span>
-						<span></span>
-						<span></span>
-					</button>
+	<body class="about-page">
+		<!-- ══ Navigation ══ -->
+		<header class="site-nav" id="site-nav">
+			<div class="nav-inner">
+				<div class="nav-brand">
+					<a class="nav-name" href="../index.html">Zhanchao Yang</a>
+					<span class="nav-affil">Penn Weitzman</span>
 				</div>
+				<button
+					class="nav-toggle"
+					id="nav-toggle"
+					aria-label="Open menu"
+					aria-expanded="false"
+					aria-controls="nav-links"
+				>
+					<span></span><span></span><span></span>
+				</button>
+				<nav class="nav-links" id="nav-links">
+					<a href="research.html">Research</a>
+					<a href="cv.html">CV</a>
+					<a href="awards.html">Awards</a>
+					<a href="about-me.html" class="active">About</a>
+					<a href="contact.html">Contact</a>
+				</nav>
 			</div>
 		</header>
 
-		<div class="cinematic-menu-panel" id="cinematic-menu-panel" aria-hidden="true">
-			<div class="cinematic-menu-panel-inner">
-				<div class="cinematic-menu-panel-top">
-					<a class="cinematic-logo" href="../index.html">Zhanchao Yang<sup>®</sup></a>
-					<button class="cinematic-menu-close" id="cinematic-menu-close" aria-label="Close menu">
-						<span></span><span></span>
-					</button>
+		<!-- ══ Hero ══ -->
+		<section class="ab-hero">
+			<div class="container ab-hero-inner">
+				<div class="ab-hero-text">
+					<p class="ab-eyebrow reveal in-view">About</p>
+					<h1 class="reveal in-view">
+						Maps, airports, and <em>far too many questions</em>
+					</h1>
+					<p class="ab-hero-lead reveal in-view reveal-d1">
+						The rest of this site is the academic version. This page is the
+						longer answer — where I grew up, how I wandered into geography and
+						planning, the places I've walked, and the systems I can't stop
+						watching.
+					</p>
+					<p class="ab-hero-route reveal in-view reveal-d2">
+						<span>Qingdao</span><span class="ab-arrow" aria-hidden="true">→</span
+						><span>Binghamton</span><span class="ab-arrow" aria-hidden="true"
+							>→</span
+						><span>Philadelphia</span>
+					</p>
 				</div>
-				<div class="cinematic-menu-grid">
-					<div class="cinematic-menu-col">
-						<a href="../index.html">Home <span>→</span></a>
-						<a href="about-me.html">About <span>→</span></a>
-						<a href="research.html">Research <span>→</span></a>
-						<a href="experience.html">Experience <span>→</span></a>
-					</div>
-					<div class="cinematic-menu-col">
-						<a href="publications.html">Publications <span>→</span></a>
-						<a href="awards.html">Awards <span>→</span></a>
-						<a href="upenn.html">UPenn</a>
-						<a href="binghamton.html">Binghamton</a>
-					</div>
-				</div>
-				<div class="cinematic-menu-foot">
-					<a class="cinematic-menu-cta" href="contact.html">Get in touch</a>
-					<p>Philadelphia, PA · zhanchao@upenn.edu</p>
+
+				<!-- one long flight, drawn as a dotted great circle -->
+				<div class="ab-hero-art reveal in-view reveal-d2" aria-hidden="true">
+					<svg viewBox="0 0 480 300" role="presentation">
+						<path
+							class="ab-flight"
+							d="M 52 214 C 150 66 330 62 428 128"
+							fill="none"
+							stroke="#d76a54"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-dasharray="3 9"
+						/>
+						<g class="ab-pin ab-pin-a">
+							<circle cx="52" cy="214" r="16" fill="none" stroke="#d76a54"
+								stroke-width="1.2" stroke-opacity="0.4" />
+							<circle cx="52" cy="214" r="6" fill="#fff" stroke="#d76a54"
+								stroke-width="3" />
+							<text x="52" y="248" text-anchor="middle">QINGDAO</text>
+						</g>
+						<g class="ab-pin ab-pin-b">
+							<circle cx="428" cy="128" r="6" fill="#fff" stroke="#0b2345"
+								stroke-width="3" />
+							<text x="428" y="106" text-anchor="middle">PHILADELPHIA</text>
+						</g>
+						<g class="ab-plane">
+							<path
+								d="M 0 -8 L 7 6 L 0 2 L -7 6 Z"
+								fill="#0b2345"
+								fill-opacity="0.75"
+							/>
+						</g>
+					</svg>
 				</div>
 			</div>
-		</div>
+		</section>
 
 		<main>
-			<section class="pc-hero">
-				<p class="pc-hero-eyebrow">About</p>
-				<h1 class="pc-hero-title">
-					City planner. <em>Spatial analyst.</em><br />
-					GIS enthusiast.
-				</h1>
-				<p class="pc-hero-lead">
-					I'm <em>Zhanchao Yang</em> — building maps that reveal
-					how cities function.
-				</p>
+			<!-- ══════════ 01 · A Little About Me ══════════ -->
+			<section class="ab-section" id="story">
+				<div class="container">
+					<p class="ab-label reveal"><span>01</span> A little about me</p>
+					<h2 class="ab-title reveal">
+						There was never one dramatic <em>turning point</em>
+					</h2>
+
+					<div class="ab-essay-grid">
+						<div class="ab-essay reveal">
+							<p>
+								I grew up in <strong>Qingdao, Shandong</strong>, a coastal city
+								in eastern China, where I lived through high school before
+								coming to the United States for college in 2021. COVID delayed
+								that journey by a year, and when I finally arrived, I was not
+								entirely sure where it would lead.
+							</p>
+							<p>
+								Geography had planted a small seed much earlier. As a child I
+								loved maps and could finish geography puzzles surprisingly
+								quickly. But I did not arrive at college planning to become a
+								geographer — or a planner. One of my first interests was
+								psychology. Between studying online, adjusting to a new
+								language, and generally not knowing what I wanted to do yet,
+								that path never quite took off.
+							</p>
+							<p>
+								Then I met <strong>Dr. Mark Reisinger</strong>. His World
+								Regional Geography course seemed to travel everywhere. Through
+								his stories, humor, maps, landscapes, and accounts of different
+								cultures, geography stopped feeling like a collection of places
+								and became a way of seeing the world.
+							</p>
+							<p class="ab-beat">Planning came even more accidentally.</p>
+							<p>
+								I took a planning course taught by
+								<strong>Frank Evangelisti</strong>, then Planning Director of
+								Broome County, and became fascinated by something different:
+								the policies, laws, institutions, and small decisions through
+								which cities actually get made. Geography had made me curious
+								about places; planning made me curious about the systems behind
+								them.
+							</p>
+							<p>
+								A few interesting classes, generous teachers, unexpected
+								questions, and quite a bit of wandering eventually brought me
+								here.
+							</p>
+						</div>
+
+						<aside class="ab-margin">
+							<div class="ab-note reveal reveal-d1">
+								<p class="ab-note-kicker">The geographer</p>
+								<p class="ab-note-name">Dr. Mark Reisinger</p>
+								<p>
+									A wonderfully kind geography professor at Binghamton
+									University, since retired. World Regional Geography — the
+									course that changed the question.
+								</p>
+							</div>
+							<div class="ab-note reveal reveal-d2">
+								<p class="ab-note-kicker">The planner</p>
+								<p class="ab-note-name">Frank Evangelisti</p>
+								<p>
+									Then Planning Director of Broome County. Taught the course
+									that turned "why is this place like this?" into "who decided,
+									and under what rule?"
+								</p>
+							</div>
+						</aside>
+					</div>
+
+					<div class="ab-oneword reveal">
+						<p class="ab-oneword-q">
+							If I had to describe myself without using <em>student</em>,
+							<em>planner</em>, or <em>researcher</em>, I would probably choose
+							one word:
+						</p>
+						<p class="ab-oneword-a">Thinker.</p>
+						<p class="ab-oneword-tail">
+							I like figuring out how things work — and occasionally asking far
+							too many questions along the way.
+						</p>
+					</div>
+				</div>
+
+				<!-- the geography puzzle, one piece still out -->
+				<div class="ab-art ab-art-puzzle" aria-hidden="true">
+					<img src="../assets/about/puzzle-map.svg" alt="" loading="lazy" />
+				</div>
 			</section>
 
-			<section class="section">
-				<div class="container content-grid">
-					<article class="list-card">
-						<img
-							src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1000&q=80"
-							alt="Tech workspace"
-						/>
-						<h3>Origin story</h3>
-						<ul>
-							<li>Geography &amp; GIScience BA at Binghamton University, SUNY.</li>
-							<li>Dual-degree MCP + MUSA at UPenn Weitzman School of Design.</li>
-							<li>Research fellow under Prof. Erick Guerra on travel behavior &amp; smart mobility.</li>
-						</ul>
-					</article>
-					<article class="list-card">
-						<h3>Research focus</h3>
-						<ul>
-							<li>Travel behavior modeling &amp; human mobility data mining</li>
-							<li>GeoAI &amp; remote sensing for urban planning</li>
-							<li>Intelligent Transportation Systems (ITS) &amp; smart mobility</li>
-							<li>Geostatistics, spatial analysis &amp; agent-based modeling</li>
-						</ul>
-					</article>
-					<article class="list-card">
-						<h3>Teaching</h3>
-						<ul>
-							<li>TA for MUSA 5000: Statistical Methods for Urban Data (Fall 2025)</li>
-							<li>TA for MUSA 5080: Public Policy Analytics (Fall 2025)</li>
-							<li>TA for CPLN 5920: Public Policy Analytics (Spring 2026)</li>
-							<li>Former EML mentor at Binghamton's English Language Institute</li>
-						</ul>
-					</article>
+			<!-- ══════════ 02 · A World Beyond the Map ══════════ -->
+			<section class="ab-section ab-section-warm ab-section-horizon" id="travel">
+				<div class="container">
+					<p class="ab-label reveal"><span>02</span> A world beyond the map</p>
+					<h2 class="ab-title reveal">
+						There is something liberating about arriving somewhere
+						<em>unfamiliar</em>
+					</h2>
+
+					<div class="ab-two-col">
+						<div class="ab-essay reveal">
+							<p>I especially love <strong>traveling alone</strong>.</p>
+							<p>
+								Solo travel gives me a particular sense of freedom: to wander
+								down a street for no reason, change plans halfway through the
+								day, sit somewhere and watch a city go by, or discover
+								something I did not know enough to look for.
+							</p>
+							<p>
+								I experience cities slowly. I walk. I ride public transit. I
+								look at maps. I visit city museums. I watch streets from street
+								corners and neighborhoods through train windows. Sometimes I
+								drive through landscapes simply to understand how places
+								connect.
+							</p>
+							<p>Museums and food are, of course, non-negotiable.</p>
+						</div>
+
+						<div class="ab-essay reveal reveal-d1">
+							<p>And then there are airports.</p>
+							<p>
+								I genuinely enjoy flying — and perhaps enjoy airports more than
+								a normal person should. I like the anticipation of departure,
+								watching aircraft arrive and leave, listening to ATC, following
+								operations, and observing the extraordinary choreography
+								required to move thousands of people through a terminal and
+								across the world.
+							</p>
+							<p>
+								I have learned that apparently even my choice of television
+								tends to involve systems, procedures, investigations, and —
+								perhaps unsurprisingly — airports.
+							</p>
+							<p class="ab-beat">
+								Travel reminds me how large the world is, and how little of it
+								any one person gets to know.
+							</p>
+						</div>
+					</div>
+
+					<!-- a small piece of in-flight advice -->
+					<div class="ab-pass reveal">
+						<div class="ab-pass-stub">
+							<p class="ab-pass-label">Advisory</p>
+							<p class="ab-pass-code">PSA</p>
+						</div>
+						<div class="ab-pass-body">
+							<p class="ab-pass-text">
+								A small piece of advice: don't watch
+								<em>Air Crash Investigation</em> on an airplane.
+							</p>
+							<p class="ab-pass-fine">
+								Seat 14A · Window · Learned the hard way
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="ab-art ab-art-horizon" aria-hidden="true">
+					<img src="../assets/about/city-horizon.svg" alt="" loading="lazy" />
+				</div>
+			</section>
+
+			<!-- ══════════ 03 · The globe ══════════ -->
+			<section class="ab-section ab-globe-section" id="places">
+				<div class="container">
+					<p class="ab-label reveal"><span>03</span> Places I've explored</p>
+					<h2 class="ab-title reveal">
+						Spin it. Everywhere lit up is somewhere I've <em>actually been</em>
+					</h2>
+
+					<div class="gl-wrap reveal">
+						<figure class="gl-figure">
+							<div class="gl-stage" id="globe-stage">
+								<canvas
+									id="globe"
+									role="img"
+									aria-label="An interactive globe marking the cities and regions Zhanchao Yang has visited across the United States, China, and Europe. A full list follows below."
+								></canvas>
+								<div class="gl-tip" id="globe-tip" hidden></div>
+								<p class="gl-hint" id="globe-hint">drag to spin</p>
+							</div>
+						</figure>
+
+						<div class="gl-side">
+							<div class="gl-readout" id="globe-readout">
+								<p class="gl-readout-kicker" id="globe-kicker">Somewhere out there</p>
+								<p class="gl-readout-name" id="globe-name">Hover a point</p>
+								<p class="gl-readout-sub" id="globe-sub">
+									Dots are cities and parks. The warm wash over China is
+									province-level — 23 of 31, and counting.
+								</p>
+							</div>
+
+							<div class="gl-jump">
+								<p class="gl-jump-label">Fly to</p>
+								<div class="gl-jump-row">
+									<button type="button" class="gl-btn" data-view="us">
+										United States
+									</button>
+									<button type="button" class="gl-btn" data-view="china">
+										China
+									</button>
+									<button type="button" class="gl-btn" data-view="europe">
+										Europe
+									</button>
+								</div>
+							</div>
+
+							<p class="gl-home">
+								<span class="gl-home-dot" aria-hidden="true"></span> Qingdao is
+								home.
+							</p>
+
+							<details class="gl-list">
+								<summary>The whole list, in text</summary>
+								<div id="globe-list"></div>
+							</details>
+						</div>
+					</div>
+
+					<p class="gl-foot reveal">
+						Still missing: Tibet, Xinjiang, Heilongjiang, Jilin, Liaoning,
+						Jiangxi, Fujian, and Chongqing. Working on it.
+					</p>
+				</div>
+			</section>
+
+			<!-- ══════════ 04 · Rules and rabbit holes ══════════ -->
+			<section class="ab-section ab-section-warm" id="rules">
+				<div class="container">
+					<p class="ab-label reveal">
+						<span>04</span> Rules, procedures &amp; other rabbit holes
+					</p>
+					<h2 class="ab-title reveal">
+						Some people follow politics to find out who wins. I want to know
+						<em>what happens between the rules</em>
+					</h2>
+
+					<p class="ab-lede reveal">
+						One question is never one question. It arrives with a procedure
+						attached, and the procedure has a history, and the history has an
+						exception.
+					</p>
+
+					<div class="ab-art ab-art-gavel" aria-hidden="true">
+						<img src="../assets/about/gavel.svg" alt="" loading="lazy" />
+					</div>
+
+					<ol class="ab-hole reveal">
+						<li>
+							<span class="ab-hole-n">Q</span>
+							<p>Who has the authority to make this decision?</p>
+						</li>
+						<li>
+							<span class="ab-hole-n">Q</span>
+							<p>What procedure has to be followed?</p>
+						</li>
+						<li>
+							<span class="ab-hole-n">Q</span>
+							<p>What happens when two institutions disagree?</p>
+						</li>
+						<li>
+							<span class="ab-hole-n">Q</span>
+							<p>Which rule applies, and where does its authority stop?</p>
+						</li>
+						<li>
+							<span class="ab-hole-n">Q</span>
+							<p>Who can investigate whom? Who gets to ask for the records?</p>
+						</li>
+						<li>
+							<span class="ab-hole-n">Q</span>
+							<p>
+								And what happens when a seemingly simple decision passes through
+								courts, legislatures, agencies, and layers of oversight?
+							</p>
+						</li>
+					</ol>
+
+					<div class="ab-chain-grid">
+						<div class="ab-chain reveal">
+							<p class="ab-chain-from">A Senate cloture vote</p>
+							<span class="ab-chain-link" aria-hidden="true"></span>
+							<p class="ab-chain-to">becomes a question about institutional design.</p>
+						</div>
+						<div class="ab-chain reveal reveal-d1">
+							<p class="ab-chain-from">A court order</p>
+							<span class="ab-chain-link" aria-hidden="true"></span>
+							<p class="ab-chain-to">leads to jurisdiction and enforcement.</p>
+						</div>
+						<div class="ab-chain reveal reveal-d2">
+							<p class="ab-chain-from">An inspector general</p>
+							<span class="ab-chain-link" aria-hidden="true"></span>
+							<p class="ab-chain-to">
+								leads to appropriations, oversight, public records, and
+								eventually an entirely different question from the one I started
+								with.
+							</p>
+						</div>
+					</div>
+
+					<div class="ab-creed reveal">
+						<p>
+							What is the rule? Why does it exist? Who can use it? Where are its
+							boundaries? And what happens when the system is actually put under
+							pressure?
+						</p>
+						<p class="ab-creed-tail">
+							It is an admittedly nerdy hobby. I am perfectly happy with that.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- ══════════ 05 · Watching cities move ══════════ -->
+			<section class="ab-section" id="systems">
+				<div class="container">
+					<p class="ab-label reveal"><span>05</span> Watching cities move</p>
+					<h2 class="ab-title reveal">
+						There is something satisfying about watching a complicated system
+						<em>quietly work</em>
+					</h2>
+
+					<div class="ab-two-col">
+						<div class="ab-essay reveal">
+							<p>
+								I have difficulty simply passing through a transportation system
+								without looking at how it works.
+								<strong>Airports are probably the clearest example.</strong>
+							</p>
+							<p>
+								I can spend a surprising amount of time watching aircraft
+								movements, listening to air traffic control, following arrivals
+								and departures, and noticing how passengers, crews, vehicles,
+								security, gates, and aircraft interact within the same enormous
+								system.
+							</p>
+						</div>
+						<div class="ab-essay reveal reveal-d1">
+							<p>
+								Cities produce smaller versions of the same fascination. I
+								notice the gestures subway operators make as part of safety
+								procedures. I watch pilots and ground crews coordinate around an
+								aircraft. I wonder why a sign is located where it is, why
+								passengers queue where they do, or why one station feels
+								intuitive while another does not.
+							</p>
+							<p class="ab-beat">
+								None of this necessarily begins as research. Often, I am simply
+								curious.
+							</p>
+						</div>
+					</div>
+
+					<!-- Placeholder frames for Zhanchao's own photographs.
+					     To drop a real photo in, replace the <svg> inside
+					     .ab-obs-art with <img src="../assets/about/…" alt="…" />
+					     and delete the class "is-sketch" on the card. -->
+					<div class="ab-obs">
+						<figure class="ab-obs-card is-sketch reveal">
+							<div class="ab-obs-art art-airside">
+								<svg viewBox="0 0 320 210" role="presentation" aria-hidden="true">
+									<g fill="none" stroke="currentColor" stroke-width="1.4"
+										stroke-linecap="round" stroke-linejoin="round">
+										<!-- terminal + jet bridge -->
+										<path d="M244 166 V78 h62 v88" />
+										<path d="M244 104 h62" stroke-opacity="0.45" />
+										<path d="M244 140 h-36 v-18 h-14" stroke-opacity="0.7" />
+										<path d="M194 122 v20" stroke-opacity="0.5" />
+										<!-- aircraft at the gate -->
+										<path d="M22 140 C 34 130 86 127 142 129 L 170 127
+											C 182 127 184 136 171 138 L 44 146 C 30 147 18 144 22 140 Z" />
+										<path d="M144 129 L 156 101 L 167 101 L 173 127" />
+										<path d="M80 135 L 64 152 L 92 152 L 112 133" />
+										<path d="M98 142 a7 7 0 1 0 0.1 0" />
+										<path d="M40 137 h84" stroke-dasharray="2 6"
+											stroke-opacity="0.45" />
+										<path d="M54 146 v8 M142 144 v8" stroke-opacity="0.6" />
+										<circle cx="54" cy="157" r="3.4" stroke-opacity="0.6" />
+										<circle cx="142" cy="155" r="3.4" stroke-opacity="0.6" />
+										<!-- apron, with the taxi centreline -->
+										<path d="M10 166 H310" stroke-opacity="0.5" />
+										<path class="ac" d="M10 182 H310" stroke-dasharray="16 12" />
+										<!-- marshaller, wands up -->
+										<g class="ac">
+											<circle cx="206" cy="164" r="4.2" />
+											<path d="M206 168 v13 M206 172 l-10 -9 M206 172 l10 -9
+												M206 181 l-7 11 M206 181 l7 11" />
+										</g>
+									</g>
+								</svg>
+							</div>
+							<figcaption>
+								<p class="ab-obs-tag">Airside</p>
+								<p>
+									Pushback, taxi, the ground crew's hand signals — an entire
+									language happening on a stretch of concrete.
+								</p>
+							</figcaption>
+						</figure>
+
+						<figure class="ab-obs-card is-sketch reveal reveal-d1">
+							<div class="ab-obs-art art-platform">
+								<svg viewBox="0 0 320 210" role="presentation" aria-hidden="true">
+									<g fill="none" stroke="currentColor" stroke-width="1.4"
+										stroke-linecap="round" stroke-linejoin="round">
+										<!-- station canopy -->
+										<path d="M16 34 H304" stroke-opacity="0.5" />
+										<path d="M34 34 v12 M286 34 v12" stroke-opacity="0.4" />
+										<!-- departure board -->
+										<rect x="200" y="46" width="94" height="40" rx="5" />
+										<path d="M212 60 h34 M212 72 h26 M258 60 h24 M258 72 h18"
+											stroke-dasharray="3 4" stroke-opacity="0.55" />
+										<!-- the train -->
+										<path d="M24 158 V104 a13 13 0 0 1 13 -13 h132
+											a13 13 0 0 1 13 13 v54 z" />
+										<rect x="38" y="106" width="38" height="26" rx="4" />
+										<rect x="126" y="106" width="38" height="26" rx="4" />
+										<path d="M88 158 V100 M112 158 V100" stroke-opacity="0.65" />
+										<path d="M94 128 h6 M100 128 h6" stroke-opacity="0.5" />
+										<path d="M24 146 h158" stroke-opacity="0.35" />
+										<circle cx="52" cy="164" r="6" stroke-opacity="0.6" />
+										<circle cx="152" cy="164" r="6" stroke-opacity="0.6" />
+										<!-- platform edge + tactile strip -->
+										<path d="M10 174 H310" stroke-opacity="0.5" />
+										<path class="ac" d="M10 186 H310" stroke-dasharray="6 7" />
+										<!-- someone waiting, standing behind the line -->
+										<g stroke-opacity="0.6">
+											<circle cx="228" cy="140" r="6" />
+											<path d="M228 146 v20 M228 152 l-9 8 M228 152 l9 8
+												M228 166 l-6 12 M228 166 l6 12" />
+										</g>
+										<!-- the door marking they are standing on -->
+										<path class="ac" d="M214 174 h28" stroke-width="2.6" />
+									</g>
+								</svg>
+							</div>
+							<figcaption>
+								<p class="ab-obs-tag">Platform</p>
+								<p>
+									Fare gates, door markings, the pause before departure. Station
+									design tells you what it expects of you.
+								</p>
+							</figcaption>
+						</figure>
+
+						<figure class="ab-obs-card is-sketch reveal reveal-d2">
+							<div class="ab-obs-art art-wayfinding">
+								<svg viewBox="0 0 320 210" role="presentation" aria-hidden="true">
+									<g fill="none" stroke="currentColor" stroke-width="1.4"
+										stroke-linecap="round" stroke-linejoin="round">
+										<!-- overhead sign gantry -->
+										<path d="M46 26 H274" stroke-opacity="0.45" />
+										<path d="M74 26 v14 M246 26 v14" stroke-opacity="0.4" />
+										<rect x="46" y="40" width="228" height="52" rx="5" />
+										<path d="M62 58 h58 M62 74 h42" stroke-opacity="0.6" />
+										<path d="M162 58 h56 M162 74 h38" stroke-opacity="0.6" />
+										<path d="M140 40 V92" stroke-opacity="0.35" />
+										<path class="ac" d="M232 56 l14 10 l-14 10" />
+										<path class="ac" d="M246 66 h-20" />
+										<!-- floor arrow -->
+										<g class="ac">
+											<path d="M112 190 V138" />
+											<path d="M96 152 l16 -16 l16 16" />
+										</g>
+										<!-- a map board, and a "you are here" dot -->
+										<rect x="204" y="118" width="72" height="54" rx="5"
+											stroke-opacity="0.6" />
+										<path d="M214 134 l16 10 l14 -8 l18 12" stroke-opacity="0.4" />
+										<path d="M228 156 h34" stroke-opacity="0.35" />
+										<circle class="ac" cx="234" cy="144" r="4" />
+										<!-- someone reading it -->
+										<g stroke-opacity="0.6">
+											<circle cx="54" cy="140" r="6.5" />
+											<path d="M54 147 v22 M54 153 l-11 9 M54 153 l11 6
+												M54 169 l-7 14 M54 169 l7 14" />
+										</g>
+									</g>
+								</svg>
+							</div>
+							<figcaption>
+								<p class="ab-obs-tag">Wayfinding</p>
+								<p>
+									One arrow in the right place saves a thousand questions. One
+									in the wrong place creates them.
+								</p>
+							</figcaption>
+						</figure>
+					</div>
+
+					<p class="ab-obs-note reveal">
+						Sketches for now — my own photographs from these trips will replace
+						them.
+					</p>
+				</div>
+			</section>
+
+			<!-- ══════════ 06 · Bookshelf ══════════ -->
+			<section class="ab-section ab-section-warm" id="bookshelf">
+				<div class="container">
+					<p class="ab-label reveal"><span>06</span> On my bookshelf</p>
+					<h2 class="ab-title reveal">
+						Not a reading list — just books that left me with
+						<em>something worth remembering</em>
+					</h2>
+					<p class="ab-lede reveal">
+						I read across energy, cities, institutions, inequality,
+						environmental policy, and political life.
+					</p>
+
+					<div class="ab-shelf">
+						<article class="bk reveal">
+							<div class="bk-cover">
+								<img
+									src="../assets/about/power-lines.jpg"
+									alt="Cover of Power Lines by Sanya Carley and David Konisky"
+									loading="lazy"
+								/>
+								<span class="bk-spine" aria-hidden="true"></span>
+							</div>
+							<div class="bk-meta">
+								<h3>Power Lines</h3>
+								<p class="bk-author">Sanya Carley &amp; David Konisky</p>
+								<p class="bk-note">
+									The subtitle does the work: the human costs of American energy
+									in transition. It is not only an engineering problem. Who pays,
+									who gets left behind, and who has a say turn out to be the
+									harder questions — and they get settled in rate cases and
+									program rules almost nobody reads.
+								</p>
+							</div>
+						</article>
+
+						<article class="bk reveal reveal-d1">
+							<div class="bk-cover">
+								<img
+									src="../assets/about/unbanking-of-america.jpg"
+									alt="Cover of The Unbanking of America by Lisa Servon"
+									loading="lazy"
+								/>
+								<span class="bk-spine" aria-hidden="true"></span>
+							</div>
+							<div class="bk-meta">
+								<h3>The Unbanking of America</h3>
+								<p class="bk-author">Lisa Servon</p>
+								<p class="bk-note">
+									Servon went and worked behind the counter, which is why the
+									book lands. People who look irrational from a distance are
+									usually responding sensibly to a system that does not work for
+									them. I think about that every time I open a dataset about
+									someone's choices.
+								</p>
+							</div>
+						</article>
+
+						<article class="bk reveal reveal-d2">
+							<div class="bk-cover">
+								<img
+									src="../assets/about/overbuilt.jpg"
+									alt="Cover of Overbuilt by Erick Guerra"
+									loading="lazy"
+								/>
+								<span class="bk-spine" aria-hidden="true"></span>
+							</div>
+							<div class="bk-meta">
+								<h3>Overbuilt</h3>
+								<p class="bk-author">Erick Guerra</p>
+								<p class="bk-note">
+									The high costs and low rewards of US highway construction —
+									and a good corrective to the idea that more capacity is
+									self-evidently worth it. Roads get justified by numbers, built
+									for decades, and then quietly reshape everything around them.
+								</p>
+							</div>
+						</article>
+
+						<article class="bk reveal">
+							<div class="bk-cover">
+								<img
+									src="../assets/about/toxic-loopholes.jpg"
+									alt="Cover of Toxic Loopholes by Craig Collins"
+									loading="lazy"
+								/>
+								<span class="bk-spine" aria-hidden="true"></span>
+							</div>
+							<div class="bk-meta">
+								<h3>Toxic Loopholes</h3>
+								<p class="bk-author">Craig Collins</p>
+								<p class="bk-note">
+									Environmental law that reads strong on paper and thin in
+									practice. The book is really about enforcement — budgets,
+									exemptions, agency capacity — which is exactly the gap between
+									a rule and what the rule actually does. My kind of gap.
+								</p>
+							</div>
+						</article>
+
+						<article class="bk reveal reveal-d1">
+							<div class="bk-cover">
+								<img
+									src="../assets/about/something-lost-something-gained.jpg"
+									alt="Cover of Something Lost, Something Gained by Hillary Rodham Clinton"
+									loading="lazy"
+								/>
+								<span class="bk-spine" aria-hidden="true"></span>
+							</div>
+							<div class="bk-meta">
+								<h3>Something Lost, Something Gained</h3>
+								<p class="bk-author">Hillary Rodham Clinton</p>
+								<p class="bk-note">
+									Less policy than perspective — a long public life looked back
+									on without much tidying up. I read it mostly for how someone
+									makes sense of the wins, the losses, and the parts that stay
+									unresolved.
+								</p>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<!-- ══════════ 07 · On screen ══════════ -->
+			<section class="ab-section" id="screen">
+				<div class="container">
+					<p class="ab-label reveal"><span>07</span> On screen</p>
+					<h2 class="ab-title reveal">
+						Even my television has <em>procedures</em>
+					</h2>
+
+					<div class="ab-watch">
+						<article class="wt reveal">
+							<div class="wt-art">
+								<img
+									class="wt-blur"
+									src="../assets/about/to-catch-a-smuggler.jpg"
+									alt=""
+									aria-hidden="true"
+									loading="lazy"
+								/>
+								<img
+									class="wt-poster"
+									src="../assets/about/to-catch-a-smuggler.jpg"
+									alt="Key art for the documentary series To Catch a Smuggler"
+									loading="lazy"
+								/>
+							</div>
+							<div class="wt-body">
+								<p class="wt-cat">Documentary</p>
+								<h3>To Catch a Smuggler</h3>
+								<p>
+									Airports, customs, border enforcement, and the endless
+									creativity of people trying to get things through them. I came
+									for the airports and stayed for the investigations.
+								</p>
+							</div>
+						</article>
+
+						<article class="wt reveal reveal-d1">
+							<div class="wt-art">
+								<img
+									class="wt-blur"
+									src="../assets/about/ncis.jpg"
+									alt=""
+									aria-hidden="true"
+									loading="lazy"
+								/>
+								<img
+									class="wt-poster"
+									src="../assets/about/ncis.jpg"
+									alt="Key art for the television series NCIS"
+									loading="lazy"
+								/>
+							</div>
+							<div class="wt-body">
+								<p class="wt-cat">TV series</p>
+								<h3>NCIS</h3>
+								<p>
+									Investigations, procedures, teamwork, and a cast that somehow
+									makes solving crimes feel familiar after enough seasons. One
+									of those shows I can always come back to.
+								</p>
+							</div>
+						</article>
+
+						<article class="wt reveal reveal-d2">
+							<div class="wt-art">
+								<img
+									class="wt-blur"
+									src="../assets/about/air-crash-investigation.jpg"
+									alt=""
+									aria-hidden="true"
+									loading="lazy"
+								/>
+								<img
+									class="wt-poster"
+									src="../assets/about/air-crash-investigation.jpg"
+									alt="Key art for the documentary series Air Crash Investigation"
+									loading="lazy"
+								/>
+							</div>
+							<div class="wt-body">
+								<p class="wt-cat">Documentary series</p>
+								<h3>Air Crash Investigation</h3>
+								<p>
+									What keeps me watching is less the crash than the process
+									afterward: evidence, systems, human decisions, engineering,
+									and the chain of small failures that produces an extraordinary
+									event.
+								</p>
+								<p class="wt-aside">And again — save this one until after landing.</p>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<!-- ══════════ 08 · A few other things ══════════ -->
+			<section class="ab-section ab-section-tail" id="else">
+				<div class="container">
+					<p class="ab-label reveal"><span>08</span> A few other things</p>
+					<p class="ab-tail-lead reveal">
+						When I am not thinking about cities, institutions, or
+						transportation:
+					</p>
+					<ul class="ab-tail reveal">
+						<li>
+							<span class="ab-tail-ico" aria-hidden="true">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+									stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+									<path d="M4 20V6l8-3 8 3v14" />
+									<path d="M9 20v-6h6v6" />
+									<path d="M2 20h20" />
+								</svg>
+							</span>
+							Broadway
+						</li>
+						<li>
+							<span class="ab-tail-ico" aria-hidden="true">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+									stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+									<path d="M9 18V5l11-2v13" />
+									<circle cx="6" cy="18" r="3" />
+									<circle cx="17" cy="16" r="3" />
+								</svg>
+							</span>
+							Orchestra
+						</li>
+						<li>
+							<span class="ab-tail-ico" aria-hidden="true">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+									stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+									<circle cx="12" cy="12" r="9" />
+									<path d="M3 12h18M12 3v18M5.6 5.6c4 4 4 8.8 0 12.8M18.4 5.6c-4 4-4 8.8 0 12.8" />
+								</svg>
+							</span>
+							Basketball
+						</li>
+					</ul>
+					<p class="ab-tail-note reveal">
+						Some interests are better left unexplained. They are simply fun.
+					</p>
 				</div>
 			</section>
 		</main>
 
+		<!-- ══ Footer ══ -->
 		<footer class="site-footer">
-			<div class="container footer-grid">
-				<div>
-					<h3>Let's build something smart.</h3>
-					<p>Philadelphia, PA · zhanchao@upenn.edu · 607-644-7982</p>
+			<div class="container">
+				<div class="footer-grid">
+					<div>
+						<p class="footer-name">Zhanchao Yang</p>
+						<p class="footer-identity">
+							Urban Planning <span class="dot">·</span> Transportation
+							<span class="dot">·</span> Spatial Analytics
+						</p>
+					</div>
+					<nav class="footer-links">
+						<a href="mailto:zhanchao@upenn.edu">Email</a>
+						<a href="research.html">Research</a>
+						<a href="cv.html">CV</a>
+						<a href="awards.html">Awards</a>
+						<a href="about-me.html">About</a>
+						<a href="contact.html">Contact</a>
+						<a href="https://github.com/zyang91" target="_blank" rel="noopener">GitHub</a>
+						<a href="https://www.linkedin.com/in/zhanchaoyang/" target="_blank" rel="noopener">LinkedIn</a>
+					</nav>
 				</div>
-				<div class="footer-links">
-					<a href="contact.html">Contact</a>
-					<a href="publications.html">Publications</a>
-					<a href="experience.html">Experience</a>
+				<div class="footer-note">
+					<span>© <span id="year"></span> Zhanchao Yang</span>
+					<span>Philadelphia, PA</span>
 				</div>
 			</div>
-			<p class="footer-note">© <span id="year"></span> Zhanchao Yang.</p>
 		</footer>
 
-		<script src="../js/index.js"></script>
+		<script src="../js/home.js"></script>
+		<script src="../js/about.js"></script>
 	</body>
 </html>
