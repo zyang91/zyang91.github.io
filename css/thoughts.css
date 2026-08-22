@@ -479,3 +479,170 @@ body.thoughts-page .footer-links a::after {
 		transform: none !important;
 	}
 }
+
+/* ══ Written thoughts: a ledger of posts ══════════════════
+   Full-width horizontal rows rather than cards. The list should
+   read like a table of contents: number on the left, the piece in
+   the middle, date and cue on the right. Whole row is the target. */
+.th-posts {
+	list-style: none;
+	border-top: 1px solid var(--rule);
+}
+.th-post {
+	border-bottom: 1px solid var(--rule);
+}
+.th-post > a {
+	display: grid;
+	grid-template-columns: 88px minmax(0, 1fr) auto;
+	align-items: start;
+	gap: 28px;
+	padding: 28px 20px 28px 0;
+	text-decoration: none;
+	color: inherit;
+	position: relative;
+	transition: background 0.3s ease, padding 0.3s ease;
+}
+.th-post > a::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 2px;
+	background: var(--accent);
+	transform: scaleY(0);
+	transform-origin: 50% 0;
+	transition: transform 0.35s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.th-post > a:hover {
+	background: rgba(69, 106, 150, 0.045);
+	padding-left: 18px;
+}
+.th-post > a:hover::before {
+	transform: scaleY(1);
+}
+.th-post-no {
+	font-family: var(--serif);
+	font-size: 1.32rem;
+	font-weight: 600;
+	line-height: 1.2;
+	color: var(--terracotta);
+	padding-top: 2px;
+}
+.th-post-main {
+	display: block;
+	min-width: 0;
+}
+.th-post-series {
+	display: block;
+	font-size: 0.7rem;
+	font-weight: 600;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	color: var(--accent);
+	margin-bottom: 8px;
+}
+.th-post-title {
+	display: block;
+	font-family: var(--serif);
+	font-size: clamp(1.28rem, 2.4vw, 1.62rem);
+	font-weight: 600;
+	line-height: 1.22;
+	letter-spacing: -0.014em;
+	margin-bottom: 10px;
+	transition: color 0.25s ease;
+}
+.th-post > a:hover .th-post-title {
+	color: var(--accent-deep);
+}
+.th-post-dek {
+	display: block;
+	font-size: 0.95rem;
+	line-height: 1.7;
+	color: var(--ink-soft);
+	max-width: 56ch;
+}
+.th-post-source {
+	display: block;
+	margin-top: 12px;
+	font-size: 0.8rem;
+	letter-spacing: 0.02em;
+	color: var(--ink-faint);
+}
+.th-post-source em {
+	font-family: var(--serif);
+	font-style: italic;
+	font-size: 0.92rem;
+}
+.th-post-end {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 14px;
+	padding-top: 4px;
+	white-space: nowrap;
+}
+.th-post-date {
+	font-size: 0.76rem;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: var(--ink-faint);
+}
+.th-post-go {
+	font-size: 0.84rem;
+	font-weight: 500;
+	letter-spacing: 0.04em;
+	color: var(--accent-deep);
+	opacity: 0;
+	transform: translateX(-6px);
+	transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.th-post > a:hover .th-post-go,
+.th-post > a:focus-visible .th-post-go {
+	opacity: 1;
+	transform: none;
+}
+.th-posts-note {
+	margin-top: 20px;
+	font-size: 0.82rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--ink-faint);
+}
+
+@media (max-width: 720px) {
+	.th-post > a {
+		grid-template-columns: 56px minmax(0, 1fr);
+		gap: 6px 16px;
+		padding: 24px 0;
+	}
+	.th-post > a:hover {
+		padding-left: 12px;
+	}
+	.th-post-no {
+		font-size: 1.1rem;
+	}
+	.th-post-end {
+		grid-column: 2;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		padding-top: 14px;
+	}
+	.th-post-go {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.th-post > a,
+	.th-post > a::before,
+	.th-post-go {
+		transition: none !important;
+	}
+	.th-post > a:hover {
+		padding-left: 0;
+	}
+}

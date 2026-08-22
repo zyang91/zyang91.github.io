@@ -1,0 +1,485 @@
+/* ══════════════════════════════════════════════════════════════
+   Zhanchao Yang — Reading Notes (single note)
+   Loads after home.css and inherits its tokens.
+
+   The Thoughts index reads like graph paper. A note itself should
+   read like a book: warm ivory ground, one narrow serif column,
+   ruled section breaks, and marginal numbers in place of loud
+   headings. Same palette as the rest of the site, slower gear.
+══════════════════════════════════════════════════════════════ */
+
+body.note-page {
+	--accent: #456a96;
+	--accent-deep: #34527a;
+	--paper: #fbf8f2;
+	--paper-deep: #f3efe5;
+	--rule: rgba(11, 35, 69, 0.1);
+	--measure: 34rem;
+
+	background: var(--paper);
+	color: var(--ink);
+	font-family: var(--sans);
+	font-size: 16px;
+	line-height: 1.65;
+	-webkit-font-smoothing: antialiased;
+	overflow-x: hidden;
+}
+
+body.note-page .site-nav {
+	background: rgba(251, 248, 242, 0.88);
+}
+body.note-page .nav-links a.active {
+	color: var(--accent-deep);
+}
+body.note-page .nav-links a::after {
+	background: var(--accent);
+}
+body.note-page .footer-links a:hover {
+	color: var(--accent-deep);
+}
+body.note-page .footer-links a::after {
+	background: var(--accent);
+}
+@media (max-width: 720px) {
+	body.note-page .nav-links {
+		background: var(--paper);
+	}
+}
+
+/* ── Reading progress: a hairline across the top ──────────── */
+.nt-progress {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 2px;
+	width: 100%;
+	z-index: 60;
+	transform: scaleX(0);
+	transform-origin: 0 50%;
+	background: linear-gradient(90deg, var(--accent) 0%, var(--terracotta) 100%);
+	opacity: 0.85;
+	will-change: transform;
+}
+
+/* ══ Masthead ═════════════════════════════════════════════ */
+.nt-hero {
+	padding: 150px 0 0;
+}
+.nt-hero-inner,
+.nt-body {
+	max-width: 62rem;
+	margin: 0 auto;
+	padding-left: 36px;
+	padding-right: 36px;
+}
+.nt-crumb {
+	display: inline-flex;
+	align-items: center;
+	gap: 9px;
+	font-size: 0.8rem;
+	font-weight: 500;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--ink-faint);
+	text-decoration: none;
+	transition: color 0.25s ease;
+}
+.nt-crumb .arrow {
+	display: inline-block;
+	transition: transform 0.3s ease;
+}
+.nt-crumb:hover {
+	color: var(--accent-deep);
+}
+.nt-crumb:hover .arrow {
+	transform: translateX(-4px);
+}
+
+/* the issue line: a numbered note, dated, rule running out to the edge */
+.nt-issue {
+	display: flex;
+	align-items: baseline;
+	gap: 16px;
+	margin: 36px 0 24px;
+	font-size: 0.74rem;
+	font-weight: 600;
+	letter-spacing: 0.22em;
+	text-transform: uppercase;
+	color: var(--accent-deep);
+}
+.nt-issue-no {
+	font-family: var(--serif);
+	font-size: 1.5rem;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	text-transform: none;
+	color: var(--terracotta);
+	line-height: 1;
+}
+.nt-issue-rule {
+	flex: 1;
+	height: 1px;
+	background: var(--rule);
+}
+.nt-issue-date {
+	letter-spacing: 0.14em;
+	font-weight: 500;
+	color: var(--ink-faint);
+}
+
+.nt-hero h1 {
+	font-family: var(--serif);
+	font-size: clamp(2.4rem, 6vw, 4rem);
+	font-weight: 600;
+	line-height: 1.05;
+	letter-spacing: -0.022em;
+	max-width: 18ch;
+}
+.nt-hero h1 em {
+	font-style: italic;
+	color: var(--accent);
+}
+.nt-dek {
+	margin-top: 22px;
+	font-family: var(--serif);
+	font-size: clamp(1.08rem, 2vw, 1.3rem);
+	line-height: 1.6;
+	color: var(--ink-soft);
+	max-width: 46ch;
+}
+
+/* the book this note came out of, set like a library card */
+.nt-source {
+	display: flex;
+	align-items: center;
+	gap: 22px;
+	margin-top: 40px;
+	padding: 20px 24px;
+	background: var(--surface);
+	border: 1px solid var(--line-soft);
+	border-left: 3px solid var(--accent);
+	border-radius: 0 4px 4px 0;
+	max-width: 34rem;
+	box-shadow: var(--shadow);
+}
+.nt-source img {
+	width: 64px;
+	height: auto;
+	display: block;
+	border-radius: 2px;
+	box-shadow: 0 1px 3px rgba(11, 35, 69, 0.18),
+		0 8px 20px rgba(11, 35, 69, 0.12);
+}
+.nt-source-label {
+	font-size: 0.68rem;
+	font-weight: 600;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: var(--accent);
+	margin-bottom: 7px;
+}
+.nt-source-title {
+	font-family: var(--serif);
+	font-size: 1.16rem;
+	font-weight: 600;
+	font-style: italic;
+	line-height: 1.25;
+	margin-bottom: 4px;
+}
+.nt-source-author {
+	font-size: 0.88rem;
+	color: var(--ink-faint);
+}
+
+.nt-meta {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px 22px;
+	margin-top: 30px;
+	padding-top: 18px;
+	border-top: 1px solid var(--rule);
+	font-size: 0.76rem;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: var(--ink-faint);
+}
+.nt-meta .nt-tag {
+	color: var(--accent-deep);
+}
+
+/* ══ The essay column ═════════════════════════════════════ */
+.nt-body {
+	padding-top: 56px;
+	padding-bottom: 24px;
+}
+.nt-section {
+	position: relative;
+	max-width: var(--measure);
+	margin: 0 auto;
+	padding-top: 56px;
+}
+.nt-section.is-open {
+	padding-top: 8px;
+}
+
+/* headings carry a small marginal number, tucked outside the column */
+.nt-section > h2 {
+	position: relative;
+	font-family: var(--serif);
+	font-size: clamp(1.35rem, 2.6vw, 1.72rem);
+	font-weight: 600;
+	line-height: 1.2;
+	letter-spacing: -0.012em;
+	margin-bottom: 24px;
+	padding-top: 20px;
+	border-top: 1px solid var(--rule);
+}
+.nt-section > h2::before {
+	content: attr(data-no);
+	position: absolute;
+	left: -74px;
+	top: 22px;
+	width: 52px;
+	text-align: right;
+	font-family: var(--sans);
+	font-size: 0.72rem;
+	font-weight: 600;
+	letter-spacing: 0.14em;
+	color: var(--accent);
+	opacity: 0.8;
+}
+.nt-section.is-open > h2 {
+	border-top: none;
+	padding-top: 0;
+}
+.nt-section.is-open > h2::before {
+	top: 3px;
+}
+
+.nt-section p {
+	font-family: var(--serif);
+	font-size: 1.08rem;
+	line-height: 1.78;
+	color: rgba(11, 35, 69, 0.86);
+	margin-bottom: 20px;
+}
+.nt-section p strong {
+	font-weight: 600;
+	color: var(--ink);
+}
+
+/* opening paragraph gets a drop cap; only that one */
+.nt-section.is-open > p:first-of-type::first-letter {
+	float: left;
+	font-family: var(--serif);
+	font-size: 3.9rem;
+	line-height: 0.82;
+	font-weight: 600;
+	color: var(--accent-deep);
+	padding: 6px 12px 0 0;
+}
+
+/* a short line meant to land on its own, set a little apart */
+.nt-beat {
+	font-size: 1.12rem !important;
+	font-style: italic;
+	color: var(--accent-deep) !important;
+	margin: 26px 0 !important;
+	padding-left: 18px;
+	border-left: 2px solid rgba(69, 106, 150, 0.3);
+}
+
+/* the questions the essay turns on */
+.nt-quote {
+	margin: 40px 0;
+}
+.nt-quote p {
+	font-size: clamp(1.3rem, 2.8vw, 1.62rem) !important;
+	font-style: italic;
+	font-weight: 600;
+	line-height: 1.34 !important;
+	letter-spacing: -0.012em;
+	color: var(--ink) !important;
+	margin: 0 !important;
+	padding-left: 30px;
+	border-left: 3px solid var(--terracotta);
+}
+.nt-quote cite {
+	display: block;
+	margin: 14px 0 0 33px;
+	font-family: var(--sans);
+	font-size: 0.76rem;
+	font-style: normal;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--ink-faint);
+}
+
+/* short paragraphs the essay stacks like a list */
+.nt-stack {
+	margin: 26px 0;
+	padding: 22px 26px;
+	background: var(--paper-deep);
+	border-radius: 4px;
+}
+.nt-stack p {
+	margin-bottom: 12px;
+	font-size: 1.02rem;
+	line-height: 1.7;
+}
+.nt-stack p:last-child {
+	margin-bottom: 0;
+}
+
+/* end mark */
+.nt-dinkus {
+	max-width: var(--measure);
+	margin: 52px auto 0;
+	text-align: center;
+	color: var(--ink-faint);
+}
+.nt-dinkus b {
+	font-family: var(--serif);
+	font-size: 1.4rem;
+	font-weight: 400;
+	letter-spacing: 0.5em;
+	opacity: 0.6;
+}
+
+/* ══ Colophon ═════════════════════════════════════════════ */
+.nt-end {
+	max-width: var(--measure);
+	margin: 60px auto 0;
+	padding-top: 28px;
+	border-top: 1px solid var(--rule);
+}
+.nt-ack {
+	font-size: 0.88rem;
+	line-height: 1.72;
+	color: var(--ink-faint);
+	font-style: italic;
+	margin-bottom: 26px;
+}
+.nt-endlinks {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px 26px;
+}
+.nt-endlinks a {
+	display: inline-flex;
+	align-items: center;
+	gap: 9px;
+	font-size: 0.88rem;
+	font-weight: 500;
+	letter-spacing: 0.03em;
+	color: var(--accent-deep);
+	text-decoration: none;
+	border-bottom: 1px solid rgba(69, 106, 150, 0.35);
+	padding-bottom: 3px;
+	transition: color 0.25s ease, border-color 0.25s ease;
+}
+.nt-endlinks .arrow {
+	display: inline-block;
+	transition: transform 0.3s ease;
+}
+.nt-endlinks a:hover {
+	color: var(--ink);
+	border-bottom-color: var(--ink);
+}
+.nt-endlinks a:hover .arrow {
+	transform: translateX(4px);
+}
+
+.nt-next {
+	padding: 70px 0 90px;
+}
+.nt-next-line {
+	max-width: var(--measure);
+	margin: 0 auto;
+	font-family: var(--serif);
+	font-size: 1rem;
+	line-height: 1.8;
+	color: var(--ink-soft);
+	padding: 24px 28px;
+	background: var(--paper-deep);
+	border-left: 2px solid var(--accent);
+	border-radius: 0 4px 4px 0;
+}
+.nt-next-line a {
+	color: var(--accent-deep);
+	text-decoration: none;
+	border-bottom: 1px solid rgba(69, 106, 150, 0.4);
+	transition: color 0.25s ease, border-color 0.25s ease;
+}
+.nt-next-line a:hover {
+	color: var(--ink);
+	border-bottom-color: var(--ink);
+}
+
+/* ══ Responsive ═══════════════════════════════════════════ */
+@media (max-width: 1080px) {
+	.nt-section > h2::before {
+		position: static;
+		display: block;
+		width: auto;
+		text-align: left;
+		margin-bottom: 8px;
+	}
+}
+
+@media (max-width: 720px) {
+	.nt-hero {
+		padding-top: 118px;
+	}
+	.nt-issue {
+		flex-wrap: wrap;
+		gap: 8px 14px;
+	}
+	.nt-issue-no {
+		white-space: nowrap;
+	}
+	.nt-issue-rule {
+		display: none;
+	}
+	.nt-issue-date {
+		flex-basis: 100%;
+	}
+	.nt-hero-inner,
+	.nt-body {
+		padding-left: 24px;
+		padding-right: 24px;
+	}
+	.nt-body {
+		padding-top: 40px;
+	}
+	.nt-source {
+		gap: 16px;
+		padding: 16px 18px;
+	}
+	.nt-source img {
+		width: 54px;
+	}
+	.nt-section {
+		padding-top: 44px;
+	}
+	.nt-section p {
+		font-size: 1.04rem;
+	}
+	.nt-quote p {
+		padding-left: 20px;
+	}
+	.nt-stack {
+		padding: 18px;
+	}
+	.nt-next {
+		padding: 54px 0 76px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.nt-crumb .arrow,
+	.nt-endlinks .arrow {
+		transition: none !important;
+		transform: none !important;
+	}
+}
