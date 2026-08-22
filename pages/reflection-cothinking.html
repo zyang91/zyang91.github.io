@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CoThinking | Zhanchao Yang</title>
+		<meta
+			name="description"
+			content="Reflections No. 1. A note on how I actually use large language models: not to be told what is true, but to have something to react to. Five working principles, and why I never liked the word copilot."
+		/>
+		<link
+			rel="icon"
+			href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%F0%9F%92%AD%3C/text%3E%3C/svg%3E"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400;1,8..60,600&family=Inter:wght@400;500;600&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="../css/home.css" />
+		<link rel="stylesheet" href="../css/note.css" />
+		<script src="../js/analytics.js" defer></script>
+	</head>
+	<body class="note-page">
+		<div class="nt-progress" id="nt-progress" aria-hidden="true"></div>
+
+		<!-- ══ Navigation ══ -->
+		<header class="site-nav" id="site-nav">
+			<div class="nav-inner">
+				<div class="nav-brand">
+					<a class="nav-name" href="../index.html">Zhanchao Yang</a>
+					<span class="nav-affil">Penn Weitzman</span>
+				</div>
+				<button
+					class="nav-toggle"
+					id="nav-toggle"
+					aria-label="Open menu"
+					aria-expanded="false"
+					aria-controls="nav-links"
+				>
+					<span></span><span></span><span></span>
+				</button>
+				<nav class="nav-links" id="nav-links">
+					<a href="research.html">Research</a>
+					<a href="blog.html" class="active">Thoughts</a>
+					<a href="cv.html">CV</a>
+					<a href="awards.html">Awards</a>
+					<a href="about-me.html">About</a>
+					<a href="contact.html">Contact</a>
+				</nav>
+			</div>
+		</header>
+
+		<!-- ══ Masthead ══ -->
+		<section class="nt-hero">
+			<div class="nt-hero-inner">
+				<a class="nt-crumb" href="blog.html#writing">
+					<span class="arrow" aria-hidden="true">←</span> Thoughts
+				</a>
+
+				<p class="nt-issue">
+					<span class="nt-issue-no">№ 02</span>
+					<span>Reflections</span>
+					<span class="nt-issue-rule" aria-hidden="true"></span>
+					<span class="nt-issue-date">August 2026</span>
+				</p>
+
+				<h1><em>CoThinking</em></h1>
+				<p class="nt-dek">
+					I rarely ask a language model what is true. I ask it for something to
+					react to&mdash;and somewhere in the disagreement, the thinking starts.
+				</p>
+
+				<p class="nt-meta">
+					<span class="nt-tag">Reflection · AI · Method</span>
+					<span>About a 9 minute read</span>
+				</p>
+			</div>
+		</section>
+
+		<!-- ══ Essay ══ -->
+		<main class="nt-body">
+			<article>
+				<section class="nt-section is-open">
+					<h2 data-no="01">Something to React To</h2>
+					<p>
+						To be honest, I use AI a lot. Probably more than I ever expected,
+						and probably more than most people I know.
+					</p>
+					<p>
+						Sometimes it helps me polish a paragraph. Sometimes I use it to
+						brainstorm. Sometimes I simply ask questions out of curiosity. I
+						don&rsquo;t think any of these are particularly unique anymore.
+					</p>
+					<p>
+						What has surprised me is not how much I use AI, but the way I use
+						it.
+					</p>
+					<p class="nt-beat">I rarely expect AI to tell me what is true.</p>
+					<p>
+						More often, it gives me something to react to. Sometimes I agree.
+						Often I do not.
+					</p>
+
+					<div class="nt-stack">
+						<p>A sentence that feels too confident.</p>
+						<p>An argument that skips a step.</p>
+						<p>
+							An explanation that sounds reasonable but doesn&rsquo;t quite
+							convince me.
+						</p>
+					</div>
+
+					<p>This happens repeatedly. Then the conversation continues.</p>
+					<p>
+						The result is rarely the first answer it gives me. In fact, some of
+						the most useful conversations are the ones where the first answer is
+						biased in an interesting way.
+					</p>
+				</section>
+
+				<section class="nt-section">
+					<h2 data-no="02">How I Met AI</h2>
+					<p>
+						Looking back, my first encounter with AI was accidental and somewhat
+						dramatic.
+					</p>
+					<p>
+						It was the spring of 2023, only a few months after ChatGPT became
+						publicly available. One of my instructors included a sentence in the
+						syllabus that read:
+					</p>
+
+					<blockquote class="nt-quote">
+						<p>
+							&ldquo;Students should not submit assignments or essays generated
+							by large language models.&rdquo;
+						</p>
+						<cite>A course syllabus, spring 2023</cite>
+					</blockquote>
+
+					<p>
+						Ironically, I missed that class because of a schedule conflict.
+						Curious about what a <em>large language model</em> was, I opened
+						ChatGPT for the first time.
+					</p>
+					<p>
+						My first impression was not impressive. AI at the time felt a
+						little&hellip; dumb. It could generate paragraphs, but complete
+						essays often sounded repetitive and generic. It could not search for
+						information, and fabricated references were surprisingly common.
+					</p>
+					<p class="nt-beat">
+						I learned my first lesson very quickly: a confident&mdash;or even
+						convincing&mdash;answer was not necessarily a correct one.
+					</p>
+					<p>Still, I kept using it, but for a limited range of tasks.</p>
+					<p>
+						By the fall of 2023, when I was preparing my first conference
+						submission, some faculty members encouraged students to use AI for
+						language polishing. By then, I had already been experimenting with
+						it for a semester.
+					</p>
+					<p>At the time, I thought I was learning how to use a new tool.</p>
+				</section>
+
+				<section class="nt-section">
+					<h2 data-no="03">Why I Started Using AI More</h2>
+					<p>
+						People often ask why I spend so much time talking to AI instead of
+						talking to other people.
+					</p>
+					<p>
+						I must admit that there are disadvantages to using AI. It consumes
+						energy, and it should never replace conversations with real people.
+						It may contain bias or misinformation.
+					</p>
+					<p>But every way of thinking comes with a price.</p>
+					<p>
+						You cannot always share every thought with a friend&mdash;at least,
+						I can&rsquo;t. Sometimes my interests don&rsquo;t align with those
+						of the people around me. Sometimes a conversation turns into an
+						argument about something I never intended to argue about. And
+						sometimes, whether intentionally or not, people begin to see you
+						differently because of what you say.
+					</p>
+					<p class="nt-beat">
+						We always say we like disagreements, but we always want to win an
+						argument.
+					</p>
+					<p>
+						As for bias, I see AI much like browsing the internet. We are
+						exposed to biased, incomplete, or even false information every day
+						through social media, news, and countless websites. What matters is
+						not avoiding all of it&mdash;that is impossible&mdash;but learning
+						how to fact-check sources, dig deeper, and separate useful
+						information from the noise.
+					</p>
+					<p>
+						I think the same principle applies to AI. It should never be treated
+						as a perfect or unquestionable source. Like any other source of
+						information, it works best when we remain willing to verify,
+						challenge, and think for ourselves.
+					</p>
+
+					<p class="nt-principle">
+						<span class="nt-principle-no">Principle 01</span>
+						Never trust AI. Always check the sources and cross-check the
+						information.
+					</p>
+				</section>
+
+				<section class="nt-section">
+					<h2 data-no="04">Keep Digging</h2>
+					<p>
+						One thing I have learned about myself through countless
+						conversations is that I rarely accept an argument simply because it
+						sounds convincing.
+					</p>
+					<p>
+						Instead, I tend to dig a little deeper. Under what conditions would
+						this argument no longer hold? Are there exceptions? What happens if
+						we push it to an extreme case? I often find myself testing a theory,
+						a hypothesis, or even a legal principle by asking what happens at
+						the edge rather than at the center.
+					</p>
+					<p>
+						One conversation that has stayed with me was about the Fourth
+						Amendment and the idea of reasonable suspicion. I wasn&rsquo;t
+						trying to learn the legal definition for an exam. I became
+						interested in a much simpler question: what does
+						&ldquo;reasonable&rdquo; actually mean?
+					</p>
+					<p>
+						We started with ordinary examples, but I kept changing the facts.
+						What if the officer only saw part of the event? What if there were
+						two equally plausible explanations? What if the person&rsquo;s
+						behavior was unusual but perfectly legal? At what point does a
+						suspicion become &ldquo;reasonable&rdquo; rather than just a guess?
+					</p>
+					<p>
+						At one point, I asked whether someone walking away after hearing
+						police sirens should create reasonable suspicion. Then I kept
+						modifying the story.
+					</p>
+
+					<div class="nt-stack">
+						<p>What if the person had headphones on?</p>
+						<p>What if they were running because they were late for work?</p>
+						<p>
+							What if the neighborhood had a history of avoiding police for
+							reasons unrelated to crime?
+						</p>
+					</div>
+
+					<p>
+						We spent the better part of an hour discussing what sounded like a
+						very simple question: if two innocent explanations and one guilty
+						explanation all fit the same evidence, what makes one interpretation
+						&ldquo;reasonable&rdquo; enough for the law?
+					</p>
+					<p>
+						By the end of the conversation, I realized I was no longer trying to
+						understand the Fourth Amendment itself. I was trying to understand
+						how people reason when the answer is uncertain. That, more than the
+						legal question itself, was what kept the conversation going.
+					</p>
+					<p>
+						Without a chatbot, I probably wouldn&rsquo;t have kept pushing the
+						discussion this far. Real conversations have natural stopping
+						points. People get tired, the topic changes, or someone simply has
+						something else to do. AI doesn&rsquo;t. It lets me keep testing
+						ideas, changing assumptions, and exploring one hypothetical after
+						another until I feel that I finally understand the reasoning.
+					</p>
+
+					<p class="nt-principle">
+						<span class="nt-principle-no">Principle 02</span>
+						Don&rsquo;t stop when you get an answer. Keep digging until you
+						understand why.
+					</p>
+				</section>
+
+				<section class="nt-section">
+					<h2 data-no="05">Thinking Through Disagreement</h2>
+					<p>
+						Another reason I enjoy using AI is that it constantly gives me ideas
+						and arguments that sound reasonable at first glance.
+					</p>
+					<p>
+						I like critique. Not because I enjoy proving others wrong, but
+						because critique forces me to explain why I agree, or why I
+						don&rsquo;t.
+					</p>
+					<p>
+						Sometimes I ask AI to argue from the opposite perspective. Sometimes
+						I ask it to defend a position that I disagree with. Occasionally, I
+						even ask it to critique my own writing before anyone else reads it.
+					</p>
+					<p>
+						I have found that disagreement is often more productive than
+						agreement. Agreement usually ends a conversation. Disagreement keeps
+						it moving.
+					</p>
+
+					<p class="nt-principle">
+						<span class="nt-principle-no">Principle 03</span>
+						Don&rsquo;t ask AI to agree with you. Ask it to challenge you.
+					</p>
+				</section>
+
+				<section class="nt-section">
+					<h2 data-no="06">A Mirror of Thinking</h2>
+					<p>Over time, I started noticing patterns.</p>
+
+					<div class="nt-stack">
+						<p>I often questioned assumptions before conclusions.</p>
+						<p>
+							I repeatedly asked where an argument stopped working rather than
+							where it succeeded.
+						</p>
+						<p>
+							I preferred changing one condition at a time instead of replacing
+							an entire theory.
+						</p>
+					</div>
+
+					<p>
+						None of these habits were taught by AI. They came from my earlier
+						statistical training.
+					</p>
+					<p>
+						Looking back, I learned as much about my own way of thinking as I
+						did about the topics we discussed.
+					</p>
+					<p>
+						After many of our conversations, I developed another habit. Before
+						closing the chat, I would often ask one final question:
+					</p>
+
+					<blockquote class="nt-quote">
+						<p>&ldquo;What do you think I am?&rdquo;</p>
+						<cite>My last question, most nights</cite>
+					</blockquote>
+
+					<p>
+						The answer was never about my personality or my background. It was
+						usually about how I approached ideas. One response has stayed with
+						me:
+					</p>
+					<p>
+						&ldquo;You rarely stop at the first explanation. You are less
+						interested in whether an answer is right than in understanding why
+						it is right, when it stops being right, and what assumptions it
+						depends on. You don&rsquo;t seem to enjoy winning arguments as much
+						as understanding how arguments are built. You treat ideas as things
+						to be tested rather than accepted. AI didn&rsquo;t teach you those
+						habits&mdash;it simply gave you a place to notice them.&rdquo;
+					</p>
+					<p>
+						I don&rsquo;t know whether that description is completely accurate.
+						But I know it made me pause.
+					</p>
+					<p>
+						Perhaps that is what I value most about these conversations. They do
+						not just help me understand a topic&mdash;they sometimes help me
+						understand myself.
+					</p>
+					<p>
+						This also reminds me of the idea of positionality in anthropology.
+						Researchers are often asked to reflect on how their own backgrounds,
+						experiences, assumptions, and relationships shape what they observe
+						and how they interpret it.
+					</p>
+					<p>
+						I began to realize that something similar was happening in my
+						conversations with AI. I was not only examining the question in
+						front of me. I was also, gradually, examining the person asking it.
+					</p>
+					<p>
+						Of course, this is not the same as positionality in ethnographic
+						research. AI cannot fully know my social position, experiences, or
+						relationships simply from a conversation. But it can reflect
+						patterns in how I reason. That reflection gives me another
+						opportunity to ask how my own position shapes the questions I ask in
+						the first place.
+					</p>
+
+					<p class="nt-principle">
+						<span class="nt-principle-no">Principle 04</span>
+						Every conversation reveals something about the topic&mdash;and
+						something about yourself.
+					</p>
+				</section>
+
+				<section class="nt-section">
+					<h2 data-no="07">Iteration</h2>
+					<p>Very little survives the first draft.</p>
+					<p>
+						Most of the time, I still write the first version. AI helps me
+						explore possibilities, challenge assumptions, reorganize ideas, and
+						polish the language. What follows is a long series of revisions.
+					</p>
+					<p>Building my personal website was the best example.</p>
+					<p>
+						When I first started, I thought the challenge would be
+						technical&mdash;learning HTML, CSS, and putting everything online.
+						It turned out to be something completely different.
+					</p>
+					<p>
+						The first version looked clean, but it didn&rsquo;t feel like me.
+						The layout was too generic. The homepage introduced my background,
+						but not my personality. So we kept changing it.
+					</p>
+					<p>
+						One evening, we spent nearly an hour discussing the structure of the
+						homepage. Another time, we went back and forth over whether my
+						research should have its own page or be integrated into a broader
+						narrative about my work. Later, we decided to postpone the entire
+						Professional Work section&mdash;not because it was unfinished, but
+						because it did not yet reflect the standard I wanted for the rest of
+						the website.
+					</p>
+					<p>
+						Gradually, the conversation shifted away from web design. We were no
+						longer talking about fonts, layouts, or navigation. We were
+						discussing what kind of scholar I wanted to become, because that
+						answer influenced almost every design decision.
+					</p>
+					<p>That is how most of my work with AI evolves.</p>
+					<p>
+						A paragraph moves. A sentence disappears. An example no longer
+						works. A conclusion becomes a question. Sometimes we remove more
+						than we add. Sometimes we return to an earlier idea after realizing
+						that the newer one was not actually better.
+					</p>
+					<p>
+						The final version rarely belongs to either the first draft or the
+						first response.
+					</p>
+					<p class="nt-beat">It emerges through iteration.</p>
+
+					<p class="nt-principle">
+						<span class="nt-principle-no">Principle 05</span>
+						Never fall in love with your first draft.
+					</p>
+				</section>
+
+				<section class="nt-section">
+					<h2 data-no="08">Why &ldquo;CoThinking&rdquo;?</h2>
+					<p>I never liked the idea of calling AI a &ldquo;copilot.&rdquo;</p>
+					<p class="nt-beat">
+						A copilot implies that someone already knows the destination.
+					</p>
+					<p>
+						Most of my conversations begin before I know where I am going. They
+						begin with curiosity.
+					</p>
+					<p>
+						&ldquo;CoThinking&rdquo; feels like a better description. It is not
+						about sharing responsibility for an answer. It is about sharing the
+						process of exploring a question.
+					</p>
+
+					<div class="nt-stack">
+						<p>Sometimes we reach a conclusion.</p>
+						<p>Sometimes we simply discover a better question.</p>
+						<p>Either outcome is worthwhile.</p>
+					</div>
+
+					<p>
+						I don&rsquo;t think AI has fundamentally changed the way I think.
+						Long before AI, I enjoyed asking questions, reading widely, and
+						trying to understand why things worked the way they did.
+					</p>
+					<p>
+						AI cannot replace reading. It cannot replace my judgment. It cannot
+						replace the statistical training that taught me to question
+						assumptions, distinguish correlation from causation, or think
+						carefully about evidence.
+					</p>
+					<p>
+						What it has changed is the scale of that process. It allows me to
+						ask more questions, test more ideas, explore more perspectives, and
+						iterate more often than I could on my own.
+					</p>
+					<p class="nt-beat">AI does not think for me.</p>
+					<p><strong>Perhaps that is what CoThinking really means.</strong></p>
+				</section>
+
+				<p class="nt-dinkus" aria-hidden="true">
+					<b>···</b>
+				</p>
+
+				<footer class="nt-end">
+					<p class="nt-ack">
+						Acknowledgment: this reflection is based entirely on my own
+						experiences and conversations. Fittingly, I used AI to help me
+						organize and trim an essay about how I use AI. I reviewed, edited,
+						and approved every part of the final manuscript.
+					</p>
+					<div class="nt-endlinks">
+						<a href="blog.html#writing">
+							<span class="arrow" aria-hidden="true">←</span> All written thoughts
+						</a>
+						<a href="../assets/thoughts/reflection/cothinking.md">
+							Read the source file
+							<span class="arrow" aria-hidden="true">→</span>
+						</a>
+						<a href="reading-note-unbanking-america.html">
+							The previous note
+							<span class="arrow" aria-hidden="true">→</span>
+						</a>
+					</div>
+				</footer>
+			</article>
+		</main>
+
+		<section class="nt-next">
+			<div class="nt-next-line">
+				Reflections is where I write about how I work rather than what I work
+				on. The rest of the notebook&mdash;maps, field notes,
+				experiments&mdash;lives on the <a href="blog.html">Thoughts page</a>.
+			</div>
+		</section>
+
+		<!-- ══ Footer ══ -->
+		<footer class="site-footer">
+			<div class="container">
+				<div class="footer-grid">
+					<div>
+						<p class="footer-name">Zhanchao Yang</p>
+						<p class="footer-identity">
+							Urban Planning <span class="dot">·</span> Transportation
+							<span class="dot">·</span> Spatial Analytics
+						</p>
+					</div>
+					<nav class="footer-links">
+						<a href="mailto:zhanchao@upenn.edu">Email</a>
+						<a href="research.html">Research</a>
+						<a href="blog.html">Thoughts</a>
+						<a href="cv.html">CV</a>
+						<a href="awards.html">Awards</a>
+						<a href="about-me.html">About</a>
+						<a href="contact.html">Contact</a>
+						<a href="https://github.com/zyang91" target="_blank" rel="noopener">GitHub</a>
+						<a href="https://www.linkedin.com/in/zhanchaoyang/" target="_blank" rel="noopener">LinkedIn</a>
+					</nav>
+				</div>
+				<div class="footer-note">
+					<span>© <span id="year"></span> Zhanchao Yang</span>
+					<span>Philadelphia, PA</span>
+				</div>
+			</div>
+		</footer>
+
+		<script src="../js/home.js"></script>
+		<script src="../js/note.js"></script>
+	</body>
+</html>
