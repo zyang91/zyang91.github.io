@@ -331,6 +331,31 @@ body.note-page .footer-links a::after {
 	margin-bottom: 0;
 }
 
+/* the working principles the reflection keeps arriving at */
+.nt-principle {
+	position: relative;
+	margin: 34px 0 !important;
+	padding: 22px 26px 22px 28px;
+	background: var(--paper-deep);
+	border-left: 3px solid var(--terracotta);
+	border-radius: 0 4px 4px 0;
+	font-size: 1.12rem !important;
+	font-weight: 600;
+	line-height: 1.5 !important;
+	color: var(--ink) !important;
+	box-shadow: var(--shadow);
+}
+.nt-principle-no {
+	display: block;
+	margin-bottom: 9px;
+	font-family: var(--sans);
+	font-size: 0.68rem;
+	font-weight: 600;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: var(--accent);
+}
+
 /* end mark */
 .nt-dinkus {
 	max-width: var(--measure);
@@ -455,6 +480,10 @@ body.note-page .footer-links a::after {
 	.nt-source {
 		gap: 16px;
 		padding: 16px 18px;
+	}
+	.nt-principle {
+		padding: 18px 18px 18px 20px;
+		font-size: 1.05rem !important;
 	}
 	.nt-source img {
 		width: 54px;
