@@ -636,6 +636,464 @@ body.theme-perception {
 	}
 }
 
+
+/* ── Why This Matters — four consequences ─────────────────── */
+.section-why {
+	border-top: 1px solid var(--line-soft);
+}
+.why-list {
+	border-top: 1px solid var(--line-soft);
+}
+.why-row {
+	display: flex;
+	align-items: flex-start;
+	gap: 30px;
+	padding: 38px 0;
+	border-bottom: 1px solid var(--line-soft);
+}
+.why-row .icon-badge {
+	width: 44px;
+	height: 44px;
+	margin-top: 2px;
+}
+.why-row .icon-badge svg {
+	width: 21px;
+	height: 21px;
+}
+.why-body {
+	max-width: 720px;
+}
+.why-body h3 {
+	font-family: var(--serif);
+	font-size: clamp(1.15rem, 2.1vw, 1.35rem);
+	font-weight: 600;
+	line-height: 1.35;
+	margin-bottom: 10px;
+}
+.why-body p {
+	font-size: 0.94rem;
+	line-height: 1.7;
+	color: var(--ink-soft);
+	max-width: 640px;
+}
+.why-body p strong {
+	color: var(--ink);
+	font-weight: 600;
+}
+.why-question {
+	font-family: var(--serif);
+	font-size: clamp(1.25rem, 2.3vw, 1.55rem);
+	font-style: italic;
+	line-height: 1.5;
+	color: var(--ink);
+	border-left: 3px solid var(--accent-mid);
+	padding: 10px 0 10px 28px;
+	margin-top: 48px;
+	max-width: 760px;
+}
+
+/* ── Framework extension — stage 04 unfolded ──────────────── */
+.flow-extend {
+	margin-top: 42px;
+	padding-top: 34px;
+	border-top: 1px solid var(--line-soft);
+	text-align: center;
+}
+.flow-extend-label {
+	font-size: 0.74rem;
+	font-weight: 600;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--ink-faint);
+	margin-bottom: 18px;
+}
+.flow-extend-stage {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 22px;
+	height: 22px;
+	margin-right: 6px;
+	border-radius: 50%;
+	background: var(--blue-soft);
+	color: var(--surface);
+	font-size: 0.62rem;
+	letter-spacing: 0.04em;
+	vertical-align: -5px;
+}
+.flow-consequences {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 10px;
+}
+.flow-consequences li {
+	font-size: 0.82rem;
+	font-weight: 500;
+	color: var(--ink-soft);
+	background: var(--surface-warm);
+	border: 1px solid var(--line);
+	border-radius: 100px;
+	padding: 7px 18px;
+}
+.flow-note {
+	font-family: var(--serif);
+	font-size: clamp(1.08rem, 2vw, 1.3rem);
+	font-style: italic;
+	line-height: 1.5;
+	text-align: center;
+	color: var(--ink);
+	margin: 38px auto 0;
+	max-width: 620px;
+}
+.flow-subnote {
+	font-size: 0.88rem;
+	line-height: 1.65;
+	text-align: center;
+	color: var(--ink-soft);
+	margin: 12px auto 0;
+	max-width: 620px;
+}
+
+/* ── Questions that thread through the aims ───────────────── */
+.aim-thread {
+	margin-top: 4px;
+	padding-top: 40px;
+	border-top: 1px solid var(--line-soft);
+}
+.aim-thread-label {
+	font-size: 0.72rem;
+	font-weight: 600;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	color: var(--accent);
+	margin-bottom: 16px;
+}
+.aim-thread-list {
+	list-style: none;
+	display: grid;
+	gap: 10px;
+}
+.aim-thread-list li {
+	position: relative;
+	padding-left: 22px;
+	font-family: var(--serif);
+	font-size: 1rem;
+	line-height: 1.55;
+	color: var(--ink);
+}
+.aim-thread-list li::before {
+	content: '';
+	position: absolute;
+	left: 2px;
+	top: 0.62em;
+	width: 8px;
+	height: 8px;
+	border-top: 1.6px solid var(--accent-mid);
+	border-right: 1.6px solid var(--accent-mid);
+	transform: rotate(45deg);
+}
+.aim-thread-note {
+	font-size: 0.9rem;
+	line-height: 1.65;
+	color: var(--ink-soft);
+	margin-top: 20px;
+	max-width: 720px;
+}
+
+/* ── From Diagnosis to Intervention ─────────────────────── */
+.section-intervene {
+	border-top: 1px solid var(--line-soft);
+}
+.intervene-question {
+	font-family: var(--serif);
+	font-size: clamp(1.25rem, 2.3vw, 1.55rem);
+	font-style: italic;
+	line-height: 1.5;
+	color: var(--ink);
+	border-left: 3px solid var(--accent-mid);
+	padding: 10px 0 10px 28px;
+	margin: -24px 0 60px;
+	max-width: 760px;
+}
+
+/* the three diagnostic steps, on a single hairline */
+.diag {
+	list-style: none;
+	border-left: 1px solid var(--line);
+	padding-left: 34px;
+	margin-bottom: 20px;
+	max-width: 760px;
+}
+.diag-step {
+	position: relative;
+	padding-bottom: 38px;
+}
+.diag-step:last-child {
+	padding-bottom: 0;
+}
+.diag-step::before {
+	content: '';
+	position: absolute;
+	left: -39px;
+	top: 5px;
+	width: 9px;
+	height: 9px;
+	border-radius: 50%;
+	background: var(--accent-mid);
+	box-shadow: 0 0 0 5px var(--bg);
+}
+.diag-n {
+	font-size: 0.7rem;
+	font-weight: 600;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: var(--accent);
+	margin-bottom: 8px;
+}
+.diag-step h3 {
+	font-family: var(--serif);
+	font-size: 1.2rem;
+	font-weight: 600;
+	line-height: 1.35;
+	margin-bottom: 8px;
+}
+.diag-step > p {
+	font-size: 0.94rem;
+	line-height: 1.7;
+	color: var(--ink-soft);
+	max-width: 640px;
+}
+.diag-gate {
+	font-size: 0.9rem;
+	line-height: 1.7;
+	color: var(--ink-soft);
+	margin-top: 14px;
+	padding-left: 18px;
+	border-left: 2px solid var(--gate-c, var(--line));
+}
+.diag-tag {
+	display: block;
+	font-size: 0.66rem;
+	font-weight: 600;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	color: var(--gate-c, var(--ink-faint));
+	margin-bottom: 3px;
+}
+.diag-gate { --gate-c: var(--blue-soft); }
+.diag-gate.alt { --gate-c: var(--terracotta); }
+
+/* the four mechanisms, as editorial rows */
+.mech {
+	margin-top: 40px;
+	border-top: 1px solid var(--line-soft);
+}
+.mech-row {
+	display: flex;
+	align-items: flex-start;
+	gap: 30px;
+	padding: 38px 0;
+	border-bottom: 1px solid var(--line-soft);
+}
+.mech-letter {
+	flex-shrink: 0;
+	width: 44px;
+	height: 44px;
+	margin-top: 2px;
+	border-radius: 50%;
+	background: var(--mech-c, var(--sand-deep));
+	color: var(--ink);
+	font-family: var(--serif);
+	font-style: italic;
+	font-size: 1.15rem;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+.mech-body {
+	max-width: 720px;
+}
+.mech-body h3 {
+	font-family: var(--serif);
+	font-size: clamp(1.15rem, 2.1vw, 1.35rem);
+	font-weight: 600;
+	line-height: 1.35;
+	margin-bottom: 10px;
+}
+.mech-body > p {
+	font-size: 0.94rem;
+	line-height: 1.7;
+	color: var(--ink-soft);
+	max-width: 640px;
+}
+.mech-fix {
+	margin-top: 14px;
+}
+.mech-fix-label {
+	font-size: 0.66rem;
+	font-weight: 600;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	color: var(--accent);
+	margin-right: 10px;
+}
+.mech-ask {
+	font-family: var(--serif);
+	font-style: italic;
+	font-size: 1rem;
+	line-height: 1.5;
+	color: var(--ink);
+	border-left: 2px solid var(--mech-c, var(--sand-deep));
+	padding-left: 16px;
+	margin-top: 18px;
+}
+.mech-eq {
+	margin: 16px 0 0;
+	padding-left: 18px;
+	border-left: 2px solid var(--line);
+}
+.eq {
+	font-size: 0.86rem;
+	line-height: 1.6;
+	color: var(--ink-soft);
+}
+.eq + .eq {
+	margin-top: 10px;
+}
+.eq-lhs {
+	display: block;
+	font-size: 0.66rem;
+	font-weight: 600;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--ink-faint);
+	margin-bottom: 2px;
+}
+.eq-alt .eq-lhs {
+	color: var(--terracotta);
+}
+.eq strong {
+	color: var(--ink);
+	font-weight: 600;
+}
+
+/* the agenda this opens up */
+.agenda-chain {
+	margin-top: 60px;
+	padding-top: 44px;
+	border-top: 1px solid var(--line-soft);
+}
+.agenda-chain-label {
+	font-size: 0.74rem;
+	font-weight: 600;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: var(--accent);
+	text-align: center;
+	margin-bottom: 30px;
+}
+.chain {
+	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 10px;
+}
+.chain li {
+	position: relative;
+	text-align: center;
+	padding: 0 10px;
+	font-family: var(--serif);
+	font-size: 0.95rem;
+	line-height: 1.4;
+	color: var(--ink);
+}
+.chain li:not(:last-child)::after {
+	content: '';
+	position: absolute;
+	top: 13px;
+	right: -6px;
+	width: 7px;
+	height: 7px;
+	border-top: 2px solid var(--ink-faint);
+	border-right: 2px solid var(--ink-faint);
+	transform: rotate(45deg);
+}
+.chain-n {
+	display: block;
+	font-family: var(--sans);
+	font-size: 0.66rem;
+	font-weight: 600;
+	letter-spacing: 0.16em;
+	color: var(--accent);
+	margin-bottom: 10px;
+}
+.chain-note {
+	font-size: 0.9rem;
+	line-height: 1.7;
+	color: var(--ink-soft);
+	text-align: center;
+	max-width: 660px;
+	margin: 34px auto 0;
+}
+.intervene-close {
+	font-family: var(--serif);
+	font-size: clamp(1.3rem, 2.5vw, 1.65rem);
+	font-style: italic;
+	line-height: 1.5;
+	text-align: center;
+	color: var(--ink);
+	max-width: 780px;
+	margin: 56px auto 0;
+}
+
+/* ── Responsive — added sections ──────────────────────────── */
+@media (max-width: 880px) {
+	.chain {
+		grid-template-columns: 1fr;
+		gap: 28px;
+	}
+	.chain li {
+		text-align: left;
+		padding: 0;
+	}
+	.chain li:not(:last-child)::after {
+		top: auto;
+		bottom: -16px;
+		right: auto;
+		left: 3px;
+		transform: rotate(135deg);
+	}
+	.chain-n {
+		margin-bottom: 4px;
+	}
+}
+
+@media (max-width: 720px) {
+	.why-row,
+	.mech-row {
+		flex-direction: column;
+		gap: 16px;
+		padding: 32px 0;
+	}
+	.mech-letter {
+		width: 38px;
+		height: 38px;
+		font-size: 1rem;
+	}
+	.why-row .icon-badge {
+		width: 40px;
+		height: 40px;
+	}
+	.diag {
+		padding-left: 26px;
+	}
+	.diag-step::before {
+		left: -31px;
+	}
+}
+
 /* ── Reduced motion ───────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
 	.route-draw {
