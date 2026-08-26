@@ -467,7 +467,7 @@ body.thoughts-page .footer-links a::after {
 		grid-column: span 1;
 	}
 	.th-fit-line {
-		padding: 22px 22px;
+		padding: 22px;
 	}
 }
 

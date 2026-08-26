@@ -156,7 +156,7 @@ body.home-cinematic::before {
 
 .cinematic-name-cta:hover .cinematic-name-cta-mono {
   background: var(--accent-orange);
-  color: #FFFFFF;
+  color: #FFF;
 }
 
 .cinematic-name-cta-text {
@@ -558,8 +558,8 @@ body.home-cinematic::before {
 }
 
 .cinematic-menu-toggle:hover {
-  background: #000000;
-  border-color: #000000;
+  background: #000;
+  border-color: #000;
   transform: scale(1.03);
 }
 
@@ -567,12 +567,12 @@ body.home-cinematic::before {
   display: block;
   width: 18px;
   height: 1.5px;
-  background: #000000;
+  background: #000;
   transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .cinematic-menu-toggle:hover span {
-  background: #FFFFFF;
+  background: #FFF;
 }
 
 @media (max-width: 860px) {
@@ -589,7 +589,7 @@ body.home-cinematic::before {
 .cinematic-menu-panel {
   position: fixed;
   inset: 0;
-  background: #FFFFFF;
+  background: #FFF;
   z-index: 100;
   opacity: 0;
   visibility: hidden;
@@ -641,8 +641,8 @@ body.menu-open {
 }
 
 .cinematic-menu-close:hover {
-  background: #000000;
-  border-color: #000000;
+  background: #000;
+  border-color: #000;
   transform: scale(1.03);
 }
 
@@ -652,7 +652,7 @@ body.menu-open {
   left: 50%;
   width: 18px;
   height: 1.5px;
-  background: #000000;
+  background: #000;
   transition: background 0.2s ease;
 }
 
@@ -665,7 +665,7 @@ body.menu-open {
 }
 
 .cinematic-menu-close:hover span {
-  background: #FFFFFF;
+  background: #FFF;
 }
 
 .cinematic-menu-grid {
@@ -686,7 +686,7 @@ body.menu-open {
   font-size: clamp(2rem, 5vw, 3.75rem);
   line-height: 1.1;
   letter-spacing: -0.025em;
-  color: #000000;
+  color: #000;
   text-decoration: none;
   padding: 14px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
@@ -710,7 +710,7 @@ body.menu-open {
 
 .cinematic-menu-col a:hover span {
   transform: translateX(6px);
-  color: #000000;
+  color: #000;
 }
 
 .cinematic-menu-foot {
@@ -727,8 +727,8 @@ body.menu-open {
   font-family: 'Inter', sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
-  color: #FFFFFF;
-  background: #000000;
+  color: #FFF;
+  background: #000;
   border-radius: 999px;
   padding: 12px 28px;
   text-decoration: none;
@@ -737,7 +737,7 @@ body.menu-open {
 
 .cinematic-menu-cta:hover {
   transform: scale(1.03);
-  color: #FFFFFF;
+  color: #FFF;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
@@ -1121,7 +1121,7 @@ body.page-cinematic em.accent-green   { color: var(--accent-green);   font-style
 .page-cinematic .primary-btn:hover,
 .page-cinematic .copy-btn:hover {
   background: var(--accent-orange);
-  color: #FFFFFF;
+  color: #FFF;
 }
 
 .page-cinematic .secondary-btn {
@@ -1262,9 +1262,9 @@ body.page-cinematic em.accent-green   { color: var(--accent-green);   font-style
 body.theme-light {
   color-scheme: light;
   --bg: #fafafa;
-  --bg-2: #ffffff;
+  --bg-2: #fff;
   --card: rgba(255, 255, 255, 0.8);
-  --card-solid: #ffffff;
+  --card-solid: #fff;
   --text: #0f0f14;
   --muted: #64648a;
   --border: rgba(0, 0, 0, 0.08);
@@ -1783,7 +1783,7 @@ h1 {
 }
 
 .terminal-body p {
-  margin: 0 0 12px 0;
+  margin: 0 0 12px;
   font-size: 13px;
   line-height: 1.6;
 }
@@ -3060,7 +3060,7 @@ body.theme-light .map-container iframe {
 
 .map-info-card h4 {
   font-size: 1rem;
-  margin: 0 0 4px 0;
+  margin: 0 0 4px;
   color: var(--text);
 }
 
