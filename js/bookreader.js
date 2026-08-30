@@ -14,7 +14,15 @@
 	if (!reader) return;
 
 	var total = parseInt(reader.getAttribute('data-pages'), 10) || 0;
-	var dir = reader.getAttribute('data-dir') || '';
+	function sanitizeDir(value) {
+		var s = String(value || '').trim();
+		s = s.replace(/\\/g, '/');
+		s = s.replace(/[^a-zA-Z0-9_./-]/g, '');
+		s = s.replace(/(^|\/)\.\.(?=\/|$)/g, '');
+		s = s.replace(/^\/+|\/+$/g, '');
+		return s;
+	}
+	var dir = sanitizeDir(reader.getAttribute('data-dir'));
 	if (!total) return;
 
 	var img = document.getElementById('rd-page');
