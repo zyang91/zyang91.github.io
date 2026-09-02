@@ -3,6 +3,7 @@ import { readFile } from 'node:fs/promises';
 import { extname, join, normalize } from 'node:path';
 
 const root = process.cwd();
+const port = Number(process.env.PORT) || 8931;
 const types = {
 	'.html': 'text/html; charset=utf-8',
 	'.css': 'text/css; charset=utf-8',
@@ -26,4 +27,4 @@ createServer(async (req, res) => {
 		res.writeHead(404);
 		res.end('not found');
 	}
-}).listen(8931, () => console.log('serving on http://localhost:8931'));
+}).listen(port, () => console.log(`serving on http://localhost:${port}`));
