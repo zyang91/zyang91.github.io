@@ -699,17 +699,6 @@ body.theme-perception {
 	color: var(--ink);
 	font-weight: 600;
 }
-.why-question {
-	font-family: var(--serif);
-	font-size: clamp(1.25rem, 2.3vw, 1.55rem);
-	font-style: italic;
-	line-height: 1.5;
-	color: var(--ink);
-	border-left: 3px solid var(--accent-mid);
-	padding: 10px 0 10px 28px;
-	margin-top: 48px;
-	max-width: 760px;
-}
 
 /* ── Framework extension — stage 04 unfolded ──────────────── */
 .flow-extend {
