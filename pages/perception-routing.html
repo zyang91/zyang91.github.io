@@ -6,7 +6,7 @@
 		<title>Perception-Based Urban Routing | Zhanchao Yang</title>
 		<meta
 			name="description"
-			content="An ongoing research project examining how perceptions of urban space shape route choice, experienced accessibility, and broader urban outcomes."
+			content="A research idea: people systematically exclude parts of the city from their practical choice sets, and those exclusions are socially and spatially patterned."
 		/>
 		<link
 			rel="icon"
@@ -69,15 +69,16 @@
 					</p>
 					<h1 class="reveal in-view">Perception-Based Urban Routing</h1>
 					<p class="p-dek reveal in-view reveal-d1">
-						How perceptions of urban space shape the routes people choose
-						<em>and what follows from those choices</em>.
+						Two places can be the same distance from a destination and just as
+						well served. <em>People still use one and avoid the other.</em>
 					</p>
 					<p class="p-lede reveal in-view reveal-d1">
-						Conventional routing models assume travelers respond to measurable
-						attributes such as travel time, distance, cost, and network
-						connectivity. But people also rely on how neighborhoods and places
-						feel. They may avoid certain areas, prefer familiar surroundings, or
-						choose a route that an algorithm would not call optimal.
+						People leave parts of the city out of the routes they will actually
+						consider. <strong>Those exclusions are not random.</strong> They
+						follow patterns across people and places, and they can pull
+						experienced accessibility a long way from what a model predicts. I
+						want to know when that happens, and whether planners should do
+						anything about it.
 					</p>
 					<div class="p-keywords reveal in-view reveal-d2">
 						<span>Route Choice</span>
@@ -123,8 +124,8 @@
 							</svg>
 						</span>
 						<div>
-							<h3>Urban Outcomes</h3>
-							<p>Impacts on accessibility and urban activity.</p>
+							<h3>Experienced Accessibility</h3>
+							<p>Access as perceived, navigated, and realized.</p>
 						</div>
 					</div>
 				</div>
@@ -137,21 +138,22 @@
 				<div class="container">
 					<p class="section-label reveal">The Core Idea</p>
 					<h2 class="section-title reveal">
-						Two cities, one origin and destination
+						There is one modeled city, but multiple experienced cities
 					</h2>
 					<p class="section-intro reveal">
-						For the same origin and destination, the algorithmic
-						&ldquo;optimal&rdquo; route and the perception-influenced route can
-						be very different. That difference can change how accessible a place
-						feels and which opportunities seem within reach.
+						The metaphor is loose but useful. For one origin and destination,
+						the modeled network offers an optimal route while the route a
+						traveler will actually consider may be another. The same
+						neighborhood can be familiar to longtime residents, threatening to
+						outsiders, and simply avoided by older travelers.
 					</p>
 
 					<div class="compare">
-						<!-- The Algorithmic City -->
+						<!-- The modeled network -->
 						<article class="compare-panel reveal">
-							<h3>The Algorithmic City</h3>
+							<h3>The Modeled Network</h3>
 							<p class="compare-sub">
-								The city as represented by the transportation network.
+								Streets, transit, connections, and travel times as represented.
 							</p>
 							<div class="compare-fig" aria-hidden="true">
 								<svg viewBox="0 0 440 280">
@@ -168,9 +170,11 @@
 										fill="#8099b5" opacity="0.24" />
 									<path d="M 252 148 L 366 128 L 402 194 L 306 228 L 250 202 Z"
 										fill="#8099b5" opacity="0.18" />
-									<text x="166" y="102" text-anchor="middle" font-family="Inter, sans-serif"
-										font-size="8.5" fill="#0b2345" opacity="0.55" letter-spacing="1.4">HIGH ACCESS</text>
-									<!-- shortest / fastest route -->
+									<text x="166" y="96" text-anchor="middle" font-family="Inter, sans-serif"
+										font-size="8.5" fill="#0b2345" opacity="0.55" letter-spacing="1.4">HIGH MODELED</text>
+									<text x="166" y="108" text-anchor="middle" font-family="Inter, sans-serif"
+										font-size="8.5" fill="#0b2345" opacity="0.55" letter-spacing="1.4">ACCESSIBILITY</text>
+									<!-- least-cost modeled route -->
 									<path class="route-draw" d="M 46 214 L 130 198 L 150 150 L 240 132 L 266 100 L 352 86 L 394 68"
 										fill="none" stroke="#0b2345" stroke-width="3" stroke-linecap="round"
 										stroke-linejoin="round" />
@@ -183,18 +187,18 @@
 								</svg>
 							</div>
 							<ul class="legend">
-								<li><span class="lg-line" style="color: #0b2345"></span> Shortest / fastest route</li>
-								<li><span class="lg-swatch" style="background: rgba(128, 153, 181, 0.4)"></span> High modeled access</li>
+								<li><span class="lg-line" style="color: #0b2345"></span> Least-cost modeled route</li>
+								<li><span class="lg-swatch" style="background: rgba(128, 153, 181, 0.4)"></span> High modeled accessibility</li>
 							</ul>
 						</article>
 
 						<span class="compare-vs reveal" aria-hidden="true">vs.</span>
 
-						<!-- The Perceived City -->
+						<!-- One behaviorally available network -->
 						<article class="compare-panel reveal reveal-d1">
-							<h3>The Perceived City</h3>
+							<h3>One Behaviorally Available Network</h3>
 							<p class="compare-sub">
-								The city as experienced and interpreted by people.
+								The narrower set of routes a traveler will actually consider.
 							</p>
 							<div class="compare-fig" aria-hidden="true">
 								<svg viewBox="0 0 440 280">
@@ -206,23 +210,23 @@
 									<rect width="440" height="280" fill="url(#gridB)" opacity="0.1" />
 									<path d="M 14 252 L 426 44" stroke="#0b2345" stroke-width="1.2" opacity="0.12" />
 									<path d="M 60 14 L 200 268" stroke="#0b2345" stroke-width="1.2" opacity="0.09" />
-									<!-- perceived barrier -->
+									<!-- excluded from the choice set -->
 									<path d="M 128 66 L 258 50 L 292 118 L 216 158 L 128 136 Z"
 										fill="#a51c30" opacity="0.14" />
 									<text x="204" y="98" text-anchor="middle" font-family="Inter, sans-serif"
-										font-size="8.5" fill="#a51c30" opacity="0.75" letter-spacing="1.4">PERCEIVED</text>
+										font-size="8.5" fill="#a51c30" opacity="0.75" letter-spacing="1.4">OUTSIDE THE</text>
 									<text x="204" y="110" text-anchor="middle" font-family="Inter, sans-serif"
-										font-size="8.5" fill="#a51c30" opacity="0.75" letter-spacing="1.4">BARRIER</text>
-									<!-- perceived positive / familiar -->
+										font-size="8.5" fill="#a51c30" opacity="0.75" letter-spacing="1.4">CHOICE SET</text>
+									<!-- familiar ground -->
 									<path d="M 128 196 L 252 178 L 296 226 L 188 254 L 118 238 Z"
 										fill="#e9dcc7" opacity="0.68" />
 									<text x="204" y="222" text-anchor="middle" font-family="Inter, sans-serif"
 										font-size="8.5" fill="#0b2345" opacity="0.6" letter-spacing="1.4">FAMILIAR</text>
-									<!-- modeled path, for reference -->
+									<!-- least-cost modeled route, for reference -->
 									<path d="M 46 214 L 150 150 L 266 100 L 394 68"
 										fill="none" stroke="#0b2345" stroke-width="1.6"
 										stroke-dasharray="5 5" opacity="0.3" stroke-linecap="round" />
-									<!-- perception-influenced route -->
+									<!-- route actually considered -->
 									<path class="route-fade" d="M 46 214 C 110 234 196 240 262 222 C 322 206 368 140 394 68"
 										fill="none" stroke="#d76a54" stroke-width="3"
 										stroke-dasharray="8 6" stroke-linecap="round" />
@@ -235,11 +239,32 @@
 								</svg>
 							</div>
 							<ul class="legend">
-								<li><span class="lg-line dashed" style="color: #d76a54"></span> Perception-influenced route</li>
-								<li><span class="lg-swatch" style="background: rgba(165, 28, 48, 0.22)"></span> Perceived barrier</li>
-								<li><span class="lg-swatch" style="background: #e9dcc7"></span> Perceived positive</li>
+								<li><span class="lg-line dashed" style="color: #d76a54"></span> Route actually considered</li>
+								<li><span class="lg-swatch" style="background: rgba(165, 28, 48, 0.22)"></span> Excluded from the choice set</li>
+								<li><span class="lg-swatch" style="background: #e9dcc7"></span> Familiar ground</li>
 							</ul>
 						</article>
+					</div>
+
+					<div class="not-noise reveal">
+						<p class="flow-subnote">
+							These exclusions are not noise. They can reflect real conditions
+							and what people believe about those conditions at the same time.
+							That puts the question between two bodies of work: how people read
+							places, and how networks produce access.
+						</p>
+						<ul class="flow-consequences">
+							<li>Physical barriers</li>
+							<li>Safety and comfort</li>
+							<li>Familiarity and information</li>
+							<li>Reputation and historical narrative</li>
+							<li>Prior experience</li>
+							<li>Perception that lags changed conditions</li>
+						</ul>
+						<p class="flow-note">
+							The same street may belong to different practical choice sets at
+							2 p.m. and 11 p.m.
+						</p>
 					</div>
 				</div>
 			</section>
@@ -252,33 +277,32 @@
 						Modeled accessibility is not experienced accessibility
 					</h2>
 					<p class="section-intro reveal">
-						Planning usually evaluates accessibility using the physical
-						transportation network: where streets and transit services exist, how
-						long trips take, and which destinations can theoretically be reached.
-						But the network available on a map may not be the network people
-						perceive as available to them. If perception systematically changes
-						route choice, a gap opens between
-						<strong>modeled accessibility</strong> and
-						<strong>experienced accessibility</strong>. That gap can matter in at
-						least four ways.
+						Planning evaluates accessibility using the modeled network: where
+						streets and transit exist, how long trips take, and which
+						destinations can theoretically be reached. When parts of that
+						network are systematically excluded from practical choice sets, a
+						gap opens between <strong>modeled accessibility</strong> and
+						<strong>experienced accessibility</strong>. It matters in three
+						ways.
 					</p>
 
 					<div class="why-list">
 						<article class="why-row reveal">
-							<span class="icon-badge" style="--badge-bg: var(--sage)" aria-hidden="true">
+							<span class="icon-badge" style="--badge-bg: rgba(128, 153, 181, 0.32)" aria-hidden="true">
 								<svg viewBox="0 0 24 24">
-									<path d="M12 21s-6.5-5.4-6.5-10a6.5 6.5 0 0 1 13 0c0 4.6-6.5 10-6.5 10z" />
-									<circle cx="12" cy="10.6" r="2.4" />
+									<path d="M2.5 16h19" />
+									<path d="M3.5 16c0-5.2 3.8-8.5 8.5-8.5s8.5 3.3 8.5 8.5" />
+									<path d="M7.5 16v-3.4M12 16V9.6M16.5 16v-3.4" />
 								</svg>
 							</span>
 							<div class="why-body">
-								<h3>Accessibility</h3>
+								<h3>Effectiveness of Investment</h3>
 								<p>
-									A destination may be physically close and technically reachable
-									while perceived barriers make it effectively more distant. Two
-									people living in the same place, facing the same transportation
-									network, may therefore experience different sets of accessible
-									opportunities.
+									Infrastructure can exist without delivering the accessibility a
+									conventional model attributes to it. If people avoid a
+									theoretically convenient street, station, or crossing, those
+									measures overstate what the investment produces. Built does not
+									necessarily mean <strong>behaviorally available</strong>.
 								</p>
 							</div>
 						</article>
@@ -292,33 +316,13 @@
 								</svg>
 							</span>
 							<div class="why-body">
-								<h3>Unequal Travel Burden</h3>
+								<h3>Spatial Inequality</h3>
 								<p>
-									Perceived barriers may not be distributed equally. Differences in
-									familiarity, past experience, perceived safety, physical ability,
-									or knowledge of the network could produce different effective
-									travel costs even when transportation supply is identical.
-								</p>
-							</div>
-						</article>
-
-						<article class="why-row reveal">
-							<span class="icon-badge" style="--badge-bg: rgba(128, 153, 181, 0.32)" aria-hidden="true">
-								<svg viewBox="0 0 24 24">
-									<path d="M2.5 16h19" />
-									<path d="M3.5 16c0-5.2 3.8-8.5 8.5-8.5s8.5 3.3 8.5 8.5" />
-									<path d="M7.5 16v-3.4M12 16V9.6M16.5 16v-3.4" />
-								</svg>
-							</span>
-							<div class="why-body">
-								<h3>Effectiveness of Investment</h3>
-								<p>
-									Infrastructure can exist without being fully used. If people avoid
-									a theoretically convenient street, station, crossing, or route
-									because of how they perceive it, conventional measures may
-									overestimate the benefit an investment produces. The question is
-									not only whether infrastructure exists, but whether it becomes
-									part of people's <strong>usable network</strong>.
+									These gaps may not be evenly distributed across people or
+									places. Differences in familiarity, past experience, perceived
+									safety, physical ability, or knowledge of the network can leave
+									two people facing the same modeled network with different sets
+									of opportunities actually within reach.
 								</p>
 							</div>
 						</article>
@@ -332,13 +336,11 @@
 								</svg>
 							</span>
 							<div class="why-body">
-								<h3>Modeling</h3>
+								<h3>Planning Diagnosis</h3>
 								<p>
-									Most routing and accessibility models represent generalized travel
-									cost through measurable attributes: time, distance, transfers,
-									monetary cost. Actual route choice may include another component,
-									<strong>perceived cost</strong>, that conventional models leave
-									out.
+									The same observed mismatch may call for an environmental
+									change, better information, a better model, or no intervention
+									at all. Which one it is cannot be read off the size of the gap.
 								</p>
 							</div>
 						</article>
@@ -346,8 +348,8 @@
 
 					<p class="why-question reveal">
 						Can spatial inequality exist not only in the infrastructure people
-						have access to, but also in the network they perceive themselves as
-						able or willing to use?
+						have access to, but also in the network they are willing to treat as
+						available?
 					</p>
 				</div>
 			</section>
@@ -355,34 +357,29 @@
 			<!-- ══ Where the Idea Comes From ══ -->
 			<section class="section section-origin" id="origin">
 				<div class="container">
-					<p class="section-label reveal">Where the Idea Comes From</p>
+					<p class="section-label reveal">The Conceptual Backbone</p>
 					<h2 class="section-title reveal">
-						Cities are navigated by mental maps, not only networks
+						Technically reachable is not the same as actually considered
 					</h2>
 
 					<div class="origin-grid">
 						<div class="origin-prose reveal">
 							<p>
-								Routing algorithms describe the city through objective,
-								measurable information: <strong>time, distance, cost, and
-								network connectivity</strong>. But in everyday life, people
-								also make subjective judgments. Is this neighborhood safe?
-								Is it pleasant? Is the detour worth it? Does this area feel
-								connected to where I need to go?
+								The <strong>modeled network</strong> defines what is technically
+								reachable. The <strong>behaviorally available network</strong>
+								defines what people are actually willing to consider. The
+								difference shapes <strong>experienced accessibility</strong>.
 							</p>
 							<p>
-								When choosing between the same origin and destination, two
-								people may take very different routes. The transportation network
-								is the same, but their
-								<strong>mental maps of the city differ</strong>. A neighborhood
-								may feel unfamiliar, inconvenient, unsafe, or simply &ldquo;not
-								on the way,&rdquo; even when an algorithm identifies it as part
-								of an efficient route.
+								What narrows the second network is not idiosyncratic taste alone.
+								Individual perception belongs here because it is systematically
+								related to group position, prior experience, information, place,
+								time, and mobility constraints.
 							</p>
 						</div>
 						<p class="origin-question reveal reveal-d1">
-							What happens when the city people perceive is different from the
-							city represented by the transportation network?
+							Idiosyncratic perception is a curiosity. Socially patterned
+							perception is a planning problem.
 						</p>
 					</div>
 
@@ -397,8 +394,12 @@
 									</svg>
 								</span>
 								<span class="flow-stage">01</span>
-								<h3>Urban Environment</h3>
-								<p>Built environment, land use, transit, and network structure.</p>
+								<h3>Modeled Network</h3>
+								<p>
+									Streets, transit, connections, and travel times as
+									represented, and the modeled accessibility calculated from
+									them.
+								</p>
 							</li>
 							<li class="st-perception">
 								<span class="flow-badge" aria-hidden="true">
@@ -408,20 +409,11 @@
 									</svg>
 								</span>
 								<span class="flow-stage">02</span>
-								<h3>Perception / Mental Map</h3>
-								<p>How people perceive neighborhoods and routes.</p>
-							</li>
-							<li class="st-choice">
-								<span class="flow-badge" aria-hidden="true">
-									<svg viewBox="0 0 24 24">
-										<path d="M12 20.5V12" />
-										<path d="M12 12C12 8 8 7 5.5 4.5M12 12c0-4 4-5 6.5-7.5" />
-										<path d="M5.5 7.5v-3h3M15.5 4.5h3v3" />
-									</svg>
-								</span>
-								<span class="flow-stage">03</span>
-								<h3>Route Choice</h3>
-								<p>Daily routing decisions shaped by perception.</p>
+								<h3>Behaviorally Available Network</h3>
+								<p>
+									The routes and places a person keeps in their practical choice
+									set. Social and spatial conditions narrow it.
+								</p>
 							</li>
 							<li class="st-access">
 								<span class="flow-badge" aria-hidden="true">
@@ -430,44 +422,32 @@
 										<circle cx="12" cy="10.6" r="2.4" />
 									</svg>
 								</span>
-								<span class="flow-stage">04</span>
+								<span class="flow-stage">03</span>
 								<h3>Experienced Accessibility</h3>
-								<p>Perception-driven access to jobs, services, and places.</p>
-							</li>
-							<li class="st-outcomes">
-								<span class="flow-badge" aria-hidden="true">
-									<svg viewBox="0 0 24 24">
-										<path d="M4 20h16" />
-										<path d="M6.5 20v-6.5M12 20V5.5M17.5 20v-9.5" />
-									</svg>
-								</span>
-								<span class="flow-stage">05</span>
-								<h3>Urban Outcomes</h3>
-								<p>Impacts on mobility, equity, economic activity, and neighborhood vitality.</p>
+								<p>Access as perceived, navigated, and realized in everyday life.</p>
 							</li>
 						</ol>
 
 						<div class="flow-extend reveal">
-							<p class="flow-extend-label">
-								<span class="flow-extend-stage">04</span> Experienced
-								accessibility unfolds into
-							</p>
-							<ul class="flow-consequences">
-								<li>Access to opportunities</li>
-								<li>Effective travel burden</li>
-								<li>Use of transportation infrastructure</li>
-								<li>Spatial inequality</li>
+							<p class="flow-extend-label">A possible feedback loop</p>
+							<ul class="loop">
+								<li><span>Place reputation</span></li>
+								<li><span>Avoidance</span></li>
+								<li><span>Underuse</span></li>
+								<li><span>Disinvestment or changing conditions</span></li>
+								<li class="loop-return"><span>back to reputation</span></li>
 							</ul>
+							<p class="loop-note">
+								The dashed links are hypotheses, not established effects. The
+								loop is here to show one thing: an exclusion can outlast a single
+								detour and start shaping the conditions that produced it.
+								Reputation is one mechanism among four, not the whole project.
+							</p>
 						</div>
 
 						<p class="flow-note reveal">
 							Physical connectivity does not necessarily imply experienced
 							connectivity.
-						</p>
-						<p class="flow-subnote reveal">
-							The project is interested in the gap between the transportation
-							network that physically exists and the network that becomes
-							behaviorally usable.
 						</p>
 					</div>
 				</div>
@@ -481,18 +461,18 @@
 						Three questions this project pursues
 					</h2>
 					<p class="section-intro reveal" style="margin-bottom: 0">
-						I want to understand how these differences in behavior affect
-						transportation, neighborhood connections, and urban economic activity.
+						In the order the project would have to answer them.
 					</p>
 					<div class="section-rule reveal" aria-hidden="true"></div>
 
 					<article class="aim-row aim-behavior reveal">
 						<span class="aim-badge" aria-hidden="true">01</span>
 						<div class="aim-content">
-							<h3>Quantify perception in routing behavior</h3>
+							<h3>Identify what gets excluded</h3>
 							<p>
-								Quantify how perception shapes routing behavior across
-								different neighborhood and city contexts.
+								Where the behaviorally available network departs from the
+								modeled one, and whether those departures are patterned across
+								people and places.
 							</p>
 						</div>
 					</article>
@@ -501,38 +481,22 @@
 						<div class="aim-content">
 							<h3>Measure experienced accessibility</h3>
 							<p>
-								Examine how perception-driven routing creates systematic
-								differences between modeled and experienced accessibility.
+								Whether those exclusions add up to systematic differences
+								between modeled and experienced accessibility.
 							</p>
 						</div>
 					</article>
 					<article class="aim-row aim-outcomes reveal">
 						<span class="aim-badge" aria-hidden="true">03</span>
 						<div class="aim-content">
-							<h3>Study the effects on cities</h3>
+							<h3>Trace the effects on cities</h3>
 							<p>
-								Study how these differences affect urban and economic outcomes.
+								<em>A longer-term direction.</em> Whether these differences
+								aggregate into citywide urban and economic outcomes.
 							</p>
 						</div>
 					</article>
 
-					<div class="aim-thread reveal">
-						<p class="aim-thread-label">Running through all three</p>
-						<ul class="aim-thread-list">
-							<li>Where do perceived and physical networks diverge?</li>
-							<li>How does this divergence affect route choice?</li>
-							<li>Does it change experienced accessibility?</li>
-							<li>
-								Under what conditions does this mismatch become consequential
-								for planning?
-							</li>
-						</ul>
-						<p class="aim-thread-note">
-							The last question is deliberately open. The project does not assume
-							in advance that every gap between perception and the network
-							requires intervention.
-						</p>
-					</div>
 				</div>
 			</section>
 
@@ -541,19 +505,18 @@
 				<div class="container">
 					<p class="section-label reveal">From Diagnosis to Intervention</p>
 					<h2 class="section-title reveal">
-						Not every mismatch is a planning problem
+						Mismatch is a diagnosis, not a policy prescription
 					</h2>
 					<p class="section-intro reveal">
-						Knowing that perception affects routing does not by itself tell
-						planners what to do. A gap between the perceived and physical network
-						can arise for very different reasons, and those mechanisms imply very
-						different responses. So the first question is not how planners should
-						change perception.
+						Knowing that perception narrows the network does not by itself tell
+						planners what to do. A gap between the modeled network and the
+						behaviorally available one can arise for very different reasons, and
+						those mechanisms imply very different responses. So the first
+						question is not how planners should change perception.
 					</p>
 					<p class="intervene-question reveal">
-						When does a mismatch between perception and the network become a
-						planning problem, what produces it, and which intervention, if any,
-						matches that mechanism?
+						When does that gap become a planning problem, what produces it, and
+						which intervention, if any, matches the mechanism?
 					</p>
 
 					<ol class="diag">
@@ -561,8 +524,8 @@
 							<p class="diag-n">Step 01</p>
 							<h3>Identify the mismatch</h3>
 							<p>
-								The physical, modeled network on one side; the perceived,
-								behaviorally used network on the other.
+								The modeled network on one side; the behaviorally available
+								network on the other.
 							</p>
 						</li>
 						<li class="diag-step reveal">
@@ -608,8 +571,8 @@
 								<p class="mech-fix">
 									<span class="mech-fix-label">Response</span> Change the physical
 									environment. The goal is not to persuade people that the barrier
-									does not exist, but to address the condition producing the
-									perceived cost.
+									does not exist, but to address the condition they are
+									responding to.
 								</p>
 							</div>
 						</article>
@@ -663,12 +626,12 @@
 								</p>
 								<div class="mech-eq">
 									<p class="eq">
-										<span class="eq-lhs">Generalized cost</span>
+										<span class="eq-lhs">What the model weighs</span>
 										<span class="eq-rhs">time + distance + monetary cost + transfers</span>
 									</p>
 									<p class="eq eq-alt">
-										<span class="eq-lhs">Experienced generalized cost</span>
-										<span class="eq-rhs">time + distance + monetary cost + transfers + <strong>perceived barriers</strong></span>
+										<span class="eq-lhs">What travelers also weigh</span>
+										<span class="eq-rhs">time + distance + monetary cost + transfers + <strong>conditions the model omits</strong></span>
 									</p>
 								</div>
 								<p class="mech-fix">
@@ -700,11 +663,6 @@
 						</p>
 					</div>
 
-					<p class="intervene-close reveal">
-						When does physical connectivity fail to become experienced
-						connectivity, why does that gap emerge, and what, if anything, should
-						planners do about it?
-					</p>
 				</div>
 			</section>
 
@@ -718,11 +676,15 @@
 								<path d="M10 20.5h4" />
 							</svg>
 						</span>
+						<p class="closing-text closing-tension">
+							A perceived barrier may be wrong, outdated, or entirely reasonable.
+							The existence of a gap does not tell planners which one it is.
+						</p>
 						<p class="closing-text">
-							By connecting <strong>human perception</strong> with
-							<strong>route choice</strong> and <strong>accessibility</strong>,
-							this project can help make transportation planning and urban policy
-							more responsive to how people actually experience cities.
+							<strong>The goal is not to make people use every route the model
+							says they can use. It is to understand why some parts of the city
+							fall outside people's practical choice sets, and whether planners
+							should do anything about it.</strong>
 						</p>
 						<div class="closing-actions">
 							<a class="btn-primary" href="research.html">

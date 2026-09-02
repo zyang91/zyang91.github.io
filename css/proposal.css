@@ -160,6 +160,11 @@ body.theme-perception {
 	max-width: 540px;
 	margin-bottom: 34px;
 }
+/* the thesis, carried inside the lede */
+.p-lede strong {
+	font-weight: 600;
+	color: var(--ink);
+}
 .p-keywords {
 	display: flex;
 	flex-wrap: wrap;
@@ -378,17 +383,17 @@ body.theme-perception {
 .flow {
 	list-style: none;
 	display: grid;
-	grid-template-columns: repeat(5, 1fr);
+	grid-template-columns: repeat(3, 1fr);
 	gap: 8px;
 	position: relative;
 }
-/* the line the stations sit on: col centers at 10% … 90% */
+/* the line the stations sit on: col centers at 16.7% … 83.3% */
 .flow::before {
 	content: '';
 	position: absolute;
 	top: 27px;
-	left: 10%;
-	right: 10%;
+	left: 16.7%;
+	right: 16.7%;
 	height: 2px;
 	background: var(--line);
 }
@@ -453,9 +458,7 @@ body.theme-perception {
 }
 .flow .st-environment { --stage-c: var(--sand-deep); }
 .flow .st-perception { --stage-c: var(--sage-deep); }
-.flow .st-choice { --stage-c: #8fa98f; }
 .flow .st-access { --stage-c: var(--blue-soft); }
-.flow .st-outcomes { --stage-c: var(--terracotta); }
 
 /* ── What This Project Aims to Do — editorial rows ────────── */
 .aim-row {
@@ -533,6 +536,12 @@ body.theme-perception {
 }
 .closing-text strong {
 	font-weight: 600;
+}
+.closing-text.closing-tension {
+	font-size: clamp(1.05rem, 2vw, 1.24rem);
+	font-style: italic;
+	color: var(--ink-soft);
+	margin-bottom: 22px;
 }
 .closing-actions {
 	display: flex;
@@ -637,7 +646,17 @@ body.theme-perception {
 }
 
 
-/* ── Why This Matters — four consequences ─────────────────── */
+/* ── Exclusions are patterned, not noise ──────────────────── */
+.not-noise {
+	margin-top: 56px;
+	padding-top: 40px;
+	border-top: 1px solid var(--line-soft);
+}
+.not-noise .flow-subnote {
+	margin-bottom: 22px;
+}
+
+/* ── Why This Matters — three consequences ────────────────── */
 .section-why {
 	border-top: 1px solid var(--line-soft);
 }
@@ -707,19 +726,50 @@ body.theme-perception {
 	color: var(--ink-faint);
 	margin-bottom: 18px;
 }
-.flow-extend-stage {
-	display: inline-flex;
-	align-items: center;
+/* dashed pills and arrows mark every link as a hypothesis */
+.loop {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
-	width: 22px;
-	height: 22px;
+	align-items: center;
+	gap: 4px;
+}
+.loop li {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+.loop li > span {
+	font-size: 0.82rem;
+	font-weight: 500;
+	color: var(--ink-soft);
+	background: var(--surface-warm);
+	border: 1px dashed var(--line);
+	border-radius: 100px;
+	padding: 7px 18px;
+}
+.loop li:not(:last-child)::after {
+	content: '⇢';
+	color: var(--ink-faint);
+	font-size: 0.95rem;
+	line-height: 1;
 	margin-right: 6px;
-	border-radius: 50%;
-	background: var(--blue-soft);
-	color: var(--surface);
-	font-size: 0.62rem;
-	letter-spacing: 0.04em;
-	vertical-align: -5px;
+}
+.loop .loop-return > span {
+	border: none;
+	background: none;
+	padding: 7px 4px;
+	font-style: italic;
+	color: var(--ink-faint);
+}
+.loop-note {
+	font-size: 0.84rem;
+	line-height: 1.65;
+	text-align: center;
+	color: var(--ink-soft);
+	margin: 20px auto 0;
+	max-width: 620px;
 }
 .flow-consequences {
 	list-style: none;
@@ -756,51 +806,6 @@ body.theme-perception {
 	max-width: 620px;
 }
 
-/* ── Questions that thread through the aims ───────────────── */
-.aim-thread {
-	margin-top: 4px;
-	padding-top: 40px;
-	border-top: 1px solid var(--line-soft);
-}
-.aim-thread-label {
-	font-size: 0.72rem;
-	font-weight: 600;
-	letter-spacing: 0.16em;
-	text-transform: uppercase;
-	color: var(--accent);
-	margin-bottom: 16px;
-}
-.aim-thread-list {
-	list-style: none;
-	display: grid;
-	gap: 10px;
-}
-.aim-thread-list li {
-	position: relative;
-	padding-left: 22px;
-	font-family: var(--serif);
-	font-size: 1rem;
-	line-height: 1.55;
-	color: var(--ink);
-}
-.aim-thread-list li::before {
-	content: '';
-	position: absolute;
-	left: 2px;
-	top: 0.62em;
-	width: 8px;
-	height: 8px;
-	border-top: 1.6px solid var(--accent-mid);
-	border-right: 1.6px solid var(--accent-mid);
-	transform: rotate(45deg);
-}
-.aim-thread-note {
-	font-size: 0.9rem;
-	line-height: 1.65;
-	color: var(--ink-soft);
-	margin-top: 20px;
-	max-width: 720px;
-}
 
 /* ── From Diagnosis to Intervention ─────────────────────── */
 .section-intervene {
@@ -1037,16 +1042,6 @@ body.theme-perception {
 	max-width: 660px;
 	margin: 34px auto 0;
 }
-.intervene-close {
-	font-family: var(--serif);
-	font-size: clamp(1.3rem, 2.5vw, 1.65rem);
-	font-style: italic;
-	line-height: 1.5;
-	text-align: center;
-	color: var(--ink);
-	max-width: 780px;
-	margin: 56px auto 0;
-}
 
 /* ── Responsive — added sections ──────────────────────────── */
 @media (max-width: 880px) {
@@ -1091,6 +1086,16 @@ body.theme-perception {
 	}
 	.diag-step::before {
 		left: -31px;
+	}
+	/* the loop reads top-to-bottom rather than wrapping mid-cycle */
+	.loop,
+	.loop li {
+		flex-direction: column;
+		gap: 6px;
+	}
+	.loop li:not(:last-child)::after {
+		content: '⇣';
+		margin-right: 0;
 	}
 }
 
