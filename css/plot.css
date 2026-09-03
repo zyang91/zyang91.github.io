@@ -1,0 +1,335 @@
+/* ══════════════════════════════════════════════════════════════
+   Zhanchao Yang — Plot Makes Differences
+   Loads after home.css and inherits its tokens, then overrides
+   most of them.
+
+   The register here is a newsroom, not a portfolio: newsprint
+   ground, hairline rules, a red slug, and figures that are given
+   the full column width because the charts are the argument.
+══════════════════════════════════════════════════════════════ */
+
+body.plot-page {
+	--paper: #fcfbf7;
+	--paper-deep: #f3f1ea;
+	--newsprint: #f7f5ef;
+	--rule: rgba(17, 17, 17, 0.16);
+	--rule-soft: rgba(17, 17, 17, 0.09);
+	--slug: #b3271c;
+	--graphite: #111;
+	--graphite-soft: rgba(17, 17, 17, 0.66);
+	--graphite-faint: rgba(17, 17, 17, 0.45);
+
+	background: var(--paper);
+	color: var(--graphite);
+	font-family: var(--sans);
+	font-size: 16px;
+	line-height: 1.65;
+	-webkit-font-smoothing: antialiased;
+	overflow-x: hidden;
+}
+
+body.plot-page .site-nav {
+	background: rgba(252, 251, 247, 0.88);
+	border-bottom: 1px solid var(--rule-soft);
+}
+body.plot-page .nav-links a::after { background: var(--slug); }
+body.plot-page .nav-links a.active { color: var(--slug); }
+
+/* ── Masthead ─────────────────────────────────────────────── */
+.pl-masthead {
+	padding: 168px 0 0;
+	border-bottom: 3px double var(--rule);
+}
+
+.pl-dateline {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px 18px;
+	align-items: baseline;
+	font-size: 0.68rem;
+	font-weight: 600;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: var(--graphite-faint);
+	padding-bottom: 14px;
+	border-bottom: 1px solid var(--rule-soft);
+}
+.pl-dateline .pl-slug { color: var(--slug); }
+
+.pl-masthead h1 {
+	font-family: var(--serif);
+	font-weight: 600;
+	font-size: clamp(3rem, 9vw, 6.6rem);
+	line-height: 0.94;
+	letter-spacing: -0.03em;
+	margin: 40px 0 0;
+	max-width: 15ch;
+}
+.pl-masthead h1 em {
+	font-style: italic;
+	color: var(--slug);
+}
+
+.pl-deck {
+	display: grid;
+	grid-template-columns: 1.15fr 1fr;
+	gap: 48px;
+	margin: 44px 0 40px;
+	align-items: end;
+}
+.pl-deck p {
+	font-family: var(--serif);
+	font-size: 1.28rem;
+	line-height: 1.55;
+	color: var(--graphite-soft);
+}
+.pl-deck p + p {
+	font-family: var(--sans);
+	font-size: 0.95rem;
+	line-height: 1.72;
+	border-left: 2px solid var(--slug);
+	padding-left: 20px;
+}
+
+/* ── Figures ──────────────────────────────────────────────── */
+.pl-figures { padding: 0 0 40px; }
+
+.pl-figure {
+	padding: 78px 0 0;
+	border-bottom: 1px solid var(--rule-soft);
+}
+.pl-figure:last-of-type { border-bottom: 0; }
+
+.pl-fig-head {
+	display: grid;
+	grid-template-columns: 88px 1fr;
+	gap: 28px;
+	align-items: start;
+	margin-bottom: 34px;
+}
+.pl-fig-n {
+	font-family: var(--serif);
+	font-size: 3.4rem;
+	line-height: 0.8;
+	font-weight: 600;
+	color: var(--paper-deep);
+	-webkit-text-stroke: 1px var(--rule);
+	letter-spacing: -0.04em;
+}
+.pl-fig-kicker {
+	font-size: 0.68rem;
+	font-weight: 600;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	color: var(--slug);
+	margin-bottom: 10px;
+}
+.pl-fig-head h2 {
+	font-family: var(--serif);
+	font-weight: 600;
+	font-size: clamp(1.6rem, 3.4vw, 2.5rem);
+	line-height: 1.14;
+	letter-spacing: -0.02em;
+	max-width: 22ch;
+}
+.pl-fig-head p {
+	margin-top: 14px;
+	font-size: 1rem;
+	line-height: 1.7;
+	color: var(--graphite-soft);
+	max-width: 58ch;
+}
+
+.pl-plate {
+	display: block;
+	background: #fff;
+	border: 1px solid var(--rule-soft);
+	box-shadow: 0 1px 2px rgba(17, 17, 17, 0.04), 0 18px 44px rgba(17, 17, 17, 0.07);
+	padding: 10px;
+	transition: box-shadow 0.5s ease, transform 0.5s ease;
+}
+.pl-plate img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.pl-plate:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 2px 6px rgba(17, 17, 17, 0.06), 0 26px 60px rgba(17, 17, 17, 0.13);
+}
+
+.pl-fig-foot {
+	display: grid;
+	grid-template-columns: 1fr 300px;
+	gap: 44px;
+	margin: 26px 0 74px;
+	align-items: start;
+}
+.pl-caption {
+	font-family: var(--serif);
+	font-size: 1.02rem;
+	line-height: 1.66;
+	color: var(--graphite-soft);
+}
+.pl-caption strong {
+	color: var(--graphite);
+	font-weight: 600;
+}
+
+/* the decisions list — what was actually done to the chart */
+.pl-moves {
+	border-top: 2px solid var(--graphite);
+	padding-top: 12px;
+	list-style: none;
+}
+.pl-moves-label {
+	font-size: 0.64rem;
+	font-weight: 600;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	color: var(--graphite-faint);
+	margin-bottom: 10px;
+}
+.pl-moves li {
+	font-size: 0.85rem;
+	line-height: 1.55;
+	color: var(--graphite-soft);
+	padding: 9px 0 9px 18px;
+	border-top: 1px solid var(--rule-soft);
+	position: relative;
+}
+.pl-moves li:first-of-type { border-top: 0; }
+.pl-moves li::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 17px;
+	width: 7px;
+	height: 1px;
+	background: var(--slug);
+}
+.pl-moves li b {
+	color: var(--graphite);
+	font-weight: 600;
+}
+
+/* ── Colophon ─────────────────────────────────────────────── */
+.pl-colophon {
+	background: var(--newsprint);
+	border-top: 3px double var(--rule);
+	padding: 72px 0 82px;
+}
+.pl-colophon-inner {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 56px;
+	align-items: start;
+}
+.pl-colophon h2 {
+	font-family: var(--serif);
+	font-size: clamp(1.7rem, 3.6vw, 2.4rem);
+	font-weight: 600;
+	letter-spacing: -0.02em;
+	line-height: 1.16;
+	margin-bottom: 18px;
+}
+.pl-colophon p {
+	font-size: 0.98rem;
+	line-height: 1.76;
+	color: var(--graphite-soft);
+}
+.pl-colophon p + p { margin-top: 14px; }
+.pl-colophon a {
+	color: var(--slug);
+	text-decoration: none;
+	border-bottom: 1px solid rgba(179, 39, 28, 0.35);
+}
+.pl-colophon a:hover { border-bottom-color: var(--slug); }
+
+.pl-stack {
+	border-top: 2px solid var(--graphite);
+	padding-top: 14px;
+}
+.pl-stack dl {
+	display: grid;
+	grid-template-columns: 116px 1fr;
+	gap: 0;
+}
+.pl-stack dt,
+.pl-stack dd {
+	padding: 11px 0;
+	border-top: 1px solid var(--rule-soft);
+	font-size: 0.86rem;
+	line-height: 1.55;
+}
+.pl-stack dl > dt:first-of-type,
+.pl-stack dl > dt:first-of-type + dd {
+	border-top: 0;
+}
+.pl-stack dt {
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	color: var(--graphite);
+}
+.pl-stack dd { color: var(--graphite-soft); }
+
+.pl-back {
+	margin-top: 30px;
+	display: inline-flex;
+	align-items: center;
+	gap: 9px;
+	font-size: 0.8rem;
+	font-weight: 600;
+	letter-spacing: 0.09em;
+	text-transform: uppercase;
+	color: var(--graphite);
+	text-decoration: none;
+	border-bottom: 0;
+}
+.pl-back .arrow { transition: transform 0.3s ease; }
+.pl-back:hover .arrow { transform: translateX(-4px); }
+
+/* ── Footer tuning ────────────────────────────────────────── */
+body.plot-page .site-footer {
+	background: var(--graphite);
+	color: rgba(255, 255, 255, 0.72);
+}
+body.plot-page .footer-grid { border-bottom-color: rgba(255, 255, 255, 0.14); }
+body.plot-page .footer-name { color: #fff; }
+body.plot-page .footer-identity { color: rgba(255, 255, 255, 0.62); }
+body.plot-page .footer-identity .dot { color: rgba(255, 255, 255, 0.34); }
+body.plot-page .footer-note { color: rgba(255, 255, 255, 0.45); }
+body.plot-page .footer-links a { color: rgba(255, 255, 255, 0.7); }
+body.plot-page .footer-links a::after { background: #fff; }
+body.plot-page .footer-links a:hover { color: #fff; }
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 980px) {
+	.pl-deck,
+	.pl-fig-foot,
+	.pl-colophon-inner {
+		grid-template-columns: 1fr;
+		gap: 28px;
+	}
+}
+
+@media (max-width: 640px) {
+	.pl-masthead { padding-top: 126px; }
+	.pl-fig-head {
+		grid-template-columns: 1fr;
+		gap: 12px;
+	}
+	.pl-fig-n { font-size: 2.4rem; }
+	.pl-plate { padding: 6px; }
+	.pl-stack dl { grid-template-columns: 1fr; }
+	.pl-stack dt { padding-bottom: 0; border-bottom: 0; }
+	.pl-stack dd { border-top: 0; padding-top: 4px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.pl-plate,
+	.pl-back .arrow {
+		transition: none;
+	}
+	.pl-plate:hover { transform: none; }
+}

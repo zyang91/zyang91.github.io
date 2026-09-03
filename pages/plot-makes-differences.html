@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Plot Makes Differences | Zhanchao Yang</title>
+		<meta
+			name="description"
+			content="Three charts, and the decisions behind them: sorting, gray, direct labels, and a sentence written inside the panel."
+		/>
+		<link
+			rel="icon"
+			href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%F0%9F%97%BA%EF%B8%8F%3C/text%3E%3C/svg%3E"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400;1,8..60,600&family=Inter:wght@400;500;600&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="../css/home.css" />
+		<link rel="stylesheet" href="../css/plot.css" />
+		<script src="../js/analytics.js" defer></script>
+	</head>
+	<body class="plot-page">
+		<!-- ══ Navigation ══ -->
+		<header class="site-nav" id="site-nav">
+			<div class="nav-inner">
+				<div class="nav-brand">
+					<a class="nav-name" href="../index.html">Zhanchao Yang</a>
+					<span class="nav-affil">Penn Weitzman</span>
+				</div>
+				<button
+					class="nav-toggle"
+					id="nav-toggle"
+					aria-label="Open menu"
+					aria-expanded="false"
+					aria-controls="nav-links"
+				>
+					<span></span><span></span><span></span>
+				</button>
+				<nav class="nav-links" id="nav-links">
+					<a href="research.html">Research</a>
+					<a href="professional-work.html">Work</a>
+					<a href="blog.html" class="active">Thoughts</a>
+					<a href="cv.html">CV</a>
+					<a href="awards.html">Awards</a>
+					<a href="about-me.html">About</a>
+					<a href="contact.html">Contact</a>
+				</nav>
+			</div>
+		</header>
+
+		<!-- ══ Masthead ══ -->
+		<section class="pl-masthead">
+			<div class="container">
+				<p class="pl-dateline">
+					<span class="pl-slug">Experiments</span>
+					<span>Charts</span>
+					<span>Three figures</span>
+					<span>Seaborn · ggplot2</span>
+				</p>
+				<h1 class="reveal in-view">Plot makes <em>differences</em>.</h1>
+				<div class="pl-deck">
+					<p class="reveal in-view reveal-d1">
+						All three could have been tables. Same numbers, same honesty, nobody
+						reading past the first row.
+					</p>
+					<p class="reveal in-view reveal-d2">
+						So each comes with its receipts.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<main class="pl-figures">
+			<div class="container">
+				<!-- ── Figure 01 ─────────────────────────────────────── -->
+				<article class="pl-figure">
+					<div class="pl-fig-head reveal">
+						<span class="pl-fig-n" aria-hidden="true">01</span>
+						<div>
+							<p class="pl-fig-kicker">Ranked bars · Regional economies</p>
+							<h2>Rust Belt cities still run on hospitals and universities</h2>
+						</div>
+					</div>
+
+					<figure class="pl-plate reveal reveal-d1">
+						<img
+							src="../assets/thoughts/plot/anchor_gdp_nyt-final.png"
+							alt="Sorted horizontal bar chart of anchor institution GDP share across major U.S. metros, colored by region, with Cleveland highest at 14 percent and San Jose lowest at 4.3 percent."
+							loading="lazy"
+							width="3000"
+							height="3000"
+						/>
+					</figure>
+
+					<div class="pl-fig-foot">
+						<p class="pl-caption reveal">
+							Two sentences sit inside the panel, one by the teal, one by the
+							navy. Between them you learn what the colors
+							<strong>mean</strong>, without leaving the chart.
+						</p>
+					</div>
+				</article>
+
+				<!-- ── Figure 02 ─────────────────────────────────────── -->
+				<article class="pl-figure">
+					<div class="pl-fig-head reveal">
+						<span class="pl-fig-n" aria-hidden="true">02</span>
+						<div>
+							<p class="pl-fig-kicker">Trend lines · Traffic speeds</p>
+							<h2>Chicago drives faster, but every city crawls by rush hour</h2>
+						</div>
+					</div>
+
+					<figure class="pl-plate reveal reveal-d1">
+						<img
+							src="../assets/thoughts/plot/plot_nyt_style_R.png"
+							alt="Line chart of average weekday driving speed by hour for Chicago, Philadelphia, and Boston, with faint scatter points behind each line and a shaded evening rush hour band."
+							loading="lazy"
+							width="2700"
+							height="1950"
+						/>
+					</figure>
+
+					<div class="pl-fig-foot">
+						<p class="pl-caption reveal">
+							The faint dots are the raw weekly numbers, left in so you can see
+							how <strong>noisy</strong> the measurement is. The bold lines stay
+							the thing you follow.
+						</p>
+					</div>
+				</article>
+
+				<!-- ── Figure 03 ─────────────────────────────────────── -->
+				<article class="pl-figure">
+					<div class="pl-fig-head reveal">
+						<span class="pl-fig-n" aria-hidden="true">03</span>
+						<div>
+							<p class="pl-fig-kicker">Scatter · Pedestrian safety</p>
+							<h2>Where children walk in danger, everyone does</h2>
+						</div>
+					</div>
+
+					<figure class="pl-plate reveal reveal-d1">
+						<img
+							src="../assets/thoughts/plot/walking_fatality.png"
+							alt="Scatter plot of child versus total pedestrian fatality rates across 30 U.S. metros, with a fitted trend line, gray unlabeled metros, and colored labeled outliers including Bakersfield, Fresno, and Florida cities."
+							loading="lazy"
+							width="2679"
+							height="2324"
+						/>
+					</figure>
+
+					<div class="pl-fig-foot">
+						<p class="pl-caption reveal">
+							Thirty labels would be a mess. Most points stay gray and nameless,
+							here to make the cloud. Only the metros with something to say get a
+							name, and <strong>McAllen</strong> gets one for breaking it.
+						</p>
+					</div>
+				</article>
+			</div>
+		</main>
+
+		<!-- ══ Colophon ══ -->
+		<section class="pl-colophon">
+			<div class="container">
+				<div class="pl-colophon-inner">
+					<div class="reveal">
+						<h2>Why bother styling a chart?</h2>
+						<p>
+							Because the plain version is not neutral. It was styled too, by
+							software, for nobody in particular.
+						</p>
+						<p>
+							A headline that says something. A sentence inside the panel. A
+							source line at the bottom. None of it is hard. It is mostly deciding
+							to treat a figure as writing.
+						</p>
+						<p>
+							The maps are on <a href="north-is-a-choice.html">North Is a Choice</a>.
+							The rest is in <a href="blog.html">Thoughts</a>.
+						</p>
+					</div>
+					<div class="pl-stack reveal reveal-d1">
+						<dl>
+							<dt>Built with</dt>
+							<dd>R, ggplot2, ggrepel</dd>
+							<dt>Figure 01</dt>
+							<dd>Federal Reserve anchor economy data</dd>
+							<dt>Figure 02</dt>
+							<dd>Hourly traffic speeds, weekdays</dd>
+							<dt>Figure 03</dt>
+							<dd>FARS 2017 to 2022, ACS population</dd>
+							<dt>Status</dt>
+							<dd>Practice, on public data</dd>
+						</dl>
+						<a class="pl-back" href="blog.html">
+							<span class="arrow" aria-hidden="true">←</span> Back to Thoughts
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ══ Footer ══ -->
+		<footer class="site-footer">
+			<div class="container">
+				<div class="footer-grid">
+					<div>
+						<p class="footer-name">Zhanchao Yang</p>
+						<p class="footer-identity">
+							Urban Planning <span class="dot">·</span> Transportation
+							<span class="dot">·</span> Spatial Analytics
+						</p>
+					</div>
+					<nav class="footer-links">
+						<a href="mailto:zhanchao@upenn.edu">Email</a>
+						<a href="research.html">Research</a>
+						<a href="professional-work.html">Work</a>
+						<a href="blog.html">Thoughts</a>
+						<a href="cv.html">CV</a>
+						<a href="awards.html">Awards</a>
+						<a href="about-me.html">About</a>
+						<a href="contact.html">Contact</a>
+						<a href="https://github.com/zyang91" target="_blank" rel="noopener">GitHub</a>
+						<a href="https://www.linkedin.com/in/zhanchaoyang/" target="_blank" rel="noopener">LinkedIn</a>
+					</nav>
+				</div>
+				<div class="footer-note">
+					<span>© <span id="year"></span> Zhanchao Yang</span>
+					<span>Philadelphia, PA</span>
+				</div>
+			</div>
+		</footer>
+
+		<script src="../js/home.js"></script>
+	</body>
+</html>
