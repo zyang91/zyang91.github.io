@@ -88,7 +88,7 @@ The fact that we **can** edit a gene more accurately does not tell us whether we
 
 The same distinction applies to energy. Technological progress can make a transition possible and desirable. It does not, by itself, tell us how quickly that transition should occur or what public policy should require.
 
-## Technology, Markets, and Transition
+## New Technology and Path Dependence
 
-This brought me to a different question keep circling back: if renewable energy is becoming cleaner, cheaper, and technologically competitive, why has the transition not happened faster on its own? Whether this is a market failure?
+One question kept circling back is **if a technology becomes better, why does the older technology sometimes remain dominant?**
 
