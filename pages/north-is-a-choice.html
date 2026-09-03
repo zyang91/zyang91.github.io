@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>North Is a Choice | Zhanchao Yang</title>
+		<meta
+			name="description"
+			content="Four maps and the choices behind them: a heat island map copied from The New York Times, a California heat risk map, a polar expedition map, and a live bivariate map."
+		/>
+		<link
+			rel="icon"
+			href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%F0%9F%97%BA%EF%B8%8F%3C/text%3E%3C/svg%3E"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400;1,8..60,600&family=Inter:wght@400;500;600&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="../css/home.css" />
+		<link rel="stylesheet" href="../css/map.css" />
+		<script src="../js/analytics.js" defer></script>
+	</head>
+	<body class="map-page">
+		<!-- ══ Navigation ══ -->
+		<header class="site-nav" id="site-nav">
+			<div class="nav-inner">
+				<div class="nav-brand">
+					<a class="nav-name" href="../index.html">Zhanchao Yang</a>
+					<span class="nav-affil">Penn Weitzman</span>
+				</div>
+				<button
+					class="nav-toggle"
+					id="nav-toggle"
+					aria-label="Open menu"
+					aria-expanded="false"
+					aria-controls="nav-links"
+				>
+					<span></span><span></span><span></span>
+				</button>
+				<nav class="nav-links" id="nav-links">
+					<a href="research.html">Research</a>
+					<a href="professional-work.html">Work</a>
+					<a href="blog.html" class="active">Thoughts</a>
+					<a href="cv.html">CV</a>
+					<a href="awards.html">Awards</a>
+					<a href="about-me.html">About</a>
+					<a href="contact.html">Contact</a>
+				</nav>
+			</div>
+		</header>
+
+		<!-- ══ Hero ══ -->
+		<section class="mp-hero">
+			<svg class="mp-rings" viewBox="0 0 760 760" aria-hidden="true">
+				<circle cx="380" cy="380" r="120" />
+				<circle cx="380" cy="380" r="200" />
+				<circle cx="380" cy="380" r="280" />
+				<circle cx="380" cy="380" r="360" />
+				<line x1="380" y1="20" x2="380" y2="740" />
+				<line x1="20" y1="380" x2="740" y2="380" />
+				<line x1="126" y1="126" x2="634" y2="634" />
+				<line x1="634" y1="126" x2="126" y2="634" />
+			</svg>
+			<div class="container">
+				<p class="mp-eyebrow reveal in-view">Experiments · Cartography</p>
+				<h1 class="reveal in-view">North is a <em>choice</em>.</h1>
+				<p class="mp-lead reveal in-view reveal-d1">
+					So is the projection, the color, and which places get a name. A map
+					looks like a picture of the world. It is an argument about it.
+				</p>
+				<p class="mp-note reveal in-view reveal-d2">
+					Four plates. One of them is a copy of a New York Times map, printed
+					next to the original so you can judge it.
+				</p>
+			</div>
+		</section>
+
+		<!-- ══ Plate rail: internal nav, tracks the current plate ══ -->
+		<nav class="mp-rail" id="mp-rail" aria-label="Plates on this page">
+			<ol>
+				<li>
+					<a href="#plate-01">
+						<span class="mp-rail-n">I</span>
+						<span class="mp-rail-t">Heat Islands</span>
+					</a>
+				</li>
+				<li>
+					<a href="#plate-02">
+						<span class="mp-rail-n">II</span>
+						<span class="mp-rail-t">Inland California</span>
+					</a>
+				</li>
+				<li>
+					<a href="#plate-03">
+						<span class="mp-rail-n">III</span>
+						<span class="mp-rail-t">Three Expeditions</span>
+					</a>
+				</li>
+				<li>
+					<a href="#plate-04">
+						<span class="mp-rail-n">IV</span>
+						<span class="mp-rail-t">Two Variables</span>
+					</a>
+				</li>
+			</ol>
+		</nav>
+
+		<main class="mp-plates">
+			<div class="container">
+				<!-- ── Plate I ───────────────────────────────────────── -->
+				<article class="mp-plate" id="plate-01">
+					<div class="mp-plate-head reveal">
+						<div>
+							<p class="mp-plate-n">Plate I · A copy, on purpose</p>
+							<h2>Heat Islands in Philadelphia</h2>
+							<p>
+								The Times mapped Baltimore in 2019. I rebuilt it for Philadelphia
+								to see how much of what works is craft and how much is data.
+								Mostly craft.
+							</p>
+						</div>
+						<dl class="mp-specs">
+							<div><dt>Shows</dt><dd>Surface heat, one summer afternoon</dd></div>
+							<div><dt>Data</dt><dd>ACS 2022, TIGER/Line</dd></div>
+							<div><dt>Color</dt><dd>Teal to rust, neutral at 93&deg;F</dd></div>
+							<div><dt>Made in</dt><dd>R</dd></div>
+						</dl>
+					</div>
+
+					<div class="mp-compare reveal reveal-d1">
+						<figure class="mp-compare-item is-mine">
+							<span class="mp-compare-tag">Mine · Philadelphia</span>
+							<img
+								src="../assets/thoughts/map/output_heat_island_philly.png"
+								alt="Map of Philadelphia showing estimated land surface temperature on a summer afternoon, with cool teal areas near Wissahickon Valley and hot rust-colored areas in South and West Philadelphia."
+								loading="lazy"
+								width="2250"
+								height="2550"
+							/>
+							<figcaption>
+								Same scale, same two annotations, same cooler and hotter bar.
+							</figcaption>
+						</figure>
+						<figure class="mp-compare-item">
+							<span class="mp-compare-tag">Reference · Baltimore</span>
+							<img
+								src="../assets/thoughts/map/source-nyt-philly-map.png"
+								alt="Reference graphic: The New York Times 2019 map of heat islands in Baltimore, showing cooler areas near parks and hotter areas east of downtown."
+								loading="lazy"
+								width="1409"
+								height="1131"
+							/>
+							<figcaption>
+								<em>&ldquo;Summer in the City Is Hot, but Some Neighborhoods
+								Suffer More&rdquo;</em>, The New York Times, August 2019, by Nadja
+								Popovich and Christopher Flavelle. Shown here as the reference for
+								a study exercise. All rights remain with the publisher.
+							</figcaption>
+						</figure>
+					</div>
+
+					<div class="mp-diff reveal">
+						<div>
+							<h3 class="is-kept">What I kept</h3>
+							<ul>
+								<li>A diverging ramp with a real middle.</li>
+								<li>Two annotations, each ending in a temperature.</li>
+								<li>Neighborhood names on the map, small, in caps.</li>
+								<li>No basemap, no north arrow, no scale bar.</li>
+							</ul>
+						</div>
+						<div>
+							<h3 class="is-changed">What I could not match</h3>
+							<ul>
+								<li>Theirs is satellite heat. Mine is a density proxy.</li>
+								<li>They draw the street grid inside the surface.</li>
+								<li>Their labels were placed by hand, and it shows.</li>
+								<li>Theirs sits in a city. Mine floats on the page.</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="mp-read reveal">
+						<p>
+							My first try used a plain ramp and the whole city looked warm. True,
+							and empty. A diverging scale makes you say what counts as
+							<strong>normal</strong>.
+						</p>
+						<p>
+							Then the parks and the row homes pulled apart on their own. Twenty
+							degrees, one afternoon, two blocks.
+						</p>
+					</div>
+				</article>
+
+				<!-- ── Plate II ──────────────────────────────────────── -->
+				<article class="mp-plate" id="plate-02">
+					<div class="mp-plate-head reveal">
+						<div>
+							<p class="mp-plate-n">Plate II · Where the breaks go</p>
+							<h2>Inland California bears the heat</h2>
+							<p>
+								County heat risk in five equal tiers. Two choices carry it: a
+								projection that keeps areas true, and breaks that follow the data.
+							</p>
+						</div>
+						<dl class="mp-specs">
+							<div><dt>Data</dt><dd>FEMA National Risk Index</dd></div>
+							<div><dt>Projection</dt><dd>California Albers, EPSG:3310</dd></div>
+							<div><dt>Classes</dt><dd>Quantile, five</dd></div>
+							<div><dt>Color</dt><dd>Magma, light to dark</dd></div>
+						</dl>
+					</div>
+
+					<figure class="mp-mount reveal reveal-d1">
+						<img
+							src="../assets/thoughts/map/output_ca_heatwave_redesign.png"
+							alt="Choropleth map of California counties shaded by heat wave risk in five quantile tiers, with the Central Valley and Inland Empire in the darkest highest-risk class."
+							loading="lazy"
+							width="2400"
+							height="2700"
+						/>
+						<figcaption>
+							FEMA National Risk Index. California Albers Equal Area, five
+							quantile classes.
+						</figcaption>
+					</figure>
+
+					<div class="mp-read reveal">
+						<p>
+							San Bernardino alone could swallow a few states, so in Mercator the
+							desert wins every map it turns up on. Albers keeps areas honest.
+						</p>
+						<p>
+							Which means the dark band down the
+							<strong>Central Valley</strong> is real. Thin vegetation, low ground,
+							trapped heat.
+						</p>
+					</div>
+				</article>
+
+				<!-- ── Plate III ─────────────────────────────────────── -->
+				<article class="mp-plate" id="plate-03">
+					<div class="mp-plate-head reveal">
+						<div>
+							<p class="mp-plate-n">Plate III · Turning the world on its pole</p>
+							<h2>Three expeditions. Three fates. One continent.</h2>
+							<p>
+								Amundsen got there first. Scott arrived thirty-three days later
+								and died walking home. Shackleton never reached the pole and lost
+								nobody.
+							</p>
+						</div>
+						<dl class="mp-specs">
+							<div><dt>Projection</dt><dd>Polar stereographic, EPSG:3031</dd></div>
+							<div><dt>Data</dt><dd>Natural Earth, expedition records</dd></div>
+							<div><dt>Color</dt><dd>One route, one outcome</dd></div>
+							<div><dt>Ground</dt><dd>Dark, so the ice reads first</dd></div>
+						</dl>
+					</div>
+
+					<figure class="mp-mount reveal reveal-d1">
+						<img
+							src="../assets/thoughts/map/output_good_projection.png"
+							alt="Polar stereographic map of Antarctica on a dark navy background, showing the Amundsen, Scott, and Shackleton expedition routes in cyan, red, and orange, with research stations marked."
+							loading="lazy"
+							width="3000"
+							height="3000"
+						/>
+						<figcaption>
+							Antarctic Polar Stereographic. Natural Earth and historic
+							expedition records.
+						</figcaption>
+					</figure>
+
+					<div class="mp-read reveal">
+						<p>
+							In Mercator the South Pole is not a place, it is the whole bottom
+							edge of the world. Turn the globe onto its pole and the smear becomes
+							a continent with a middle. Only then do three routes
+							<strong>converge</strong>.
+						</p>
+						<p>
+							Ten nations, one continent, no owner. A century on, nobody owns the
+							ice.
+						</p>
+					</div>
+				</article>
+
+				<!-- ── Plate IV ──────────────────────────────────────── -->
+				<article class="mp-plate" id="plate-04">
+					<div class="mp-live reveal">
+						<div>
+							<p class="mp-plate-n">Plate IV · Live</p>
+							<h2>Two variables, one surface</h2>
+							<p>
+								Two distributions in one color, so you can see where they
+								disagree. Also the map most likely to be misread, which is why it
+								helps to hover.
+							</p>
+							<a
+								class="mp-live-link"
+								href="https://musa-zhanchao.github.io/bivariate-map-excercise/"
+								target="_blank"
+								rel="noopener"
+							>
+								Open the map
+								<span class="arrow" aria-hidden="true">→</span>
+							</a>
+						</div>
+						<div class="mp-bivariate-wrap" aria-hidden="true">
+							<div class="mp-bivariate">
+								<span style="background: #e8e8e8"></span>
+								<span style="background: #b8d6be"></span>
+								<span style="background: #73ae80"></span>
+								<span style="background: #b5c0da"></span>
+								<span style="background: #90b2b3"></span>
+								<span style="background: #5a9178"></span>
+								<span style="background: #6c83b5"></span>
+								<span style="background: #567994"></span>
+								<span style="background: #2a5a5b"></span>
+							</div>
+							<p class="mp-bivariate-cap">Nine classes, two axes</p>
+						</div>
+					</div>
+				</article>
+			</div>
+		</main>
+
+		<!-- ══ Closing note ══ -->
+		<section class="mp-close">
+			<div class="container">
+				<div class="mp-close-inner">
+					<div class="reveal">
+						<h2>Every one of these was <em>a decision</em>.</h2>
+						<p>
+							None of it was hard. The projections are one line, the palettes have
+							names, the data is public. The time went into choosing.
+						</p>
+						<p>
+							Which is why Plate I is here and not hidden. Copy something you
+							admire closely enough and its choices become visible.
+						</p>
+						<p>
+							Charts are on
+							<a href="plot-makes-differences.html">Plot Makes Differences</a>.
+							Thirty more maps are in the
+							<a href="https://zyang91.github.io/mapchallenge/" target="_blank" rel="noopener">30 Day Map Challenge</a>.
+							The rest is in <a href="blog.html">Thoughts</a>.
+						</p>
+					</div>
+					<div class="reveal reveal-d1">
+						<dl class="mp-toolbox">
+							<div><dt>Made with</dt><dd>R, sf, ggplot2, Leaflet</dd></div>
+							<div><dt>Plate I</dt><dd>After The New York Times, 2019</dd></div>
+							<div><dt>Plate II</dt><dd>FEMA National Risk Index</dd></div>
+							<div><dt>Plate III</dt><dd>Natural Earth</dd></div>
+							<div><dt>Plate IV</dt><dd>Hosted as a live map</dd></div>
+							<div><dt>Status</dt><dd>Still adding plates</dd></div>
+						</dl>
+						<a class="mp-back" href="blog.html">
+							<span class="arrow" aria-hidden="true">←</span> Back to Thoughts
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ══ Footer ══ -->
+		<footer class="site-footer">
+			<div class="container">
+				<div class="footer-grid">
+					<div>
+						<p class="footer-name">Zhanchao Yang</p>
+						<p class="footer-identity">
+							Urban Planning <span class="dot">·</span> Transportation
+							<span class="dot">·</span> Spatial Analytics
+						</p>
+					</div>
+					<nav class="footer-links">
+						<a href="mailto:zhanchao@upenn.edu">Email</a>
+						<a href="research.html">Research</a>
+						<a href="professional-work.html">Work</a>
+						<a href="blog.html">Thoughts</a>
+						<a href="cv.html">CV</a>
+						<a href="awards.html">Awards</a>
+						<a href="about-me.html">About</a>
+						<a href="contact.html">Contact</a>
+						<a href="https://github.com/zyang91" target="_blank" rel="noopener">GitHub</a>
+						<a href="https://www.linkedin.com/in/zhanchaoyang/" target="_blank" rel="noopener">LinkedIn</a>
+					</nav>
+				</div>
+				<div class="footer-note">
+					<span>© <span id="year"></span> Zhanchao Yang</span>
+					<span>Philadelphia, PA</span>
+				</div>
+			</div>
+		</footer>
+
+		<script src="../js/home.js"></script>
+		<script src="../js/map.js"></script>
+	</body>
+</html>
