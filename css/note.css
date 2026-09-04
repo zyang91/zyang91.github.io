@@ -512,3 +512,304 @@ body.note-page .footer-links a::after {
 		transform: none !important;
 	}
 }
+
+/* ══════════════════════════════════════════════════════════
+   Extended furniture
+   Note № 03 runs long enough to need subheads, and it argues
+   partly through objects: a keyboard, a screenshot, two paths
+   set side by side. Everything below stays in the same ruled,
+   ivory register as the essay column above it.
+══════════════════════════════════════════════════════════ */
+
+/* ── Subheads inside a numbered section ───────────────────── */
+.nt-sub {
+	max-width: var(--measure);
+	margin: 42px auto 20px;
+	font-family: var(--serif);
+	font-size: 1.14rem;
+	font-weight: 600;
+	font-style: italic;
+	line-height: 1.35;
+	letter-spacing: -0.006em;
+	color: var(--accent-deep);
+}
+.nt-sub::before {
+	content: '';
+	display: block;
+	width: 34px;
+	height: 2px;
+	margin-bottom: 14px;
+	background: var(--terracotta);
+	opacity: 0.55;
+}
+
+/* ── Figures ──────────────────────────────────────────────
+   Breaking a little wider than the 34rem column, so an image
+   reads as an object on the page rather than a fat paragraph. */
+.nt-figure {
+	margin: 44px -4rem;
+}
+.nt-figure > img {
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 3px;
+	border: 1px solid var(--line-soft);
+	box-shadow: var(--shadow);
+}
+.nt-figure figcaption {
+	margin-top: 14px;
+	padding-left: 14px;
+	border-left: 2px solid var(--rule);
+	font-size: 0.86rem;
+	line-height: 1.62;
+	color: var(--ink-faint);
+}
+.nt-figure figcaption b {
+	display: block;
+	margin-bottom: 4px;
+	font-family: var(--sans);
+	font-size: 0.66rem;
+	font-weight: 600;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: var(--accent);
+}
+
+/* a phone screenshot: kept narrow, framed like the thing itself */
+.nt-shot {
+	max-width: 27rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+.nt-shot > img {
+	border-radius: 10px;
+}
+
+/* ── The keyboard ─────────────────────────────────────────
+   Drawn rather than photographed: the point is the one key
+   that sits where a period once did. */
+.nt-kb {
+	margin: 40px -2rem;
+	padding: 26px 26px 22px;
+	background: var(--paper-deep);
+	border-radius: 6px;
+	border: 1px solid var(--rule);
+}
+.nt-kb svg {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.nt-kb .key {
+	fill: var(--surface);
+	stroke: rgba(11, 35, 69, 0.16);
+	stroke-width: 1;
+}
+.nt-kb .key-label {
+	font-family: var(--sans);
+	font-size: 13px;
+	font-weight: 500;
+	fill: var(--ink-soft);
+	text-anchor: middle;
+}
+.nt-kb .key.is-swapped {
+	fill: rgba(215, 106, 84, 0.14);
+	stroke: var(--terracotta);
+	stroke-width: 1.6;
+}
+.nt-kb .key.is-swapped + .key-label {
+	fill: var(--terracotta);
+	font-weight: 600;
+}
+.nt-kb .kb-note {
+	font-family: var(--sans);
+	font-size: 11px;
+	font-weight: 500;
+	letter-spacing: 0.08em;
+	fill: var(--ink-faint);
+}
+.nt-kb figcaption {
+	margin-top: 16px;
+	font-size: 0.86rem;
+	line-height: 1.62;
+	color: var(--ink-faint);
+}
+
+/* ── Two paths, set against each other ────────────────────── */
+.nt-paths {
+	margin: 40px -4rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 18px;
+}
+.nt-path {
+	padding: 22px 24px;
+	background: var(--surface);
+	border: 1px solid var(--line-soft);
+	border-top: 3px solid var(--accent);
+	border-radius: 0 0 4px 4px;
+	box-shadow: var(--shadow);
+}
+.nt-path:last-child {
+	border-top-color: var(--sage-deep);
+}
+.nt-path h4 {
+	font-family: var(--sans);
+	font-size: 0.68rem;
+	font-weight: 600;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: var(--accent);
+	margin-bottom: 10px;
+}
+.nt-path:last-child h4 {
+	color: #6f8a6b;
+}
+.nt-path p {
+	font-family: var(--serif) !important;
+	font-size: 1rem !important;
+	line-height: 1.6 !important;
+	margin: 0 0 10px !important;
+	color: var(--ink) !important;
+}
+.nt-path p:last-child {
+	margin-bottom: 0 !important;
+	font-size: 0.92rem !important;
+	color: var(--ink-faint) !important;
+}
+
+/* ── The three questions the essay turns on ───────────────── */
+.nt-ledger {
+	max-width: var(--measure);
+	margin: 38px auto;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0;
+	border-top: 2px solid var(--terracotta);
+	border-bottom: 1px solid var(--rule);
+}
+.nt-ledger > div {
+	flex: 1 1 0;
+	min-width: 8rem;
+	padding: 20px 18px;
+	text-align: center;
+}
+.nt-ledger > div + div {
+	border-left: 1px solid var(--rule);
+}
+.nt-ledger dt {
+	font-family: var(--serif);
+	font-size: 1.32rem;
+	font-weight: 600;
+	color: var(--ink);
+	margin-bottom: 8px;
+}
+.nt-ledger dd {
+	font-family: var(--sans);
+	font-size: 0.74rem;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--ink-faint);
+	margin: 0;
+}
+
+/* ── Sources ──────────────────────────────────────────────── */
+.nt-sources {
+	max-width: var(--measure);
+	margin: 44px auto 0;
+	padding-top: 26px;
+	border-top: 1px solid var(--rule);
+}
+.nt-sources h2 {
+	font-family: var(--sans);
+	font-size: 0.72rem;
+	font-weight: 600;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	color: var(--accent);
+	margin-bottom: 18px;
+}
+.nt-sources ol {
+	list-style: none;
+	counter-reset: src;
+}
+.nt-sources li {
+	position: relative;
+	counter-increment: src;
+	padding-left: 30px;
+	margin-bottom: 15px;
+	font-size: 0.88rem;
+	line-height: 1.66;
+	color: var(--ink-soft);
+}
+.nt-sources li::before {
+	content: counter(src);
+	position: absolute;
+	left: 0;
+	top: 1px;
+	font-family: var(--sans);
+	font-size: 0.7rem;
+	font-weight: 600;
+	color: var(--accent);
+	opacity: 0.7;
+}
+.nt-sources a {
+	color: var(--accent-deep);
+	text-decoration: none;
+	border-bottom: 1px solid rgba(69, 106, 150, 0.3);
+	word-break: break-word;
+}
+.nt-sources a:hover {
+	color: var(--ink);
+	border-bottom-color: var(--ink);
+}
+
+/* ── Dateline ─────────────────────────────────────────────── */
+.nt-dateline {
+	max-width: var(--measure);
+	margin: 30px auto 0;
+	font-family: var(--sans);
+	font-size: 0.74rem;
+	font-weight: 500;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	color: var(--ink-faint);
+	text-align: center;
+}
+
+@media (max-width: 860px) {
+	.nt-figure,
+	.nt-kb,
+	.nt-paths {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+@media (max-width: 720px) {
+	.nt-paths {
+		grid-template-columns: 1fr;
+	}
+	.nt-kb {
+		padding: 18px 16px 16px;
+	}
+	.nt-ledger > div {
+		flex-basis: 100%;
+		padding: 16px 14px;
+	}
+	.nt-ledger > div + div {
+		border-left: none;
+		border-top: 1px solid var(--rule);
+	}
+	.nt-sub {
+		margin-top: 34px;
+	}
+}
+
+/* the one key the diagram is actually about */
+.nt-kb .key-label.is-period {
+	font-size: 26px;
+	font-weight: 700;
+	dominant-baseline: alphabetic;
+}
