@@ -63,6 +63,24 @@ body.contact-page {
 	width: 100%;
 	height: auto;
 	mix-blend-mode: multiply;
+	-webkit-mask-image: linear-gradient(
+		180deg,
+		transparent 0%,
+		rgba(0, 0, 0, 0.28) 5%,
+		#000 18%,
+		#000 88%,
+		rgba(0, 0, 0, 0.55) 96%,
+		transparent 100%
+	);
+	mask-image: linear-gradient(
+		180deg,
+		transparent 0%,
+		rgba(0, 0, 0, 0.28) 5%,
+		#000 18%,
+		#000 88%,
+		rgba(0, 0, 0, 0.55) 96%,
+		transparent 100%
+	);
 }
 .contact-hero-eyebrow {
 	font-size: 0.76rem;
