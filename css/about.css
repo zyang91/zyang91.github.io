@@ -11,10 +11,10 @@
 
 body.about-page {
 	--accent: var(--terracotta);
-	--accent-deep: #b8523d;
-	--paper: #f8f4ec;
-	--paper-deep: #f2ece0;
-	--rule: rgba(11, 35, 69, 0.1);
+	--accent-deep: #963521;
+	--paper: #f7f3ec;
+	--paper-deep: #ece5d8;
+	--rule: rgba(32, 32, 30, 0.1);
 
 	background: var(--paper);
 	color: var(--ink);
@@ -34,11 +34,11 @@ body.about-page::before {
 	pointer-events: none;
 	background-image: radial-gradient(
 			circle at 50% 50%,
-			rgba(11, 35, 69, 0.055) 0 1px,
+			rgba(32, 32, 30, 0.055) 0 1px,
 			transparent 1.4px
 		),
-		radial-gradient(ellipse 54% 40% at 88% 2%, rgba(215, 106, 84, 0.16) 0%, transparent 70%),
-		radial-gradient(ellipse 50% 38% at 2% 34%, rgba(200, 213, 197, 0.34) 0%, transparent 72%);
+		radial-gradient(ellipse 54% 40% at 88% 2%, rgba(201, 137, 107, 0.16) 0%, transparent 70%),
+		radial-gradient(ellipse 50% 38% at 2% 34%, rgba(211, 225, 228, 0.34) 0%, transparent 72%);
 	background-size: 22px 22px, auto, auto;
 	-webkit-mask-image: linear-gradient(180deg, #000 0%, #000 72%, transparent 100%);
 	mask-image: linear-gradient(180deg, #000 0%, #000 72%, transparent 100%);
@@ -52,7 +52,7 @@ body.about-page > footer {
 }
 
 body.about-page .site-nav {
-	background: rgba(248, 244, 236, 0.84);
+	background: rgba(247, 243, 236, 0.84);
 }
 body.about-page .nav-links a.active {
 	color: var(--accent-deep);
@@ -172,10 +172,10 @@ body.about-page .nav-links a::after {
 .ab-section-warm {
 	background: linear-gradient(
 		180deg,
-		rgba(233, 220, 199, 0) 0%,
-		rgba(233, 220, 199, 0.42) 12%,
-		rgba(233, 220, 199, 0.42) 88%,
-		rgba(233, 220, 199, 0) 100%
+		rgba(230, 218, 198, 0) 0%,
+		rgba(230, 218, 198, 0.42) 12%,
+		rgba(230, 218, 198, 0.42) 88%,
+		rgba(230, 218, 198, 0) 100%
 	);
 }
 /* ── Section artwork ─────────────────────────────────────── */
@@ -261,7 +261,7 @@ body.about-page .nav-links a::after {
 	height: 30px;
 	border-radius: 50%;
 	border: 1.5px solid var(--sand-deep);
-	background: rgba(255, 255, 255, 0.6);
+	background: rgba(251, 249, 245, 0.66);
 	color: var(--ink-faint);
 	font-size: 0.68rem;
 	letter-spacing: 0.06em;
@@ -430,7 +430,7 @@ body.about-page .nav-links a::after {
 }
 .ab-pass-stub {
 	background: var(--ink);
-	color: #fdfcf9;
+	color: #faf6ef;
 	padding: 22px 26px;
 	display: flex;
 	flex-direction: column;
@@ -523,7 +523,7 @@ body.about-page .nav-links a::after {
 	z-index: 3;
 	transform: translate(-50%, -140%);
 	background: var(--ink);
-	color: #fdfcf9;
+	color: #faf6ef;
 	font-size: 0.78rem;
 	font-weight: 500;
 	letter-spacing: 0.02em;
@@ -531,7 +531,7 @@ body.about-page .nav-links a::after {
 	padding: 7px 12px;
 	border-radius: 8px;
 	pointer-events: none;
-	box-shadow: 0 8px 22px rgba(11, 35, 69, 0.22);
+	box-shadow: 0 8px 22px rgba(32, 32, 30, 0.22);
 }
 .gl-tip::after {
 	content: '';
@@ -591,7 +591,7 @@ body.about-page .nav-links a::after {
 	font-size: 0.82rem;
 	font-weight: 500;
 	color: var(--ink-soft);
-	background: rgba(255, 255, 255, 0.7);
+	background: rgba(251, 249, 245, 0.74);
 	border: 1px solid var(--rule);
 	border-radius: 100px;
 	padding: 8px 17px;
@@ -607,7 +607,7 @@ body.about-page .nav-links a::after {
 .gl-btn.is-active {
 	background: var(--ink);
 	border-color: var(--ink);
-	color: #fdfcf9;
+	color: #faf6ef;
 }
 .gl-home {
 	margin-top: 26px;
@@ -805,8 +805,8 @@ body.about-page .nav-links a::after {
 	box-shadow: var(--shadow-lift);
 }
 .ab-obs-art {
-	background: linear-gradient(160deg, var(--paper-deep), rgba(200, 213, 197, 0.4));
-	color: rgba(11, 35, 69, 0.5);
+	background: linear-gradient(160deg, var(--paper-deep), rgba(211, 225, 228, 0.4));
+	color: rgba(32, 32, 30, 0.5);
 	aspect-ratio: 16 / 10;
 	display: flex;
 	align-items: center;
@@ -815,13 +815,13 @@ body.about-page .nav-links a::after {
 }
 /* each observation gets its own tint so the row is not three of the same */
 .art-airside {
-	background: linear-gradient(158deg, #eef3f6, #d8e3ea);
+	background: linear-gradient(158deg, #eaf1f3, #d2e0e4);
 }
 .art-platform {
-	background: linear-gradient(158deg, #f3efe6, #e4dccb);
+	background: linear-gradient(158deg, #f4efe4, #e3d8c4);
 }
 .art-wayfinding {
-	background: linear-gradient(158deg, #eef2ec, #d9e4d6);
+	background: linear-gradient(158deg, #eef3f4, #d4e2e5);
 }
 /* the one thing in each drawing that is doing the guiding */
 .ab-obs-art .ac {
@@ -878,7 +878,7 @@ body.about-page .nav-links a::after {
 	aspect-ratio: 2 / 3;
 	border-radius: 2px 6px 6px 2px;
 	background: var(--paper-deep);
-	box-shadow: 0 2px 4px rgba(11, 35, 69, 0.1), 0 14px 26px rgba(11, 35, 69, 0.16);
+	box-shadow: 0 2px 4px rgba(32, 32, 30, 0.1), 0 14px 26px rgba(32, 32, 30, 0.16);
 	overflow: hidden;
 	transition: transform 0.45s cubic-bezier(0.22, 0.61, 0.36, 1),
 		box-shadow 0.45s ease;
@@ -893,7 +893,7 @@ body.about-page .nav-links a::after {
 }
 .bk:hover .bk-cover {
 	transform: translateY(-6px) rotate(-1.5deg);
-	box-shadow: 0 4px 8px rgba(11, 35, 69, 0.12), 0 22px 40px rgba(11, 35, 69, 0.22);
+	box-shadow: 0 4px 8px rgba(32, 32, 30, 0.12), 0 22px 40px rgba(32, 32, 30, 0.22);
 }
 /* the sliver of spine that makes a flat scan read as a book */
 .bk-spine {
@@ -956,7 +956,7 @@ body.about-page .nav-links a::after {
 	position: relative;
 	aspect-ratio: 2 / 3;
 	overflow: hidden;
-	background: #10182a;
+	background: #252523;
 	border-bottom: 1px solid var(--rule);
 }
 .wt-art img {
@@ -1028,7 +1028,7 @@ body.about-page .nav-links a::after {
 	display: inline-flex;
 	align-items: center;
 	gap: 11px;
-	background: rgba(255, 255, 255, 0.72);
+	background: rgba(251, 249, 245, 0.76);
 	border: 1px solid var(--rule);
 	border-radius: 100px;
 	padding: 11px 24px 11px 18px;

@@ -66,8 +66,8 @@ body.cv-page {
 	display: inline-flex;
 	align-items: center;
 	gap: 10px;
-	background: var(--ink);
-	color: #fff;
+	background: var(--red);
+	color: var(--on-dark);
 	font-family: var(--sans);
 	font-size: 0.9rem;
 	font-weight: 500;
@@ -78,7 +78,7 @@ body.cv-page {
 	transition: background 0.25s ease, transform 0.25s ease;
 }
 .cv-hero .btn-primary:hover {
-	background: var(--red);
+	background: var(--red-deep);
 	transform: translateY(-1px);
 }
 .btn-outline {
@@ -440,7 +440,7 @@ body.cv-page {
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
 	color: var(--red);
-	background: rgba(165, 28, 48, 0.07);
+	background: rgba(184, 68, 45, 0.07);
 	padding: 3px 10px;
 	border-radius: 100px;
 	margin-left: 8px;

@@ -9,11 +9,11 @@
 ══════════════════════════════════════════════════════════════ */
 
 body.thoughts-page {
-	--accent: #456a96;
-	--accent-deep: #34527a;
-	--paper: #fbfaf6;
-	--paper-deep: #f4f2ea;
-	--rule: rgba(11, 35, 69, 0.09);
+	--accent: #b8442d;
+	--accent-deep: #963521;
+	--paper: #f7f3ec;
+	--paper-deep: #eee7db;
+	--rule: rgba(32, 32, 30, 0.09);
 
 	background: var(--paper);
 	color: var(--ink);
@@ -31,10 +31,10 @@ body.thoughts-page::before {
 	inset: 0;
 	z-index: 0;
 	pointer-events: none;
-	background-image: linear-gradient(rgba(69, 106, 150, 0.09) 1px, transparent 1px),
-		linear-gradient(90deg, rgba(69, 106, 150, 0.09) 1px, transparent 1px),
-		linear-gradient(rgba(69, 106, 150, 0.05) 1px, transparent 1px),
-		linear-gradient(90deg, rgba(69, 106, 150, 0.05) 1px, transparent 1px);
+	background-image: linear-gradient(rgba(96, 125, 139, 0.09) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(96, 125, 139, 0.09) 1px, transparent 1px),
+		linear-gradient(rgba(96, 125, 139, 0.05) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(96, 125, 139, 0.05) 1px, transparent 1px);
 	background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px;
 	-webkit-mask-image: linear-gradient(180deg, #000 0%, #000 46%, transparent 92%);
 	mask-image: linear-gradient(180deg, #000 0%, #000 46%, transparent 92%);
@@ -48,7 +48,7 @@ body.thoughts-page > footer {
 }
 
 body.thoughts-page .site-nav {
-	background: rgba(251, 250, 246, 0.85);
+	background: rgba(247, 243, 236, 0.85);
 }
 body.thoughts-page .nav-links a.active {
 	color: var(--accent-deep);
@@ -116,7 +116,7 @@ body.thoughts-page .footer-links a::after {
 	margin-top: 26px;
 	padding-left: 20px;
 	border-left: 2px solid var(--accent);
-	border-left-color: rgba(69, 106, 150, 0.35);
+	border-left-color: rgba(184, 68, 45, 0.35);
 	font-size: 0.95rem;
 	line-height: 1.75;
 	color: var(--ink-faint);
@@ -146,7 +146,7 @@ body.thoughts-page .footer-links a::after {
 	transition: background 0.3s ease;
 }
 .th-kind-list a:hover {
-	background: rgba(69, 106, 150, 0.05);
+	background: rgba(96, 125, 139, 0.05);
 }
 .th-kind-list li:first-child a {
 	padding-left: 0;
@@ -313,7 +313,7 @@ body.thoughts-page .footer-links a::after {
 	letter-spacing: 0.03em;
 	color: var(--accent-deep);
 	text-decoration: none;
-	border-bottom: 1px solid rgba(69, 106, 150, 0.35);
+	border-bottom: 1px solid rgba(184, 68, 45, 0.35);
 	padding-bottom: 3px;
 	transition: color 0.25s ease, border-color 0.25s ease;
 }
@@ -331,7 +331,7 @@ body.thoughts-page .footer-links a::after {
 /* live cards lift; the map tiles drift a hair on hover */
 .th-card.is-live:hover {
 	transform: translateY(-3px);
-	border-color: rgba(69, 106, 150, 0.3);
+	border-color: rgba(201, 168, 157, 0.75);
 	box-shadow: var(--shadow-lift);
 }
 .th-card.is-live:hover .th-card-media svg {
@@ -340,7 +340,7 @@ body.thoughts-page .footer-links a::after {
 
 /* nothing to open yet: quieter, and it says so plainly */
 .th-card.is-pending {
-	background: rgba(255, 255, 255, 0.55);
+	background: rgba(251, 249, 245, 0.62);
 	border-style: dashed;
 	border-color: var(--line);
 }
@@ -415,7 +415,7 @@ body.thoughts-page .footer-links a::after {
 .th-fit-line a {
 	color: var(--accent-deep);
 	text-decoration: none;
-	border-bottom: 1px solid rgba(69, 106, 150, 0.4);
+	border-bottom: 1px solid rgba(184, 68, 45, 0.4);
 	transition: color 0.25s ease, border-color 0.25s ease;
 }
 .th-fit-line a:hover {
@@ -515,7 +515,7 @@ body.thoughts-page .footer-links a::after {
 	transition: transform 0.35s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 .th-post > a:hover {
-	background: rgba(69, 106, 150, 0.045);
+	background: rgba(96, 125, 139, 0.045);
 	padding-left: 18px;
 }
 .th-post > a:hover::before {

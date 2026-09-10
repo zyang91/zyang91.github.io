@@ -5,6 +5,59 @@
 ══════════════════════════════════════════════════════════════ */
 
 :root {
+	/* ── Colour refresh ───────────────────────────────────────
+	   Warm ivory paper · cool urban blue-gray · brick-red accent
+	   · deep charcoal type. Token names are unchanged so every
+	   page that consumes them picks up the new palette.
+	── */
+	--bg: #f7f3ec;
+	--surface: #fbf9f5;
+	--surface-warm: #e8eef0;
+	--ink: #20201e;
+	--ink-soft: rgba(32, 32, 30, 0.74);
+	--ink-faint: rgba(32, 32, 30, 0.55);
+	--red: #b8442d;
+	--red-deep: #963521;
+	--brick-dark: #8f3023;
+	--on-dark: #faf6ef;
+	--on-dark-soft: #ead8cf;
+	--on-dark-accent: #f3c4ad;
+	--blue: #53666c;
+	--blue-mid: #607d8b;
+	--blue-soft: #8aa3ab;
+	--sand: #e6dac6;
+	--sand-deep: #d8c6af;
+	--sage: #d3e1e4;
+	--sage-deep: #a9c2c7;
+	--terracotta: #c9896b;
+	--line: rgba(32, 32, 30, 0.16);
+	--line-soft: rgba(32, 32, 30, 0.09);
+	--shadow: 0 1px 2px rgba(32, 32, 30, 0.04), 0 8px 28px rgba(32, 32, 30, 0.08);
+	--shadow-lift: 0 2px 4px rgba(32, 32, 30, 0.06), 0 16px 44px rgba(32, 32, 30, 0.13);
+	--nav-bg: rgba(247, 243, 236, 0.92);
+	--panel-translucent: rgba(251, 249, 245, 0.55);
+	--footer-bg: #252523;
+	--footer-fg: #ede8e0;
+	--footer-muted: rgba(237, 232, 224, 0.66);
+	--footer-faint: rgba(237, 232, 224, 0.46);
+	--footer-accent: #d96a4b;
+	--footer-line: rgba(237, 232, 224, 0.16);
+	--serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+	--sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* ── Legacy palette ───────────────────────────────────────────
+   The bespoke pages — individual Thoughts pieces and the project
+   sub-pages — were designed around the previous navy/brick scheme
+   and keep it. They re-declare the original tokens on their own
+   body class, so the refresh above applies everywhere else.
+── */
+body.note-page,
+body.map-page,
+body.plot-page,
+body.jc,
+body.study,
+body.proposal {
 	--bg: #faf8f4;
 	--surface: #fff;
 	--surface-warm: #f5f2ec;
@@ -12,6 +65,11 @@
 	--ink-soft: rgba(11, 35, 69, 0.72);
 	--ink-faint: rgba(11, 35, 69, 0.5);
 	--red: #a51c30;
+	--red-deep: #8a1727;
+	--brick-dark: #8a1727;
+	--on-dark: #fdfcf9;
+	--on-dark-soft: rgba(253, 252, 249, 0.72);
+	--on-dark-accent: #d76a54;
 	--blue: #456a96;
 	--blue-mid: #6685a8;
 	--blue-soft: #8099b5;
@@ -24,8 +82,14 @@
 	--line-soft: rgba(11, 35, 69, 0.08);
 	--shadow: 0 1px 2px rgba(11, 35, 69, 0.04), 0 8px 28px rgba(11, 35, 69, 0.07);
 	--shadow-lift: 0 2px 4px rgba(11, 35, 69, 0.05), 0 16px 44px rgba(11, 35, 69, 0.12);
-	--serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
-	--sans: 'Inter', system-ui, -apple-system, sans-serif;
+	--nav-bg: rgba(250, 248, 244, 0.82);
+	--panel-translucent: rgba(255, 255, 255, 0.5);
+	--footer-bg: transparent;
+	--footer-fg: var(--ink);
+	--footer-muted: var(--ink-soft);
+	--footer-faint: var(--ink-faint);
+	--footer-accent: var(--red);
+	--footer-line: var(--line-soft);
 }
 
 * {
@@ -76,7 +140,7 @@ body.home {
 	left: 0;
 	right: 0;
 	z-index: 50;
-	background: rgba(250, 248, 244, 0.82);
+	background: var(--nav-bg);
 	backdrop-filter: blur(12px);
 	-webkit-backdrop-filter: blur(12px);
 	border-bottom: 1px solid transparent;
@@ -189,6 +253,7 @@ body.home {
 	align-items: center;
 	padding: 140px 0 80px;
 	overflow: hidden;
+	background: linear-gradient(120deg, #f4f0e9 0%, #e8eef0 55%, #f1e4da 100%);
 }
 .hero .container {
 	width: 100%;
@@ -232,10 +297,10 @@ body.home {
 	pointer-events: none;
 	background: linear-gradient(
 		100deg,
-		var(--bg) 0%,
-		var(--bg) 34%,
-		rgba(250, 248, 244, 0.72) 52%,
-		rgba(250, 248, 244, 0) 72%
+		#f4f0e9 0%,
+		#f4f0e9 34%,
+		rgba(244, 240, 233, 0.72) 52%,
+		rgba(244, 240, 233, 0) 72%
 	);
 }
 
@@ -303,8 +368,8 @@ body.home {
 	display: inline-flex;
 	align-items: center;
 	gap: 10px;
-	background: var(--ink);
-	color: #fdfcf9;
+	background: var(--red);
+	color: var(--on-dark);
 	font-size: 0.9rem;
 	font-weight: 500;
 	letter-spacing: 0.04em;
@@ -317,7 +382,7 @@ body.home {
 	transition: transform 0.3s ease;
 }
 .btn-primary:hover {
-	background: var(--red);
+	background: var(--red-deep);
 	transform: translateY(-1px);
 	box-shadow: var(--shadow);
 }
@@ -343,7 +408,7 @@ body.home {
 	border: 1px solid var(--line);
 	border-radius: 100px;
 	padding: 9px 18px;
-	background: rgba(255, 255, 255, 0.5);
+	background: var(--panel-translucent);
 	transition: color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
 }
 .hero-links a svg {
@@ -507,7 +572,7 @@ body.home {
 }
 .q-row.q-policy { --badge-bg: var(--sand); }
 .q-row.q-perception { --badge-bg: var(--sage); }
-.q-row.q-outcomes { --badge-bg: rgba(128, 153, 181, 0.32); }
+.q-row.q-outcomes { --badge-bg: rgba(96, 125, 139, 0.26); }
 .q-content {
 	max-width: 760px;
 }
@@ -830,10 +895,21 @@ body.home {
 }
 
 /* ── Research Agenda ──────────────────────────────────────── */
+/* the single high-contrast section: deep brick, ivory type */
 .section-agenda {
-	background: var(--surface-warm);
-	border-top: 1px solid var(--line-soft);
-	border-bottom: 1px solid var(--line-soft);
+	background: var(--brick-dark);
+	border-top: 1px solid var(--brick-dark);
+	border-bottom: 1px solid var(--brick-dark);
+	color: var(--on-dark);
+}
+.section-agenda .section-label {
+	color: var(--on-dark-accent);
+}
+.section-agenda .section-label::before {
+	background: var(--on-dark-accent);
+}
+.section-agenda .section-title {
+	color: var(--on-dark);
 }
 .agenda-inner {
 	max-width: 820px;
@@ -842,12 +918,12 @@ body.home {
 	font-family: var(--serif);
 	font-size: clamp(1.14rem, 2vw, 1.3rem);
 	line-height: 1.7;
-	color: var(--ink-soft);
+	color: var(--on-dark-soft);
 	margin-bottom: 20px;
 }
 .agenda-text strong {
 	font-weight: 600;
-	color: var(--ink);
+	color: var(--on-dark);
 }
 .agenda-pillars {
 	display: grid;
@@ -856,23 +932,24 @@ body.home {
 	margin-top: 48px;
 }
 .agenda-pillar {
-	background: var(--surface);
-	border: 1px solid var(--line-soft);
+	background: rgba(250, 246, 239, 0.09);
+	border: 1px solid rgba(250, 246, 239, 0.22);
 	border-radius: 6px;
-	box-shadow: var(--shadow);
+	box-shadow: none;
 	padding: 28px 26px;
 }
 .agenda-pillar .icon-badge {
-	--badge-bg: var(--surface-warm);
-	border: 1px solid var(--line-soft);
+	--badge-bg: rgba(250, 246, 239, 0.14);
+	border: 1px solid rgba(250, 246, 239, 0.24);
 	width: 48px;
 	height: 48px;
 	margin-bottom: 18px;
+	color: var(--on-dark);
 }
 .agenda-pillar .icon-badge svg {
 	width: 22px;
 	height: 22px;
-	stroke: var(--red);
+	stroke: var(--on-dark-accent);
 }
 .agenda-pillar h3 {
 	font-family: var(--serif);
@@ -880,19 +957,30 @@ body.home {
 	font-weight: 600;
 	line-height: 1.4;
 	margin-bottom: 10px;
+	color: var(--on-dark);
 }
 .agenda-pillar p {
 	font-size: 0.88rem;
 	line-height: 1.6;
-	color: var(--ink-soft);
+	color: var(--on-dark-soft);
 }
 .agenda-cta {
 	margin-top: 44px;
+}
+.section-agenda .btn-primary {
+	background: var(--on-dark);
+	color: var(--brick-dark);
+}
+.section-agenda .btn-primary:hover {
+	background: #fff;
+	box-shadow: 0 8px 26px rgba(0, 0, 0, 0.22);
 }
 
 /* ── Footer ───────────────────────────────────────────────── */
 .site-footer {
 	padding: 80px 0 48px;
+	background: var(--footer-bg);
+	color: var(--footer-fg);
 }
 .footer-grid {
 	display: flex;
@@ -901,21 +989,22 @@ body.home {
 	gap: 40px;
 	flex-wrap: wrap;
 	padding-bottom: 48px;
-	border-bottom: 1px solid var(--line-soft);
+	border-bottom: 1px solid var(--footer-line);
 }
 .footer-name {
 	font-family: var(--serif);
 	font-size: 1.5rem;
 	font-weight: 600;
 	margin-bottom: 8px;
+	color: var(--footer-fg);
 }
 .footer-identity {
 	font-size: 0.86rem;
 	letter-spacing: 0.05em;
-	color: var(--ink-soft);
+	color: var(--footer-muted);
 }
 .footer-identity .dot {
-	color: var(--sand-deep);
+	color: var(--footer-accent);
 	margin: 0 7px;
 }
 .footer-links {
@@ -925,7 +1014,7 @@ body.home {
 	flex-wrap: wrap;
 }
 .footer-links a {
-	color: var(--ink-soft);
+	color: var(--footer-muted);
 	text-decoration: none;
 	position: relative;
 	padding-bottom: 2px;
@@ -938,17 +1027,17 @@ body.home {
 	bottom: 0;
 	width: 100%;
 	height: 1px;
-	background: var(--red);
+	background: var(--footer-accent);
 	transform: scaleX(0);
 	transform-origin: left;
 	transition: transform 0.3s ease;
 }
-.footer-links a:hover { color: var(--red); }
+.footer-links a:hover { color: var(--footer-accent); }
 .footer-links a:hover::after { transform: scaleX(1); }
 .footer-note {
 	padding-top: 28px;
 	font-size: 0.78rem;
-	color: var(--ink-faint);
+	color: var(--footer-faint);
 	display: flex;
 	justify-content: space-between;
 	gap: 16px;
@@ -970,9 +1059,9 @@ body.home {
 	.hero-scrim {
 		background: linear-gradient(
 			100deg,
-			var(--bg) 0%,
-			rgba(250, 248, 244, 0.85) 45%,
-			rgba(250, 248, 244, 0.35) 100%
+			#f4f0e9 0%,
+			rgba(244, 240, 233, 0.85) 45%,
+			rgba(244, 240, 233, 0.35) 100%
 		);
 	}
 	.q-row {
