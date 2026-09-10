@@ -929,6 +929,22 @@ body.home {
 }
 .footer-links a:hover { color: var(--red); }
 .footer-links a:hover::after { transform: scaleX(1); }
+/* A shared hometown signature, kept clear of links and copyright. */
+.footer-hometown {
+	width: min(100%, 620px);
+	margin: 24px auto 0;
+}
+.footer-hometown img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+/* Preserve the same drawing on the two dark editorial footers. */
+body.map-page .footer-hometown img,
+body.plot-page .footer-hometown img {
+	filter: grayscale(1) brightness(0) invert(0.85);
+}
+
 .footer-note {
 	padding-top: 28px;
 	font-size: 0.78rem;
