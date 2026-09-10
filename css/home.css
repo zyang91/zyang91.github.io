@@ -194,48 +194,32 @@ body.home {
 	width: 100%;
 }
 
-.hero-map {
+/* Keep the collage crisp and use its open left edge beside the copy. */
+.hero-art {
 	position: absolute;
-	top: 0;
-	bottom: 0;
-	right: -2%;
-	width: 74%;
+	inset: 0 0 0 auto;
+	width: 60%;
 	pointer-events: none;
 	will-change: transform;
-	-webkit-mask-image: radial-gradient(
-		ellipse 82% 78% at 56% 48%,
-		rgba(0, 0, 0, 1) 52%,
-		rgba(0, 0, 0, 0) 88%
-	);
-	mask-image: radial-gradient(
-		ellipse 82% 78% at 56% 48%,
-		rgba(0, 0, 0, 1) 52%,
-		rgba(0, 0, 0, 0) 88%
-	);
 }
-/* zoomed to Center City: City Hall sits at (52.3%, 59.9%) of the
-   generated image; translate by the image's own size to center it */
-.hero-map img {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	width: 165%;
-	height: auto;
-	transform: translate(-52.3%, -58%);
+.hero-art img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: right center;
 }
-
-/* the map always yields to the text: cream scrim over its left side */
 .hero-scrim {
 	position: absolute;
 	inset: 0;
 	z-index: 1;
 	pointer-events: none;
 	background: linear-gradient(
-		100deg,
+		90deg,
 		var(--bg) 0%,
-		var(--bg) 34%,
-		rgba(250, 248, 244, 0.72) 52%,
-		rgba(250, 248, 244, 0) 72%
+		var(--bg) 43%,
+		rgba(250, 248, 244, 0.94) 50%,
+		rgba(250, 248, 244, 0) 67%
 	);
 }
 
@@ -964,17 +948,25 @@ body.home {
 		grid-template-columns: 1fr;
 		gap: 20px;
 	}
-	.hero-map {
-		opacity: 0.6;
+	.hero {
+		flex-direction: column;
+		align-items: stretch;
+		padding-bottom: 0;
+		min-height: auto;
 	}
-	.hero-scrim {
-		background: linear-gradient(
-			100deg,
-			var(--bg) 0%,
-			rgba(250, 248, 244, 0.85) 45%,
-			rgba(250, 248, 244, 0.35) 100%
-		);
+	.hero .container { order: 1; }
+	.hero-art {
+		position: relative;
+		inset: auto;
+		order: 2;
+		width: 100%;
+		height: clamp(300px, 55vw, 520px);
+		margin-top: 40px;
+		will-change: auto;
+		transform: none !important;
 	}
+	.hero-scrim,
+	.hero-scroll { display: none; }
 	.q-row {
 		gap: 24px;
 		padding: 38px 0;
@@ -1046,7 +1038,7 @@ body.home {
 		transition: none;
 	}
 	.hero-scroll svg { animation: none; }
-	.hero-map { transform: none !important; }
+	.hero-art { transform: none !important; }
 	.fw-line {
 		animation: none !important;
 		stroke-dashoffset: 0;
