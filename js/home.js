@@ -1,5 +1,5 @@
 /* Homepage interactions: scroll reveals, framework activation,
-   hero map parallax, nav state. Motion stays slow and subtle. */
+   hero artwork parallax, nav state. Motion stays slow and subtle. */
 
 (function () {
 	'use strict';
@@ -74,9 +74,9 @@
 		}
 	}
 
-	/* Hero map: extremely slow parallax */
-	var heroMap = document.getElementById('hero-map');
-	if (heroMap && !reducedMotion) {
+	/* Hero artwork: extremely slow parallax on desktop */
+	var heroArt = document.getElementById('hero-art');
+	if (heroArt && !reducedMotion) {
 		var ticking = false;
 		window.addEventListener(
 			'scroll',
@@ -85,8 +85,8 @@
 				ticking = true;
 				window.requestAnimationFrame(function () {
 					var y = window.scrollY;
-					if (y < window.innerHeight * 1.2) {
-						heroMap.style.transform = 'translateY(' + y * 0.08 + 'px)';
+					if (window.matchMedia('(min-width: 961px)').matches && y < window.innerHeight * 1.2) {
+						heroArt.style.transform = 'translateY(' + y * 0.08 + 'px)';
 					}
 					ticking = false;
 				});
