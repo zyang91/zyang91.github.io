@@ -70,10 +70,42 @@ body.thoughts-page .footer-links a::after {
 
 /* ══ Hero ═════════════════════════════════════════════════ */
 .th-hero {
-	padding: 176px 0 68px;
+    padding: 150px 0 100px;
+    min-height: 760px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    isolation: isolate;
+    background: var(--paper);
+}
+.th-hero-art {
+    position: absolute;
+    inset: 0 0 0 auto;
+    width: 78%;
+    z-index: -1;
+    pointer-events: none;
+    mask-image: linear-gradient(90deg, transparent, #000 24%), linear-gradient(#000 78%, transparent);
+    mask-composite: intersect;
+}
+.th-hero-art img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: right center;
+    mix-blend-mode: multiply;
+}
+.th-hero-inner { width: 100%; }
+.th-hero-inner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: linear-gradient(90deg, var(--paper) 0%, var(--paper) 30%, rgba(251, 250, 246, 0.94) 38%, rgba(251, 250, 246, 0) 61%);
 }
 .th-hero-inner > * {
-	max-width: 900px;
+	max-width: 460px;
 }
 .th-eyebrow {
 	font-size: 0.74rem;
@@ -645,4 +677,33 @@ body.thoughts-page .footer-links a::after {
 	.th-post > a:hover {
 		padding-left: 0;
 	}
+}
+
+/* Let the notebook artwork flow below the copy on smaller screens. */
+@media (max-width: 980px) {
+    .th-hero {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 126px 0 0;
+        min-height: 0;
+    }
+    .th-hero-inner { order: 0; }
+    .th-hero-inner > * { max-width: 560px; }
+    .th-hero-inner::before { display: none; }
+    .th-hero-art {
+        position: relative;
+        order: 1;
+        width: 100%;
+        height: clamp(280px, 60vw, 540px);
+        margin-top: -20px;
+        mask-image: linear-gradient(180deg, transparent, #000 12%, #000 82%, transparent);
+        mask-composite: add;
+    }
+    .th-hero-art img { object-fit: contain; object-position: right center; }
+}
+@media (max-width: 540px) {
+    .th-hero { padding-top: 110px; }
+    .th-hero-art { width: 130%; margin-left: -30%; margin-top: 0; }
+    .th-hero h1 { font-size: clamp(2.8rem, 11vw, 3.6rem); }
 }
