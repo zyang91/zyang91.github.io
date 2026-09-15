@@ -162,7 +162,7 @@ body.thoughts-page .footer-links a::after {
 .th-kind-list {
 	list-style: none;
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(4, 1fr);
 	gap: 0;
 	border-top: 1px solid var(--rule);
 	border-bottom: 1px solid var(--rule);
@@ -427,6 +427,15 @@ body.thoughts-page .footer-links a::after {
 	font-size: 0.95rem;
 	color: var(--ink-faint);
 	max-width: 52ch;
+}
+
+/* ══ Teaching thoughts: same ledger, chalk-green accent ═══ */
+.th-teaching {
+	--accent: #3f6b55;
+	--accent-deep: #2d5140;
+}
+.th-teaching .th-post > a:hover {
+	background: rgba(63, 107, 85, 0.05);
 }
 
 /* ══ Where this fits ══════════════════════════════════════ */

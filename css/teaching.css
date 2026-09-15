@@ -1,0 +1,128 @@
+/* ══════════════════════════════════════════════════════════════
+   Zhanchao Yang — Teaching Thoughts (single piece)
+   Loads after home.css and inherits its tokens.
+   Deliberately plain: one readable column. Body in Literata (a
+   screen-reading serif); the questions set apart in Fraunces
+   italic and colour, with no boxes around them.
+══════════════════════════════════════════════════════════════ */
+
+body.teaching-page {
+	--accent: #3f6b55;
+	--question: #b8492f;
+	--read: 'Literata', Georgia, 'Times New Roman', serif;
+	--display: 'Fraunces', Georgia, 'Times New Roman', serif;
+	--measure: 36rem;
+
+	background: var(--bg);
+	color: var(--ink);
+	font-family: var(--sans);
+	font-size: 16px;
+	line-height: 1.65;
+	-webkit-font-smoothing: antialiased;
+	overflow-x: hidden;
+}
+
+body.teaching-page .nav-links a.active {
+	color: var(--accent);
+}
+
+body.teaching-page .nav-links a::after,
+body.teaching-page .footer-links a::after {
+	background: var(--accent);
+}
+
+.tt-page {
+	max-width: var(--measure);
+	margin: 0 auto;
+	padding: 140px 24px 100px;
+	box-sizing: content-box;
+}
+
+.tt-crumb {
+	display: inline-block;
+	margin-bottom: 28px;
+	font-size: 0.9rem;
+	color: var(--ink-faint);
+	text-decoration: none;
+}
+
+.tt-crumb:hover {
+	color: var(--accent);
+}
+
+.tt-page p.tt-eyebrow {
+	font-family: var(--sans);
+	font-size: 0.78rem;
+	font-weight: 600;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	line-height: 1.4;
+	color: var(--accent);
+	margin-bottom: 14px;
+}
+
+.tt-page h1 {
+	font-family: var(--display);
+	font-size: clamp(2.1rem, 5vw, 3rem);
+	font-weight: 600;
+	line-height: 1.12;
+	letter-spacing: -0.01em;
+	color: var(--ink);
+	margin-bottom: 44px;
+}
+
+.tt-page h1::after {
+	content: '';
+	display: block;
+	width: 48px;
+	height: 3px;
+	margin-top: 22px;
+	border-radius: 2px;
+	background: var(--question);
+}
+
+.tt-page p {
+	font-family: var(--read);
+	font-size: 1.12rem;
+	line-height: 1.85;
+	color: #22324a;
+	margin-bottom: 1.35em;
+	hanging-punctuation: first;
+	text-wrap: pretty;
+}
+
+.tt-page p strong {
+	font-weight: 600;
+	color: var(--ink);
+}
+
+/* paragraphs that are only a bolded question: a different face and colour */
+.tt-page p.tt-q {
+	font-family: var(--display);
+	font-size: 1.55rem;
+	font-style: italic;
+	line-height: 1.35;
+	color: var(--question);
+	margin: 1.4em 0;
+	text-wrap: balance;
+}
+
+.tt-page p.tt-q strong {
+	font-weight: 600;
+	color: inherit;
+}
+
+@media (max-width: 720px) {
+	.tt-page {
+		padding-top: 110px;
+	}
+
+	.tt-page p {
+		font-size: 1.06rem;
+		line-height: 1.8;
+	}
+
+	.tt-page p.tt-q {
+		font-size: 1.35rem;
+	}
+}
