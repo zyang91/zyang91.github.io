@@ -25,9 +25,6 @@ body.theme-perception {
 .proposal .section-label {
 	color: var(--accent);
 }
-.proposal .section-label::before {
-	background: var(--accent);
-}
 
 /* ── Proposal hero ────────────────────────────────────────── */
 .p-hero {
@@ -117,12 +114,6 @@ body.theme-perception {
 	align-items: center;
 	gap: 12px;
 	flex-wrap: wrap;
-}
-.p-eyebrow::before {
-	content: '';
-	width: 30px;
-	height: 1.5px;
-	background: var(--accent);
 }
 .p-eyebrow .p-status {
 	color: var(--ink);

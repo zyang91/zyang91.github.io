@@ -32,9 +32,6 @@ body.study {
 .study .section-label {
 	color: var(--accent);
 }
-.study .section-label::before {
-	background: var(--accent);
-}
 
 /* ── Navigation: ink-dark for the whole study page ─────────── */
 .study .site-nav {
@@ -46,10 +43,6 @@ body.study {
 }
 .study .nav-name {
 	color: #fff;
-}
-.study .nav-affil {
-	color: var(--on-dark-faint);
-	border-left-color: var(--dark-line);
 }
 .study .nav-links a {
 	color: var(--on-dark-soft);
@@ -131,12 +124,6 @@ body.study {
 	text-transform: uppercase;
 	color: var(--accent-bright);
 	margin-bottom: 22px;
-}
-.st-eyebrow::before {
-	content: '';
-	width: 30px;
-	height: 1.5px;
-	background: var(--accent-bright);
 }
 .st-status {
 	color: var(--on-dark);

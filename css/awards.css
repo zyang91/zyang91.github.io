@@ -82,12 +82,6 @@ body.awards-page {
 	align-items: center;
 	gap: 12px;
 }
-.aw-hero-eyebrow::before {
-	content: '';
-	width: 30px;
-	height: 1.5px;
-	background: var(--red);
-}
 .aw-hero h1 {
 	font-family: var(--serif);
 	font-weight: 600;
