@@ -118,13 +118,6 @@ body.thoughts-page .footer-links a::after {
 	align-items: center;
 	gap: 14px;
 }
-.th-eyebrow::after {
-	content: '';
-	height: 1px;
-	width: 68px;
-	background: var(--accent);
-	opacity: 0.45;
-}
 .th-hero h1 {
 	font-family: var(--serif);
 	font-size: clamp(2.6rem, 6.4vw, 4.4rem);

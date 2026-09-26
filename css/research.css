@@ -166,12 +166,6 @@ body.research-hub [id] {
 	align-items: center;
 	gap: 12px;
 }
-.rh-hero-eyebrow::before {
-	content: '';
-	width: 30px;
-	height: 1.5px;
-	background: var(--red);
-}
 .rh-hero h1 {
 	font-family: var(--serif);
 	font-size: clamp(2.6rem, 5.6vw, 3.9rem);

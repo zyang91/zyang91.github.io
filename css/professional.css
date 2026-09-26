@@ -86,12 +86,6 @@ body.pro [id] {
 	align-items: center;
 	gap: 12px;
 }
-.pw-hero-eyebrow::before {
-	content: '';
-	width: 26px;
-	height: 1.5px;
-	background: var(--red);
-}
 .pw-hero h1 {
 	font-family: var(--serif);
 	font-size: clamp(2.2rem, 5vw, 3.4rem);
