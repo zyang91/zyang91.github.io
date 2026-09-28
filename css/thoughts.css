@@ -438,6 +438,15 @@ body.thoughts-page .footer-links a::after {
 	background: rgba(63, 107, 85, 0.05);
 }
 
+/* ══ Experiments: same ledger, slate-blue accent ═════════ */
+.th-lab {
+	--accent: #456a96;
+	--accent-deep: #34547a;
+}
+.th-lab .th-post > a:hover {
+	background: rgba(69, 106, 150, 0.05);
+}
+
 /* ══ Where this fits ══════════════════════════════════════ */
 .th-fit {
 	padding: 20px 0 84px;
