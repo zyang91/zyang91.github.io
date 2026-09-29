@@ -113,7 +113,8 @@
 			</a>
 		</section>
 
-		<main>
+		<main class="research-story" id="research-story">
+			<div class="story-spine" aria-hidden="true"><span></span></div>
 			<!-- ══ Questions I Study ══ -->
 			<section class="section" id="questions">
 				<div class="container">
@@ -127,21 +128,13 @@
 					</p>
 					<div class="section-rule reveal" aria-hidden="true"></div>
 
-					<article class="q-row q-policy reveal">
-						<span class="icon-badge" aria-hidden="true">
-							<svg viewBox="0 0 24 24">
-								<rect x="4.5" y="3.5" width="15" height="13.5" rx="2.4" />
-								<path d="M4.5 10.5h15" />
-								<path d="M8 17v2.4M16 17v2.4" />
-								<circle cx="8.4" cy="14" r="0.9" fill="currentColor" stroke="none" />
-								<circle cx="15.6" cy="14" r="0.9" fill="currentColor" stroke="none" />
-							</svg>
-						</span>
+					<article class="q-row q-policy">
+						<span class="scene-number" aria-hidden="true">01</span>
 						<div class="q-content">
-							<p class="q-text">
+							<h3 class="q-text">
 								&ldquo;How do transportation policies and changing urban
 								conditions reshape travel behavior?&rdquo;
-							</p>
+							</h3>
 							<p class="q-desc">
 								How changes such as telework and transit service affect
 								the travel decisions people make each day.
@@ -151,20 +144,19 @@
 								<span class="q-keys">Travel Behavior · Telework · Transit · Travel Demand</span>
 							</p>
 						</div>
-					</article>
+					<figure class="scene-figure scene-travel">
+<div class="scene-caption"><span>01 / Changing conditions</span><span>Behavior</span></div>
+<div class="scene-art"><img src="assets/research-scenes/telework-city.jpg" width="1536" height="1024" loading="lazy" decoding="async" alt="Architectural collage connecting a home workspace, transit, and daily urban journeys." /></div>
+<figcaption>A change in work. A different pattern of movement.<small>Conceptual illustration</small></figcaption></figure>
+</article>
 
-					<article class="q-row q-perception reveal">
-						<span class="icon-badge" aria-hidden="true">
-							<svg viewBox="0 0 24 24">
-								<circle cx="12" cy="7.6" r="3.4" />
-								<path d="M5.5 20.2c1-4 3.5-6 6.5-6s5.5 2 6.5 6" />
-							</svg>
-						</span>
+					<article class="q-row q-perception">
+						<span class="scene-number" aria-hidden="true">02</span>
 						<div class="q-content">
-							<p class="q-text">
+							<h3 class="q-text">
 								&ldquo;How do people perceive, navigate, and experience urban
 								space?&rdquo;
-							</p>
+							</h3>
 							<p class="q-desc">
 								How perceptions, mental maps, and lived experience shape
 								route choice, and why access can feel different from what a network
@@ -175,20 +167,19 @@
 								<span class="q-keys">Route Choice · Urban Perception · Mental Maps · Accessibility</span>
 							</p>
 						</div>
-					</article>
+					<figure class="scene-figure scene-city">
+<div class="scene-caption"><span>02 / The perceived city</span><span>Accessibility</span></div>
+<div class="scene-art"><img src="assets/research-scenes/perceived-city.jpg" width="1536" height="1024" loading="lazy" decoding="async" alt="Layered city map contrasting a direct route with a route shaped by perception." /></div>
+<figcaption>The network we measure. The city we experience.<small>Conceptual illustration</small></figcaption></figure>
+</article>
 
-					<article class="q-row q-outcomes reveal">
-						<span class="icon-badge" aria-hidden="true">
-							<svg viewBox="0 0 24 24">
-								<path d="M4 20h16" />
-								<path d="M6.5 20v-6.5M12 20V5.5M17.5 20v-9.5" />
-							</svg>
-						</span>
+					<article class="q-row q-outcomes">
+						<span class="scene-number" aria-hidden="true">03</span>
 						<div class="q-content">
-							<p class="q-text">
+							<h3 class="q-text">
 								&ldquo;How do transportation systems and infrastructure
 								investments shape broader urban and economic outcomes?&rdquo;
-							</p>
+							</h3>
 							<p class="q-desc">
 								How transit service, infrastructure, and major investments
 								affect congestion, economic activity, land use, and development.
@@ -198,7 +189,11 @@
 								<span class="q-keys">Infrastructure · Congestion · Economic Activity · Urban Development</span>
 							</p>
 						</div>
-					</article>
+					<figure class="scene-figure scene-impact">
+<div class="scene-caption"><span>03 / Beyond the network</span><span>Urban outcomes</span></div>
+<div class="scene-art"><img src="assets/research-scenes/urban-activity.jpg" width="1536" height="1024" loading="lazy" decoding="async" alt="Transit interchange connecting neighborhoods, public spaces, and urban activity." /></div>
+<figcaption>Local investments. Connections across the city.<small>Conceptual illustration</small></figcaption></figure>
+</article>
 				</div>
 			</section>
 
@@ -215,81 +210,45 @@
 						my research.
 					</p>
 
-					<!-- the framework, drawn as a transit line -->
-					<div class="fw-map" id="framework-diagram" aria-label="Research framework: urban policy and infrastructure leads to perception and individual behavior, then mobility and accessibility, then urban and economic outcomes">
-						<svg viewBox="0 0 1000 175" role="img">
-							<path class="fw-line" d="M 30 62 H 926" fill="none" stroke="#0b2345"
-								stroke-width="3.5" stroke-linecap="round" />
-							<path class="fw-tick t3" d="M 926 53 L 944 62 L 926 71 Z" fill="#0b2345" />
-
-							<!-- minor stops -->
-							<circle class="fw-tick t1" cx="260" cy="62" r="3" fill="#0b2345" opacity="0.5" />
-							<circle class="fw-tick t2" cx="500" cy="62" r="3" fill="#0b2345" opacity="0.5" />
-							<circle class="fw-tick t3" cx="740" cy="62" r="3" fill="#0b2345" opacity="0.5" />
-
-							<!-- stations -->
-							<g class="fw-station s1">
-								<circle cx="140" cy="62" r="15" fill="#ffffff" stroke="#d9c5a5" stroke-width="5.5" />
-							</g>
-							<g class="fw-station s2">
-								<circle cx="380" cy="62" r="15" fill="#ffffff" stroke="#b7c9b7" stroke-width="5.5" />
-							</g>
-							<g class="fw-station s3">
-								<circle cx="620" cy="62" r="15" fill="#ffffff" stroke="#8099b5" stroke-width="5.5" />
-							</g>
-							<g class="fw-station s4">
-								<circle cx="860" cy="62" r="15" fill="#ffffff" stroke="#d76a54" stroke-width="5.5" />
-							</g>
-
-							<!-- stage markers -->
-							<text class="fw-label s1" x="140" y="28" text-anchor="middle"
-								font-family="Inter, sans-serif" font-size="11" font-weight="600"
-								letter-spacing="2.5" fill="#a51c30">01</text>
-							<text class="fw-label s2" x="380" y="28" text-anchor="middle"
-								font-family="Inter, sans-serif" font-size="11" font-weight="600"
-								letter-spacing="2.5" fill="#a51c30">02</text>
-							<text class="fw-label s3" x="620" y="28" text-anchor="middle"
-								font-family="Inter, sans-serif" font-size="11" font-weight="600"
-								letter-spacing="2.5" fill="#a51c30">03</text>
-							<text class="fw-label s4" x="860" y="28" text-anchor="middle"
-								font-family="Inter, sans-serif" font-size="11" font-weight="600"
-								letter-spacing="2.5" fill="#a51c30">04</text>
-
-							<!-- station names -->
-							<g font-family="'Source Serif 4', Georgia, serif" font-size="17"
-								font-weight="600" fill="#0b2345" text-anchor="middle">
-								<text class="fw-label s1" x="140" y="103">Urban Policy &amp;
-									<tspan x="140" dy="21">Infrastructure</tspan></text>
-								<text class="fw-label s2" x="380" y="103">Perception &amp;
-									<tspan x="380" dy="21">Individual Behavior</tspan></text>
-								<text class="fw-label s3" x="620" y="103">Mobility &amp;
-									<tspan x="620" dy="21">Accessibility</tspan></text>
-								<text class="fw-label s4" x="860" y="103">Urban &amp; Economic
-									<tspan x="860" dy="21">Outcomes</tspan></text>
-							</g>
-						</svg>
+					<div class="system-layout">
+					<div class="system-overview">
+					<p class="system-note">Follow the connections</p>
+					<p class="system-statement">Policy changes.<br>People respond.<br>
+					<em>Cities evolve.</em>
+					</p>
+					<p class="system-detail">One research framework, from the conditions of travel to the life of the city.</p>
+					<div class="system-meter" aria-hidden="true">
+					<span>
+					</span>
 					</div>
-
-					<!-- vertical variant for small screens -->
-					<ol class="fw-vertical">
-						<li class="fw-policy">
-							<span class="fw-v-stage">01</span>
-							<h3>Urban Policy &amp; Infrastructure</h3>
-						</li>
-						<li class="fw-perception">
-							<span class="fw-v-stage">02</span>
-							<h3>Perception &amp; Individual Behavior</h3>
-						</li>
-						<li class="fw-mobility">
-							<span class="fw-v-stage">03</span>
-							<h3>Mobility &amp; Accessibility</h3>
-						</li>
-						<li class="fw-outcomes">
-							<span class="fw-v-stage">04</span>
-							<h3>Urban &amp; Economic Outcomes</h3>
-						</li>
+					</div>
+					<ol class="system-stages">
+					<li class="system-stage">
+					<span class="system-stop" aria-hidden="true">01</span>
+					<p class="system-note">The conditions of urban life</p>
+					<h3>Urban Policy &amp; Infrastructure</h3>
+					<p>Public policy, transit service, and infrastructure investments.</p>
+					</li>
+					<li class="system-stage">
+					<span class="system-stop" aria-hidden="true">02</span>
+					<p class="system-note">How people respond</p>
+					<h3>Perception &amp; Individual Behavior</h3>
+					<p>Travel decisions, mental maps, and lived experience.</p>
+					</li>
+					<li class="system-stage">
+					<span class="system-stop" aria-hidden="true">03</span>
+					<p class="system-note">The connections people can make</p>
+					<h3>Mobility &amp; Accessibility</h3>
+					<p>Route choice and the gap between measured and experienced access.</p>
+					</li>
+					<li class="system-stage">
+					<span class="system-stop" aria-hidden="true">04</span>
+					<p class="system-note">What those choices mean for cities</p>
+					<h3>Urban &amp; Economic Outcomes</h3>
+					<p>Congestion, economic activity, land use, and development.</p>
+					</li>
 					</ol>
-
+					</div>
 					<div class="fw-methods reveal">
 						<p class="fw-methods-label">Methods across the framework</p>
 						<div class="fw-methods-row">
@@ -668,6 +627,7 @@
 						</div>
 					</div>
 
+					<p class="closing-statement">Understanding how people move.<br><em>And what that means for cities.</em></p>
 					<div class="agenda-cta reveal">
 						<a class="btn-primary" href="pages/research.html">
 							Explore My Research <span class="arrow" aria-hidden="true">→</span>
