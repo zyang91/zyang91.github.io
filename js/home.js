@@ -95,3 +95,41 @@
 		);
 	}
 })();
+
+
+/* Progressive enhancement: content and complete figures remain visible without JS. */
+(function () {
+ 'use strict';
+ var story = document.getElementById('research-story');
+ if (!story) return;
+ var scenes = Array.from(story.querySelectorAll('.q-row'));
+ var framework = story.querySelector('.system-layout');
+ var stages = Array.from(story.querySelectorAll('.system-stage'));
+ var motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+ var frame = 0;
+ function clamp(value) { return Math.max(0, Math.min(1, value)); }
+ function update() {
+  frame = 0;
+  var height = window.innerHeight;
+  var bounds = story.getBoundingClientRect();
+  story.style.setProperty('--story-progress', motion.matches ? 1 : clamp((height * .55 - bounds.top) / bounds.height));
+  scenes.forEach(function (scene) {
+   var rect = scene.getBoundingClientRect();
+   var progress = motion.matches ? 1 : clamp((height * .9 - rect.top) / (rect.height * .75));
+   scene.style.setProperty('--scene-progress', progress);
+
+  });
+  var route = framework.querySelector('.system-stages').getBoundingClientRect();
+  framework.style.setProperty('--framework-progress', motion.matches ? 1 : clamp((height * .55 - route.top) / route.height));
+  stages.forEach(function (stage) {
+   stage.classList.toggle('is-active', motion.matches || stage.getBoundingClientRect().top < height * .55);
+  });
+ }
+ function schedule() { if (!frame) frame = window.requestAnimationFrame(update); }
+ window.addEventListener('scroll', schedule, { passive: true });
+ window.addEventListener('resize', schedule);
+ window.addEventListener('load', schedule);
+ motion.addEventListener('change', schedule);
+ if (document.fonts) document.fonts.ready.then(schedule);
+ update();
+})();
