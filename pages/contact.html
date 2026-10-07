@@ -213,6 +213,58 @@
 				</div>
 			</section>
 
+			<!-- ══ Message form ══ -->
+			<section class="section section-message" id="message">
+				<div class="container">
+					<p class="section-label reveal">Send a Message</p>
+					<h2 class="section-title reveal">Write to me directly</h2>
+					<p class="section-intro reveal">
+						Prefer not to open your email client? Leave a note here and it will
+						land straight in my inbox.
+					</p>
+
+					<form
+						class="contact-form contact-card reveal"
+						id="contact-form"
+						action="https://formsubmit.co/zhanchaoyang69@gmail.com"
+						method="POST"
+					>
+						<input type="hidden" name="_subject" value="New message from zhanchaoyang.com" />
+						<input type="hidden" name="_template" value="table" />
+						<input type="hidden" name="_captcha" value="false" />
+						<input type="hidden" name="_next" value="https://zhanchaoyang.com/pages/contact.html#message" />
+						<!-- honeypot: bots fill this, people never see it -->
+						<input type="text" name="_honey" class="form-honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+						<div class="form-row">
+							<div class="form-field">
+								<label for="cf-name">Name</label>
+								<input id="cf-name" name="name" type="text" autocomplete="name" required maxlength="120" />
+							</div>
+							<div class="form-field">
+								<label for="cf-email">Email</label>
+								<input id="cf-email" name="email" type="email" autocomplete="email" required maxlength="200" />
+							</div>
+						</div>
+						<div class="form-field">
+							<label for="cf-topic">Subject <span class="form-optional">(optional)</span></label>
+							<input id="cf-topic" name="topic" type="text" maxlength="200" />
+						</div>
+						<div class="form-field">
+							<label for="cf-message">Message</label>
+							<textarea id="cf-message" name="message" rows="6" required maxlength="5000"></textarea>
+						</div>
+
+						<div class="form-actions">
+							<button class="btn-primary" type="submit">
+								Send Message <span class="arrow" aria-hidden="true">→</span>
+							</button>
+							<p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+						</div>
+					</form>
+				</div>
+			</section>
+
 			<!-- ══ Map ══ -->
 			<section class="section section-map" id="location">
 				<div class="container">
@@ -282,5 +334,6 @@
 		</footer>
 
 		<script src="../js/home.js"></script>
+		<script src="../js/contact.js"></script>
 	</body>
 </html>
