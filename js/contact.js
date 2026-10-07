@@ -37,7 +37,8 @@
 			}
 			form.reset();
 			setStatus('Thanks — your message is on its way. I’ll reply soon.', 'success');
-		} catch {
+		} catch (error) {
+			console.error('Contact form:', error.message);
 			setStatus('Something went wrong. Please email me at zhanchao@upenn.edu instead.', 'error');
 		} finally {
 			button.disabled = false;
